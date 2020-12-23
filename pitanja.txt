@@ -1,1 +1,3 @@
+nema char kao char?
 da li this i super treba da budu rezervisane reci?
+gramatika->prva smena ne dozvoljava programe tipa samo ispis?
