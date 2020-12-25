@@ -1,0 +1,86 @@
+INFO  19:32:50,941 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:32:51,104 - #38 program
+INFO  19:32:51,104 - #21 p
+INFO  19:32:51,104 - #24 {
+INFO  19:32:51,104 - #21 int
+INFO  19:32:51,104 - #21 main
+INFO  19:32:51,104 - #26 (
+INFO  19:32:51,104 - #47 )
+INFO  19:32:51,104 - #24 {
+INFO  19:32:51,104 - #22 if
+INFO  19:32:51,104 - #26 (
+INFO  19:32:51,104 - #21 a
+INFO  19:32:51,104 - #51 ==
+INFO  19:32:51,119 - #6 a
+INFO  19:32:51,119 - #47 )
+INFO  19:32:51,126 - #21 a
+INFO  19:32:51,126 - #29 --
+INFO  19:32:51,126 - #45 ;
+INFO  19:32:51,126 - #41 }
+INFO  19:32:51,126 - #41 }
+ERROR 19:32:51,126 - ovde
+INFO  19:32:51,126 - Program(
+  ProgName(
+  ) [ProgName]
+  NoMethodDeclEmptyList(
+  ) [NoMethodDeclEmptyList]
+  MethodDeclMultipleList(
+    MethodDeclEmptyList(
+    ) [MethodDeclEmptyList]
+    MethodDecl(
+      ReturnTypeType(
+        Type(
+        ) [Type]
+      ) [ReturnTypeType]
+      FormalParamEmptyList(
+      ) [FormalParamEmptyList]
+      VarDeclEmptyList(
+      ) [VarDeclEmptyList]
+      StatementList_(
+        StatementEmptyList(
+        ) [StatementEmptyList]
+        IfStatement(
+          NoConditionOR(
+            NoConditionAND(
+              ConditionFactExprRelop(
+                ExprTermNoMinus(
+                  TermNoMul(
+                    FactorDesignator(
+                      Designator(
+                        DesignatorOptionEmptyList(
+                        ) [DesignatorOptionEmptyList]
+                      ) [Designator]
+                    ) [FactorDesignator]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [ExprTermNoMinus]
+                Same(
+                ) [Same]
+                ExprTermNoMinus(
+                  TermNoMul(
+                    FactorChar(
+                    ) [FactorChar]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [ExprTermNoMinus]
+              ) [ConditionFactExprRelop]
+            ) [NoConditionAND]
+          ) [NoConditionOR]
+          DesignatorStatementStatement(
+            DesignatorStatement_(
+              Designator(
+                DesignatorOptionEmptyList(
+                ) [DesignatorOptionEmptyList]
+              ) [Designator]
+              DecDesignator(
+              ) [DecDesignator]
+            ) [DesignatorStatement_]
+          ) [DesignatorStatementStatement]
+        ) [IfStatement]
+      ) [StatementList_]
+    ) [MethodDecl]
+  ) [MethodDeclMultipleList]
+) [Program]
+INFO  19:32:51,126 - ===================================

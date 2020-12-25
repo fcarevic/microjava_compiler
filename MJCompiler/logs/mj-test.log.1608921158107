@@ -1,0 +1,363 @@
+INFO  19:19:44,815 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:19:45,210 - #38 program
+INFO  19:19:45,210 - #21 p
+INFO  19:19:45,210 - #24 {
+INFO  19:19:45,220 - #21 int
+INFO  19:19:45,220 - #21 main
+INFO  19:19:45,231 - #26 (
+INFO  19:19:45,231 - #47 )
+INFO  19:19:45,231 - #24 {
+INFO  19:19:45,241 - #22 if
+INFO  19:19:45,241 - #26 (
+INFO  19:19:45,241 - #21 a
+INFO  19:19:45,241 - #51 ==
+ERROR 19:19:45,259 - 
+Sintaksna greska na liniji 4
+INFO  19:19:45,261 - #6 a
+INFO  19:19:45,261 - #47 )
+INFO  19:19:45,261 - #45 ;
+INFO  19:19:45,261 - #41 }
+INFO  19:19:45,261 - #41 }
+ERROR 19:19:45,261 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9
+INFO  19:20:29,354 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:20:29,778 - #38 program
+INFO  19:20:29,778 - #21 p
+INFO  19:20:29,778 - #24 {
+INFO  19:20:45,405 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:20:45,789 - #38 program
+INFO  19:20:45,789 - #21 p
+INFO  19:20:45,789 - #24 {
+INFO  19:21:01,464 - #21 int
+INFO  19:21:08,387 - #21 main
+INFO  19:21:17,844 - #26 (
+INFO  19:21:17,859 - #47 )
+INFO  19:21:21,904 - #24 {
+INFO  19:21:25,703 - #22 if
+INFO  19:21:33,868 - #26 (
+INFO  19:21:33,879 - #21 a
+INFO  19:21:33,879 - #51 ==
+ERROR 19:22:12,365 - 
+Sintaksna greska na liniji 4
+INFO  19:22:12,379 - #6 a
+INFO  19:22:12,379 - #47 )
+INFO  19:22:12,379 - #45 ;
+INFO  19:22:12,381 - #41 }
+INFO  19:22:12,381 - #41 }
+ERROR 19:22:12,381 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9
+INFO  19:23:14,721 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:23:15,119 - #38 program
+INFO  19:23:15,119 - #21 p
+INFO  19:23:15,121 - #24 {
+INFO  19:23:20,190 - #21 int
+INFO  19:23:20,791 - #21 main
+INFO  19:23:28,257 - #26 (
+INFO  19:23:28,274 - #47 )
+INFO  19:23:29,460 - #24 {
+INFO  19:23:30,293 - #22 if
+INFO  19:23:32,035 - #26 (
+INFO  19:23:32,048 - #21 a
+INFO  19:23:32,049 - #51 ==
+ERROR 19:26:03,859 - 
+Sintaksna greska na liniji 4
+INFO  19:26:03,872 - #6 a
+INFO  19:26:03,873 - #47 )
+INFO  19:26:03,873 - #45 ;
+INFO  19:26:03,889 - #41 }
+INFO  19:26:03,889 - #41 }
+ERROR 19:26:03,889 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9
+INFO  19:27:24,974 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:27:25,356 - #38 program
+INFO  19:27:25,356 - #21 p
+INFO  19:27:25,356 - #24 {
+INFO  19:27:33,974 - #21 int
+INFO  19:27:36,700 - #21 main
+INFO  19:27:42,869 - #26 (
+INFO  19:27:42,873 - #47 )
+INFO  19:27:45,460 - #24 {
+INFO  19:27:47,832 - #22 if
+INFO  19:28:12,919 - #26 (
+INFO  19:28:12,934 - #21 a
+INFO  19:28:12,934 - #51 ==
+INFO  19:30:55,041 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:30:55,212 - #38 program
+INFO  19:30:55,212 - #21 p
+INFO  19:30:55,212 - #24 {
+INFO  19:30:55,228 - #21 int
+INFO  19:30:55,228 - #21 main
+INFO  19:30:55,228 - #26 (
+INFO  19:30:55,228 - #47 )
+INFO  19:30:55,228 - #24 {
+INFO  19:30:55,244 - #22 if
+INFO  19:30:55,244 - #26 (
+INFO  19:30:55,244 - #21 a
+INFO  19:30:55,250 - #51 ==
+INFO  19:30:55,250 - #6 a
+INFO  19:30:55,266 - #47 )
+INFO  19:30:55,266 - #45 ;
+ERROR 19:30:55,266 - 
+Sintaksna greska na liniji 5
+INFO  19:30:55,266 - #41 }
+INFO  19:30:55,266 - #41 }
+ERROR 19:30:55,281 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9
+INFO  19:31:15,788 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:31:15,963 - #38 program
+INFO  19:31:15,963 - #21 p
+INFO  19:31:15,963 - #24 {
+INFO  19:31:15,963 - #21 int
+INFO  19:31:15,979 - #21 main
+INFO  19:31:15,982 - #26 (
+INFO  19:31:15,982 - #47 )
+INFO  19:31:15,982 - #24 {
+INFO  19:31:15,982 - #22 if
+INFO  19:31:15,982 - #26 (
+INFO  19:31:15,982 - #21 a
+INFO  19:31:15,982 - #51 ==
+INFO  19:31:15,997 - #6 a
+INFO  19:31:15,997 - #47 )
+INFO  19:31:16,013 - #41 }
+ERROR 19:31:16,013 - 
+Sintaksna greska na liniji 8
+INFO  19:31:16,013 - #41 }
+ERROR 19:31:16,013 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9
+INFO  19:31:24,138 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:31:24,285 - #38 program
+INFO  19:31:24,285 - #21 p
+INFO  19:31:24,285 - #24 {
+INFO  19:31:24,285 - #21 int
+INFO  19:31:24,285 - #21 main
+INFO  19:31:24,285 - #26 (
+INFO  19:31:24,285 - #47 )
+INFO  19:31:24,285 - #24 {
+INFO  19:31:24,301 - #22 if
+INFO  19:31:24,301 - #26 (
+INFO  19:31:24,301 - #21 a
+INFO  19:31:24,301 - #51 ==
+INFO  19:31:24,301 - #6 a
+INFO  19:31:24,301 - #47 )
+INFO  19:31:24,301 - #24 {
+INFO  19:31:24,301 - #41 }
+INFO  19:31:24,301 - #41 }
+INFO  19:31:24,301 - #41 }
+ERROR 19:31:24,316 - ovde
+INFO  19:31:24,316 - Program(
+  ProgName(
+  ) [ProgName]
+  NoMethodDeclEmptyList(
+  ) [NoMethodDeclEmptyList]
+  MethodDeclMultipleList(
+    MethodDeclEmptyList(
+    ) [MethodDeclEmptyList]
+    MethodDecl(
+      ReturnTypeType(
+        Type(
+        ) [Type]
+      ) [ReturnTypeType]
+      FormalParamEmptyList(
+      ) [FormalParamEmptyList]
+      VarDeclEmptyList(
+      ) [VarDeclEmptyList]
+      StatementList_(
+        StatementEmptyList(
+        ) [StatementEmptyList]
+        IfStatement(
+          NoConditionOR(
+            NoConditionAND(
+              ConditionFactExprRelop(
+                ExprTermNoMinus(
+                  TermNoMul(
+                    FactorDesignator(
+                      Designator(
+                        DesignatorOptionEmptyList(
+                        ) [DesignatorOptionEmptyList]
+                      ) [Designator]
+                    ) [FactorDesignator]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [ExprTermNoMinus]
+                Same(
+                ) [Same]
+                ExprTermNoMinus(
+                  TermNoMul(
+                    FactorChar(
+                    ) [FactorChar]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [ExprTermNoMinus]
+              ) [ConditionFactExprRelop]
+            ) [NoConditionAND]
+          ) [NoConditionOR]
+          StatementStatement(
+            StatementEmptyList(
+            ) [StatementEmptyList]
+          ) [StatementStatement]
+        ) [IfStatement]
+      ) [StatementList_]
+    ) [MethodDecl]
+  ) [MethodDeclMultipleList]
+) [Program]
+INFO  19:31:24,323 - ===================================
+INFO  19:32:02,718 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:32:02,957 - #38 program
+INFO  19:32:02,966 - #21 p
+INFO  19:32:02,966 - #24 {
+INFO  19:32:02,969 - #21 int
+INFO  19:32:02,969 - #21 main
+INFO  19:32:02,969 - #26 (
+INFO  19:32:02,969 - #47 )
+INFO  19:32:02,969 - #24 {
+INFO  19:32:02,977 - #22 if
+INFO  19:32:02,979 - #26 (
+INFO  19:32:02,979 - #21 a
+INFO  19:32:02,979 - #51 ==
+INFO  19:32:02,979 - #6 a
+INFO  19:32:02,979 - #47 )
+INFO  19:32:02,990 - #4 break
+INFO  19:32:02,990 - #45 ;
+INFO  19:32:02,990 - #41 }
+INFO  19:32:02,990 - #41 }
+ERROR 19:32:02,990 - ovde
+INFO  19:32:02,998 - Program(
+  ProgName(
+  ) [ProgName]
+  NoMethodDeclEmptyList(
+  ) [NoMethodDeclEmptyList]
+  MethodDeclMultipleList(
+    MethodDeclEmptyList(
+    ) [MethodDeclEmptyList]
+    MethodDecl(
+      ReturnTypeType(
+        Type(
+        ) [Type]
+      ) [ReturnTypeType]
+      FormalParamEmptyList(
+      ) [FormalParamEmptyList]
+      VarDeclEmptyList(
+      ) [VarDeclEmptyList]
+      StatementList_(
+        StatementEmptyList(
+        ) [StatementEmptyList]
+        IfStatement(
+          NoConditionOR(
+            NoConditionAND(
+              ConditionFactExprRelop(
+                ExprTermNoMinus(
+                  TermNoMul(
+                    FactorDesignator(
+                      Designator(
+                        DesignatorOptionEmptyList(
+                        ) [DesignatorOptionEmptyList]
+                      ) [Designator]
+                    ) [FactorDesignator]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [ExprTermNoMinus]
+                Same(
+                ) [Same]
+                ExprTermNoMinus(
+                  TermNoMul(
+                    FactorChar(
+                    ) [FactorChar]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [ExprTermNoMinus]
+              ) [ConditionFactExprRelop]
+            ) [NoConditionAND]
+          ) [NoConditionOR]
+          BreakStatement(
+          ) [BreakStatement]
+        ) [IfStatement]
+      ) [StatementList_]
+    ) [MethodDecl]
+  ) [MethodDeclMultipleList]
+) [Program]
+INFO  19:32:02,998 - ===================================
+INFO  19:32:20,899 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:32:21,091 - #38 program
+INFO  19:32:21,091 - #21 p
+INFO  19:32:21,091 - #24 {
+INFO  19:32:21,101 - #21 int
+INFO  19:32:21,101 - #21 main
+INFO  19:32:21,101 - #26 (
+INFO  19:32:21,101 - #47 )
+INFO  19:32:21,101 - #24 {
+INFO  19:32:21,101 - #22 if
+INFO  19:32:21,109 - #26 (
+INFO  19:32:21,110 - #21 a
+INFO  19:32:21,110 - #51 ==
+INFO  19:32:21,112 - #6 a
+INFO  19:32:21,120 - #47 )
+INFO  19:32:21,122 - #21 a
+INFO  19:32:21,122 - #36 ++
+INFO  19:32:21,122 - #45 ;
+INFO  19:32:21,122 - #41 }
+INFO  19:32:21,122 - #41 }
+ERROR 19:32:21,130 - ovde
+INFO  19:32:21,130 - Program(
+  ProgName(
+  ) [ProgName]
+  NoMethodDeclEmptyList(
+  ) [NoMethodDeclEmptyList]
+  MethodDeclMultipleList(
+    MethodDeclEmptyList(
+    ) [MethodDeclEmptyList]
+    MethodDecl(
+      ReturnTypeType(
+        Type(
+        ) [Type]
+      ) [ReturnTypeType]
+      FormalParamEmptyList(
+      ) [FormalParamEmptyList]
+      VarDeclEmptyList(
+      ) [VarDeclEmptyList]
+      StatementList_(
+        StatementEmptyList(
+        ) [StatementEmptyList]
+        IfStatement(
+          NoConditionOR(
+            NoConditionAND(
+              ConditionFactExprRelop(
+                ExprTermNoMinus(
+                  TermNoMul(
+                    FactorDesignator(
+                      Designator(
+                        DesignatorOptionEmptyList(
+                        ) [DesignatorOptionEmptyList]
+                      ) [Designator]
+                    ) [FactorDesignator]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [ExprTermNoMinus]
+                Same(
+                ) [Same]
+                ExprTermNoMinus(
+                  TermNoMul(
+                    FactorChar(
+                    ) [FactorChar]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [ExprTermNoMinus]
+              ) [ConditionFactExprRelop]
+            ) [NoConditionAND]
+          ) [NoConditionOR]
+          DesignatorStatementStatement(
+            DesignatorStatement_(
+              Designator(
+                DesignatorOptionEmptyList(
+                ) [DesignatorOptionEmptyList]
+              ) [Designator]
+              IncDesignator(
+              ) [IncDesignator]
+            ) [DesignatorStatement_]
+          ) [DesignatorStatementStatement]
+        ) [IfStatement]
+      ) [StatementList_]
+    ) [MethodDecl]
+  ) [MethodDeclMultipleList]
+) [Program]
+INFO  19:32:21,130 - ===================================

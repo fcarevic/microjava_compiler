@@ -1,0 +1,22 @@
+INFO  19:19:02,317 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:19:02,471 - #38 program
+INFO  19:19:02,471 - #21 p
+INFO  19:19:02,471 - #24 {
+INFO  19:19:02,486 - #21 int
+INFO  19:19:02,486 - #21 main
+INFO  19:19:02,486 - #26 (
+INFO  19:19:02,486 - #47 )
+INFO  19:19:02,486 - #24 {
+INFO  19:19:02,486 - #22 if
+INFO  19:19:02,486 - #26 (
+INFO  19:19:02,486 - #21 a
+INFO  19:19:02,486 - #51 ==
+ERROR 19:19:02,502 - 
+Sintaksna greska na liniji 4
+INFO  19:19:02,502 - #6 a
+INFO  19:19:02,502 - #47 )
+INFO  19:19:02,502 - #24 {
+INFO  19:19:02,502 - #41 }
+INFO  19:19:02,502 - #41 }
+INFO  19:19:02,502 - #41 }
+ERROR 19:19:02,502 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 8

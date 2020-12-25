@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 25/11/2020 1:49:9
+// 25/11/2020 19:54:47
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,16 +8,16 @@ package rs.ac.bg.etf.pp1.ast;
 public class ClassDeclMethod extends ClassDecl {
 
     private ExtendsClause ExtendsClause;
-    private VarDecl VarDecl;
-    private MethodDecl MethodDecl;
+    private VarDeclList VarDeclList;
+    private MethodDeclList MethodDeclList;
 
-    public ClassDeclMethod (ExtendsClause ExtendsClause, VarDecl VarDecl, MethodDecl MethodDecl) {
+    public ClassDeclMethod (ExtendsClause ExtendsClause, VarDeclList VarDeclList, MethodDeclList MethodDeclList) {
         this.ExtendsClause=ExtendsClause;
         if(ExtendsClause!=null) ExtendsClause.setParent(this);
-        this.VarDecl=VarDecl;
-        if(VarDecl!=null) VarDecl.setParent(this);
-        this.MethodDecl=MethodDecl;
-        if(MethodDecl!=null) MethodDecl.setParent(this);
+        this.VarDeclList=VarDeclList;
+        if(VarDeclList!=null) VarDeclList.setParent(this);
+        this.MethodDeclList=MethodDeclList;
+        if(MethodDeclList!=null) MethodDeclList.setParent(this);
     }
 
     public ExtendsClause getExtendsClause() {
@@ -28,20 +28,20 @@ public class ClassDeclMethod extends ClassDecl {
         this.ExtendsClause=ExtendsClause;
     }
 
-    public VarDecl getVarDecl() {
-        return VarDecl;
+    public VarDeclList getVarDeclList() {
+        return VarDeclList;
     }
 
-    public void setVarDecl(VarDecl VarDecl) {
-        this.VarDecl=VarDecl;
+    public void setVarDeclList(VarDeclList VarDeclList) {
+        this.VarDeclList=VarDeclList;
     }
 
-    public MethodDecl getMethodDecl() {
-        return MethodDecl;
+    public MethodDeclList getMethodDeclList() {
+        return MethodDeclList;
     }
 
-    public void setMethodDecl(MethodDecl MethodDecl) {
-        this.MethodDecl=MethodDecl;
+    public void setMethodDeclList(MethodDeclList MethodDeclList) {
+        this.MethodDeclList=MethodDeclList;
     }
 
     public void accept(Visitor visitor) {
@@ -50,21 +50,21 @@ public class ClassDeclMethod extends ClassDecl {
 
     public void childrenAccept(Visitor visitor) {
         if(ExtendsClause!=null) ExtendsClause.accept(visitor);
-        if(VarDecl!=null) VarDecl.accept(visitor);
-        if(MethodDecl!=null) MethodDecl.accept(visitor);
+        if(VarDeclList!=null) VarDeclList.accept(visitor);
+        if(MethodDeclList!=null) MethodDeclList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(ExtendsClause!=null) ExtendsClause.traverseTopDown(visitor);
-        if(VarDecl!=null) VarDecl.traverseTopDown(visitor);
-        if(MethodDecl!=null) MethodDecl.traverseTopDown(visitor);
+        if(VarDeclList!=null) VarDeclList.traverseTopDown(visitor);
+        if(MethodDeclList!=null) MethodDeclList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(ExtendsClause!=null) ExtendsClause.traverseBottomUp(visitor);
-        if(VarDecl!=null) VarDecl.traverseBottomUp(visitor);
-        if(MethodDecl!=null) MethodDecl.traverseBottomUp(visitor);
+        if(VarDeclList!=null) VarDeclList.traverseBottomUp(visitor);
+        if(MethodDeclList!=null) MethodDeclList.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -79,14 +79,14 @@ public class ClassDeclMethod extends ClassDecl {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(VarDecl!=null)
-            buffer.append(VarDecl.toString("  "+tab));
+        if(VarDeclList!=null)
+            buffer.append(VarDeclList.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(MethodDecl!=null)
-            buffer.append(MethodDecl.toString("  "+tab));
+        if(MethodDeclList!=null)
+            buffer.append(MethodDeclList.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

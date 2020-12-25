@@ -1,0 +1,38 @@
+INFO  16:56:40,405 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  16:56:43,863 - #38 program
+INFO  16:56:43,963 - #21 MJProgram
+INFO  16:56:43,965 - #21 int
+INFO  16:56:50,940 - #21 x
+INFO  16:56:51,794 - #45 ;
+INFO  16:56:53,239 - #21 int
+INFO  16:56:55,309 - #21 y
+INFO  16:56:55,741 - #45 ;
+INFO  16:56:57,033 - #10 const
+INFO  16:56:59,030 - #21 int
+INFO  16:56:59,038 - #21 x
+INFO  16:56:59,689 - #17 =
+INFO  16:56:59,689 - #33 3
+INFO  16:56:59,704 - #45 ;
+INFO  16:57:03,856 - #24 {
+INFO  16:57:05,963 - #21 int
+INFO  16:57:06,532 - #21 k
+INFO  16:57:08,189 - #26 (
+INFO  16:57:08,189 - #47 )
+INFO  16:57:08,856 - #21 int
+INFO  16:57:10,051 - #21 y
+INFO  16:57:13,115 - #45 ;
+INFO  16:57:16,738 - #24 {
+INFO  16:57:36,758 - #44 return
+INFO  16:57:52,826 - #21 y
+INFO  16:57:52,832 - #35 +
+INFO  16:59:43,276 - #33 5
+INFO  16:59:55,704 - #35 +
+ERROR 17:00:18,846 - 
+Sintaksna greska na liniji 10
+INFO  17:00:18,873 - #33 6
+INFO  17:00:18,873 - #35 +
+INFO  17:00:18,873 - #33 7
+INFO  17:00:18,873 - #45 ;
+INFO  17:00:18,873 - #41 }
+INFO  17:00:18,873 - #41 }
+ERROR 17:00:18,873 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 12

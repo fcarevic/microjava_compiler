@@ -1,0 +1,129 @@
+INFO  16:45:08,957 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  16:45:09,157 - #38 program
+INFO  16:45:09,157 - #21 MJProgram
+INFO  16:45:09,157 - #21 int
+INFO  16:45:09,157 - #21 x
+INFO  16:45:09,157 - #45 ;
+INFO  16:45:09,165 - #21 int
+INFO  16:45:09,167 - #21 y
+INFO  16:45:09,167 - #45 ;
+INFO  16:45:09,167 - #10 const
+INFO  16:45:09,167 - #21 int
+INFO  16:45:09,167 - #21 x
+INFO  16:45:09,167 - #17 =
+INFO  16:45:09,167 - #33 3
+INFO  16:45:09,167 - #45 ;
+INFO  16:45:09,175 - #24 {
+INFO  16:45:09,177 - #21 int
+INFO  16:45:09,177 - #21 k
+INFO  16:45:09,177 - #26 (
+INFO  16:45:09,177 - #47 )
+INFO  16:45:09,177 - #21 int
+INFO  16:45:09,185 - #21 y
+INFO  16:45:09,185 - #45 ;
+INFO  16:45:09,185 - #24 {
+INFO  16:45:09,187 - #44 return
+INFO  16:45:09,187 - #21 y
+INFO  16:45:09,187 - #35 +
+INFO  16:45:09,187 - #33 5
+INFO  16:45:09,217 - #45 ;
+INFO  16:45:09,238 - #41 }
+INFO  16:45:09,238 - #41 }
+ERROR 16:45:09,246 - ovde
+INFO  16:45:09,248 - Program(
+  ProgName(
+  ) [ProgName]
+  NoMethodDeclList_(
+    NoMethodDeclList_(
+      NoMethodDeclList_(
+        NoMethodDeclEmptyList(
+        ) [NoMethodDeclEmptyList]
+        VarDeclNoMethodDecl(
+          VarDecl(
+            Type(
+            ) [Type]
+            VarInitSingle(
+              VarInitPrimitive(
+              ) [VarInitPrimitive]
+            ) [VarInitSingle]
+          ) [VarDecl]
+        ) [VarDeclNoMethodDecl]
+      ) [NoMethodDeclList_]
+      VarDeclNoMethodDecl(
+        VarDecl(
+          Type(
+          ) [Type]
+          VarInitSingle(
+            VarInitPrimitive(
+            ) [VarInitPrimitive]
+          ) [VarInitSingle]
+        ) [VarDecl]
+      ) [VarDeclNoMethodDecl]
+    ) [NoMethodDeclList_]
+    ConstDeclNoMethodDecl(
+      ConstDecl(
+        Type(
+        ) [Type]
+        ConstInitSingle(
+          ConstInit(
+            StdConstNumber(
+            ) [StdConstNumber]
+          ) [ConstInit]
+        ) [ConstInitSingle]
+      ) [ConstDecl]
+    ) [ConstDeclNoMethodDecl]
+  ) [NoMethodDeclList_]
+  MethodDeclMultipleList(
+    MethodDeclEmptyList(
+    ) [MethodDeclEmptyList]
+    MethodDecl(
+      ReturnTypeType(
+        Type(
+        ) [Type]
+      ) [ReturnTypeType]
+      FormalParamEmptyList(
+      ) [FormalParamEmptyList]
+      VarDeclList_(
+        VarDeclEmptyList(
+        ) [VarDeclEmptyList]
+        VarDecl(
+          Type(
+          ) [Type]
+          VarInitSingle(
+            VarInitPrimitive(
+            ) [VarInitPrimitive]
+          ) [VarInitSingle]
+        ) [VarDecl]
+      ) [VarDeclList_]
+      StatementList_(
+        StatementEmptyList(
+        ) [StatementEmptyList]
+        MatchedStatement(
+          ReturnStatement_(
+            ReturnStatementExpr(
+              ExprTermNoMinus(
+                TermNoMul(
+                  FactorDesignator(
+                    Designator(
+                      DesignatorOptionEmptyList(
+                      ) [DesignatorOptionEmptyList]
+                    ) [Designator]
+                  ) [FactorDesignator]
+                ) [TermNoMul]
+                AddopTermExprOption_(
+                  Plus(
+                  ) [Plus]
+                  TermNoMul(
+                    FactorNumber(
+                    ) [FactorNumber]
+                  ) [TermNoMul]
+                ) [AddopTermExprOption_]
+              ) [ExprTermNoMinus]
+            ) [ReturnStatementExpr]
+          ) [ReturnStatement_]
+        ) [MatchedStatement]
+      ) [StatementList_]
+    ) [MethodDecl]
+  ) [MethodDeclMultipleList]
+) [Program]
+INFO  16:45:09,258 - ===================================

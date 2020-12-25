@@ -1,0 +1,164 @@
+INFO  17:42:13,713 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  17:42:14,190 - #7 program	1
+INFO  17:42:14,190 - #2 MJProgram	1
+INFO  17:42:14,190 - #2 int	2
+INFO  17:42:14,190 - #2 x	2
+INFO  17:42:14,190 - #27 ;	2
+INFO  17:42:14,198 - #2 int	3
+INFO  17:42:14,198 - #2 y	3
+INFO  17:42:14,200 - #27 ;	3
+INFO  17:42:14,200 - #26 const	4
+INFO  17:42:14,200 - #2 int	4
+INFO  17:42:14,200 - #2 x	4
+INFO  17:42:14,200 - #19 =	4
+INFO  17:42:14,200 - #3 3	4
+INFO  17:42:14,208 - #27 ;	4
+INFO  17:42:14,210 - #20 {	6
+INFO  17:42:14,210 - #2 int	7
+INFO  17:42:14,210 - #2 k	7
+INFO  17:42:14,210 - #24 (	7
+INFO  17:42:14,210 - #25 )	7
+INFO  17:42:14,220 - #2 int	8
+INFO  17:42:14,220 - #2 y	8
+INFO  17:42:14,220 - #27 ;	8
+INFO  17:42:14,220 - #20 {	9
+INFO  17:42:14,230 - #35 return	10
+INFO  17:42:14,230 - #2 y	10
+INFO  17:42:14,230 - #11 +	10
+INFO  17:42:14,230 - #3 5	10
+INFO  17:42:14,240 - #11 +	10
+INFO  17:42:14,240 - #3 6	10
+INFO  17:42:14,240 - #11 +	10
+INFO  17:42:14,240 - #3 7	10
+INFO  17:42:14,240 - #27 ;	10
+INFO  17:42:14,240 - #21 }	11
+INFO  17:42:14,240 - #21 }	12
+INFO  17:42:14,258 - Program(
+  ProgramName(
+   MJProgram
+  ) [ProgramName]
+  DeclarationList(
+    DeclarationList(
+      DeclarationList(
+        NoDecls(
+        ) [NoDecls]
+        VarDeclarations(
+          VariableDecls(
+            Type(
+             int
+            ) [Type]
+            SingleVariable(
+              NonArrayVariable(
+               x
+              ) [NonArrayVariable]
+            ) [SingleVariable]
+          ) [VariableDecls]
+        ) [VarDeclarations]
+      ) [DeclarationList]
+      VarDeclarations(
+        VariableDecls(
+          Type(
+           int
+          ) [Type]
+          SingleVariable(
+            NonArrayVariable(
+             y
+            ) [NonArrayVariable]
+          ) [SingleVariable]
+        ) [VariableDecls]
+      ) [VarDeclarations]
+    ) [DeclarationList]
+    ConstDeclarations(
+      Type(
+       int
+      ) [Type]
+      SingleConst(
+        ConstDefinition(
+         x
+          AssignOp(
+          ) [AssignOp]
+          NumericLiteral(
+           3
+          ) [NumericLiteral]
+        ) [ConstDefinition]
+      ) [SingleConst]
+    ) [ConstDeclarations]
+  ) [DeclarationList]
+  SingleMethod(
+    OneMethodDeclaration(
+      MethodTypeName(
+        TypedReturn(
+          Type(
+           int
+          ) [Type]
+        ) [TypedReturn]
+       k
+      ) [MethodTypeName]
+      EmptyFormPars(
+      ) [EmptyFormPars]
+      HasMethodVariables(
+        NoVariables(
+        ) [NoVariables]
+        VariableDecls(
+          Type(
+           int
+          ) [Type]
+          SingleVariable(
+            NonArrayVariable(
+             y
+            ) [NonArrayVariable]
+          ) [SingleVariable]
+        ) [VariableDecls]
+      ) [HasMethodVariables]
+      NonEmptyMethodStatements(
+        EmptyMethodStatements(
+        ) [EmptyMethodStatements]
+        ReturnStmt(
+          NonEmptyReturn(
+            ExprNoTernStatement(
+              AddOperationTerm(
+                TermList(
+                  TermList(
+                    TermList(
+                      OneTerm(
+                        NonMullOpTerm(
+                          NoParamsDesignator(
+                            CleanDesignator(
+                             y
+                            ) [CleanDesignator]
+                          ) [NoParamsDesignator]
+                        ) [NonMullOpTerm]
+                      ) [OneTerm]
+                      AddopPlus(
+                      ) [AddopPlus]
+                      NonMullOpTerm(
+                        NumericConstant(
+                         5
+                        ) [NumericConstant]
+                      ) [NonMullOpTerm]
+                    ) [TermList]
+                    AddopPlus(
+                    ) [AddopPlus]
+                    NonMullOpTerm(
+                      NumericConstant(
+                       6
+                      ) [NumericConstant]
+                    ) [NonMullOpTerm]
+                  ) [TermList]
+                  AddopPlus(
+                  ) [AddopPlus]
+                  NonMullOpTerm(
+                    NumericConstant(
+                     7
+                    ) [NumericConstant]
+                  ) [NonMullOpTerm]
+                ) [TermList]
+              ) [AddOperationTerm]
+            ) [ExprNoTernStatement]
+          ) [NonEmptyReturn]
+        ) [ReturnStmt]
+      ) [NonEmptyMethodStatements]
+    ) [OneMethodDeclaration]
+  ) [SingleMethod]
+) [Program]
+INFO  17:42:14,485 - ===================================

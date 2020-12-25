@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 25/11/2020 1:49:9
+// 25/11/2020 19:54:47
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class ClassDeclsNoMethod extends ClassDecl {
 
     private ExtendsClause ExtendsClause;
-    private VarDecl VarDecl;
+    private VarDeclList VarDeclList;
 
-    public ClassDeclsNoMethod (ExtendsClause ExtendsClause, VarDecl VarDecl) {
+    public ClassDeclsNoMethod (ExtendsClause ExtendsClause, VarDeclList VarDeclList) {
         this.ExtendsClause=ExtendsClause;
         if(ExtendsClause!=null) ExtendsClause.setParent(this);
-        this.VarDecl=VarDecl;
-        if(VarDecl!=null) VarDecl.setParent(this);
+        this.VarDeclList=VarDeclList;
+        if(VarDeclList!=null) VarDeclList.setParent(this);
     }
 
     public ExtendsClause getExtendsClause() {
@@ -25,12 +25,12 @@ public class ClassDeclsNoMethod extends ClassDecl {
         this.ExtendsClause=ExtendsClause;
     }
 
-    public VarDecl getVarDecl() {
-        return VarDecl;
+    public VarDeclList getVarDeclList() {
+        return VarDeclList;
     }
 
-    public void setVarDecl(VarDecl VarDecl) {
-        this.VarDecl=VarDecl;
+    public void setVarDeclList(VarDeclList VarDeclList) {
+        this.VarDeclList=VarDeclList;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +39,18 @@ public class ClassDeclsNoMethod extends ClassDecl {
 
     public void childrenAccept(Visitor visitor) {
         if(ExtendsClause!=null) ExtendsClause.accept(visitor);
-        if(VarDecl!=null) VarDecl.accept(visitor);
+        if(VarDeclList!=null) VarDeclList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(ExtendsClause!=null) ExtendsClause.traverseTopDown(visitor);
-        if(VarDecl!=null) VarDecl.traverseTopDown(visitor);
+        if(VarDeclList!=null) VarDeclList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(ExtendsClause!=null) ExtendsClause.traverseBottomUp(visitor);
-        if(VarDecl!=null) VarDecl.traverseBottomUp(visitor);
+        if(VarDeclList!=null) VarDeclList.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,8 +65,8 @@ public class ClassDeclsNoMethod extends ClassDecl {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(VarDecl!=null)
-            buffer.append(VarDecl.toString("  "+tab));
+        if(VarDeclList!=null)
+            buffer.append(VarDeclList.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

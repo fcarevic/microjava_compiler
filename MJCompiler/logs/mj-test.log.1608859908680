@@ -1,0 +1,7 @@
+INFO  02:27:16,625 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  02:27:17,004 - #38 program
+INFO  02:27:17,008 - #21 IDENT
+INFO  02:27:17,008 - #21 IDENT
+ERROR 02:27:17,008 - 
+Sintaksna greska na liniji 3
+ERROR 02:27:17,008 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 3

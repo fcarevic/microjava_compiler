@@ -1,0 +1,157 @@
+INFO  17:51:04,602 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  17:51:04,893 - #38 program
+INFO  17:51:04,895 - #21 MJProgram
+INFO  17:51:04,987 - #21 int
+INFO  17:51:05,007 - #21 x
+INFO  17:51:05,017 - #45 ;
+INFO  17:51:05,027 - #21 int
+INFO  17:51:05,027 - #21 y
+INFO  17:51:05,027 - #45 ;
+INFO  17:51:05,027 - #10 const
+INFO  17:51:05,027 - #21 int
+INFO  17:51:05,027 - #21 x
+INFO  17:51:05,027 - #17 =
+INFO  17:51:05,035 - #33 3
+INFO  17:51:05,035 - #45 ;
+INFO  17:51:05,037 - #24 {
+INFO  17:51:05,048 - #21 int
+INFO  17:51:05,170 - #21 k
+INFO  17:51:05,170 - #26 (
+INFO  17:51:05,170 - #47 )
+INFO  17:51:05,170 - #21 int
+INFO  17:51:05,180 - #21 y
+INFO  17:51:05,180 - #45 ;
+INFO  17:51:05,180 - #24 {
+INFO  17:51:05,188 - #44 return
+INFO  17:51:05,188 - #21 y
+INFO  17:51:05,188 - #35 +
+INFO  17:51:05,206 - #33 5
+INFO  17:51:05,224 - #35 +
+INFO  17:51:05,236 - #33 6
+INFO  17:51:05,236 - #35 +
+INFO  17:51:05,236 - #33 7
+INFO  17:51:05,236 - #45 ;
+INFO  17:51:05,236 - #41 }
+INFO  17:51:05,236 - #41 }
+ERROR 17:51:05,256 - ovde
+INFO  17:51:05,277 - Program(
+  ProgName(
+  ) [ProgName]
+  NoMethodDeclList_(
+    NoMethodDeclList_(
+      NoMethodDeclList_(
+        NoMethodDeclEmptyList(
+        ) [NoMethodDeclEmptyList]
+        VarDeclNoMethodDecl(
+          VarDecl(
+            Type(
+            ) [Type]
+            VarInitSingle(
+              VarInitPrimitive(
+              ) [VarInitPrimitive]
+            ) [VarInitSingle]
+          ) [VarDecl]
+        ) [VarDeclNoMethodDecl]
+      ) [NoMethodDeclList_]
+      VarDeclNoMethodDecl(
+        VarDecl(
+          Type(
+          ) [Type]
+          VarInitSingle(
+            VarInitPrimitive(
+            ) [VarInitPrimitive]
+          ) [VarInitSingle]
+        ) [VarDecl]
+      ) [VarDeclNoMethodDecl]
+    ) [NoMethodDeclList_]
+    ConstDeclNoMethodDecl(
+      ConstDecl(
+        Type(
+        ) [Type]
+        ConstInitSingle(
+          ConstInit(
+            StdConstNumber(
+            ) [StdConstNumber]
+          ) [ConstInit]
+        ) [ConstInitSingle]
+      ) [ConstDecl]
+    ) [ConstDeclNoMethodDecl]
+  ) [NoMethodDeclList_]
+  MethodDeclMultipleList(
+    MethodDeclEmptyList(
+    ) [MethodDeclEmptyList]
+    MethodDecl(
+      ReturnTypeType(
+        Type(
+        ) [Type]
+      ) [ReturnTypeType]
+      FormalParamEmptyList(
+      ) [FormalParamEmptyList]
+      VarDeclList_(
+        VarDeclEmptyList(
+        ) [VarDeclEmptyList]
+        VarDecl(
+          Type(
+          ) [Type]
+          VarInitSingle(
+            VarInitPrimitive(
+            ) [VarInitPrimitive]
+          ) [VarInitSingle]
+        ) [VarDecl]
+      ) [VarDeclList_]
+      StatementList_(
+        StatementEmptyList(
+        ) [StatementEmptyList]
+        MatchedStatement(
+          ReturnStatement_(
+            ReturnStatementExpr(
+              ExprTermNoMinus(
+                TermNoMul(
+                  FactorDesignator(
+                    Designator(
+                      DesignatorOptionEmptyList(
+                      ) [DesignatorOptionEmptyList]
+                    ) [Designator]
+                  ) [FactorDesignator]
+                ) [TermNoMul]
+                AddopMultipleList(
+                  AddopMultipleList(
+                    AddopMultipleList(
+                      AddopEmptyList(
+                      ) [AddopEmptyList]
+                      AddopTermExprOption_(
+                        Plus(
+                        ) [Plus]
+                        TermNoMul(
+                          FactorNumber(
+                          ) [FactorNumber]
+                        ) [TermNoMul]
+                      ) [AddopTermExprOption_]
+                    ) [AddopMultipleList]
+                    AddopTermExprOption_(
+                      Plus(
+                      ) [Plus]
+                      TermNoMul(
+                        FactorNumber(
+                        ) [FactorNumber]
+                      ) [TermNoMul]
+                    ) [AddopTermExprOption_]
+                  ) [AddopMultipleList]
+                  AddopTermExprOption_(
+                    Plus(
+                    ) [Plus]
+                    TermNoMul(
+                      FactorNumber(
+                      ) [FactorNumber]
+                    ) [TermNoMul]
+                  ) [AddopTermExprOption_]
+                ) [AddopMultipleList]
+              ) [ExprTermNoMinus]
+            ) [ReturnStatementExpr]
+          ) [ReturnStatement_]
+        ) [MatchedStatement]
+      ) [StatementList_]
+    ) [MethodDecl]
+  ) [MethodDeclMultipleList]
+) [Program]
+INFO  17:51:05,277 - ===================================

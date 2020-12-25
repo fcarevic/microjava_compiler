@@ -1,0 +1,102 @@
+INFO  19:33:08,380 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  19:33:08,496 - #38 program
+INFO  19:33:08,496 - #21 p
+INFO  19:33:08,496 - #24 {
+INFO  19:33:08,496 - #21 int
+INFO  19:33:08,511 - #21 main
+INFO  19:33:08,511 - #26 (
+INFO  19:33:08,511 - #47 )
+INFO  19:33:08,511 - #24 {
+INFO  19:33:08,511 - #22 if
+INFO  19:33:08,511 - #26 (
+INFO  19:33:08,511 - #21 a
+INFO  19:33:08,511 - #51 ==
+INFO  19:33:08,511 - #6 a
+INFO  19:33:08,511 - #47 )
+INFO  19:33:08,527 - #21 a
+INFO  19:33:08,527 - #17 =
+INFO  19:33:08,527 - #28 -
+INFO  19:33:08,527 - #21 a
+INFO  19:33:08,527 - #45 ;
+INFO  19:33:08,527 - #41 }
+INFO  19:33:08,533 - #41 }
+ERROR 19:33:08,538 - ovde
+INFO  19:33:08,538 - Program(
+  ProgName(
+  ) [ProgName]
+  NoMethodDeclEmptyList(
+  ) [NoMethodDeclEmptyList]
+  MethodDeclMultipleList(
+    MethodDeclEmptyList(
+    ) [MethodDeclEmptyList]
+    MethodDecl(
+      ReturnTypeType(
+        Type(
+        ) [Type]
+      ) [ReturnTypeType]
+      FormalParamEmptyList(
+      ) [FormalParamEmptyList]
+      VarDeclEmptyList(
+      ) [VarDeclEmptyList]
+      StatementList_(
+        StatementEmptyList(
+        ) [StatementEmptyList]
+        IfStatement(
+          NoConditionOR(
+            NoConditionAND(
+              ConditionFactExprRelop(
+                ExprTermNoMinus(
+                  TermNoMul(
+                    FactorDesignator(
+                      Designator(
+                        DesignatorOptionEmptyList(
+                        ) [DesignatorOptionEmptyList]
+                      ) [Designator]
+                    ) [FactorDesignator]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [ExprTermNoMinus]
+                Same(
+                ) [Same]
+                ExprTermNoMinus(
+                  TermNoMul(
+                    FactorChar(
+                    ) [FactorChar]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [ExprTermNoMinus]
+              ) [ConditionFactExprRelop]
+            ) [NoConditionAND]
+          ) [NoConditionOR]
+          DesignatorStatementStatement(
+            DesignatorStatement_(
+              Designator(
+                DesignatorOptionEmptyList(
+                ) [DesignatorOptionEmptyList]
+              ) [Designator]
+              AssignopExpr(
+                Equal(
+                ) [Equal]
+                ExprTermMinus(
+                  TermNoMul(
+                    FactorDesignator(
+                      Designator(
+                        DesignatorOptionEmptyList(
+                        ) [DesignatorOptionEmptyList]
+                      ) [Designator]
+                    ) [FactorDesignator]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [ExprTermMinus]
+              ) [AssignopExpr]
+            ) [DesignatorStatement_]
+          ) [DesignatorStatementStatement]
+        ) [IfStatement]
+      ) [StatementList_]
+    ) [MethodDecl]
+  ) [MethodDeclMultipleList]
+) [Program]
+INFO  19:33:08,538 - ===================================

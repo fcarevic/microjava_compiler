@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 25/11/2020 1:49:9
+// 25/11/2020 19:54:47
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -8,13 +8,13 @@ package rs.ac.bg.etf.pp1.ast;
 public class ExprTermMinus extends Expr {
 
     private Term Term;
-    private AddopTermExprOption AddopTermExprOption;
+    private AddopList AddopList;
 
-    public ExprTermMinus (Term Term, AddopTermExprOption AddopTermExprOption) {
+    public ExprTermMinus (Term Term, AddopList AddopList) {
         this.Term=Term;
         if(Term!=null) Term.setParent(this);
-        this.AddopTermExprOption=AddopTermExprOption;
-        if(AddopTermExprOption!=null) AddopTermExprOption.setParent(this);
+        this.AddopList=AddopList;
+        if(AddopList!=null) AddopList.setParent(this);
     }
 
     public Term getTerm() {
@@ -25,12 +25,12 @@ public class ExprTermMinus extends Expr {
         this.Term=Term;
     }
 
-    public AddopTermExprOption getAddopTermExprOption() {
-        return AddopTermExprOption;
+    public AddopList getAddopList() {
+        return AddopList;
     }
 
-    public void setAddopTermExprOption(AddopTermExprOption AddopTermExprOption) {
-        this.AddopTermExprOption=AddopTermExprOption;
+    public void setAddopList(AddopList AddopList) {
+        this.AddopList=AddopList;
     }
 
     public void accept(Visitor visitor) {
@@ -39,18 +39,18 @@ public class ExprTermMinus extends Expr {
 
     public void childrenAccept(Visitor visitor) {
         if(Term!=null) Term.accept(visitor);
-        if(AddopTermExprOption!=null) AddopTermExprOption.accept(visitor);
+        if(AddopList!=null) AddopList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(Term!=null) Term.traverseTopDown(visitor);
-        if(AddopTermExprOption!=null) AddopTermExprOption.traverseTopDown(visitor);
+        if(AddopList!=null) AddopList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(Term!=null) Term.traverseBottomUp(visitor);
-        if(AddopTermExprOption!=null) AddopTermExprOption.traverseBottomUp(visitor);
+        if(AddopList!=null) AddopList.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -65,8 +65,8 @@ public class ExprTermMinus extends Expr {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(AddopTermExprOption!=null)
-            buffer.append(AddopTermExprOption.toString("  "+tab));
+        if(AddopList!=null)
+            buffer.append(AddopList.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

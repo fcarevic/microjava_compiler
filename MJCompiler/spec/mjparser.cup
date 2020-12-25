@@ -72,16 +72,18 @@ nonterminal DesignatorStatement, DesingatorOption, ActualParameterList, Assignop
 nonterminal Condition , ConditionTerm, ConditonFact, ConditionFactRelOp, Relop;
 nonterminal Term , Factor, TermOptions ;
 nonterminal Matched, Unmatched;
-nonterminal MinusExpr ;
-nonterminal ConstDeclList, StdConstType, Designator , AddopTermExprOption, CondFact, Addop, Mulop;
-nonterminal DesignatorOptionList, DesignatorOption;
-
-Program ::= (Program) PROG IDENT NoMethodDeclList LCURVPAREN MethodDeclList RCURVPAREN
+nonterminal MinusExpr, ProgName;
+nonterminal ConstDeclList, StdConstType, Designator , AddopTermExprOption,  Addop, Mulop;
+nonterminal DesignatorOptionList, DesignatorOption, AddopList;
+precedence left ELSE;
+start with Program;
+Program ::= (Program) PROG ProgName NoMethodDeclList LCURVPAREN MethodDeclList RCURVPAREN
 				{:
 				parser.ispisi_poruku("ovde");
 				
 				:}
 				;
+ProgName ::= (ProgName) IDENT:progName;
 NoMethodDeclList ::= (NoMethodDeclList_) NoMethodDeclList NoMethodDecl
 					|
 					(NoMethodDeclEmptyList) /*epsilon*/
@@ -112,31 +114,28 @@ StdConstType ::= (StdConstBool) BOOL
 				;
 					
 
-VarDeclList ::= (VarDeclList) VarDeclList VarDecl;
+VarDeclList ::= (VarDeclList_) VarDeclList VarDecl
+				|
+				(VarDeclEmptyList) /* epsilon*/
+				;
 				
-VarDecl ::= (VarDecl_) Type VarInitList SEMI 
-			|
-			 (ErrorVarDecl) error SEMI:l
-		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
+VarDecl ::= (VarDecl) Type:varType VarInitList SEMI 
 		 	;
 VarInitList ::= (VarInitMultipleList) VarInitList COMMA VarInit
 				|
-				(VarInitSingle) VarInit
-				|
-				  (ErrorVarInit) error COMMA:l
-		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
+				(VarInitSingle) VarInit:var
 		 	;
 				
-VarInit ::= (VarInitPrimitive) IDENT 
+VarInit ::= (VarInitPrimitive) IDENT:name
 		   |
-		   (VatInitArray) IDENT  LBRACE RBRACE 
+		   (VarInitArray) IDENT:name  LBRACE RBRACE 
 		   ;
 
 ClassDeclList ::= (ClassDeclList) ClassDeclList ClassDecl; 
 					
-ClassDecl ::= (ClassDeclsNoMethod) CLASS IDENT ExtendsClause LCURVPAREN VarDecl RCURVPAREN 
+ClassDecl ::= (ClassDeclsNoMethod) CLASS IDENT ExtendsClause LCURVPAREN VarDeclList RCURVPAREN 
 				|
-			(ClassDeclMethod) CLASS IDENT ExtendsClause LCURVPAREN VarDecl LCURVPAREN MethodDecl RCURVPAREN RCURVPAREN 
+			(ClassDeclMethod) CLASS IDENT ExtendsClause LCURVPAREN VarDeclList LCURVPAREN MethodDeclList RCURVPAREN RCURVPAREN 
 			;
 ExtendsClause ::= (ExtendsClause_) EXTENDS Type 
 				|
@@ -157,11 +156,16 @@ ReturnType ::= (ReturnTypeType) Type
 
 FormalParamList ::= (FormalParamList_) FormalParamList COMMA FormalParam
 				|
+				(FormalParamSingle) FormalParam
+				|
 				(FormalParamEmptyList) /*epsilon*/				
 				;
-FormalParam ::= (FormalParam) Type VarInit;
+FormalParam ::= (FormalParamPrimitive) Type IDENT
+				|
+				(FormalParamArray) Type IDENT LBRACE RBRACE
+				;
 
-Type ::= (Type) IDENT ;
+Type ::= (Type) IDENT:typeName ;
 
 
 StatementList ::= (StatementList_) StatementList Statement
@@ -169,19 +173,11 @@ StatementList ::= (StatementList_) StatementList Statement
 				(StatementEmptyList) /*epsilon*/
 				;
 
-Statement ::= (MatchedStatement) Matched
-			  |
-			  (UnmatchedStatement) Unmatched
-			  ;
 
-Unmatched ::= (UnmatchedIfStatement) IF Expr Statement
-				|
-			 (UnmatchedIfElseStatement) IF Expr Matched ELSE Unmatched 
-			 ;
  
-Matched   ::= (DesignatorStatementStatement) DesignatorStatement  
+Statement   ::= (DesignatorStatementStatement) DesignatorStatement  
 			|
-			(DoWhileStatement) DO Statement WHILE Statement SEMI
+			(DoWhileStatement) DO Statement WHILE LPAREN Condition RPAREN SEMI
 			|
 			(SwitchStatement) SWITCH LPAREN  Expr RPAREN LCURVPAREN CaseList RCURVPAREN 
 		    |
@@ -197,7 +193,9 @@ Matched   ::= (DesignatorStatementStatement) DesignatorStatement
 		    |
 		    (StatementStatement) LCURVPAREN StatementList RCURVPAREN
 		    |
-		    (MatchedIfStatement) IF Expr Matched ELSE Matched
+		    (IfStatement) IF LPAREN Condition RPAREN Statement 
+		    |
+		    (IfElseStatement) IF  LPAREN Condition RPAREN Statement ELSE Statement
 		    ;
 		    
 		    
@@ -236,7 +234,9 @@ DesingatorOption ::= (AssignopExpr) Assignop Expr
 
 
 
-ActualParameterList ::= (ActualParameterList_)  ActualParameterList COMMA Expr
+ActualParameterList ::= (ActualParameterMultipleList)  ActualParameterList COMMA Expr
+					|
+					(ActualParameterSingle) Expr
 					|
 					(ActualParameterEmptyList) /*epsilon*/
 					;
@@ -248,34 +248,36 @@ ConditionTerm ::= (ConditionAND) ConditionTerm AND ConditonFact
 				|
 				(NoConditionAND) ConditonFact
 				;
-ConditonFact ::= (ConditionFact) Expr ConditionFactRelOp ;
-ConditionFactRelOp ::= (ConditionFactRelOp_) Relop Expr
-					|
-					(NoConditionFactRelOp) /*epsilon*/
-					;
+ConditonFact ::= (ConditionFactExpr) Expr  
+				|
+				(ConditionFactExprRelop) Expr Relop Expr
+				;
 
 /* ****************************************** */
 		    
-Expr ::= (ExprTermMinus) MINUS  Term AddopTermExprOption
+Expr ::= (ExprTermMinus) MINUS  Term AddopList
 			|
-		(ExprTermNoMinus) Term AddopTermExprOption
-		|	
-		(ConditionTernary) CondFact QUESTION Expr COLON Expr
+		(ExprTermNoMinus) Term AddopList
 			;
-		 /* |
+		/*	
+		(ConditionTernary) Condition QUESTION Expr COLON Expr
+			;
+		  |
 		 (ConditionTernary) Condition QUESTION Expr COLON Expr
 			 
 			
 		; */
-		
-AddopTermExprOption ::= (AddopTermExprOption_) Addop Term 
-						|
-						(NoAddopTermExprOption) /*epsilon*/
-						; 	
+AddopList ::= (AddopMultipleList) AddopList AddopTermExprOption
+				|
+				(AddopEmptyList) /*epsilon*/
+				; 
+
+AddopTermExprOption ::= (AddopTermExprOption_) Addop Term ;
+						 	
 
 Term ::= (TermNoMul) Factor 
 		|
-		(TermMul) Factor Mulop Factor
+		(TermMul) Term Mulop Factor
 		 ;
 
 		    
@@ -287,7 +289,9 @@ Factor ::= (FactorDesignatorActParams) Designator LPAREN ActualParameterList RPA
 			|
 			(FactorNumber) NUMBER
 						| 
-			(FactorChar) STRING
+			(FactorString) STRING
+			|
+			(FactorChar) CHAR
 			|
 			(FactorBool) BOOL
 			|

@@ -1,0 +1,98 @@
+INFO  16:42:59,346 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  16:42:59,891 - #38 program
+INFO  16:42:59,891 - #21 MJProgram
+INFO  16:42:59,891 - #21 int
+INFO  16:42:59,913 - #21 x
+INFO  16:42:59,923 - #45 ;
+INFO  16:42:59,943 - #21 int
+INFO  16:42:59,952 - #21 y
+INFO  16:42:59,952 - #45 ;
+INFO  16:42:59,952 - #10 const
+INFO  16:42:59,952 - #21 int
+INFO  16:42:59,952 - #21 x
+INFO  16:42:59,952 - #17 =
+INFO  16:42:59,952 - #33 3
+INFO  16:42:59,952 - #45 ;
+INFO  16:42:59,964 - #24 {
+INFO  16:42:59,972 - #21 int
+INFO  16:42:59,974 - #21 k
+INFO  16:42:59,974 - #26 (
+INFO  16:42:59,974 - #47 )
+INFO  16:42:59,974 - #21 int
+INFO  16:42:59,974 - #21 y
+INFO  16:42:59,974 - #45 ;
+INFO  16:42:59,974 - #24 {
+INFO  16:42:59,974 - #41 }
+INFO  16:42:59,984 - #41 }
+ERROR 16:42:59,984 - ovde
+INFO  16:42:59,984 - Program(
+  ProgName(
+  ) [ProgName]
+  NoMethodDeclList_(
+    NoMethodDeclList_(
+      NoMethodDeclList_(
+        NoMethodDeclEmptyList(
+        ) [NoMethodDeclEmptyList]
+        VarDeclNoMethodDecl(
+          VarDecl(
+            Type(
+            ) [Type]
+            VarInitSingle(
+              VarInitPrimitive(
+              ) [VarInitPrimitive]
+            ) [VarInitSingle]
+          ) [VarDecl]
+        ) [VarDeclNoMethodDecl]
+      ) [NoMethodDeclList_]
+      VarDeclNoMethodDecl(
+        VarDecl(
+          Type(
+          ) [Type]
+          VarInitSingle(
+            VarInitPrimitive(
+            ) [VarInitPrimitive]
+          ) [VarInitSingle]
+        ) [VarDecl]
+      ) [VarDeclNoMethodDecl]
+    ) [NoMethodDeclList_]
+    ConstDeclNoMethodDecl(
+      ConstDecl(
+        Type(
+        ) [Type]
+        ConstInitSingle(
+          ConstInit(
+            StdConstNumber(
+            ) [StdConstNumber]
+          ) [ConstInit]
+        ) [ConstInitSingle]
+      ) [ConstDecl]
+    ) [ConstDeclNoMethodDecl]
+  ) [NoMethodDeclList_]
+  MethodDeclMultipleList(
+    MethodDeclEmptyList(
+    ) [MethodDeclEmptyList]
+    MethodDecl(
+      ReturnTypeType(
+        Type(
+        ) [Type]
+      ) [ReturnTypeType]
+      FormalParamEmptyList(
+      ) [FormalParamEmptyList]
+      VarDeclList_(
+        VarDeclEmptyList(
+        ) [VarDeclEmptyList]
+        VarDecl(
+          Type(
+          ) [Type]
+          VarInitSingle(
+            VarInitPrimitive(
+            ) [VarInitPrimitive]
+          ) [VarInitSingle]
+        ) [VarDecl]
+      ) [VarDeclList_]
+      StatementEmptyList(
+      ) [StatementEmptyList]
+    ) [MethodDecl]
+  ) [MethodDeclMultipleList]
+) [Program]
+INFO  16:42:59,992 - ===================================

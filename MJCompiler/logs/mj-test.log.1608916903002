@@ -1,0 +1,41 @@
+INFO  18:19:59,607 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  18:20:00,075 - #38 program
+INFO  18:20:00,075 - #21 test_303
+INFO  18:20:00,075 - #10 const
+INFO  18:20:00,096 - #21 int
+INFO  18:20:00,096 - #21 cinilac
+INFO  18:20:00,096 - #17 =
+INFO  18:20:00,096 - #33 4
+INFO  18:20:00,096 - #9 ,
+INFO  18:20:00,106 - #21 delilac
+INFO  18:20:00,106 - #17 =
+INFO  18:20:00,106 - #33 3
+INFO  18:20:00,106 - #45 ;
+INFO  18:20:00,106 - #7 class
+INFO  18:20:00,106 - #21 Predmet
+INFO  18:20:00,114 - #24 {
+INFO  18:20:00,116 - #21 int
+INFO  18:20:00,124 - #21 tezina
+INFO  18:20:00,126 - #45 ;
+INFO  18:20:00,126 - #21 char
+INFO  18:20:00,146 - #21 vrsta
+INFO  18:20:00,154 - #45 ;
+INFO  18:20:00,154 - #24 {
+INFO  18:20:00,156 - #48 void
+INFO  18:20:00,156 - #21 postaviTezinu
+INFO  18:20:00,156 - #26 (
+INFO  18:20:00,156 - #21 int
+INFO  18:20:00,156 - #21 tezina
+INFO  18:20:00,156 - #47 )
+INFO  18:20:00,156 - #24 {
+INFO  18:20:00,156 - #21 this
+INFO  18:20:00,164 - #14 .
+INFO  18:20:00,166 - #21 tezina
+INFO  18:20:00,166 - #17 =
+INFO  18:20:00,166 - #21 tezina
+INFO  18:20:00,176 - #45 ;
+INFO  18:20:00,176 - #41 }
+INFO  18:20:00,176 - #48 void
+ERROR 18:20:00,185 - 
+Sintaksna greska na liniji 14
+ERROR 18:20:00,185 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 14
