@@ -1,0 +1,12 @@
+INFO  01:46:32,679 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  01:46:33,190 - #38 program
+INFO  01:46:33,190 - #21 MJProgram
+INFO  01:46:33,190 - #24 {
+INFO  01:46:33,190 - #41 }
+INFO  01:46:33,190 - Program(
+  NoMethodDeclEmptyList(
+  ) [NoMethodDeclEmptyList]
+  MethodDeclEmptyList(
+  ) [MethodDeclEmptyList]
+) [Program]
+INFO  01:46:33,198 - ===================================

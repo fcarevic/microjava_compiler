@@ -65,7 +65,7 @@ import java_cup.runtime.Symbol;
 "="			{ return new_symbol(sym.EQUAL, yytext() );}
 "++"		{ return new_symbol(sym.PLUSPLUS, yytext() );}
 "--"		{ return new_symbol(sym.MINUSMINUS, yytext() );}
-";"			{ return new_symbol(sym.SEMICOLON, yytext() );}
+";"			{ return new_symbol(sym.SEMI, yytext() );}
 ","			{ return new_symbol(sym.COMMA, yytext() );}
 "." 		{ return new_symbol(sym.DOT, yytext());}
 "("			{ return new_symbol(sym.LPAREN , yytext());}

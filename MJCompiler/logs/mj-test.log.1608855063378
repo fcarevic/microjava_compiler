@@ -1,0 +1,7 @@
+INFO  01:08:02,616 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  01:08:02,798 - #38 program
+INFO  01:08:02,798 - #21 test_303
+INFO  01:08:02,798 - #10 const
+ERROR 01:08:02,798 - 
+Sintaksna greska na liniji 5
+ERROR 01:08:02,806 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 5

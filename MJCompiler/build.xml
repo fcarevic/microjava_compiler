@@ -8,6 +8,7 @@
 				<exclude name="util/Log4JUtils.java"/>
 				<exclude name="Yylex.java"/>
 				<exclude name="RuleVisitor.java"/>
+			
 			</fileset>
 		</delete>
 		<delete>
@@ -26,7 +27,7 @@
 		</java>
 	</target>
 
-	<target name="parserGen" depends="delete">
+	<target name="parserGen" depends="delete" >
 		<java jar="lib/cup_v10k.jar" fork="true">
 			<arg value="-destdir"/>
 			<arg value="src/rs/ac/bg/etf/pp1"/>
