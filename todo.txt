@@ -1,0 +1,2 @@
+oporavak gresaka nivo C 
+ternarni operator

@@ -74,7 +74,7 @@ nonterminal Term , Factor, TermOptions ;
 nonterminal Matched, Unmatched;
 nonterminal MinusExpr, ProgName;
 nonterminal ConstDeclList, StdConstType, Designator , AddopTermExprOption,  Addop, Mulop;
-nonterminal DesignatorOptionList, DesignatorOption, AddopList;
+nonterminal DesignatorOptionList, FormalParams, DesignatorOption, AddopList, IfErrorCorection;
 precedence left ELSE;
 start with Program;
 Program ::= (Program) PROG ProgName NoMethodDeclList LCURVPAREN MethodDeclList RCURVPAREN
@@ -119,12 +119,19 @@ VarDeclList ::= (VarDeclList_) VarDeclList VarDecl
 				(VarDeclEmptyList) /* epsilon*/
 				;
 				
-VarDecl ::= (VarDecl) Type:varType VarInitList SEMI 
+VarDecl ::= (VarDecl_) Type:varType VarInitList SEMI 
+		 	|
+		 	(VarDeclError) error SEMI:l
+		 	 {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
 		 	;
+		 	
 VarInitList ::= (VarInitMultipleList) VarInitList COMMA VarInit
 				|
 				(VarInitSingle) VarInit:var
-		 	;
+				|
+				(VarInitError) error COMMA:l
+				 {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :}
+				;
 				
 VarInit ::= (VarInitPrimitive) IDENT:name
 		   |
@@ -147,16 +154,23 @@ MethodDeclList ::= (MethodDeclMultipleList) MethodDeclList MethodDecl
 					|
 					(MethodDeclEmptyList) /*epsilon*/
 					; 
-MethodDecl ::= (MethodDecl) ReturnType IDENT LPAREN FormalParamList RPAREN VarDeclList LCURVPAREN StatementList RCURVPAREN ;
+MethodDecl ::= (MethodDecl) ReturnType IDENT LPAREN FormalParams VarDeclList LCURVPAREN StatementList RCURVPAREN ;
 
 ReturnType ::= (ReturnTypeType) Type 
 				|
 				(ReturnTypeVoid) VOID
 				;
-
+FormalParams ::= (FormalParams_)  FormalParamList RPAREN
+				|
+				(FormalParamsError) error RPAREN:l
+							 {: parser.report_error("Izvrsen oporavak do ) u liniji " + lleft, null);  :}
+				;
 FormalParamList ::= (FormalParamList_) FormalParamList COMMA FormalParam
 				|
 				(FormalParamSingle) FormalParam
+				|
+				(FormaParamError) error COMMA:l
+				 {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :}
 				|
 				(FormalParamEmptyList) /*epsilon*/				
 				;
@@ -193,14 +207,18 @@ Statement   ::= (DesignatorStatementStatement) DesignatorStatement
 		    |
 		    (StatementStatement) LCURVPAREN StatementList RCURVPAREN
 		    |
-		    (IfStatement) IF LPAREN Condition RPAREN Statement 
+		    (IfStatement) IF LPAREN IfErrorCorection  Statement 
 		    |
-		    (IfElseStatement) IF  LPAREN Condition RPAREN Statement ELSE Statement
+		    (IfElseStatement) IF  LPAREN IfErrorCorection Statement ELSE Statement
 		    ;
 		    
 		    
-		    
-		    
+IfErrorCorection ::= (IfCondition) Condition RPAREN  
+					|
+					(IfError) error RPAREN:l
+					 {: parser.report_error("Izvrsen oporavak do ) u liniji " + lleft, null);  :}
+						;
+    
 CaseList ::= (CaseList_) CaseList Case
 			 |
 			 (CaseSingle) Case 
@@ -219,9 +237,8 @@ PrintNumConst ::= (PrintNumConst_)   COMMA NUMBER
 
 DesignatorStatement ::= (DesignatorStatement_) Designator DesingatorOption SEMI
 						|
-						(ErrorDesignator) error COMMA:l
+						(ErrorDesignator) error SEMI:l
 		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
-		
 						;
 DesingatorOption ::= (AssignopExpr) Assignop Expr
 					|

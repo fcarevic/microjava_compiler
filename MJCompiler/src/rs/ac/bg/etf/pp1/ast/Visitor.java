@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 25/11/2020 19:54:48
+// 26/11/2020 1:27:38
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -32,6 +32,7 @@ public interface Visitor {
     public void visit(ReturnStatement ReturnStatement);
     public void visit(VarDeclList VarDeclList);
     public void visit(FormalParamList FormalParamList);
+    public void visit(FormalParams FormalParams);
     public void visit(Expr Expr);
     public void visit(ConditonFact ConditonFact);
     public void visit(AddopList AddopList);
@@ -41,11 +42,13 @@ public interface Visitor {
     public void visit(VarInit VarInit);
     public void visit(Statement Statement);
     public void visit(ConstInitList ConstInitList);
+    public void visit(VarDecl VarDecl);
     public void visit(DesignatorOption DesignatorOption);
     public void visit(ClassDecl ClassDecl);
     public void visit(MinusExpr MinusExpr);
     public void visit(MethodDeclList MethodDeclList);
     public void visit(ActualParameterList ActualParameterList);
+    public void visit(IfErrorCorection IfErrorCorection);
     public void visit(VarInitList VarInitList);
     public void visit(Rem Rem);
     public void visit(Div Div);
@@ -103,6 +106,8 @@ public interface Visitor {
     public void visit(Case Case);
     public void visit(CaseSingle CaseSingle);
     public void visit(CaseList_ CaseList_);
+    public void visit(IfError IfError);
+    public void visit(IfCondition IfCondition);
     public void visit(IfElseStatement IfElseStatement);
     public void visit(IfStatement IfStatement);
     public void visit(StatementStatement StatementStatement);
@@ -120,8 +125,11 @@ public interface Visitor {
     public void visit(FormalParamArray FormalParamArray);
     public void visit(FormalParamPrimitive FormalParamPrimitive);
     public void visit(FormalParamEmptyList FormalParamEmptyList);
+    public void visit(FormaParamError FormaParamError);
     public void visit(FormalParamSingle FormalParamSingle);
     public void visit(FormalParamList_ FormalParamList_);
+    public void visit(FormalParamsError FormalParamsError);
+    public void visit(FormalParams_ FormalParams_);
     public void visit(ReturnTypeVoid ReturnTypeVoid);
     public void visit(ReturnTypeType ReturnTypeType);
     public void visit(MethodDecl MethodDecl);
@@ -134,9 +142,11 @@ public interface Visitor {
     public void visit(ClassDeclList ClassDeclList);
     public void visit(VarInitArray VarInitArray);
     public void visit(VarInitPrimitive VarInitPrimitive);
+    public void visit(VarInitError VarInitError);
     public void visit(VarInitSingle VarInitSingle);
     public void visit(VarInitMultipleList VarInitMultipleList);
-    public void visit(VarDecl VarDecl);
+    public void visit(VarDeclError VarDeclError);
+    public void visit(VarDecl_ VarDecl_);
     public void visit(VarDeclEmptyList VarDeclEmptyList);
     public void visit(VarDeclList_ VarDeclList_);
     public void visit(StdConstChar StdConstChar);

@@ -109,8 +109,10 @@ nonterminal AddopTermExprOption AddopTermExprOption;
 nonterminal  Addop Addop;
 nonterminal Mulop Mulop;
 nonterminal DesignatorOptionList DesignatorOptionList;
+nonterminal FormalParams FormalParams;
 nonterminal DesignatorOption DesignatorOption;
 nonterminal AddopList AddopList;
+nonterminal IfErrorCorection IfErrorCorection;
 precedence left ELSE;
 start with Program;
 Program ::= (Program) PROG ProgName:P1 NoMethodDeclList:N2 LCURVPAREN MethodDeclList:M3 RCURVPAREN
@@ -155,12 +157,19 @@ VarDeclList ::= (VarDeclList_) VarDeclList:V1 VarDecl:V2 {: RESULT=new VarDeclLi
 				(VarDeclEmptyList) {: RESULT=new VarDeclEmptyList(); :} /* epsilon*/
 				;
 				
-VarDecl ::= (VarDecl) Type:varType VarInitList:V1 SEMI {: RESULT=new VarDecl(varType, V1); RESULT.setLine(varTypeleft); :} 
+VarDecl ::= (VarDecl_) Type:varType VarInitList:V1 SEMI {: RESULT=new VarDecl_(varType, V1); RESULT.setLine(varTypeleft); :} 
+		 	|
+		 	(VarDeclError) error SEMI:l
+		 	 {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new VarDeclError(); :}
 		 	;
+		 	
 VarInitList ::= (VarInitMultipleList) VarInitList:V1 COMMA VarInit:V2 {: RESULT=new VarInitMultipleList(V1, V2); RESULT.setLine(V1left); :}
 				|
 				(VarInitSingle) VarInit:var {: RESULT=new VarInitSingle(var); RESULT.setLine(varleft); :}
-		 	;
+				|
+				(VarInitError) error COMMA:l
+				 {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :} {: RESULT=new VarInitError(); :}
+				;
 				
 VarInit ::= (VarInitPrimitive) IDENT:name {: RESULT=new VarInitPrimitive(); :}
 		   |
@@ -183,16 +192,23 @@ MethodDeclList ::= (MethodDeclMultipleList) MethodDeclList:M1 MethodDecl:M2 {: R
 					|
 					(MethodDeclEmptyList) {: RESULT=new MethodDeclEmptyList(); :} /*epsilon*/
 					; 
-MethodDecl ::= (MethodDecl) ReturnType:R1 IDENT LPAREN FormalParamList:F2 RPAREN VarDeclList:V3 LCURVPAREN StatementList:S4 RCURVPAREN {: RESULT=new MethodDecl(R1, F2, V3, S4); RESULT.setLine(R1left); :} ;
+MethodDecl ::= (MethodDecl) ReturnType:R1 IDENT LPAREN FormalParams:F2 VarDeclList:V3 LCURVPAREN StatementList:S4 RCURVPAREN {: RESULT=new MethodDecl(R1, F2, V3, S4); RESULT.setLine(R1left); :} ;
 
 ReturnType ::= (ReturnTypeType) Type:T1 {: RESULT=new ReturnTypeType(T1); RESULT.setLine(T1left); :} 
 				|
 				(ReturnTypeVoid) VOID {: RESULT=new ReturnTypeVoid(); :}
 				;
-
+FormalParams ::= (FormalParams_)  FormalParamList:F1 RPAREN {: RESULT=new FormalParams_(F1); RESULT.setLine(F1left); :}
+				|
+				(FormalParamsError) error RPAREN:l
+							 {: parser.report_error("Izvrsen oporavak do ) u liniji " + lleft, null);  :} {: RESULT=new FormalParamsError(); :}
+				;
 FormalParamList ::= (FormalParamList_) FormalParamList:F1 COMMA FormalParam:F2 {: RESULT=new FormalParamList_(F1, F2); RESULT.setLine(F1left); :}
 				|
 				(FormalParamSingle) FormalParam:F1 {: RESULT=new FormalParamSingle(F1); RESULT.setLine(F1left); :}
+				|
+				(FormaParamError) error COMMA:l
+				 {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :} {: RESULT=new FormaParamError(); :}
 				|
 				(FormalParamEmptyList) {: RESULT=new FormalParamEmptyList(); :} /*epsilon*/				
 				;
@@ -229,14 +245,18 @@ Statement   ::= (DesignatorStatementStatement) DesignatorStatement:D1 {: RESULT=
 		    |
 		    (StatementStatement) LCURVPAREN StatementList:S1 RCURVPAREN {: RESULT=new StatementStatement(S1); RESULT.setLine(S1left); :}
 		    |
-		    (IfStatement) IF LPAREN Condition:C1 RPAREN Statement:S2 {: RESULT=new IfStatement(C1, S2); RESULT.setLine(C1left); :} 
+		    (IfStatement) IF LPAREN IfErrorCorection:I1  Statement:S2 {: RESULT=new IfStatement(I1, S2); RESULT.setLine(I1left); :} 
 		    |
-		    (IfElseStatement) IF  LPAREN Condition:C1 RPAREN Statement:S2 ELSE Statement:S3 {: RESULT=new IfElseStatement(C1, S2, S3); RESULT.setLine(C1left); :}
+		    (IfElseStatement) IF  LPAREN IfErrorCorection:I1 Statement:S2 ELSE Statement:S3 {: RESULT=new IfElseStatement(I1, S2, S3); RESULT.setLine(I1left); :}
 		    ;
 		    
 		    
-		    
-		    
+IfErrorCorection ::= (IfCondition) Condition:C1 RPAREN {: RESULT=new IfCondition(C1); RESULT.setLine(C1left); :}  
+					|
+					(IfError) error RPAREN:l
+					 {: parser.report_error("Izvrsen oporavak do ) u liniji " + lleft, null);  :} {: RESULT=new IfError(); :}
+						;
+    
 CaseList ::= (CaseList_) CaseList:C1 Case:C2 {: RESULT=new CaseList_(C1, C2); RESULT.setLine(C1left); :}
 			 |
 			 (CaseSingle) Case:C1 {: RESULT=new CaseSingle(C1); RESULT.setLine(C1left); :} 
@@ -255,9 +275,8 @@ PrintNumConst ::= (PrintNumConst_)   COMMA NUMBER {: RESULT=new PrintNumConst_()
 
 DesignatorStatement ::= (DesignatorStatement_) Designator:D1 DesingatorOption:D2 SEMI {: RESULT=new DesignatorStatement_(D1, D2); RESULT.setLine(D1left); :}
 						|
-						(ErrorDesignator) error COMMA:l
+						(ErrorDesignator) error SEMI:l
 		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new ErrorDesignator(); :}
-		
 						;
 DesingatorOption ::= (AssignopExpr) Assignop:A1 Expr:E2 {: RESULT=new AssignopExpr(A1, E2); RESULT.setLine(A1left); :}
 					|
