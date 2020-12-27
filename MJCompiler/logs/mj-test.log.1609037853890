@@ -1,0 +1,179 @@
+INFO  03:56:48,848 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  03:56:49,033 - #34 program
+INFO  03:56:49,034 - #47 test301
+INFO  03:56:49,034 - #8 const
+INFO  03:56:49,036 - #47 int
+INFO  03:56:49,036 - #47 nula
+INFO  03:56:49,036 - #15 =
+INFO  03:56:49,036 - #50 0
+INFO  03:56:49,036 - #41 ;
+INFO  03:56:49,045 - #5 class
+INFO  03:56:49,045 - #47 a
+INFO  03:56:49,045 - #21 {
+INFO  03:56:49,045 - #37 }
+INFO  03:56:49,055 - #47 int
+INFO  03:56:49,055 - #47 niz
+INFO  03:56:49,055 - #20 [
+INFO  03:56:49,055 - #36 ]
+INFO  03:56:49,055 - #41 ;
+INFO  03:56:49,055 - #47 int
+INFO  03:56:49,055 - #47 c
+INFO  03:56:49,055 - #41 ;
+INFO  03:56:49,055 - #47 a
+INFO  03:56:49,055 - #47 aa
+INFO  03:56:49,055 - #41 ;
+INFO  03:56:49,055 - #21 {
+INFO  03:56:49,055 - #47 int
+INFO  03:56:49,063 - #47 main
+INFO  03:56:49,065 - #23 (
+INFO  03:56:49,065 - #42 )
+INFO  03:56:49,065 - #21 {
+INFO  03:56:49,065 - #47 niz
+INFO  03:56:49,065 - #15 =
+INFO  03:56:49,075 - #47 aa
+INFO  03:56:49,075 - #41 ;
+INFO  03:56:49,083 - #40 return
+INFO  03:56:49,083 - #41 ;
+INFO  03:56:49,085 - #37 }
+INFO  03:56:49,085 - #37 }
+ERROR 03:56:49,085 - ovde
+INFO  03:56:49,096 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoMethodDeclList_(
+    NoMethodDeclList_(
+      NoMethodDeclList_(
+        NoMethodDeclList_(
+          NoMethodDeclList_(
+            NoMethodDeclEmptyList(
+            ) [NoMethodDeclEmptyList]
+            ConstDeclNoMethodDecl(
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+                ConstInitSingle(
+                  ConstInit(
+                   nula
+                    StdConstNumber(
+                     0
+                    ) [StdConstNumber]
+                  ) [ConstInit]
+                ) [ConstInitSingle]
+              ) [ConstDecl]
+            ) [ConstDeclNoMethodDecl]
+          ) [NoMethodDeclList_]
+          ClassDeclNoMethodDecl(
+            ClassDeclsNoMethod(
+              ClassName(
+               a
+              ) [ClassName]
+              NoExtendsClause(
+              ) [NoExtendsClause]
+              VarDeclEmptyList(
+              ) [VarDeclEmptyList]
+            ) [ClassDeclsNoMethod]
+          ) [ClassDeclNoMethodDecl]
+        ) [NoMethodDeclList_]
+        VarDeclNoMethodDecl(
+          VarDecl_(
+            Type(
+             int
+            ) [Type]
+            VarInitSingle(
+              VarInitArray(
+               niz
+              ) [VarInitArray]
+            ) [VarInitSingle]
+          ) [VarDecl_]
+        ) [VarDeclNoMethodDecl]
+      ) [NoMethodDeclList_]
+      VarDeclNoMethodDecl(
+        VarDecl_(
+          Type(
+           int
+          ) [Type]
+          VarInitSingle(
+            VarInitPrimitive(
+             c
+            ) [VarInitPrimitive]
+          ) [VarInitSingle]
+        ) [VarDecl_]
+      ) [VarDeclNoMethodDecl]
+    ) [NoMethodDeclList_]
+    VarDeclNoMethodDecl(
+      VarDecl_(
+        Type(
+         a
+        ) [Type]
+        VarInitSingle(
+          VarInitPrimitive(
+           aa
+          ) [VarInitPrimitive]
+        ) [VarInitSingle]
+      ) [VarDecl_]
+    ) [VarDeclNoMethodDecl]
+  ) [NoMethodDeclList_]
+  MethodDeclMultipleList(
+    MethodDeclEmptyList(
+    ) [MethodDeclEmptyList]
+    MethodDecl(
+      ReturnTypeType(
+        Type(
+         int
+        ) [Type]
+      ) [ReturnTypeType]
+      MethodName(
+       main
+      ) [MethodName]
+      FormalParams_(
+        FormalParamEmptyList(
+        ) [FormalParamEmptyList]
+      ) [FormalParams_]
+      VarDeclEmptyList(
+      ) [VarDeclEmptyList]
+      StatementList_(
+        StatementList_(
+          StatementEmptyList(
+          ) [StatementEmptyList]
+          DesignatorStatementStatement(
+            DesignatorStatementAssignop(
+              Designator(
+                DesignatorName(
+                 niz
+                ) [DesignatorName]
+                DesignatorOptionEmptyList(
+                ) [DesignatorOptionEmptyList]
+              ) [Designator]
+              Equal(
+              ) [Equal]
+              ExprTermNoMinus(
+                TermNoMul(
+                  FactorDesignator(
+                    Designator(
+                      DesignatorName(
+                       aa
+                      ) [DesignatorName]
+                      DesignatorOptionEmptyList(
+                      ) [DesignatorOptionEmptyList]
+                    ) [Designator]
+                  ) [FactorDesignator]
+                ) [TermNoMul]
+                AddopEmptyList(
+                ) [AddopEmptyList]
+              ) [ExprTermNoMinus]
+            ) [DesignatorStatementAssignop]
+          ) [DesignatorStatementStatement]
+        ) [StatementList_]
+        ReturnStatement_(
+          ReturnStatementNoExpr(
+          ) [ReturnStatementNoExpr]
+        ) [ReturnStatement_]
+      ) [StatementList_]
+    ) [MethodDecl]
+  ) [MethodDeclMultipleList]
+) [Program]
+INFO  03:56:49,106 - ===================================
+ERROR 03:56:49,126 - Neispravna tipizacija za dodelu vrednosti  na liniji 15
+ERROR 03:56:49,126 - Missing return statement

@@ -272,20 +272,19 @@ PrintNumConst ::= (PrintNumConst_)   COMMA NUMBER:val {: RESULT=new PrintNumCons
 					(NoPrintNumConst) {: RESULT=new NoPrintNumConst(); :} /*epsilon*/
 					; 
 
-DesignatorStatement ::= (DesignatorStatement_) Designator:D1 DesingatorOption:D2 SEMI {: RESULT=new DesignatorStatement_(D1, D2); RESULT.setLine(D1left); :}
+DesignatorStatement ::= (DesignatorStatementAssignop) Designator:D1 Assignop:A2 Expr:E3 SEMI {: RESULT=new DesignatorStatementAssignop(D1, A2, E3); RESULT.setLine(D1left); :}
 						|
-						(ErrorDesignator) error SEMI:l
+					(DesignatorStatementFuncCall) Designator:D1 LPAREN ActualParameterList:A2 RPAREN SEMI {: RESULT=new DesignatorStatementFuncCall(D1, A2); RESULT.setLine(D1left); :}
+					|
+					(DesignatorStatementInc) Designator:D1 PLUSPLUS SEMI {: RESULT=new DesignatorStatementInc(D1); RESULT.setLine(D1left); :}
+					|
+					(DesignatoStatementDec) Designator:D1 MINUSMINUS SEMI {: RESULT=new DesignatoStatementDec(D1); RESULT.setLine(D1left); :}
+					|
+					(ErrorDesignator) error SEMI:l
 		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new ErrorDesignator(); :}
 						;
-DesingatorOption ::= (AssignopExpr) Assignop:A1 Expr:E2 {: RESULT=new AssignopExpr(A1, E2); RESULT.setLine(A1left); :}
-					|
-					LPAREN ActualParameterList:A1 RPAREN {: RESULT=new DesingatorOptionDerived1(A1); RESULT.setLine(A1left); :}
-					|
-					(IncDesignator) PLUSPLUS {: RESULT=new IncDesignator(); :}
-					|
-					(DecDesignator) MINUSMINUS {: RESULT=new DecDesignator(); :}
-					;
-
+						
+					
 
 
 ActualParameterList ::= (ActualParameterMultipleList)  ActualParameterList:A1 COMMA Expr:E2 {: RESULT=new ActualParameterMultipleList(A1, E2); RESULT.setLine(A1left); :}
@@ -355,6 +354,10 @@ Factor ::= (FactorFunctionCall) Designator:D1 LPAREN ActualParameterList:A2 RPAR
 			|
 			(FactorExpr) LPAREN Expr:E1 RPAREN {: RESULT=new FactorExpr(E1); RESULT.setLine(E1left); :}
 			;
+
+
+
+
 
 
 

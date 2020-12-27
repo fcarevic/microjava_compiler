@@ -4,15 +4,16 @@ program test301
 
 	const int nula = 0;
 	
-
+	class a {} 
 	int niz[];
-	
-	
+	int c;
+	a aa ;
 {
-	void main()	
+	int main()	
 		
 	{
-	niz[nula] =1 ;
+			niz= aa ;
+			return 'c' ;
 		//print(bodovi > 10 ? '+' : '-');
 	}
 }

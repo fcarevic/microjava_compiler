@@ -1,66 +1,117 @@
-INFO  02:30:22,430 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
-INFO  02:30:22,799 - #34 program
-INFO  02:30:22,799 - #47 test301
-INFO  02:30:22,800 - #8 const
-INFO  02:30:22,805 - #47 int
-INFO  02:30:22,805 - #47 nula
-INFO  02:30:22,810 - #15 =
-INFO  02:30:22,810 - #50 0
-INFO  02:30:22,811 - #41 ;
-INFO  02:30:22,817 - #47 int
-INFO  02:30:22,822 - #47 niz
-INFO  02:30:22,822 - #20 [
-INFO  02:30:22,823 - #36 ]
-INFO  02:30:22,824 - #41 ;
-INFO  02:30:22,825 - #21 {
-INFO  02:30:22,826 - #43 void
-INFO  02:30:22,828 - #47 main
-INFO  02:30:22,831 - #23 (
-INFO  02:30:22,836 - #42 )
-INFO  02:30:22,839 - #21 {
-INFO  02:30:22,842 - #47 niz
-INFO  02:30:22,845 - #20 [
-INFO  02:30:22,848 - #47 nula
-INFO  02:30:22,849 - #36 ]
-INFO  02:30:22,881 - #15 =
-INFO  02:30:22,883 - #50 1
-INFO  02:30:22,890 - #41 ;
-INFO  02:30:22,890 - #37 }
-INFO  02:30:22,891 - #37 }
-ERROR 02:30:22,896 - ovde
-INFO  02:30:22,905 - Program(
+INFO  03:57:54,429 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  03:57:54,600 - #34 program
+INFO  03:57:54,600 - #47 test301
+INFO  03:57:54,607 - #8 const
+INFO  03:57:54,609 - #47 int
+INFO  03:57:54,609 - #47 nula
+INFO  03:57:54,609 - #15 =
+INFO  03:57:54,609 - #50 0
+INFO  03:57:54,609 - #41 ;
+INFO  03:57:54,609 - #5 class
+INFO  03:57:54,609 - #47 a
+INFO  03:57:54,609 - #21 {
+INFO  03:57:54,624 - #37 }
+INFO  03:57:54,624 - #47 int
+INFO  03:57:54,624 - #47 niz
+INFO  03:57:54,624 - #20 [
+INFO  03:57:54,624 - #36 ]
+INFO  03:57:54,624 - #41 ;
+INFO  03:57:54,624 - #47 int
+INFO  03:57:54,624 - #47 c
+INFO  03:57:54,624 - #41 ;
+INFO  03:57:54,624 - #47 a
+INFO  03:57:54,624 - #47 aa
+INFO  03:57:54,624 - #41 ;
+INFO  03:57:54,624 - #21 {
+INFO  03:57:54,624 - #47 int
+INFO  03:57:54,624 - #47 main
+INFO  03:57:54,624 - #23 (
+INFO  03:57:54,624 - #42 )
+INFO  03:57:54,640 - #21 {
+INFO  03:57:54,640 - #47 niz
+INFO  03:57:54,640 - #15 =
+INFO  03:57:54,640 - #47 aa
+INFO  03:57:54,653 - #41 ;
+INFO  03:57:54,653 - #40 return
+INFO  03:57:54,653 - #51 c
+INFO  03:57:54,653 - #41 ;
+INFO  03:57:54,653 - #37 }
+INFO  03:57:54,653 - #37 }
+ERROR 03:57:54,653 - ovde
+INFO  03:57:54,685 - Program(
   ProgName(
    test301
   ) [ProgName]
   NoMethodDeclList_(
     NoMethodDeclList_(
-      NoMethodDeclEmptyList(
-      ) [NoMethodDeclEmptyList]
-      ConstDeclNoMethodDecl(
-        ConstDecl(
+      NoMethodDeclList_(
+        NoMethodDeclList_(
+          NoMethodDeclList_(
+            NoMethodDeclEmptyList(
+            ) [NoMethodDeclEmptyList]
+            ConstDeclNoMethodDecl(
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+                ConstInitSingle(
+                  ConstInit(
+                   nula
+                    StdConstNumber(
+                     0
+                    ) [StdConstNumber]
+                  ) [ConstInit]
+                ) [ConstInitSingle]
+              ) [ConstDecl]
+            ) [ConstDeclNoMethodDecl]
+          ) [NoMethodDeclList_]
+          ClassDeclNoMethodDecl(
+            ClassDeclsNoMethod(
+              ClassName(
+               a
+              ) [ClassName]
+              NoExtendsClause(
+              ) [NoExtendsClause]
+              VarDeclEmptyList(
+              ) [VarDeclEmptyList]
+            ) [ClassDeclsNoMethod]
+          ) [ClassDeclNoMethodDecl]
+        ) [NoMethodDeclList_]
+        VarDeclNoMethodDecl(
+          VarDecl_(
+            Type(
+             int
+            ) [Type]
+            VarInitSingle(
+              VarInitArray(
+               niz
+              ) [VarInitArray]
+            ) [VarInitSingle]
+          ) [VarDecl_]
+        ) [VarDeclNoMethodDecl]
+      ) [NoMethodDeclList_]
+      VarDeclNoMethodDecl(
+        VarDecl_(
           Type(
            int
           ) [Type]
-          ConstInitSingle(
-            ConstInit(
-             nula
-              StdConstNumber(
-               0
-              ) [StdConstNumber]
-            ) [ConstInit]
-          ) [ConstInitSingle]
-        ) [ConstDecl]
-      ) [ConstDeclNoMethodDecl]
+          VarInitSingle(
+            VarInitPrimitive(
+             c
+            ) [VarInitPrimitive]
+          ) [VarInitSingle]
+        ) [VarDecl_]
+      ) [VarDeclNoMethodDecl]
     ) [NoMethodDeclList_]
     VarDeclNoMethodDecl(
       VarDecl_(
         Type(
-         int
+         a
         ) [Type]
         VarInitSingle(
-          VarInitArray(
-           niz
-          ) [VarInitArray]
+          VarInitPrimitive(
+           aa
+          ) [VarInitPrimitive]
         ) [VarInitSingle]
       ) [VarDecl_]
     ) [VarDeclNoMethodDecl]
@@ -69,8 +120,11 @@ INFO  02:30:22,905 - Program(
     MethodDeclEmptyList(
     ) [MethodDeclEmptyList]
     MethodDecl(
-      ReturnTypeVoid(
-      ) [ReturnTypeVoid]
+      ReturnTypeType(
+        Type(
+         int
+        ) [Type]
+      ) [ReturnTypeType]
       MethodName(
        main
       ) [MethodName]
@@ -81,53 +135,55 @@ INFO  02:30:22,905 - Program(
       VarDeclEmptyList(
       ) [VarDeclEmptyList]
       StatementList_(
-        StatementEmptyList(
-        ) [StatementEmptyList]
-        DesignatorStatementStatement(
-          DesignatorStatement_(
-            Designator(
-              DesignatorName(
-               niz
-              ) [DesignatorName]
-              DesignatorOptionList_(
-                DesignatorIndexingOption(
-                  ExprTermNoMinus(
-                    TermNoMul(
-                      FactorDesignator(
-                        Designator(
-                          DesignatorName(
-                           nula
-                          ) [DesignatorName]
-                          DesignatorOptionEmptyList(
-                          ) [DesignatorOptionEmptyList]
-                        ) [Designator]
-                      ) [FactorDesignator]
-                    ) [TermNoMul]
-                    AddopEmptyList(
-                    ) [AddopEmptyList]
-                  ) [ExprTermNoMinus]
-                ) [DesignatorIndexingOption]
+        StatementList_(
+          StatementEmptyList(
+          ) [StatementEmptyList]
+          DesignatorStatementStatement(
+            DesignatorStatementAssignop(
+              Designator(
+                DesignatorName(
+                 niz
+                ) [DesignatorName]
                 DesignatorOptionEmptyList(
                 ) [DesignatorOptionEmptyList]
-              ) [DesignatorOptionList_]
-            ) [Designator]
-            AssignopExpr(
+              ) [Designator]
               Equal(
               ) [Equal]
               ExprTermNoMinus(
                 TermNoMul(
-                  FactorNumber(
-                   1
-                  ) [FactorNumber]
+                  FactorDesignator(
+                    Designator(
+                      DesignatorName(
+                       aa
+                      ) [DesignatorName]
+                      DesignatorOptionEmptyList(
+                      ) [DesignatorOptionEmptyList]
+                    ) [Designator]
+                  ) [FactorDesignator]
                 ) [TermNoMul]
                 AddopEmptyList(
                 ) [AddopEmptyList]
               ) [ExprTermNoMinus]
-            ) [AssignopExpr]
-          ) [DesignatorStatement_]
-        ) [DesignatorStatementStatement]
+            ) [DesignatorStatementAssignop]
+          ) [DesignatorStatementStatement]
+        ) [StatementList_]
+        ReturnStatement_(
+          ReturnStatementExpr(
+            ExprTermNoMinus(
+              TermNoMul(
+                FactorChar(
+                 c
+                ) [FactorChar]
+              ) [TermNoMul]
+              AddopEmptyList(
+              ) [AddopEmptyList]
+            ) [ExprTermNoMinus]
+          ) [ReturnStatementExpr]
+        ) [ReturnStatement_]
       ) [StatementList_]
     ) [MethodDecl]
   ) [MethodDeclMultipleList]
 ) [Program]
-INFO  02:30:22,906 - ===================================
+INFO  03:57:54,685 - ===================================
+ERROR 03:57:54,716 - Neispravna tipizacija za dodelu vrednosti  na liniji 15
+ERROR 03:57:54,716 -  Tip return expessiona nije moguce dodeliti tipu povratne vrednosi  na liniji 16

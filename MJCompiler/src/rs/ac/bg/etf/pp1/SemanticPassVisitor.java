@@ -1,7 +1,9 @@
 package rs.ac.bg.etf.pp1;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import org.apache.log4j.Logger;
 
@@ -353,7 +355,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(ReturnStatementNoExpr returnStatementNoExpr) {
 			if(returnType!=Tab.noType) {
-				report_error("Missing return statement", returnStatementNoExpr);
+				report_error("Missing return expression statement", returnStatementNoExpr);
 				
 			}
 	}
@@ -378,13 +380,13 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 				funcCall.struct = Tab.noType;
 				return;
 		}
-		funcCall.struct = currentDesignatorType;
+		funcCall.struct = getFinalTypeForDesignator(funcCall.getDesignator());
 		
 	}
 	
 	@Override
 	public void visit(FactorDesignator factorDesignator) {
-		factorDesignator.struct = currentDesignatorType;
+		factorDesignator.struct = getFinalTypeForDesignator(factorDesignator.getDesignator());
 	}
 	
 	@Override
@@ -490,31 +492,80 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	}
 	
-	/** 	DESIGNATOR CHAINING CHECK		**/
+	/***  DESIGNATOR STATEMENT CHECKS****/
 	
-	private Obj currentDesignator= null;
-	private Struct currentDesignatorType = null;
+	@Override
+	public void visit(DesignatoStatementDec designatoStatementDec) {
+		if(getFinalTypeForDesignator(designatoStatementDec.getDesignator()) != Tab.intType) {
+			report_error("Nije tip int za dec ", designatoStatementDec);
+		}
+	}
+
+	@Override
+	public void visit(DesignatorStatementInc designatorStatementInc) {
+				if(getFinalTypeForDesignator(designatorStatementInc.getDesignator()) != Tab.intType) {
+					report_error("Nije tip int za inc ", designatorStatementInc);
+					
+				}
+	}
+	
+	@Override
+	public void visit(DesignatorStatementAssignop statement) {
+		if(!statement.getExpr().struct.assignableTo(getFinalTypeForDesignator(statement.getDesignator()))) {
+			report_error("Neispravna tipizacija za dodelu vrednosti ", statement);
+			
+		}
+	
+	}
+	
+	
+	/** 	DESIGNATOR CHAINING CHECK		**/
+	private Map<String, Struct> designatorTypeChainingFinals = new HashMap<String, Struct>();
+	Obj currentDesignator= null;
+	Struct currentDesignatorType = null;
+	
+	
+	private Struct getFinalTypeForDesignator(Designator designator) {
+	    visit(designator);
+	    return currentDesignatorType;
+	}
+	
 	
 	@Override
 	public void visit(Designator designator) {
-		designator.obj=currentDesignator;
+		
+		currentDesignator = Tab.find(designator.getDesignatorName().getName());
+		if(currentDesignator == Tab.noObj) return;
+		currentDesignatorType = currentDesignator.getType();
+		DesignatorOptionList optList = designator.getDesignatorOptionList();
+		do {
+			 
+			if( optList instanceof DesignatorOptionEmptyList) 
+				break;
+			else 
+			{
+				DesignatorOptionList_ list = (DesignatorOptionList_) optList;
+				DesignatorOption option = list.getDesignatorOption();
+					if(option instanceof DesignatorDotIdentOption) {
+						checkDesignatorDotIdentOption((DesignatorDotIdentOption) option);
+					} else 
+						if (option instanceof DesignatorIndexingOption)
+							checkDesignatorIndexingOption((DesignatorIndexingOption)option);
+				
+				optList = list.getDesignatorOptionList();
+			}
+			
+		}while(currentDesignatorType!=Tab.noType);
+	  designator.obj=currentDesignator;	
 		
 	}
 	
 	@Override
 	public void visit(DesignatorName designatorName) {
-		System.err.println("DESIGNATOR NAME");
-		
 		Obj obj  = Tab.find(designatorName.getName());
 		if(obj==Tab.noObj) {
 			report_error("Nije definisano ime " + designatorName.getName() + " ", designatorName);
-			currentDesignator = Tab.noObj;
-			currentDesignatorType = Tab.noType;
-			return;
-		}
-		
-		currentDesignator=obj;
-		currentDesignatorType = currentDesignator.getType();
+		}		
 	}
 	
 
@@ -522,34 +573,10 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorDotIdentOption nextDesignator) {
 		
-			if(currentDesignatorType==Tab.noType) return;
+		if(Tab.find(nextDesignator.getName())==Tab.noObj) {
 			
-			if(currentDesignatorType.getKind() != Struct.Class) {
-				report_error("Ime " +  currentDesignator.getName() + " nije objekat klase", nextDesignator);
-				currentDesignator=Tab.noObj;
-				currentDesignatorType = Tab.noType;
-				return;
-				
-			}
-			Obj nextDes  = Tab.find(nextDesignator.getName());
-			
-			for(Obj obj : currentDesignatorType.getMembers()) {
-				if(obj.getName().equals(nextDes.getName())) {
-					if(nextDes.getKind() != Obj.Fld) {
-						report_error("Ime " +  nextDesignator.getName() + " nije polje klase ", nextDesignator);
-						currentDesignator=Tab.noObj;
-						currentDesignatorType = Tab.noType;
-						return;
-					} else {
-						currentDesignator= nextDes;
-						currentDesignatorType = nextDes.getType();
-					}
-				}
-			}
-			report_error("Ime " + nextDesignator.getName() +" nije polje objekta " + currentDesignator.getName()+"  ", nextDesignator);
-			currentDesignator = Tab.noObj;
-			currentDesignatorType = Tab.noType;
-			
+			report_error("Ime " + nextDesignator.getName() + "  nije definisano  ", nextDesignator);
+		}
 	}
 	
 	/** *
@@ -557,8 +584,50 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	 * 
 	 * */
 	@Override
-	public void visit(DesignatorIndexingOption DesignatorIndexingOption) {
-		System.err.println("DESIGNATOR INDEXING");	
+	public void visit(DesignatorIndexingOption designatorIndexingOption) {
+		
+		if(designatorIndexingOption.getExpr().struct != Tab.intType) {
+			report_error("Indeks nije nije tipa int ", designatorIndexingOption);
+			
+			
+		}
+	}
+	
+	
+	private void checkDesignatorDotIdentOption(DesignatorDotIdentOption nextDesignator) {
+		
+		if(currentDesignatorType==Tab.noType) return;
+		
+		if(currentDesignatorType.getKind() != Struct.Class) {
+			report_error("Ime " +  currentDesignator.getName() + " nije objekat klase", nextDesignator);
+			currentDesignator=Tab.noObj;
+			currentDesignatorType = Tab.noType;
+			return;
+			
+		}
+		Obj nextDes  = Tab.find(nextDesignator.getName());
+		
+		for(Obj obj : currentDesignatorType.getMembers()) {
+			if(obj.getName().equals(nextDes.getName())) {
+				if(nextDes.getKind() != Obj.Fld) {
+					report_error("Ime " +  nextDesignator.getName() + " nije polje klase ", nextDesignator);
+					currentDesignator=Tab.noObj;
+					currentDesignatorType = Tab.noType;
+					return;
+				} else {
+					currentDesignator= nextDes;
+					currentDesignatorType = nextDes.getType();
+				}
+			}
+		}
+		report_error("Ime " + nextDesignator.getName() +" nije polje objekta " + currentDesignator.getName()+"  ", nextDesignator);
+		currentDesignator = Tab.noObj;
+		currentDesignatorType = Tab.noType;
+		
+	}
+	
+	private void checkDesignatorIndexingOption(DesignatorIndexingOption DesignatorIndexingOption) {
+		
 		
 		if(currentDesignator == Tab.noObj) return;
 			if(currentDesignatorType == Tab.noType) return;
@@ -571,8 +640,6 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			currentDesignatorType  = currentDesignatorType.getElemType() ;
 			
 	}
-	
-	
 	
 
 }

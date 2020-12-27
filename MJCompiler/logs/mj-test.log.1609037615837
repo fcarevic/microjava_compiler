@@ -1,0 +1,43 @@
+INFO  03:53:08,435 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  03:53:08,732 - #34 program
+INFO  03:53:08,732 - #47 test301
+INFO  03:53:08,732 - #8 const
+INFO  03:53:08,742 - #47 int
+INFO  03:53:08,742 - #47 nula
+INFO  03:53:08,752 - #15 =
+INFO  03:53:08,752 - #50 0
+INFO  03:53:08,752 - #41 ;
+INFO  03:53:08,752 - #5 class
+INFO  03:53:08,762 - #47 a
+INFO  03:53:08,762 - #21 {
+INFO  03:53:08,772 - #37 }
+INFO  03:53:08,772 - #41 ;
+ERROR 03:53:08,772 - 
+Sintaksna greska na liniji 7
+INFO  03:53:08,780 - #47 int
+INFO  03:53:08,780 - #47 niz
+INFO  03:53:08,780 - #20 [
+ERROR 03:53:08,782 - Izvrsen oporavak do ; u liniji 7
+INFO  03:53:08,782 - #36 ]
+INFO  03:53:08,782 - #41 ;
+INFO  03:53:08,790 - #47 int
+INFO  03:53:08,792 - #47 c
+INFO  03:53:08,792 - #41 ;
+INFO  03:53:08,792 - #47 a
+INFO  03:53:08,792 - #47 aa
+INFO  03:53:08,792 - #41 ;
+INFO  03:53:08,802 - #21 {
+INFO  03:53:08,802 - #43 void
+INFO  03:53:08,810 - #47 main
+INFO  03:53:08,813 - #23 (
+INFO  03:53:08,813 - #42 )
+INFO  03:53:08,821 - #21 {
+INFO  03:53:08,821 - #47 niz
+INFO  03:53:08,823 - #15 =
+INFO  03:53:08,833 - #47 aa
+INFO  03:53:08,833 - #41 ;
+INFO  03:53:08,833 - #37 }
+INFO  03:53:08,841 - #37 }
+ERROR 03:53:08,843 - 
+Sintaksna greska na liniji 21
+ERROR 03:53:08,851 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 21

@@ -248,20 +248,19 @@ PrintNumConst ::= (PrintNumConst_)   COMMA NUMBER:val
 					(NoPrintNumConst) /*epsilon*/
 					; 
 
-DesignatorStatement ::= (DesignatorStatement_) Designator DesingatorOption SEMI
+DesignatorStatement ::= (DesignatorStatementAssignop) Designator Assignop Expr SEMI
 						|
-						(ErrorDesignator) error SEMI:l
+					(DesignatorStatementFuncCall) Designator LPAREN ActualParameterList RPAREN SEMI
+					|
+					(DesignatorStatementInc) Designator PLUSPLUS SEMI
+					|
+					(DesignatoStatementDec) Designator MINUSMINUS SEMI
+					|
+					(ErrorDesignator) error SEMI:l
 		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
 						;
-DesingatorOption ::= (AssignopExpr) Assignop Expr
-					|
-					LPAREN ActualParameterList RPAREN
-					|
-					(IncDesignator) PLUSPLUS
-					|
-					(DecDesignator) MINUSMINUS
-					;
-
+						
+					
 
 
 ActualParameterList ::= (ActualParameterMultipleList)  ActualParameterList COMMA Expr
