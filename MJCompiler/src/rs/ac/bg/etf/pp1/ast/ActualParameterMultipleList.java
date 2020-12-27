@@ -1,28 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 27/11/2020 3:23:2
+// 27/11/2020 23:35:43
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ActualParameterMultipleList extends ActualParameterList {
+public class ActualParameterMultipleList extends ActualParams {
 
-    private ActualParameterList ActualParameterList;
     private Expr Expr;
+    private ActualParams ActualParams;
 
-    public ActualParameterMultipleList (ActualParameterList ActualParameterList, Expr Expr) {
-        this.ActualParameterList=ActualParameterList;
-        if(ActualParameterList!=null) ActualParameterList.setParent(this);
+    public ActualParameterMultipleList (Expr Expr, ActualParams ActualParams) {
         this.Expr=Expr;
         if(Expr!=null) Expr.setParent(this);
-    }
-
-    public ActualParameterList getActualParameterList() {
-        return ActualParameterList;
-    }
-
-    public void setActualParameterList(ActualParameterList ActualParameterList) {
-        this.ActualParameterList=ActualParameterList;
+        this.ActualParams=ActualParams;
+        if(ActualParams!=null) ActualParams.setParent(this);
     }
 
     public Expr getExpr() {
@@ -33,24 +25,32 @@ public class ActualParameterMultipleList extends ActualParameterList {
         this.Expr=Expr;
     }
 
+    public ActualParams getActualParams() {
+        return ActualParams;
+    }
+
+    public void setActualParams(ActualParams ActualParams) {
+        this.ActualParams=ActualParams;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(ActualParameterList!=null) ActualParameterList.accept(visitor);
         if(Expr!=null) Expr.accept(visitor);
+        if(ActualParams!=null) ActualParams.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(ActualParameterList!=null) ActualParameterList.traverseTopDown(visitor);
         if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(ActualParams!=null) ActualParams.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(ActualParameterList!=null) ActualParameterList.traverseBottomUp(visitor);
         if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(ActualParams!=null) ActualParams.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -59,14 +59,14 @@ public class ActualParameterMultipleList extends ActualParameterList {
         buffer.append(tab);
         buffer.append("ActualParameterMultipleList(\n");
 
-        if(ActualParameterList!=null)
-            buffer.append(ActualParameterList.toString("  "+tab));
+        if(Expr!=null)
+            buffer.append(Expr.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Expr!=null)
-            buffer.append(Expr.toString("  "+tab));
+        if(ActualParams!=null)
+            buffer.append(ActualParams.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

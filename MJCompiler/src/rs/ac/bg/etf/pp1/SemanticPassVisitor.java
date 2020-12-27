@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import org.apache.log4j.Logger;
 
@@ -268,12 +269,14 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	private Struct returnType;
 	private boolean currentMethod=false;
+	private int numberOfFormalParams=0;
 	
 	@Override
 	public void visit(ReturnTypeType returnType) {
 		returnType.struct = returnType.getType().struct;
 		this.returnType= returnType.struct;
 		currentMethod=true;
+		
 		
 	}
 	
@@ -286,6 +289,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	@Override
 	public void visit(FormalParamPrimitive formalParam) {
+		numberOfFormalParams++;
 		Obj o = Tab.currentScope.findSymbol(formalParam.getParamName());
 		if(o!= null) {
 			report_error("Formalni parametar vec postoji + " + formalParam.getParamName() , formalParam);
@@ -296,6 +300,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	@Override
 	public void visit(FormalParamArray formalParam) {
+		numberOfFormalParams++;
 		Obj o = Tab.currentScope.findSymbol(formalParam.getParamName());
 		if(o!= null) {
 			report_error("Formalni parametar vec postoji + " + formalParam.getParamName() , formalParam);
@@ -308,6 +313,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	@Override
 	public void visit(MethodName methodName) {
+		numberOfFormalParams=0;
 		Obj obj = Tab.currentScope.findSymbol(methodName.getMethodName());
 		if(obj != null) {
 			report_error("Vec postoji tip sa deklarisanim imenom kao metoda : "+ methodName.getMethodName() + " ", methodName);
@@ -330,6 +336,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		currentMethod=false;
 		Obj method = methodDecl.getMethodName().obj;
 		if(method!= null) {
+			method.setLevel(numberOfFormalParams);
 			Tab.chainLocalSymbols(method);
 		}
 		Tab.closeScope();
@@ -380,6 +387,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 				funcCall.struct = Tab.noType;
 				return;
 		}
+		checkActualParameterFuncCall(funcCall.getDesignator().obj, funcCall.getActualParameterList(), funcCall);
 		funcCall.struct = getFinalTypeForDesignator(funcCall.getDesignator());
 		
 	}
@@ -429,20 +437,18 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		termNoMul.struct = termNoMul.getFactor().struct;
 	}
 	
-	private boolean wasAddopEmptyList = false;
 	
 	@Override
 	public void visit(AddopEmptyList addopEmptyList) {
 		addopEmptyList.struct = Tab.noType;
-		wasAddopEmptyList=true;
+		
 	}
 	
 	@Override
 	public void visit(AddopMultipleList addopMultipleList) {
 		// TODO Auto-generated method stub
-		if(wasAddopEmptyList ) {
+		if(addopMultipleList.getAddopList() instanceof AddopEmptyList ) {
 			addopMultipleList.struct = addopMultipleList.getTerm().struct;
-			wasAddopEmptyList=false;
 			return;
 		} else {
 			if(addopMultipleList.getTerm().struct == Tab.intType && addopMultipleList.getAddopList().struct == Tab.intType)
@@ -455,8 +461,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	@Override
 	public void visit(ExprTermMinus exprTermMinus) {
-		if(wasAddopEmptyList) {
-			wasAddopEmptyList=false;
+		if(exprTermMinus.getAddopList()instanceof AddopEmptyList) {
 			exprTermMinus.struct = ( exprTermMinus.getTerm().struct == Tab.intType? Tab.intType : Tab.noType);
 		}
 		else {
@@ -475,8 +480,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	@Override
 	public void visit(ExprTermNoMinus exprTermNoMinus) {
-		if(wasAddopEmptyList) {
-			wasAddopEmptyList=false;
+		if(exprTermNoMinus.getAddopList() instanceof AddopEmptyList) {
 			exprTermNoMinus.struct =  exprTermNoMinus.getTerm().struct;
 		}
 		else {
@@ -511,11 +515,85 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	@Override
 	public void visit(DesignatorStatementAssignop statement) {
+		
 		if(!statement.getExpr().struct.assignableTo(getFinalTypeForDesignator(statement.getDesignator()))) {
 			report_error("Neispravna tipizacija za dodelu vrednosti ", statement);
 			
 		}
 	
+	}
+	
+	@Override
+	public void visit(DesignatorStatementFuncCall designatorFuncCall) {
+		
+		String name = getLastDesignatorNameInChaining(designatorFuncCall.getDesignator());
+		Obj mth = Tab.find(name);
+		if(mth.getKind() != Obj.Meth) {
+				report_error("Ime " + name + " nije funkcija ", designatorFuncCall);
+				return;
+		}
+		
+		checkActualParameterFuncCall(mth, designatorFuncCall.getActualParameterList(), designatorFuncCall);
+	}
+	
+	private boolean checkActualParameterFuncCall(Obj mth, ActualParameterList paramList, SyntaxNode info) {
+		List<Obj> localSymbols = mth.getLocalSymbols().stream().collect(Collectors.toList());
+		
+		boolean classMethod = false;
+		
+		if((paramList instanceof ActualParameterEmptyList)) {
+			if(mth.getLevel()>1 || mth.getLevel()==1 && ! localSymbols.get(0).getName().equals("this")) {
+			report_error("Previse parametara specificirano za fju " + mth.getName() + " ", info);
+			return false;
+			}
+			return true;
+			
+		}	
+		
+		
+		
+		ActualParams param = ((ActualParameterList_)paramList).getActualParams();
+		
+		for(int i= 0 ; i<mth.getLevel(); i++) {
+		
+					if(localSymbols.get(i).getName().equals("this") && i==0)
+					{
+						classMethod = true;
+						continue;
+					}
+					 if (param instanceof ActualParameterSingle) {
+						ActualParameterSingle singleParam = (ActualParameterSingle) param;
+						if(!singleParam.getExpr().struct.assignableTo(localSymbols.get(i).getType())) {
+							report_error(" Tip parametra " + (classMethod? i: (i+1)) + "( " + localSymbols.get(i).getName()+ ") nije odgovarajuci" , info);
+							return false;			
+						}
+						
+						if(i!= mth.getLevel()-1) {
+							
+							report_error(" Premalo parametara ,  fja  " + mth.getName()+ " zahteva "  + (classMethod? mth.getLevel()-1 : mth.getLevel()) + " parametara ", info);
+							return false;			
+						}
+						return true;
+					}
+					
+					else if(param instanceof ActualParameterMultipleList) {
+						ActualParameterMultipleList multList = (ActualParameterMultipleList) param;
+						if(!multList.getExpr().struct.assignableTo(localSymbols.get(i).getType())) {
+							report_error(" Tip parametra " + (classMethod? i: (i+1)) + "( " + localSymbols.get(i).getName()+ ") nije odgovarajuci" , info);
+						return false;			
+					}
+							param = multList.getActualParams();
+					}
+					else {
+						report_error(" GRESKA " , info);
+						return false;	
+					}
+				}
+		
+	
+		report_error("Previse parametara za fju " + mth.getName(), info);
+		return false;
+		
 	}
 	
 	
@@ -640,6 +718,23 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			currentDesignatorType  = currentDesignatorType.getElemType() ;
 			
 	}
+	private String getLastDesignatorNameInChaining(Designator designator) {
+		String name = "";
+		
+		name = designator.getDesignatorName().getName();
+		
+		DesignatorOptionList optList = designator.getDesignatorOptionList();
+		
+		while(! (optList instanceof DesignatorOptionEmptyList)) {
+			DesignatorOption option = ((DesignatorOptionList_)optList).getDesignatorOption();
+			if(option instanceof DesignatorDotIdentOption)
+				name = ((DesignatorDotIdentOption)option).getName();
+		}
+		return name;
+	}
 	
-
+public boolean isSuccess() {
+	return !errorDetected;
+}
+	
 }

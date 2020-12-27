@@ -84,7 +84,8 @@ nonterminal PrintNumConst PrintNumConst;
 nonterminal PrintExpr PrintExpr;
 nonterminal DesignatorStatement DesignatorStatement;
 nonterminal DesingatorOption DesingatorOption;
-nonterminal ActualParameterList ActualParameterList ;
+nonterminal ActualParameterList ActualParameterList;
+nonterminal ActualParams ActualParams ;
 nonterminal Condition Condition ;
 nonterminal ConditionTerm ConditionTerm;
 nonterminal ConditonFact ConditonFact;
@@ -287,12 +288,15 @@ DesignatorStatement ::= (DesignatorStatementAssignop) Designator:D1 Assignop:A2 
 					
 
 
-ActualParameterList ::= (ActualParameterMultipleList)  ActualParameterList:A1 COMMA Expr:E2 {: RESULT=new ActualParameterMultipleList(A1, E2); RESULT.setLine(A1left); :}
-					|
-					(ActualParameterSingle) Expr:E1 {: RESULT=new ActualParameterSingle(E1); RESULT.setLine(E1left); :}
-					|
+ActualParameterList ::= (ActualParameterList_) ActualParams:A1 {: RESULT=new ActualParameterList_(A1); RESULT.setLine(A1left); :}
+						|
 					(ActualParameterEmptyList) {: RESULT=new ActualParameterEmptyList(); :} /*epsilon*/
 					;
+ActualParams ::= (ActualParameterMultipleList)  Expr:E1 COMMA ActualParams:A2 {: RESULT=new ActualParameterMultipleList(E1, A2); RESULT.setLine(E1left); :}  
+					|
+					(ActualParameterSingle) Expr:E1 {: RESULT=new ActualParameterSingle(E1); RESULT.setLine(E1left); :}
+					;
+
 Condition ::= (ConditionOR)Condition:C1 OR ConditionTerm:C2 {: RESULT=new ConditionOR(C1, C2); RESULT.setLine(C1left); :}
 			|
 			(NoConditionOR) ConditionTerm:C1 {: RESULT=new NoConditionOR(C1); RESULT.setLine(C1left); :}

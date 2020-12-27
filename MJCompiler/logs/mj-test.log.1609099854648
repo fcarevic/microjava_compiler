@@ -1,0 +1,383 @@
+INFO  21:04:29,721 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  21:04:30,204 - #34 program
+INFO  21:04:30,205 - #47 test301
+INFO  21:04:30,206 - #8 const
+INFO  21:04:30,210 - #47 int
+INFO  21:04:30,211 - #47 nula
+INFO  21:04:30,214 - #15 =
+INFO  21:04:30,215 - #50 0
+INFO  21:04:30,215 - #41 ;
+INFO  21:04:30,222 - #8 const
+INFO  21:04:30,226 - #47 int
+INFO  21:04:30,226 - #47 jedan
+INFO  21:04:30,227 - #15 =
+INFO  21:04:30,228 - #50 1
+INFO  21:04:30,228 - #41 ;
+INFO  21:04:30,228 - #8 const
+INFO  21:04:30,228 - #47 int
+INFO  21:04:30,229 - #47 pet
+INFO  21:04:30,230 - #15 =
+INFO  21:04:30,230 - #50 5
+INFO  21:04:30,230 - #41 ;
+INFO  21:04:30,230 - #47 int
+INFO  21:04:30,235 - #47 niz
+INFO  21:04:30,236 - #20 [
+INFO  21:04:30,236 - #36 ]
+INFO  21:04:30,237 - #41 ;
+INFO  21:04:30,237 - #47 char
+INFO  21:04:30,238 - #47 nizch
+INFO  21:04:30,238 - #20 [
+INFO  21:04:30,238 - #36 ]
+INFO  21:04:30,238 - #41 ;
+INFO  21:04:30,239 - #21 {
+INFO  21:04:30,239 - #43 void
+INFO  21:04:30,241 - #47 main
+INFO  21:04:30,243 - #23 (
+INFO  21:04:30,262 - #42 )
+INFO  21:04:30,264 - #47 int
+INFO  21:04:30,267 - #47 bodovi
+INFO  21:04:30,267 - #41 ;
+INFO  21:04:30,267 - #47 bool
+INFO  21:04:30,268 - #47 bt
+INFO  21:04:30,269 - #41 ;
+INFO  21:04:30,270 - #21 {
+INFO  21:04:30,272 - #47 bodovi
+INFO  21:04:30,274 - #15 =
+INFO  21:04:30,282 - #47 bodovi
+INFO  21:04:30,286 - #31 +
+INFO  21:04:30,290 - #23 (
+INFO  21:04:30,298 - #47 pet
+INFO  21:04:30,298 - #27 *
+INFO  21:04:30,299 - #47 jedan
+INFO  21:04:30,304 - #25 -
+INFO  21:04:30,305 - #50 1
+INFO  21:04:30,328 - #42 )
+INFO  21:04:30,332 - #27 *
+INFO  21:04:30,333 - #47 bodovi
+INFO  21:04:30,333 - #25 -
+INFO  21:04:30,333 - #23 (
+INFO  21:04:30,334 - #50 3
+INFO  21:04:30,334 - #39 %
+INFO  21:04:30,336 - #50 2
+INFO  21:04:30,339 - #31 +
+INFO  21:04:30,339 - #50 3
+INFO  21:04:30,343 - #27 *
+INFO  21:04:30,346 - #50 2
+INFO  21:04:30,346 - #25 -
+INFO  21:04:30,350 - #50 3
+INFO  21:04:30,353 - #42 )
+INFO  21:04:30,353 - #41 ;
+INFO  21:04:30,353 - #33 print
+INFO  21:04:30,354 - #23 (
+INFO  21:04:30,354 - #47 bodovi
+INFO  21:04:30,355 - #42 )
+INFO  21:04:30,359 - #41 ;
+INFO  21:04:30,360 - #38 read
+INFO  21:04:30,360 - #23 (
+INFO  21:04:30,360 - #47 bodovi
+INFO  21:04:30,360 - #42 )
+INFO  21:04:30,361 - #41 ;
+INFO  21:04:30,361 - #37 }
+INFO  21:04:30,361 - #37 }
+ERROR 21:04:30,366 - ovde
+INFO  21:04:30,372 - Program(
+  ProgName(
+   test301
+  ) [ProgName]
+  NoMethodDeclList_(
+    NoMethodDeclList_(
+      NoMethodDeclList_(
+        NoMethodDeclList_(
+          NoMethodDeclList_(
+            NoMethodDeclEmptyList(
+            ) [NoMethodDeclEmptyList]
+            ConstDeclNoMethodDecl(
+              ConstDecl(
+                Type(
+                 int
+                ) [Type]
+                ConstInitSingle(
+                  ConstInit(
+                   nula
+                    StdConstNumber(
+                     0
+                    ) [StdConstNumber]
+                  ) [ConstInit]
+                ) [ConstInitSingle]
+              ) [ConstDecl]
+            ) [ConstDeclNoMethodDecl]
+          ) [NoMethodDeclList_]
+          ConstDeclNoMethodDecl(
+            ConstDecl(
+              Type(
+               int
+              ) [Type]
+              ConstInitSingle(
+                ConstInit(
+                 jedan
+                  StdConstNumber(
+                   1
+                  ) [StdConstNumber]
+                ) [ConstInit]
+              ) [ConstInitSingle]
+            ) [ConstDecl]
+          ) [ConstDeclNoMethodDecl]
+        ) [NoMethodDeclList_]
+        ConstDeclNoMethodDecl(
+          ConstDecl(
+            Type(
+             int
+            ) [Type]
+            ConstInitSingle(
+              ConstInit(
+               pet
+                StdConstNumber(
+                 5
+                ) [StdConstNumber]
+              ) [ConstInit]
+            ) [ConstInitSingle]
+          ) [ConstDecl]
+        ) [ConstDeclNoMethodDecl]
+      ) [NoMethodDeclList_]
+      VarDeclNoMethodDecl(
+        VarDecl_(
+          Type(
+           int
+          ) [Type]
+          VarInitSingle(
+            VarInitArray(
+             niz
+            ) [VarInitArray]
+          ) [VarInitSingle]
+        ) [VarDecl_]
+      ) [VarDeclNoMethodDecl]
+    ) [NoMethodDeclList_]
+    VarDeclNoMethodDecl(
+      VarDecl_(
+        Type(
+         char
+        ) [Type]
+        VarInitSingle(
+          VarInitArray(
+           nizch
+          ) [VarInitArray]
+        ) [VarInitSingle]
+      ) [VarDecl_]
+    ) [VarDeclNoMethodDecl]
+  ) [NoMethodDeclList_]
+  MethodDeclMultipleList(
+    MethodDeclEmptyList(
+    ) [MethodDeclEmptyList]
+    MethodDecl(
+      ReturnTypeVoid(
+      ) [ReturnTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      FormalParams_(
+        FormalParamEmptyList(
+        ) [FormalParamEmptyList]
+      ) [FormalParams_]
+      VarDeclList_(
+        VarDeclList_(
+          VarDeclEmptyList(
+          ) [VarDeclEmptyList]
+          VarDecl_(
+            Type(
+             int
+            ) [Type]
+            VarInitSingle(
+              VarInitPrimitive(
+               bodovi
+              ) [VarInitPrimitive]
+            ) [VarInitSingle]
+          ) [VarDecl_]
+        ) [VarDeclList_]
+        VarDecl_(
+          Type(
+           bool
+          ) [Type]
+          VarInitSingle(
+            VarInitPrimitive(
+             bt
+            ) [VarInitPrimitive]
+          ) [VarInitSingle]
+        ) [VarDecl_]
+      ) [VarDeclList_]
+      StatementList_(
+        StatementList_(
+          StatementList_(
+            StatementEmptyList(
+            ) [StatementEmptyList]
+            DesignatorStatementStatement(
+              DesignatorStatementAssignop(
+                Designator(
+                  DesignatorName(
+                   bodovi
+                  ) [DesignatorName]
+                  DesignatorOptionEmptyList(
+                  ) [DesignatorOptionEmptyList]
+                ) [Designator]
+                Equal(
+                ) [Equal]
+                ExprTermNoMinus(
+                  TermNoMul(
+                    FactorDesignator(
+                      Designator(
+                        DesignatorName(
+                         bodovi
+                        ) [DesignatorName]
+                        DesignatorOptionEmptyList(
+                        ) [DesignatorOptionEmptyList]
+                      ) [Designator]
+                    ) [FactorDesignator]
+                  ) [TermNoMul]
+                  AddopMultipleList(
+                    AddopMultipleList(
+                      AddopEmptyList(
+                      ) [AddopEmptyList]
+                      Plus(
+                      ) [Plus]
+                      TermMul(
+                        TermNoMul(
+                          FactorExpr(
+                            ExprTermNoMinus(
+                              TermMul(
+                                TermNoMul(
+                                  FactorDesignator(
+                                    Designator(
+                                      DesignatorName(
+                                       pet
+                                      ) [DesignatorName]
+                                      DesignatorOptionEmptyList(
+                                      ) [DesignatorOptionEmptyList]
+                                    ) [Designator]
+                                  ) [FactorDesignator]
+                                ) [TermNoMul]
+                                Mul(
+                                ) [Mul]
+                                FactorDesignator(
+                                  Designator(
+                                    DesignatorName(
+                                     jedan
+                                    ) [DesignatorName]
+                                    DesignatorOptionEmptyList(
+                                    ) [DesignatorOptionEmptyList]
+                                  ) [Designator]
+                                ) [FactorDesignator]
+                              ) [TermMul]
+                              AddopMultipleList(
+                                AddopEmptyList(
+                                ) [AddopEmptyList]
+                                Minus(
+                                ) [Minus]
+                                TermNoMul(
+                                  FactorNumber(
+                                   1
+                                  ) [FactorNumber]
+                                ) [TermNoMul]
+                              ) [AddopMultipleList]
+                            ) [ExprTermNoMinus]
+                          ) [FactorExpr]
+                        ) [TermNoMul]
+                        Mul(
+                        ) [Mul]
+                        FactorDesignator(
+                          Designator(
+                            DesignatorName(
+                             bodovi
+                            ) [DesignatorName]
+                            DesignatorOptionEmptyList(
+                            ) [DesignatorOptionEmptyList]
+                          ) [Designator]
+                        ) [FactorDesignator]
+                      ) [TermMul]
+                    ) [AddopMultipleList]
+                    Minus(
+                    ) [Minus]
+                    TermNoMul(
+                      FactorExpr(
+                        ExprTermNoMinus(
+                          TermMul(
+                            TermNoMul(
+                              FactorNumber(
+                               3
+                              ) [FactorNumber]
+                            ) [TermNoMul]
+                            Rem(
+                            ) [Rem]
+                            FactorNumber(
+                             2
+                            ) [FactorNumber]
+                          ) [TermMul]
+                          AddopMultipleList(
+                            AddopMultipleList(
+                              AddopEmptyList(
+                              ) [AddopEmptyList]
+                              Plus(
+                              ) [Plus]
+                              TermMul(
+                                TermNoMul(
+                                  FactorNumber(
+                                   3
+                                  ) [FactorNumber]
+                                ) [TermNoMul]
+                                Mul(
+                                ) [Mul]
+                                FactorNumber(
+                                 2
+                                ) [FactorNumber]
+                              ) [TermMul]
+                            ) [AddopMultipleList]
+                            Minus(
+                            ) [Minus]
+                            TermNoMul(
+                              FactorNumber(
+                               3
+                              ) [FactorNumber]
+                            ) [TermNoMul]
+                          ) [AddopMultipleList]
+                        ) [ExprTermNoMinus]
+                      ) [FactorExpr]
+                    ) [TermNoMul]
+                  ) [AddopMultipleList]
+                ) [ExprTermNoMinus]
+              ) [DesignatorStatementAssignop]
+            ) [DesignatorStatementStatement]
+          ) [StatementList_]
+          PrintStatement(
+            PrintExpr(
+              ExprTermNoMinus(
+                TermNoMul(
+                  FactorDesignator(
+                    Designator(
+                      DesignatorName(
+                       bodovi
+                      ) [DesignatorName]
+                      DesignatorOptionEmptyList(
+                      ) [DesignatorOptionEmptyList]
+                    ) [Designator]
+                  ) [FactorDesignator]
+                ) [TermNoMul]
+                AddopEmptyList(
+                ) [AddopEmptyList]
+              ) [ExprTermNoMinus]
+              NoPrintNumConst(
+              ) [NoPrintNumConst]
+            ) [PrintExpr]
+          ) [PrintStatement]
+        ) [StatementList_]
+        ReadStatement(
+          Designator(
+            DesignatorName(
+             bodovi
+            ) [DesignatorName]
+            DesignatorOptionEmptyList(
+            ) [DesignatorOptionEmptyList]
+          ) [Designator]
+        ) [ReadStatement]
+      ) [StatementList_]
+    ) [MethodDecl]
+  ) [MethodDeclMultipleList]
+) [Program]
+INFO  21:04:30,373 - ===================================

@@ -68,7 +68,7 @@ nonterminal ClassDeclList , MethodDecl;
 nonterminal FormalParamList, VarDeclList ;
 nonterminal FormalParam ;
 nonterminal Statement, StatementList, CaseList, Case, ReturnStatement, PrintNumConst, PrintExpr;
-nonterminal DesignatorStatement, DesingatorOption, ActualParameterList ;
+nonterminal DesignatorStatement, DesingatorOption, ActualParameterList, ActualParams ;
 nonterminal Condition , ConditionTerm, ConditonFact, ConditionFactRelOp ;
 nonterminal TermOptions ;
 nonterminal Matched, Unmatched;
@@ -263,12 +263,15 @@ DesignatorStatement ::= (DesignatorStatementAssignop) Designator Assignop Expr S
 					
 
 
-ActualParameterList ::= (ActualParameterMultipleList)  ActualParameterList COMMA Expr
-					|
-					(ActualParameterSingle) Expr
-					|
+ActualParameterList ::= (ActualParameterList_) ActualParams
+						|
 					(ActualParameterEmptyList) /*epsilon*/
 					;
+ActualParams ::= (ActualParameterMultipleList)  Expr COMMA ActualParams  
+					|
+					(ActualParameterSingle) Expr
+					;
+
 Condition ::= (ConditionOR)Condition OR ConditionTerm
 			|
 			(NoConditionOR) ConditionTerm

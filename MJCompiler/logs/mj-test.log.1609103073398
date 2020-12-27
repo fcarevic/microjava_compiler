@@ -1,0 +1,291 @@
+INFO  22:04:05,364 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  22:04:05,536 - #34 program
+INFO  22:04:05,536 - #47 test301
+INFO  22:04:05,548 - #5 class
+INFO  22:04:05,550 - #47 T
+INFO  22:04:05,550 - #21 {
+INFO  22:04:05,550 - #37 }
+INFO  22:04:05,550 - #21 {
+INFO  22:04:05,550 - #47 T
+INFO  22:04:05,550 - #47 tmp
+INFO  22:04:05,550 - #23 (
+INFO  22:04:05,550 - #42 )
+INFO  22:04:05,550 - #47 T
+INFO  22:04:05,566 - #47 t
+INFO  22:04:05,566 - #41 ;
+INFO  22:04:05,566 - #21 {
+INFO  22:04:05,566 - #40 return
+INFO  22:04:05,566 - #47 t
+INFO  22:04:05,566 - #41 ;
+INFO  22:04:05,566 - #37 }
+INFO  22:04:05,566 - #43 void
+INFO  22:04:05,566 - #47 main
+INFO  22:04:05,582 - #23 (
+INFO  22:04:05,582 - #42 )
+INFO  22:04:05,582 - #47 T
+INFO  22:04:05,582 - #47 t
+INFO  22:04:05,582 - #41 ;
+INFO  22:04:05,582 - #21 {
+INFO  22:04:05,582 - #47 tmp
+INFO  22:04:05,582 - #23 (
+INFO  22:04:05,582 - #42 )
+INFO  22:04:05,582 - #15 =
+ERROR 22:04:05,582 - 
+Sintaksna greska na liniji 19
+INFO  22:04:05,582 - #47 t
+INFO  22:04:05,582 - #41 ;
+INFO  22:04:05,582 - #47 bodovi
+INFO  22:04:05,582 - #15 =
+INFO  22:04:05,582 - #50 0
+ERROR 22:04:05,582 - Izvrsen oporavak do ; u liniji 19
+INFO  22:04:05,582 - #41 ;
+INFO  22:04:05,582 - #47 bodovi
+INFO  22:04:05,582 - #32 ++
+INFO  22:04:05,582 - #41 ;
+INFO  22:04:05,582 - #47 bodovi
+INFO  22:04:05,582 - #15 =
+INFO  22:04:05,597 - #47 bodovi
+INFO  22:04:05,597 - #31 +
+INFO  22:04:05,597 - #47 jedan
+INFO  22:04:05,597 - #41 ;
+INFO  22:04:05,597 - #47 bodovi
+INFO  22:04:05,597 - #15 =
+INFO  22:04:05,597 - #47 bodovi
+INFO  22:04:05,597 - #27 *
+INFO  22:04:05,597 - #47 pet
+INFO  22:04:05,597 - #41 ;
+INFO  22:04:05,613 - #47 bodovi
+INFO  22:04:05,613 - #26 --
+INFO  22:04:05,613 - #41 ;
+INFO  22:04:05,613 - #33 print
+INFO  22:04:05,613 - #23 (
+INFO  22:04:05,613 - #47 bodovi
+INFO  22:04:05,613 - #42 )
+INFO  22:04:05,613 - #41 ;
+INFO  22:04:05,628 - #47 niz
+INFO  22:04:05,628 - #15 =
+INFO  22:04:05,628 - #28 new
+INFO  22:04:05,628 - #47 int
+INFO  22:04:05,628 - #20 [
+INFO  22:04:05,628 - #50 3
+INFO  22:04:05,628 - #36 ]
+INFO  22:04:05,628 - #41 ;
+INFO  22:04:05,628 - #47 niz
+INFO  22:04:05,628 - #20 [
+INFO  22:04:05,628 - #47 nula
+INFO  22:04:05,628 - #36 ]
+INFO  22:04:05,628 - #15 =
+INFO  22:04:05,628 - #47 jedan
+INFO  22:04:05,628 - #41 ;
+INFO  22:04:05,628 - #47 niz
+INFO  22:04:05,628 - #20 [
+INFO  22:04:05,628 - #50 1
+INFO  22:04:05,628 - #36 ]
+INFO  22:04:05,628 - #15 =
+INFO  22:04:05,628 - #50 2
+INFO  22:04:05,628 - #41 ;
+INFO  22:04:05,628 - #47 niz
+INFO  22:04:05,628 - #20 [
+INFO  22:04:05,628 - #47 niz
+INFO  22:04:05,628 - #20 [
+INFO  22:04:05,628 - #47 jedan
+INFO  22:04:05,628 - #36 ]
+INFO  22:04:05,628 - #36 ]
+INFO  22:04:05,628 - #15 =
+INFO  22:04:05,628 - #47 niz
+INFO  22:04:05,628 - #20 [
+INFO  22:04:05,628 - #47 niz
+INFO  22:04:05,628 - #20 [
+INFO  22:04:05,628 - #50 0
+INFO  22:04:05,628 - #36 ]
+INFO  22:04:05,628 - #36 ]
+INFO  22:04:05,628 - #27 *
+INFO  22:04:05,628 - #50 3
+INFO  22:04:05,628 - #41 ;
+INFO  22:04:05,628 - #47 bodovi
+INFO  22:04:05,628 - #15 =
+INFO  22:04:05,644 - #47 niz
+INFO  22:04:05,644 - #20 [
+INFO  22:04:05,644 - #50 2
+INFO  22:04:05,644 - #36 ]
+INFO  22:04:05,644 - #10 /
+INFO  22:04:05,644 - #47 niz
+INFO  22:04:05,644 - #20 [
+INFO  22:04:05,644 - #50 0
+INFO  22:04:05,644 - #36 ]
+INFO  22:04:05,644 - #41 ;
+INFO  22:04:05,644 - #33 print
+INFO  22:04:05,644 - #23 (
+INFO  22:04:05,644 - #47 bodovi
+INFO  22:04:05,644 - #42 )
+INFO  22:04:05,644 - #41 ;
+INFO  22:04:05,644 - #33 print
+INFO  22:04:05,644 - #23 (
+INFO  22:04:05,644 - #47 niz
+INFO  22:04:05,644 - #20 [
+INFO  22:04:05,644 - #50 2
+INFO  22:04:05,644 - #36 ]
+INFO  22:04:05,644 - #42 )
+INFO  22:04:05,644 - #41 ;
+INFO  22:04:05,644 - #47 nizch
+INFO  22:04:05,644 - #15 =
+INFO  22:04:05,644 - #28 new
+INFO  22:04:05,644 - #47 char
+INFO  22:04:05,644 - #20 [
+INFO  22:04:05,644 - #50 3
+INFO  22:04:05,644 - #36 ]
+INFO  22:04:05,644 - #41 ;
+INFO  22:04:05,644 - #47 nizch
+INFO  22:04:05,644 - #20 [
+INFO  22:04:05,644 - #50 0
+INFO  22:04:05,644 - #36 ]
+INFO  22:04:05,644 - #15 =
+INFO  22:04:05,644 - #51 a
+INFO  22:04:05,644 - #41 ;
+INFO  22:04:05,644 - #47 nizch
+INFO  22:04:05,644 - #20 [
+INFO  22:04:05,644 - #47 jedan
+INFO  22:04:05,644 - #36 ]
+INFO  22:04:05,644 - #15 =
+INFO  22:04:05,644 - #51 b
+INFO  22:04:05,644 - #41 ;
+INFO  22:04:05,644 - #47 nizch
+INFO  22:04:05,644 - #20 [
+INFO  22:04:05,644 - #47 pet
+INFO  22:04:05,644 - #25 -
+INFO  22:04:05,644 - #50 3
+INFO  22:04:05,660 - #36 ]
+INFO  22:04:05,660 - #15 =
+INFO  22:04:05,660 - #51 c
+INFO  22:04:05,660 - #41 ;
+INFO  22:04:05,660 - #33 print
+INFO  22:04:05,660 - #23 (
+INFO  22:04:05,660 - #47 nizch
+INFO  22:04:05,660 - #20 [
+INFO  22:04:05,660 - #50 1
+INFO  22:04:05,660 - #36 ]
+INFO  22:04:05,660 - #42 )
+INFO  22:04:05,660 - #41 ;
+INFO  22:04:05,660 - #33 print
+INFO  22:04:05,660 - #23 (
+INFO  22:04:05,660 - #47 nizch
+INFO  22:04:05,660 - #20 [
+INFO  22:04:05,660 - #47 jedan
+INFO  22:04:05,660 - #27 *
+INFO  22:04:05,660 - #50 2
+INFO  22:04:05,660 - #36 ]
+INFO  22:04:05,660 - #42 )
+INFO  22:04:05,660 - #41 ;
+INFO  22:04:05,660 - #47 bodovi
+INFO  22:04:05,660 - #15 =
+INFO  22:04:05,660 - #47 bodovi
+INFO  22:04:05,660 - #31 +
+INFO  22:04:05,660 - #23 (
+INFO  22:04:05,660 - #47 pet
+INFO  22:04:05,660 - #27 *
+INFO  22:04:05,660 - #47 jedan
+INFO  22:04:05,660 - #25 -
+INFO  22:04:05,660 - #50 1
+INFO  22:04:05,660 - #42 )
+INFO  22:04:05,660 - #27 *
+INFO  22:04:05,660 - #47 bodovi
+INFO  22:04:05,675 - #25 -
+INFO  22:04:05,675 - #23 (
+INFO  22:04:05,675 - #50 3
+INFO  22:04:05,675 - #39 %
+INFO  22:04:05,675 - #50 2
+INFO  22:04:05,675 - #31 +
+INFO  22:04:05,675 - #50 3
+INFO  22:04:05,675 - #27 *
+INFO  22:04:05,675 - #50 2
+INFO  22:04:05,675 - #25 -
+INFO  22:04:05,675 - #50 3
+INFO  22:04:05,675 - #42 )
+INFO  22:04:05,675 - #41 ;
+INFO  22:04:05,675 - #33 print
+INFO  22:04:05,691 - #23 (
+INFO  22:04:05,691 - #47 bodovi
+INFO  22:04:05,691 - #42 )
+INFO  22:04:05,691 - #41 ;
+INFO  22:04:05,691 - #38 read
+INFO  22:04:05,691 - #23 (
+INFO  22:04:05,691 - #47 bodovi
+INFO  22:04:05,691 - #42 )
+INFO  22:04:05,691 - #41 ;
+INFO  22:04:05,691 - #37 }
+INFO  22:04:05,691 - #37 }
+ERROR 22:04:05,691 - ovde
+INFO  22:04:05,691 - ===================================
+ERROR 22:04:05,707 - Nije definisano ime bodovi  na liniji 22
+ERROR 22:04:05,707 - Neispravna tipizacija za dodelu vrednosti  na liniji 22
+ERROR 22:04:05,707 - Nije definisano ime bodovi  na liniji 23
+ERROR 22:04:05,707 - Nije tip int za inc  na liniji 23
+ERROR 22:04:05,707 - Nije definisano ime bodovi  na liniji 24
+ERROR 22:04:05,707 - Nije definisano ime bodovi  na liniji 24
+ERROR 22:04:05,707 - Nije definisano ime jedan  na liniji 24
+ERROR 22:04:05,707 - Nekompatibilni tipovi prilikom sabiranja  na liniji 24
+ERROR 22:04:05,707 - Neispravna tipizacija za dodelu vrednosti  na liniji 24
+ERROR 22:04:05,707 - Nije definisano ime bodovi  na liniji 25
+ERROR 22:04:05,707 - Nije definisano ime bodovi  na liniji 25
+ERROR 22:04:05,707 - Nije definisano ime pet  na liniji 25
+ERROR 22:04:05,707 - Nekompatibilni tipovi prilikom mnozenja  na liniji 25
+ERROR 22:04:05,707 - Neispravna tipizacija za dodelu vrednosti  na liniji 25
+ERROR 22:04:05,707 - Nije definisano ime bodovi  na liniji 26
+ERROR 22:04:05,707 - Nije tip int za dec  na liniji 26
+ERROR 22:04:05,707 - Nije definisano ime bodovi  na liniji 27
+ERROR 22:04:05,707 - Nije definisano ime niz  na liniji 30
+ERROR 22:04:05,707 - Neispravna tipizacija za dodelu vrednosti  na liniji 30
+ERROR 22:04:05,707 - Nije definisano ime niz  na liniji 31
+ERROR 22:04:05,707 - Nije definisano ime nula  na liniji 31
+ERROR 22:04:05,707 - Indeks nije nije tipa int  na liniji 31
+ERROR 22:04:05,707 - Nije definisano ime jedan  na liniji 31
+ERROR 22:04:05,707 - Nije definisano ime niz  na liniji 32
+ERROR 22:04:05,722 - Neispravna tipizacija za dodelu vrednosti  na liniji 32
+ERROR 22:04:05,722 - Nije definisano ime niz  na liniji 33
+ERROR 22:04:05,722 - Nije definisano ime niz  na liniji 33
+ERROR 22:04:05,722 - Nije definisano ime jedan  na liniji 33
+ERROR 22:04:05,722 - Indeks nije nije tipa int  na liniji 33
+ERROR 22:04:05,722 - Indeks nije nije tipa int  na liniji 33
+ERROR 22:04:05,722 - Nije definisano ime niz  na liniji 33
+ERROR 22:04:05,722 - Nije definisano ime niz  na liniji 33
+ERROR 22:04:05,722 - Indeks nije nije tipa int  na liniji 33
+ERROR 22:04:05,722 - Nekompatibilni tipovi prilikom mnozenja  na liniji 33
+ERROR 22:04:05,722 - Neispravna tipizacija za dodelu vrednosti  na liniji 33
+ERROR 22:04:05,722 - Nije definisano ime bodovi  na liniji 34
+ERROR 22:04:05,722 - Nije definisano ime niz  na liniji 34
+ERROR 22:04:05,722 - Nije definisano ime niz  na liniji 34
+ERROR 22:04:05,722 - Nekompatibilni tipovi prilikom mnozenja  na liniji 34
+ERROR 22:04:05,722 - Neispravna tipizacija za dodelu vrednosti  na liniji 34
+ERROR 22:04:05,722 - Nije definisano ime bodovi  na liniji 35
+ERROR 22:04:05,722 - Nije definisano ime niz  na liniji 36
+ERROR 22:04:05,722 - Nije definisano ime nizch  na liniji 39
+ERROR 22:04:05,722 - Neispravna tipizacija za dodelu vrednosti  na liniji 39
+ERROR 22:04:05,722 - Nije definisano ime nizch  na liniji 40
+ERROR 22:04:05,722 - Neispravna tipizacija za dodelu vrednosti  na liniji 40
+ERROR 22:04:05,722 - Nije definisano ime nizch  na liniji 41
+ERROR 22:04:05,722 - Nije definisano ime jedan  na liniji 41
+ERROR 22:04:05,722 - Indeks nije nije tipa int  na liniji 41
+ERROR 22:04:05,722 - Neispravna tipizacija za dodelu vrednosti  na liniji 41
+ERROR 22:04:05,722 - Nije definisano ime nizch  na liniji 42
+ERROR 22:04:05,722 - Nije definisano ime pet  na liniji 42
+ERROR 22:04:05,722 - Nekompatibilni tipovi prilikom sabiranja  na liniji 42
+ERROR 22:04:05,722 - Indeks nije nije tipa int  na liniji 42
+ERROR 22:04:05,722 - Neispravna tipizacija za dodelu vrednosti  na liniji 42
+ERROR 22:04:05,722 - Nije definisano ime nizch  na liniji 43
+ERROR 22:04:05,722 - Nije definisano ime nizch  na liniji 44
+ERROR 22:04:05,722 - Nije definisano ime jedan  na liniji 44
+ERROR 22:04:05,722 - Nekompatibilni tipovi prilikom mnozenja  na liniji 44
+ERROR 22:04:05,722 - Indeks nije nije tipa int  na liniji 44
+ERROR 22:04:05,722 - Nije definisano ime bodovi  na liniji 47
+ERROR 22:04:05,722 - Nije definisano ime bodovi  na liniji 47
+ERROR 22:04:05,722 - Nije definisano ime pet  na liniji 49
+ERROR 22:04:05,722 - Nije definisano ime jedan  na liniji 49
+ERROR 22:04:05,722 - Nekompatibilni tipovi prilikom mnozenja  na liniji 49
+ERROR 22:04:05,722 - Nekompatibilni tipovi prilikom sabiranja  na liniji 49
+ERROR 22:04:05,722 - Nije definisano ime bodovi  na liniji 50
+ERROR 22:04:05,722 - Nekompatibilni tipovi prilikom mnozenja  na liniji 49
+ERROR 22:04:05,722 - Nekompatibilni tipovi prilikom sabiranja  na liniji 47
+ERROR 22:04:05,722 - Neispravna tipizacija za dodelu vrednosti  na liniji 47
+ERROR 22:04:05,722 - Nije definisano ime bodovi  na liniji 52
+ERROR 22:04:05,722 - Nije definisano ime bodovi  na liniji 54
+ERROR 22:04:05,722 - NEUSPESNO SEMANTICKO  PARSIRANJE

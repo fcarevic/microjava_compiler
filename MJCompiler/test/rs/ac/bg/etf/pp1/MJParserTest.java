@@ -43,9 +43,13 @@ public class MJParserTest {
 	        Symbol s = p.parse();  //pocetak parsiranja
 	        
 	        Program prog = (Program)(s.value); 
+	        if(p.errorDetected) {
+	        	log.error("NEUSPESNO SINTAKSNO PARSIRANJE");
+	        	return;
+	        }
 	       // Tab.init();
 			// ispis sintaksnog stabla
-			log.info(prog.toString(""));
+			//log.info(prog.toString(""));
 			log.info("===================================");
 
 			// ispis prepoznatih programskih konstrukcija
@@ -53,7 +57,16 @@ public class MJParserTest {
 			SemanticPassVisitor v = new SemanticPassVisitor();
 			prog.traverseBottomUp(v); 
 			
-			Tab.dump( new SymbolTablePrinter());
+			
+			if(!v.isSuccess()) {
+				log.error("NEUSPESNO SEMANTICKO  PARSIRANJE");
+				
+			} else {
+				
+				log.info("USPESNO SEMANTICKO PARSIRANJE");
+			}
+			
+			//Tab.dump( new SymbolTablePrinter());
 			
 			
 	/*      
