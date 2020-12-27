@@ -1,20 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2020 1:27:38
+// 27/11/2020 1:44:41
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public interface Visitor { 
 
-    public void visit(Unmatched Unmatched);
     public void visit(PrintNumConst PrintNumConst);
+    public void visit(Unmatched Unmatched);
     public void visit(ReturnType ReturnType);
     public void visit(Mulop Mulop);
     public void visit(AddopTermExprOption AddopTermExprOption);
     public void visit(Matched Matched);
-    public void visit(StdConstType StdConstType);
     public void visit(Relop Relop);
+    public void visit(StdConstType StdConstType);
     public void visit(Assignop Assignop);
     public void visit(TermOptions TermOptions);
     public void visit(StatementList StatementList);
@@ -32,8 +32,8 @@ public interface Visitor {
     public void visit(ReturnStatement ReturnStatement);
     public void visit(VarDeclList VarDeclList);
     public void visit(FormalParamList FormalParamList);
-    public void visit(FormalParams FormalParams);
     public void visit(Expr Expr);
+    public void visit(FormalParams FormalParams);
     public void visit(ConditonFact ConditonFact);
     public void visit(AddopList AddopList);
     public void visit(DesignatorOptionList DesignatorOptionList);
@@ -66,6 +66,7 @@ public interface Visitor {
     public void visit(DesignatorDotIdentOption DesignatorDotIdentOption);
     public void visit(DesignatorOptionEmptyList DesignatorOptionEmptyList);
     public void visit(DesignatorOptionList_ DesignatorOptionList_);
+    public void visit(DesignatorName DesignatorName);
     public void visit(Designator Designator);
     public void visit(FactorExpr FactorExpr);
     public void visit(FactorNewExpr FactorNewExpr);
@@ -75,10 +76,9 @@ public interface Visitor {
     public void visit(FactorString FactorString);
     public void visit(FactorNumber FactorNumber);
     public void visit(FactorDesignator FactorDesignator);
-    public void visit(FactorDesignatorActParams FactorDesignatorActParams);
+    public void visit(FactorFunctionCall FactorFunctionCall);
     public void visit(TermMul TermMul);
     public void visit(TermNoMul TermNoMul);
-    public void visit(AddopTermExprOption_ AddopTermExprOption_);
     public void visit(AddopEmptyList AddopEmptyList);
     public void visit(AddopMultipleList AddopMultipleList);
     public void visit(ExprTermNoMinus ExprTermNoMinus);
@@ -132,11 +132,13 @@ public interface Visitor {
     public void visit(FormalParams_ FormalParams_);
     public void visit(ReturnTypeVoid ReturnTypeVoid);
     public void visit(ReturnTypeType ReturnTypeType);
+    public void visit(MethodName MethodName);
     public void visit(MethodDecl MethodDecl);
     public void visit(MethodDeclEmptyList MethodDeclEmptyList);
     public void visit(MethodDeclMultipleList MethodDeclMultipleList);
     public void visit(NoExtendsClause NoExtendsClause);
     public void visit(ExtendsClause_ ExtendsClause_);
+    public void visit(ClassName ClassName);
     public void visit(ClassDeclMethod ClassDeclMethod);
     public void visit(ClassDeclsNoMethod ClassDeclsNoMethod);
     public void visit(ClassDeclList ClassDeclList);

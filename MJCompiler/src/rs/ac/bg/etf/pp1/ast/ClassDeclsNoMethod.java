@@ -1,20 +1,31 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2020 1:27:37
+// 27/11/2020 1:44:40
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class ClassDeclsNoMethod extends ClassDecl {
 
+    private ClassName ClassName;
     private ExtendsClause ExtendsClause;
     private VarDeclList VarDeclList;
 
-    public ClassDeclsNoMethod (ExtendsClause ExtendsClause, VarDeclList VarDeclList) {
+    public ClassDeclsNoMethod (ClassName ClassName, ExtendsClause ExtendsClause, VarDeclList VarDeclList) {
+        this.ClassName=ClassName;
+        if(ClassName!=null) ClassName.setParent(this);
         this.ExtendsClause=ExtendsClause;
         if(ExtendsClause!=null) ExtendsClause.setParent(this);
         this.VarDeclList=VarDeclList;
         if(VarDeclList!=null) VarDeclList.setParent(this);
+    }
+
+    public ClassName getClassName() {
+        return ClassName;
+    }
+
+    public void setClassName(ClassName ClassName) {
+        this.ClassName=ClassName;
     }
 
     public ExtendsClause getExtendsClause() {
@@ -38,17 +49,20 @@ public class ClassDeclsNoMethod extends ClassDecl {
     }
 
     public void childrenAccept(Visitor visitor) {
+        if(ClassName!=null) ClassName.accept(visitor);
         if(ExtendsClause!=null) ExtendsClause.accept(visitor);
         if(VarDeclList!=null) VarDeclList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
+        if(ClassName!=null) ClassName.traverseTopDown(visitor);
         if(ExtendsClause!=null) ExtendsClause.traverseTopDown(visitor);
         if(VarDeclList!=null) VarDeclList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
+        if(ClassName!=null) ClassName.traverseBottomUp(visitor);
         if(ExtendsClause!=null) ExtendsClause.traverseBottomUp(visitor);
         if(VarDeclList!=null) VarDeclList.traverseBottomUp(visitor);
         accept(visitor);
@@ -58,6 +72,12 @@ public class ClassDeclsNoMethod extends ClassDecl {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ClassDeclsNoMethod(\n");
+
+        if(ClassName!=null)
+            buffer.append(ClassName.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
 
         if(ExtendsClause!=null)
             buffer.append(ExtendsClause.toString("  "+tab));

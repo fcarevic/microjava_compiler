@@ -1,5 +1,3 @@
-
-
 package rs.ac.bg.etf.pp1;
 
 import java_cup.runtime.*;
@@ -54,36 +52,49 @@ scan with {:
 :}
 
 
-terminal AND, BOOL, BREAK, CASE, CHAR, CLASS, COLON, COMMA, CONST, CONTINUE, DIV, DO; 
-terminal DOT, ELSE, ENUM, EQUAL, EXTENDS, GE, GT, IDENT, IF, LBRACE, LCURVPAREN; 
-terminal LE, LPAREN, LT, MINUS, MINUSMINUS, MUL, NEW, NOTSAME, NUMBER, OR, PLUS; 
-terminal  PLUSPLUS, PRINT, PROG,QUESTION, RBRACE, RCURVPAREN, READ, REM, RETURN, SEMI, STRING, RPAREN, VOID, WHILE, SWITCH, SAME;
-
+terminal AND, BREAK, CASE,  CLASS, COLON, COMMA, CONST, CONTINUE, DIV, DO; 
+terminal DOT, ELSE, ENUM, EQUAL, EXTENDS, GE, GT, IF, LBRACE, LCURVPAREN; 
+terminal LE, LPAREN, LT, MINUS, MINUSMINUS, MUL, NEW, NOTSAME, OR, PLUS; 
+terminal  PLUSPLUS, PRINT, PROG,QUESTION, RBRACE, RCURVPAREN, READ, REM, RETURN, SEMI,  RPAREN, VOID, WHILE, SWITCH, SAME;
+terminal String IDENT, STRING;
+terminal String BOOL;
+terminal Integer NUMBER;
+terminal Character CHAR;
 nonterminal Program, NoMethodDeclList, MethodDeclList; 
 nonterminal NoMethodDecl, ConstDecl, VarDecl, ClassDecl;
-nonterminal ConstInitList, ConstInit, Type;
+nonterminal ConstInitList;
 nonterminal VarInitList, VarInit ;  
-nonterminal ExtendsClause ;
 nonterminal ClassDeclList , MethodDecl;
-nonterminal ReturnType, FormalParamList, VarDeclList ;
+nonterminal FormalParamList, VarDeclList ;
 nonterminal FormalParam ;
-nonterminal Statement, StatementList, Expr, CaseList, Case, ReturnStatement, PrintNumConst, PrintExpr;
-nonterminal DesignatorStatement, DesingatorOption, ActualParameterList, Assignop ;
-nonterminal Condition , ConditionTerm, ConditonFact, ConditionFactRelOp, Relop;
-nonterminal Term , Factor, TermOptions ;
+nonterminal Statement, StatementList, CaseList, Case, ReturnStatement, PrintNumConst, PrintExpr;
+nonterminal DesignatorStatement, DesingatorOption, ActualParameterList ;
+nonterminal Condition , ConditionTerm, ConditonFact, ConditionFactRelOp ;
+nonterminal TermOptions ;
 nonterminal Matched, Unmatched;
 nonterminal MinusExpr, ProgName;
-nonterminal ConstDeclList, StdConstType, Designator , AddopTermExprOption,  Addop, Mulop;
-nonterminal DesignatorOptionList, FormalParams, DesignatorOption, AddopList, IfErrorCorection;
+nonterminal ConstDeclList, AddopTermExprOption;
+nonterminal DesignatorOptionList, FormalParams, IfErrorCorection;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, StdConstType, ExtendsClause, ReturnType ;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName ; 
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr ;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName ;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
+
+
+
+
 precedence left ELSE;
 start with Program;
+
 Program ::= (Program) PROG ProgName NoMethodDeclList LCURVPAREN MethodDeclList RCURVPAREN
 				{:
+				CUP$MJParser$stack.add(0,o);
 				parser.ispisi_poruku("ovde");
 				
 				:}
 				;
-ProgName ::= (ProgName) IDENT:progName;
+ProgName ::= (ProgName) IDENT:progName ;
 NoMethodDeclList ::= (NoMethodDeclList_) NoMethodDeclList NoMethodDecl
 					|
 					(NoMethodDeclEmptyList) /*epsilon*/
@@ -97,20 +108,20 @@ NoMethodDecl ::= (ConstDeclNoMethodDecl) ConstDecl
 
 ConstDeclList ::= (ConstDeclList) ConstDeclList ConstDecl;
 
-ConstDecl ::= (ConstDecl) CONST Type ConstInitList SEMI ;
+ConstDecl ::= (ConstDecl) CONST Type:constType ConstInitList SEMI ;
 ConstInitList ::= (ConstInitMultipleList) ConstInitList COMMA ConstInit
 					|
 				(ConstInitSingle) ConstInit
 					;
-ConstInit ::= (ConstInit) IDENT EQUAL StdConstType ;
+ConstInit ::= (ConstInit) IDENT:name EQUAL StdConstType ;
 
-StdConstType ::= (StdConstBool) BOOL
+StdConstType ::= (StdConstBool) BOOL:val
 				|
-				(StdConstNumber) NUMBER
+				(StdConstNumber) NUMBER:val
 				|
-				(StdConstString) STRING
+				(StdConstString) STRING:val
 				|
-				(StdConstChar) CHAR
+				(StdConstChar) CHAR:val
 				;
 					
 
@@ -140,11 +151,12 @@ VarInit ::= (VarInitPrimitive) IDENT:name
 
 ClassDeclList ::= (ClassDeclList) ClassDeclList ClassDecl; 
 					
-ClassDecl ::= (ClassDeclsNoMethod) CLASS IDENT ExtendsClause LCURVPAREN VarDeclList RCURVPAREN 
+ClassDecl ::= (ClassDeclsNoMethod) CLASS ClassName ExtendsClause LCURVPAREN VarDeclList RCURVPAREN 
 				|
-			(ClassDeclMethod) CLASS IDENT ExtendsClause LCURVPAREN VarDeclList LCURVPAREN MethodDeclList RCURVPAREN RCURVPAREN 
+			(ClassDeclMethod) CLASS ClassName ExtendsClause LCURVPAREN VarDeclList LCURVPAREN MethodDeclList RCURVPAREN RCURVPAREN 
 			;
-ExtendsClause ::= (ExtendsClause_) EXTENDS Type 
+ClassName ::= (ClassName) IDENT:className ;
+ExtendsClause ::= (ExtendsClause_) EXTENDS Type:extendType 
 				|
 				(NoExtendsClause) /*epsilon*/
 				;
@@ -154,9 +166,10 @@ MethodDeclList ::= (MethodDeclMultipleList) MethodDeclList MethodDecl
 					|
 					(MethodDeclEmptyList) /*epsilon*/
 					; 
-MethodDecl ::= (MethodDecl) ReturnType IDENT LPAREN FormalParams VarDeclList LCURVPAREN StatementList RCURVPAREN ;
+MethodDecl ::= (MethodDecl) ReturnType MethodName LPAREN FormalParams VarDeclList LCURVPAREN StatementList RCURVPAREN ;
 
-ReturnType ::= (ReturnTypeType) Type 
+MethodName ::= (MethodName) IDENT:methodName;
+ReturnType ::= (ReturnTypeType) Type:retType 
 				|
 				(ReturnTypeVoid) VOID
 				;
@@ -174,9 +187,9 @@ FormalParamList ::= (FormalParamList_) FormalParamList COMMA FormalParam
 				|
 				(FormalParamEmptyList) /*epsilon*/				
 				;
-FormalParam ::= (FormalParamPrimitive) Type IDENT
+FormalParam ::= (FormalParamPrimitive) Type IDENT:paramName
 				|
-				(FormalParamArray) Type IDENT LBRACE RBRACE
+				(FormalParamArray) Type IDENT:paramName LBRACE RBRACE
 				;
 
 Type ::= (Type) IDENT:typeName ;
@@ -230,7 +243,7 @@ ReturnStatement ::= (ReturnStatementNoExpr) RETURN
 					(ReturnStatementExpr) RETURN Expr
 					;
 PrintExpr ::= (PrintExpr) Expr PrintNumConst ;
-PrintNumConst ::= (PrintNumConst_)   COMMA NUMBER
+PrintNumConst ::= (PrintNumConst_)   COMMA NUMBER:val
 					| 
 					(NoPrintNumConst) /*epsilon*/
 					; 
@@ -284,12 +297,12 @@ Expr ::= (ExprTermMinus) MINUS  Term AddopList
 			 
 			
 		; */
-AddopList ::= (AddopMultipleList) AddopList AddopTermExprOption
+AddopList ::= (AddopMultipleList) AddopList Addop Term 
 				|
 				(AddopEmptyList) /*epsilon*/
 				; 
 
-AddopTermExprOption ::= (AddopTermExprOption_) Addop Term ;
+
 						 	
 
 Term ::= (TermNoMul) Factor 
@@ -300,17 +313,17 @@ Term ::= (TermNoMul) Factor
 		    
 	
 		    
-Factor ::= (FactorDesignatorActParams) Designator LPAREN ActualParameterList RPAREN
+Factor ::= (FactorFunctionCall) Designator LPAREN ActualParameterList RPAREN
 			|
 			(FactorDesignator) Designator
 			|
-			(FactorNumber) NUMBER
+			(FactorNumber) NUMBER:val
 						| 
-			(FactorString) STRING
+			(FactorString) STRING:val
 			|
-			(FactorChar) CHAR
+			(FactorChar) CHAR:val
 			|
-			(FactorBool) BOOL
+			(FactorBool) BOOL:val
 			|
 			(FactorNew) NEW Type
 			|
@@ -321,17 +334,20 @@ Factor ::= (FactorDesignatorActParams) Designator LPAREN ActualParameterList RPA
 
 
 
-Designator ::= (Designator) IDENT DesignatorOptionList ;
-DesignatorOptionList ::= (DesignatorOptionList_) DesignatorOptionList DesignatorOption 
+
+
+
+
+Designator ::= (Designator) DesignatorName DesignatorOptionList ;
+DesignatorName ::= (DesignatorName) IDENT:name;
+DesignatorOptionList ::= (DesignatorOptionList_)  DesignatorOption DesignatorOptionList 
 						|
 						(DesignatorOptionEmptyList) /*epsilon*/
 						;
-DesignatorOption ::= (DesignatorDotIdentOption) DOT IDENT
+DesignatorOption ::= (DesignatorDotIdentOption) DOT IDENT:name
 					|
 					(DesignatorIndexingOption) LBRACE Expr RBRACE
 					;
-
-
 
 
 

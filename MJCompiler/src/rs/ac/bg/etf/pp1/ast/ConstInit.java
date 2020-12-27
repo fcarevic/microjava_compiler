@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2020 1:27:37
+// 27/11/2020 1:44:39
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,11 +9,23 @@ public class ConstInit implements SyntaxNode {
 
     private SyntaxNode parent;
     private int line;
+    public rs.etf.pp1.symboltable.concepts.Obj obj = null;
+
+    private String name;
     private StdConstType StdConstType;
 
-    public ConstInit (StdConstType StdConstType) {
+    public ConstInit (String name, StdConstType StdConstType) {
+        this.name=name;
         this.StdConstType=StdConstType;
         if(StdConstType!=null) StdConstType.setParent(this);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name=name;
     }
 
     public StdConstType getStdConstType() {
@@ -62,6 +74,9 @@ public class ConstInit implements SyntaxNode {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("ConstInit(\n");
+
+        buffer.append(" "+tab+name);
+        buffer.append("\n");
 
         if(StdConstType!=null)
             buffer.append(StdConstType.toString("  "+tab));

@@ -1,20 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2020 1:27:38
+// 27/11/2020 1:44:41
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public abstract class VisitorAdaptor implements Visitor { 
 
-    public void visit(Unmatched Unmatched) { }
     public void visit(PrintNumConst PrintNumConst) { }
+    public void visit(Unmatched Unmatched) { }
     public void visit(ReturnType ReturnType) { }
     public void visit(Mulop Mulop) { }
     public void visit(AddopTermExprOption AddopTermExprOption) { }
     public void visit(Matched Matched) { }
-    public void visit(StdConstType StdConstType) { }
     public void visit(Relop Relop) { }
+    public void visit(StdConstType StdConstType) { }
     public void visit(Assignop Assignop) { }
     public void visit(TermOptions TermOptions) { }
     public void visit(StatementList StatementList) { }
@@ -32,8 +32,8 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ReturnStatement ReturnStatement) { }
     public void visit(VarDeclList VarDeclList) { }
     public void visit(FormalParamList FormalParamList) { }
-    public void visit(FormalParams FormalParams) { }
     public void visit(Expr Expr) { }
+    public void visit(FormalParams FormalParams) { }
     public void visit(ConditonFact ConditonFact) { }
     public void visit(AddopList AddopList) { }
     public void visit(DesignatorOptionList DesignatorOptionList) { }
@@ -66,6 +66,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(DesignatorDotIdentOption DesignatorDotIdentOption) { visit(); }
     public void visit(DesignatorOptionEmptyList DesignatorOptionEmptyList) { visit(); }
     public void visit(DesignatorOptionList_ DesignatorOptionList_) { visit(); }
+    public void visit(DesignatorName DesignatorName) { visit(); }
     public void visit(Designator Designator) { visit(); }
     public void visit(FactorExpr FactorExpr) { visit(); }
     public void visit(FactorNewExpr FactorNewExpr) { visit(); }
@@ -75,10 +76,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FactorString FactorString) { visit(); }
     public void visit(FactorNumber FactorNumber) { visit(); }
     public void visit(FactorDesignator FactorDesignator) { visit(); }
-    public void visit(FactorDesignatorActParams FactorDesignatorActParams) { visit(); }
+    public void visit(FactorFunctionCall FactorFunctionCall) { visit(); }
     public void visit(TermMul TermMul) { visit(); }
     public void visit(TermNoMul TermNoMul) { visit(); }
-    public void visit(AddopTermExprOption_ AddopTermExprOption_) { visit(); }
     public void visit(AddopEmptyList AddopEmptyList) { visit(); }
     public void visit(AddopMultipleList AddopMultipleList) { visit(); }
     public void visit(ExprTermNoMinus ExprTermNoMinus) { visit(); }
@@ -132,11 +132,13 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(FormalParams_ FormalParams_) { visit(); }
     public void visit(ReturnTypeVoid ReturnTypeVoid) { visit(); }
     public void visit(ReturnTypeType ReturnTypeType) { visit(); }
+    public void visit(MethodName MethodName) { visit(); }
     public void visit(MethodDecl MethodDecl) { visit(); }
     public void visit(MethodDeclEmptyList MethodDeclEmptyList) { visit(); }
     public void visit(MethodDeclMultipleList MethodDeclMultipleList) { visit(); }
     public void visit(NoExtendsClause NoExtendsClause) { visit(); }
     public void visit(ExtendsClause_ ExtendsClause_) { visit(); }
+    public void visit(ClassName ClassName) { visit(); }
     public void visit(ClassDeclMethod ClassDeclMethod) { visit(); }
     public void visit(ClassDeclsNoMethod ClassDeclsNoMethod) { visit(); }
     public void visit(ClassDeclList ClassDeclList) { visit(); }

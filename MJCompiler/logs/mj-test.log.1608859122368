@@ -1,7 +1,0 @@
-INFO  02:17:16,556 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
-INFO  02:17:16,756 - #38 program
-INFO  02:17:16,756 - #21 MJProgram
-INFO  02:17:16,756 - #21 int
-ERROR 02:17:16,756 - 
-Sintaksna greska na liniji 2
-ERROR 02:17:16,756 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 2

@@ -7,7 +7,9 @@
 				<exclude name="sym_old.java"/>
 				<exclude name="util/Log4JUtils.java"/>
 				<exclude name="Yylex.java"/>
+				<exclude name="SemanticPassVisitor.java"/>
 				<exclude name="RuleVisitor.java"/>
+				<exclude name="SymbolTablePrinter.java"/>
 			
 			</fileset>
 		</delete>

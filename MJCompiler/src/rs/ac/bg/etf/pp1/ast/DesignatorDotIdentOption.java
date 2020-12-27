@@ -1,13 +1,24 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2020 1:27:38
+// 27/11/2020 1:44:41
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class DesignatorDotIdentOption extends DesignatorOption {
 
-    public DesignatorDotIdentOption () {
+    private String name;
+
+    public DesignatorDotIdentOption (String name) {
+        this.name=name;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name=name;
     }
 
     public void accept(Visitor visitor) {
@@ -29,6 +40,9 @@ public class DesignatorDotIdentOption extends DesignatorOption {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
         buffer.append("DesignatorDotIdentOption(\n");
+
+        buffer.append(" "+tab+name);
+        buffer.append("\n");
 
         buffer.append(tab);
         buffer.append(") [DesignatorDotIdentOption]");

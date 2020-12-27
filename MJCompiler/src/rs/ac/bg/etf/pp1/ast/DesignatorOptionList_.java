@@ -1,28 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 26/11/2020 1:27:38
+// 27/11/2020 1:44:41
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class DesignatorOptionList_ extends DesignatorOptionList {
 
-    private DesignatorOptionList DesignatorOptionList;
     private DesignatorOption DesignatorOption;
+    private DesignatorOptionList DesignatorOptionList;
 
-    public DesignatorOptionList_ (DesignatorOptionList DesignatorOptionList, DesignatorOption DesignatorOption) {
-        this.DesignatorOptionList=DesignatorOptionList;
-        if(DesignatorOptionList!=null) DesignatorOptionList.setParent(this);
+    public DesignatorOptionList_ (DesignatorOption DesignatorOption, DesignatorOptionList DesignatorOptionList) {
         this.DesignatorOption=DesignatorOption;
         if(DesignatorOption!=null) DesignatorOption.setParent(this);
-    }
-
-    public DesignatorOptionList getDesignatorOptionList() {
-        return DesignatorOptionList;
-    }
-
-    public void setDesignatorOptionList(DesignatorOptionList DesignatorOptionList) {
         this.DesignatorOptionList=DesignatorOptionList;
+        if(DesignatorOptionList!=null) DesignatorOptionList.setParent(this);
     }
 
     public DesignatorOption getDesignatorOption() {
@@ -33,24 +25,32 @@ public class DesignatorOptionList_ extends DesignatorOptionList {
         this.DesignatorOption=DesignatorOption;
     }
 
+    public DesignatorOptionList getDesignatorOptionList() {
+        return DesignatorOptionList;
+    }
+
+    public void setDesignatorOptionList(DesignatorOptionList DesignatorOptionList) {
+        this.DesignatorOptionList=DesignatorOptionList;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(DesignatorOptionList!=null) DesignatorOptionList.accept(visitor);
         if(DesignatorOption!=null) DesignatorOption.accept(visitor);
+        if(DesignatorOptionList!=null) DesignatorOptionList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(DesignatorOptionList!=null) DesignatorOptionList.traverseTopDown(visitor);
         if(DesignatorOption!=null) DesignatorOption.traverseTopDown(visitor);
+        if(DesignatorOptionList!=null) DesignatorOptionList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(DesignatorOptionList!=null) DesignatorOptionList.traverseBottomUp(visitor);
         if(DesignatorOption!=null) DesignatorOption.traverseBottomUp(visitor);
+        if(DesignatorOptionList!=null) DesignatorOptionList.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -59,14 +59,14 @@ public class DesignatorOptionList_ extends DesignatorOptionList {
         buffer.append(tab);
         buffer.append("DesignatorOptionList_(\n");
 
-        if(DesignatorOptionList!=null)
-            buffer.append(DesignatorOptionList.toString("  "+tab));
+        if(DesignatorOption!=null)
+            buffer.append(DesignatorOption.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(DesignatorOption!=null)
-            buffer.append(DesignatorOption.toString("  "+tab));
+        if(DesignatorOptionList!=null)
+            buffer.append(DesignatorOptionList.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
