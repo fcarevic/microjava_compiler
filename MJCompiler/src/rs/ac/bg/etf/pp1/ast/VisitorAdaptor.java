@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 27/11/2020 23:35:44
+// 28/11/2020 16:4:55
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -11,15 +11,15 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(Unmatched Unmatched) { }
     public void visit(ReturnType ReturnType) { }
     public void visit(Mulop Mulop) { }
-    public void visit(AddopTermExprOption AddopTermExprOption) { }
     public void visit(Matched Matched) { }
+    public void visit(AddopTermExprOption AddopTermExprOption) { }
     public void visit(Relop Relop) { }
     public void visit(StdConstType StdConstType) { }
     public void visit(Assignop Assignop) { }
     public void visit(TermOptions TermOptions) { }
     public void visit(StatementList StatementList) { }
-    public void visit(Addop Addop) { }
     public void visit(ConditionTerm ConditionTerm) { }
+    public void visit(Addop Addop) { }
     public void visit(ExtendsClause ExtendsClause) { }
     public void visit(Factor Factor) { }
     public void visit(Term Term) { }
@@ -33,9 +33,9 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ReturnStatement ReturnStatement) { }
     public void visit(VarDeclList VarDeclList) { }
     public void visit(FormalParamList FormalParamList) { }
+    public void visit(ConditonFact ConditonFact) { }
     public void visit(Expr Expr) { }
     public void visit(FormalParams FormalParams) { }
-    public void visit(ConditonFact ConditonFact) { }
     public void visit(AddopList AddopList) { }
     public void visit(DesignatorOptionList DesignatorOptionList) { }
     public void visit(DesignatorStatement DesignatorStatement) { }
@@ -104,11 +104,13 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(PrintExpr PrintExpr) { visit(); }
     public void visit(ReturnStatementExpr ReturnStatementExpr) { visit(); }
     public void visit(ReturnStatementNoExpr ReturnStatementNoExpr) { visit(); }
+    public void visit(CaseClause CaseClause) { visit(); }
     public void visit(Case Case) { visit(); }
     public void visit(CaseSingle CaseSingle) { visit(); }
     public void visit(CaseList_ CaseList_) { visit(); }
     public void visit(IfError IfError) { visit(); }
     public void visit(IfCondition IfCondition) { visit(); }
+    public void visit(DoClause DoClause) { visit(); }
     public void visit(IfElseStatement IfElseStatement) { visit(); }
     public void visit(IfStatement IfStatement) { visit(); }
     public void visit(StatementStatement StatementStatement) { visit(); }

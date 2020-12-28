@@ -12,6 +12,8 @@ import org.apache.log4j.Logger;
 import rs.ac.bg.etf.pp1.ast.*;
 import rs.etf.pp1.symboltable.*;
 import rs.etf.pp1.symboltable.concepts.*;
+import rs.etf.pp1.symboltable.structure.HashTableDataStructure;
+import rs.etf.pp1.symboltable.structure.SymbolDataStructure;
 public class SemanticPassVisitor extends VisitorAdaptor {
 	private static Struct boolStruct  = new Struct(Struct.Bool);
 	
@@ -156,7 +158,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	@Override
 	public void visit(VarInitArray varInitArray) {
-		Obj obj = Tab.currentScope.findSymbol(varInitArray.getName());
+		Obj obj = Tab.currentScope().findSymbol(varInitArray.getName());
 		if(obj!= null) {
 			report_error("Vec postoji deklarisano ime : " + varInitArray.getName(), varInitArray);
 			return;
@@ -167,7 +169,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(VarInitPrimitive varInitPrimitive) {
 	
-		Obj obj = Tab.currentScope.findSymbol(varInitPrimitive.getName());
+		Obj obj = Tab.currentScope().findSymbol(varInitPrimitive.getName());
 		if(obj!= null) {
 			report_error("Vec postoji deklarisano ime : " + varInitPrimitive.getName(), varInitPrimitive);
 			return;
@@ -194,7 +196,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			}
 			
 		}
-	
+		
 		variableNames.clear();
 	}
 	/////////////////////////////////////////////////////
@@ -213,11 +215,48 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		if(classDecl.getClassName().obj != Tab.noObj ) {
 			Struct extendsType = classDecl.getExtendsClause().struct;
 			classDecl.getClassName().obj.getType().setElementType(extendsType);
+			addBaseMethodsToClass(classDecl.getClassName().obj, classDecl);
 			Tab.chainLocalSymbols(classDecl.getClassName().obj.getType());
 		}	
 	Tab.closeScope();
 	}
 	
+	
+	
+	private boolean checkIfSameClassMethods(Obj baseMth, Obj overriddeMth, SyntaxNode info) {
+		if(! baseMth.getName().equals(overriddeMth.getName())) return false;
+		if(baseMth.getLocalSymbols().size() != overriddeMth.getLocalSymbols().size()) return false;
+		
+		List<Obj> localsBase = baseMth.getLocalSymbols().stream().collect(Collectors.toList());
+		List<Obj> localsOverride= overriddeMth.getLocalSymbols().stream().collect(Collectors.toList());
+		 
+		for(int i=1 ; i < baseMth.getLevel(); i++) {
+			Obj localOverride = localsOverride.get(i);
+			if(!localOverride.getType().equals(localsBase.get(i))) {
+				report_error("Redefinisana metoda" + overriddeMth.getName() + " nema iste parametre ", info);
+				return false;
+			}
+		}
+		return true;
+	}
+	
+	
+	private void addBaseMethodsToClass(Obj classObj, SyntaxNode info) {
+		Struct baseClassStruct = classObj.getType().getElemType();
+		if(baseClassStruct==Tab.noType) return;
+		for(Obj baseLocalMth: baseClassStruct.getMembers()) {
+			if(baseLocalMth.getKind() == Obj.Meth) {
+				Obj extendedMethObj = Tab.currentScope().findSymbol(baseLocalMth.getName());
+				if(extendedMethObj==null ) {
+					Obj o= Tab.insert(Obj.Meth, baseLocalMth.getName(), baseLocalMth.getType());
+				o.setLevel(baseLocalMth.getLevel());
+				} else  checkIfSameClassMethods(baseLocalMth, extendedMethObj, info);
+			}
+		}
+		
+		
+		
+	}
 	
 	
 	
@@ -228,6 +267,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		if(classDecl.getClassName().obj != Tab.noObj ) {
 			Struct extendsType = classDecl.getExtendsClause().struct;
 			classDecl.getClassName().obj.getType().setElementType(extendsType);
+			addBaseMethodsToClass(classDecl.getClassName().obj, classDecl);
 			Tab.chainLocalSymbols(classDecl.getClassName().obj.getType());
 		
 		}	
@@ -255,7 +295,24 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	@Override
 	public void visit(ExtendsClause_ extendsClause) {
+		if(currentClassStruct.get(currentClassStruct.size()-1)==null) return;
 		extendsClause.struct = extendsClause.getType().struct;
+		if(extendsClause.struct.getKind() != Struct.Class) {
+			report_error("Tip specificiran u extends klauzuli nije klasa ", extendsClause);
+			return;
+		}
+		if(extendsClause.struct.getElemType()!=Tab.noType) {
+			report_error("Nije dozvoljeno izvesti izvedenu klasu  ", extendsClause);
+			return;
+		}
+		
+		List<Obj> locals = extendsClause.struct.getMembers().stream().collect(Collectors.toList());
+		for(int i=0; i<extendsClause.struct.getNumberOfFields() ; i++) {
+			
+			Obj baseClassObj = locals.get(i);
+			Obj extendedClassObj = Tab.insert(baseClassObj.getKind(), baseClassObj.getName(), baseClassObj.getType());
+			
+		}
 	}
 	
 	@Override
@@ -276,8 +333,6 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		returnType.struct = returnType.getType().struct;
 		this.returnType= returnType.struct;
 		currentMethod=true;
-		
-		
 	}
 	
 	@Override
@@ -290,7 +345,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(FormalParamPrimitive formalParam) {
 		numberOfFormalParams++;
-		Obj o = Tab.currentScope.findSymbol(formalParam.getParamName());
+		Obj o = Tab.currentScope().findSymbol(formalParam.getParamName());
 		if(o!= null) {
 			report_error("Formalni parametar vec postoji + " + formalParam.getParamName() , formalParam);
 			return;
@@ -301,7 +356,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(FormalParamArray formalParam) {
 		numberOfFormalParams++;
-		Obj o = Tab.currentScope.findSymbol(formalParam.getParamName());
+		Obj o = Tab.currentScope().findSymbol(formalParam.getParamName());
 		if(o!= null) {
 			report_error("Formalni parametar vec postoji + " + formalParam.getParamName() , formalParam);
 			return;
@@ -314,7 +369,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(MethodName methodName) {
 		numberOfFormalParams=0;
-		Obj obj = Tab.currentScope.findSymbol(methodName.getMethodName());
+		Obj obj = Tab.currentScope().findSymbol(methodName.getMethodName());
 		if(obj != null) {
 			report_error("Vec postoji tip sa deklarisanim imenom kao metoda : "+ methodName.getMethodName() + " ", methodName);
 			methodName.obj=null;
@@ -368,6 +423,164 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	}
 	
 	
+	
+	/***  CONDITIONS *************************/
+	
+	@Override
+	public void visit(ConditionAND conditionAND) {
+			if(conditionAND.getConditionTerm().struct != boolStruct || conditionAND.getConditonFact().struct != boolStruct) {
+				report_error(" Jedan od tipova u AND izrazu nije bool ", conditionAND);
+				conditionAND.struct= Tab.noType;
+				return;
+			}
+			conditionAND.struct=boolStruct;
+	}
+	
+	@Override
+	public void visit(NoConditionAND noConditionAND) {
+	
+	noConditionAND.struct = noConditionAND.getConditonFact().struct;
+		
+	}
+	
+	@Override
+	public void visit(ConditionOR conditionOR) {
+		if(conditionOR.getConditionTerm().struct != boolStruct || conditionOR.getCondition().struct != boolStruct) {
+			report_error(" Jedan od tipova u AND izrazu nije bool ", conditionOR);
+			conditionOR.struct= Tab.noType;
+			return;
+		}
+		conditionOR.struct=boolStruct;
+	}
+	
+	
+	
+	@Override
+	public void visit(NoConditionOR noConditionOR) {
+		noConditionOR.struct =noConditionOR.getConditionTerm().struct;
+		if(noConditionOR.struct != boolStruct) {
+			report_error(" Uslov nije boolean tipa ", noConditionOR);
+		}
+	}
+	
+	
+	@Override
+	public void visit(ConditionFactExpr conditionFactExpr) {
+			conditionFactExpr.struct = conditionFactExpr.getExpr().struct;
+	}
+	
+	@Override
+	public void visit(ConditionFactExprRelop condition) {
+		Struct expr1= condition.getExpr().struct;
+		Struct expr2= condition.getExpr1().struct;
+		
+		if(! expr1.compatibleWith(expr2)) {
+			report_error(" Tipovi poredjenja nisu kompatibilni ", condition);
+			return;
+		}
+		if( expr2.getKind()==expr1.getKind() && (expr1.getKind() == Struct.Array || expr1.getKind() == Struct.Class)) {
+			
+			if( ! (condition.getRelop()instanceof Same || condition.getRelop() instanceof NotSame)) {
+				String type = "niz";
+				if(expr1.getKind() == Struct.Class) type = "klase";
+				report_error(" Promenljive su tipa "+ type+ ", iskoriscen je nedozvoljeni relacioni operator. Dozvolljeni su samo == i != | ", condition);
+				return;
+			}
+		}
+	
+	}
+	
+	
+	/** BREAK CONTINUE SWITCH DOWHILE IF ****/
+	
+	private boolean isCaseStmt = false; // ako je case stmt
+	private int doWhileLoopCount = 0;
+	private int ifStatementCount = 0;
+	
+	public void visit(CaseClause CaseClause) {
+		isCaseStmt = true;
+		
+	};
+	
+	@Override
+	public void visit(Case Case) {
+		isCaseStmt = false;
+	}
+	
+	@Override
+	public void visit(DoClause DoClause) {
+	doWhileLoopCount++;
+	}
+	
+	@Override
+	public void visit(BreakStatement breakStatement) {
+			if(!isCaseStmt && doWhileLoopCount==0) {
+			 report_error("Break nije ni u case, ni u do while ", breakStatement);	
+			 return;
+			}
+	}
+	
+	@Override
+	public void visit(ContinueStatement continueStatement) {
+			if(doWhileLoopCount==0) {
+			report_error("Continue nije u do while petlji ", continueStatement);
+			return;
+			}
+	}
+	
+	
+	@Override
+	public void visit(IfCondition IfCondition) {
+		ifStatementCount++;
+	}
+	
+	@Override
+	public void visit(IfElseStatement IfElseStatement) {
+		ifStatementCount--;
+	}
+	
+	@Override
+	public void visit(IfStatement IfStatement) {
+		ifStatementCount--;
+	}
+	
+	
+	@Override
+	public void visit(SwitchStatement switchStatement) {
+		if(switchStatement.getExpr().struct != Tab.intType) {
+			report_error(" Expr u switch-u nije tipa int ", switchStatement);
+			return;
+		}
+		if(!checkIfAllCasesDifferent(switchStatement)) return ;
+		
+
+	}
+	
+	private boolean checkIfAllCasesDifferent(SwitchStatement switchStmt) {
+		boolean isVaild=true;
+		Map<Integer, Boolean> map = new HashMap<Integer, Boolean>();
+		
+		CaseList caselist = switchStmt.getCaseList();
+		
+		while(! (caselist instanceof CaseSingle)) {
+			Case caseSt = ((CaseList_) caselist).getCase();
+			if(map.get(caseSt.getCaseClause().getValue())!=null) {
+				report_error(" Case sa vrednoscu " + caseSt.getCaseClause().getValue() + " vec postojii" , switchStmt);
+				isVaild=false;
+			}
+			caselist = ((CaseList_) caselist).getCaseList();
+		}
+		
+		if(caselist instanceof CaseSingle) {
+			Case caseSt = ((CaseSingle) caselist).getCase();
+			if(map.get(caseSt.getCaseClause().getValue())!=null) {
+				report_error(" Case sa vrednoscu " + caseSt.getCaseClause().getValue() + " vec postojii" , switchStmt);
+				isVaild=false;
+			}
+		}
+		return isVaild;
+	}
+	
 	/******* SEMANTIC CHECK ***************************/
 	
 	@Override
@@ -405,12 +618,32 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(FactorNew factorNew) {
 		// TODO Auto-generated method stub
+		Obj obj = Tab.find(factorNew.getType().getTypeName());
+		if(obj.getKind()!=Obj.Type) {
+			report_error("Tip uz new nije type", factorNew);
+			factorNew.struct = Tab.noType;
+			return;
+		}
 		factorNew.struct = factorNew.getType().struct;
 	}
  	
 	@Override
 	public void visit(FactorNewExpr factorNewExpr) {
+		
+		Obj obj = Tab.find(factorNewExpr.getType().getTypeName());
+		if(obj.getKind() != Obj.Type) {
+			report_error("Tip uz new nije type", factorNewExpr);
+			factorNewExpr.struct = Tab.noType;
+			return;
+		} else if (factorNewExpr.getExpr().struct != Tab.intType) {
+			report_error("Expr uz new nije int", factorNewExpr);
+			factorNewExpr.struct = Tab.noType;
+			return;
+		}
+		
+		
 		factorNewExpr.struct = new Struct(Struct.Array, factorNewExpr.getType().struct);
+		
 	}
 	
 	@Override
@@ -655,6 +888,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			
 			report_error("Ime " + nextDesignator.getName() + "  nije definisano  ", nextDesignator);
 		}
+		nextDesignator.obj = Tab.find(nextDesignator.getName());
 	}
 	
 	/** *
@@ -687,7 +921,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		
 		for(Obj obj : currentDesignatorType.getMembers()) {
 			if(obj.getName().equals(nextDes.getName())) {
-				if(nextDes.getKind() != Obj.Fld) {
+				if(obj.getKind() != Obj.Fld) {
 					report_error("Ime " +  nextDesignator.getName() + " nije polje klase ", nextDesignator);
 					currentDesignator=Tab.noObj;
 					currentDesignatorType = Tab.noType;
@@ -695,6 +929,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 				} else {
 					currentDesignator= nextDes;
 					currentDesignatorType = nextDes.getType();
+					return;
 				}
 			}
 		}

@@ -86,10 +86,7 @@ nonterminal DesignatorStatement DesignatorStatement;
 nonterminal DesingatorOption DesingatorOption;
 nonterminal ActualParameterList ActualParameterList;
 nonterminal ActualParams ActualParams ;
-nonterminal Condition Condition ;
-nonterminal ConditionTerm ConditionTerm;
-nonterminal ConditonFact ConditonFact;
-nonterminal ConditionFactRelOp ConditionFactRelOp ;
+nonterminal  ConditionFactRelOp ConditionFactRelOp ;
 nonterminal TermOptions TermOptions ;
 nonterminal Matched Matched;
 nonterminal Unmatched Unmatched;
@@ -105,7 +102,9 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
-
+nonterminal DoClause DoClause;
+nonterminal CaseClause CaseClause ;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact ;
 
 
 
@@ -229,7 +228,7 @@ StatementList ::= (StatementList_) StatementList:S1 Statement:S2 {: RESULT=new S
  
 Statement   ::= (DesignatorStatementStatement) DesignatorStatement:D1 {: RESULT=new DesignatorStatementStatement(D1); RESULT.setLine(D1left); :}  
 			|
-			(DoWhileStatement) DO Statement:S1 WHILE LPAREN Condition:C2 RPAREN SEMI {: RESULT=new DoWhileStatement(S1, C2); RESULT.setLine(S1left); :}
+			(DoWhileStatement) DoClause:D1 Statement:S2 WHILE LPAREN Condition:C3 RPAREN SEMI {: RESULT=new DoWhileStatement(D1, S2, C3); RESULT.setLine(D1left); :}
 			|
 			(SwitchStatement) SWITCH LPAREN  Expr:E1 RPAREN LCURVPAREN CaseList:C2 RCURVPAREN {: RESULT=new SwitchStatement(E1, C2); RESULT.setLine(E1left); :} 
 		    |
@@ -249,7 +248,11 @@ Statement   ::= (DesignatorStatementStatement) DesignatorStatement:D1 {: RESULT=
 		    |
 		    (IfElseStatement) IF  LPAREN IfErrorCorection:I1 Statement:S2 ELSE Statement:S3 {: RESULT=new IfElseStatement(I1, S2, S3); RESULT.setLine(I1left); :}
 		    ;
-		    
+
+
+DoClause ::= (DoClause) DO {: RESULT=new DoClause(); :} ;
+
+	    
 		    
 IfErrorCorection ::= (IfCondition) Condition:C1 RPAREN {: RESULT=new IfCondition(C1); RESULT.setLine(C1left); :}  
 					|
@@ -261,7 +264,10 @@ CaseList ::= (CaseList_) CaseList:C1 Case:C2 {: RESULT=new CaseList_(C1, C2); RE
 			 |
 			 (CaseSingle) Case:C1 {: RESULT=new CaseSingle(C1); RESULT.setLine(C1left); :} 
 			 ;
-Case  ::= (Case) CASE NUMBER:N1 COLON StatementList:S2 {: RESULT=new Case(N1, S2); RESULT.setLine(N1left); :} ; /*DA LI IDE STATEMENT ILI STATEMENTLIST*/
+Case  ::= (Case) CaseClause:C1 StatementList:S2 {: RESULT=new Case(C1, S2); RESULT.setLine(C1left); :} ; /*DA LI IDE STATEMENT ILI STATEMENTLIST*/
+
+CaseClause ::=	(CaseClause) CASE NUMBER:value COLON {: RESULT=new CaseClause(value); RESULT.setLine(valueleft); :} ;
+
 
 ReturnStatement ::= (ReturnStatementNoExpr) RETURN {: RESULT=new ReturnStatementNoExpr(); :}
 					|

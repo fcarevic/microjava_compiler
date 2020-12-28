@@ -69,7 +69,7 @@ nonterminal FormalParamList, VarDeclList ;
 nonterminal FormalParam ;
 nonterminal Statement, StatementList, CaseList, Case, ReturnStatement, PrintNumConst, PrintExpr;
 nonterminal DesignatorStatement, DesingatorOption, ActualParameterList, ActualParams ;
-nonterminal Condition , ConditionTerm, ConditonFact, ConditionFactRelOp ;
+nonterminal  ConditionFactRelOp ;
 nonterminal TermOptions ;
 nonterminal Matched, Unmatched;
 nonterminal MinusExpr, ProgName;
@@ -80,7 +80,8 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
-
+nonterminal DoClause, CaseClause ;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact ;
 
 
 
@@ -204,7 +205,7 @@ StatementList ::= (StatementList_) StatementList Statement
  
 Statement   ::= (DesignatorStatementStatement) DesignatorStatement  
 			|
-			(DoWhileStatement) DO Statement WHILE LPAREN Condition RPAREN SEMI
+			(DoWhileStatement) DoClause Statement WHILE LPAREN Condition RPAREN SEMI
 			|
 			(SwitchStatement) SWITCH LPAREN  Expr RPAREN LCURVPAREN CaseList RCURVPAREN 
 		    |
@@ -224,7 +225,11 @@ Statement   ::= (DesignatorStatementStatement) DesignatorStatement
 		    |
 		    (IfElseStatement) IF  LPAREN IfErrorCorection Statement ELSE Statement
 		    ;
-		    
+
+
+DoClause ::= (DoClause) DO ;
+
+	    
 		    
 IfErrorCorection ::= (IfCondition) Condition RPAREN  
 					|
@@ -236,7 +241,10 @@ CaseList ::= (CaseList_) CaseList Case
 			 |
 			 (CaseSingle) Case 
 			 ;
-Case  ::= (Case) CASE NUMBER COLON StatementList ; /*DA LI IDE STATEMENT ILI STATEMENTLIST*/
+Case  ::= (Case) CaseClause StatementList ; /*DA LI IDE STATEMENT ILI STATEMENTLIST*/
+
+CaseClause ::=	(CaseClause) CASE NUMBER:value COLON ;
+
 
 ReturnStatement ::= (ReturnStatementNoExpr) RETURN
 					|
