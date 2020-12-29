@@ -177,6 +177,8 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		variableNames.add(varInitPrimitive);
 	}
 	
+	
+	
 	@Override
 	public void visit(VarDecl_ varDecl) {
 		
@@ -206,7 +208,13 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	private int currentClassCount = 0;
 	private List<Struct> currentClassStruct=new ArrayList<Struct>();
 	
-	
+	@Override
+	public void visit(ClassFields classFields) {
+		if(currentClassStruct.get(currentClassStruct.size()-1)!=null) {
+			
+			currentClassStruct.get(currentClassStruct.size()-1).setMembers(Tab.currentScope().getLocals());
+		}
+	}
 	
 	@Override
 	public void visit(ClassDeclsNoMethod classDecl) {
@@ -232,7 +240,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		 
 		for(int i=1 ; i < baseMth.getLevel(); i++) {
 			Obj localOverride = localsOverride.get(i);
-			if(!localOverride.getType().equals(localsBase.get(i))) {
+			if(!localOverride.getType().equals(localsBase.get(i).getType())) {
 				report_error("Redefinisana metoda" + overriddeMth.getName() + " nema iste parametre ", info);
 				return false;
 			}
@@ -288,7 +296,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			Tab.openScope();
 			return;
 		}
-		className.obj=Tab.insert(Obj.Type, className.getClassName(), new Struct(Struct.Class));
+		className.obj=Tab.insert(Obj.Type, className.getClassName(), new MyStruct(Struct.Class));
 		currentClassStruct.add(className.obj.getType());
 		Tab.openScope();
 	}
@@ -312,6 +320,10 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			Obj baseClassObj = locals.get(i);
 			Obj extendedClassObj = Tab.insert(baseClassObj.getKind(), baseClassObj.getName(), baseClassObj.getType());
 			
+		}
+		
+		if(currentClassCount>0 && currentClassStruct.get(currentClassStruct.size()-1)!=null) {
+			currentClassStruct.get(currentClassStruct.size()-1).setElementType(extendsClause.struct);
 		}
 	}
 	
@@ -381,6 +393,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		
 		if(currentClassCount>0 && currentClassStruct.get(currentClassStruct.size()-1)!=null) {
 			Tab.insert(Obj.Var, "this", currentClassStruct.get(currentClassStruct.size()-1));	
+			numberOfFormalParams+=1;
 		}
 		
 	}
@@ -487,6 +500,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 				return;
 			}
 		}
+		condition.struct = boolStruct;
 	
 	}
 	
@@ -759,10 +773,12 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorStatementFuncCall designatorFuncCall) {
 		
-		String name = getLastDesignatorNameInChaining(designatorFuncCall.getDesignator());
-		Obj mth = Tab.find(name);
+		Obj mth = getLastDesignatorMethodInChaining(designatorFuncCall.getDesignator());
+		
+		 
+	
 		if(mth.getKind() != Obj.Meth) {
-				report_error("Ime " + name + " nije funkcija ", designatorFuncCall);
+				report_error("Ime " + mth.getName() + " nije funkcijA ", designatorFuncCall);
 				return;
 		}
 		
@@ -846,8 +862,22 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	public void visit(Designator designator) {
 		
 		currentDesignator = Tab.find(designator.getDesignatorName().getName());
-		if(currentDesignator == Tab.noObj) return;
+		if(currentDesignator == Tab.noObj) {
+			if(currentClassCount>0) {
+				Struct baseClass = currentClassStruct.get(currentClassStruct.size()-1).getElemType();
+				if(baseClass!=null && baseClass!=Tab.noType) {
+					currentDesignator = baseClass.getMembersTable().searchKey(designator.getDesignatorName().getName());
+					if(currentDesignator==null) 
+					 { currentDesignator = Tab.noObj;
+					 currentDesignatorType= Tab.noType;
+					return;
+					}
+				}
+			}
+		}
+		
 		currentDesignatorType = currentDesignator.getType();
+		
 		DesignatorOptionList optList = designator.getDesignatorOptionList();
 		do {
 			 
@@ -875,6 +905,15 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	public void visit(DesignatorName designatorName) {
 		Obj obj  = Tab.find(designatorName.getName());
 		if(obj==Tab.noObj) {
+			if(currentClassCount>0) {
+			Struct baseClass = currentClassStruct.get(currentClassStruct.size()-1).getElemType();
+			if(baseClass!=null && baseClass!=Tab.noType) {
+				obj = baseClass.getMembersTable().searchKey(designatorName.getName());
+				if(obj!=null) return;
+			}
+				
+				
+			}
 			report_error("Nije definisano ime " + designatorName.getName() + " ", designatorName);
 		}		
 	}
@@ -884,11 +923,11 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorDotIdentOption nextDesignator) {
 		
-		if(Tab.find(nextDesignator.getName())==Tab.noObj) {
+		/*if(Tab.find(nextDesignator.getName())==Tab.noObj) {
 			
 			report_error("Ime " + nextDesignator.getName() + "  nije definisano  ", nextDesignator);
 		}
-		nextDesignator.obj = Tab.find(nextDesignator.getName());
+		nextDesignator.obj = Tab.find(nextDesignator.getName());*/
 	}
 	
 	/** *
@@ -917,22 +956,44 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			return;
 			
 		}
-		Obj nextDes  = Tab.find(nextDesignator.getName());
+	
 		
 		for(Obj obj : currentDesignatorType.getMembers()) {
-			if(obj.getName().equals(nextDes.getName())) {
-				if(obj.getKind() != Obj.Fld) {
+			if(obj.getName().equals(nextDesignator.getName())) {
+				if(obj.getKind() != Obj.Fld && obj.getKind()!= Obj.Meth) {
 					report_error("Ime " +  nextDesignator.getName() + " nije polje klase ", nextDesignator);
 					currentDesignator=Tab.noObj;
 					currentDesignatorType = Tab.noType;
 					return;
 				} else {
-					currentDesignator= nextDes;
-					currentDesignatorType = nextDes.getType();
+					currentDesignator= obj;
+					currentDesignatorType = obj.getType();
 					return;
 				}
 			}
 		}
+		
+		if(currentDesignatorType.getElemType() != null && currentDesignatorType.getElemType() != Tab.noType ) {
+			for(Obj obj : currentDesignatorType.getElemType().getMembers()) { //proverava osnovnu klasu
+				if(obj.getName().equals(nextDesignator.getName())) {
+					if(obj.getKind() != Obj.Fld && obj.getKind()!= Obj.Meth) {
+						report_error("Ime " +  nextDesignator.getName() + " nije polje klase ", nextDesignator);
+						currentDesignator=Tab.noObj;
+						currentDesignatorType = Tab.noType;
+						return;
+					} else {
+						currentDesignator= obj;
+						currentDesignatorType = obj.getType();
+						return;
+					}
+				}
+			}	
+			
+			
+		}
+		
+		
+		
 		report_error("Ime " + nextDesignator.getName() +" nije polje objekta " + currentDesignator.getName()+"  ", nextDesignator);
 		currentDesignator = Tab.noObj;
 		currentDesignatorType = Tab.noType;
@@ -964,9 +1025,56 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			DesignatorOption option = ((DesignatorOptionList_)optList).getDesignatorOption();
 			if(option instanceof DesignatorDotIdentOption)
 				name = ((DesignatorDotIdentOption)option).getName();
+			optList = ((DesignatorOptionList_)optList).getDesignatorOptionList();
+			
 		}
 		return name;
 	}
+	private Obj getLastDesignatorMethodInChaining(Designator designator) {
+		String name = "";
+		String prevName = name;
+		
+		name = designator.getDesignatorName().getName();
+		
+		DesignatorOptionList optList = designator.getDesignatorOptionList();
+		
+		while(! (optList instanceof DesignatorOptionEmptyList)) {
+			DesignatorOption option = ((DesignatorOptionList_)optList).getDesignatorOption();
+			if(option instanceof DesignatorDotIdentOption) {
+				prevName=name;
+				name = ((DesignatorDotIdentOption)option).getName();
+			}
+			optList = ((DesignatorOptionList_)optList).getDesignatorOptionList();
+			
+		}
+		
+		Obj retObj = Tab.find(name);
+		if(retObj==Tab.noObj) {
+			if(prevName.equals("")&& currentClassCount>0) {
+				retObj = currentClassStruct.get(currentClassStruct.size()-1).getElemType().getMembersTable().searchKey(name);
+				if(retObj==null) retObj=Tab.noObj;
+				return retObj;
+			} else {
+				Obj prevObj = Tab.find(prevName);
+				Struct prevObjStruct = prevObj.getType();
+				while(prevObjStruct.getKind() == Struct.Array) prevObjStruct= prevObjStruct.getElemType();
+				if(prevObjStruct.getKind() != Struct.Class) {
+					report_error(" Nije objekat klase " + prevObj.getName(), designator);
+					retObj = Tab.noObj;
+					return retObj;
+					
+				} 
+				retObj = prevObjStruct.getMembersTable().searchKey(name);
+				if(retObj==null) retObj = Tab.noObj;
+				return retObj;
+			} 
+			
+		}
+		
+		return retObj;
+		
+	}
+	
 	
 public boolean isSuccess() {
 	return !errorDetected;

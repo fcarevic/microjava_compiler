@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 28/11/2020 16:4:55
+// 29/11/2020 1:49:53
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -141,6 +141,7 @@ public interface Visitor {
     public void visit(MethodDeclMultipleList MethodDeclMultipleList);
     public void visit(NoExtendsClause NoExtendsClause);
     public void visit(ExtendsClause_ ExtendsClause_);
+    public void visit(ClassFields ClassFields);
     public void visit(ClassName ClassName);
     public void visit(ClassDeclMethod ClassDeclMethod);
     public void visit(ClassDeclsNoMethod ClassDeclsNoMethod);

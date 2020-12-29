@@ -80,7 +80,7 @@ nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
-nonterminal DoClause, CaseClause ;
+nonterminal DoClause, CaseClause, ClassFields ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact ;
 
 
@@ -124,7 +124,7 @@ StdConstType ::= (StdConstBool) BOOL:val
 				|
 				(StdConstChar) CHAR:val
 				;
-					
+				
 
 VarDeclList ::= (VarDeclList_) VarDeclList VarDecl
 				|
@@ -152,11 +152,12 @@ VarInit ::= (VarInitPrimitive) IDENT:name
 
 ClassDeclList ::= (ClassDeclList) ClassDeclList ClassDecl; 
 					
-ClassDecl ::= (ClassDeclsNoMethod) CLASS ClassName ExtendsClause LCURVPAREN VarDeclList RCURVPAREN 
+ClassDecl ::= (ClassDeclsNoMethod) CLASS ClassName ExtendsClause LCURVPAREN ClassFields RCURVPAREN 
 				|
-			(ClassDeclMethod) CLASS ClassName ExtendsClause LCURVPAREN VarDeclList LCURVPAREN MethodDeclList RCURVPAREN RCURVPAREN 
+			(ClassDeclMethod) CLASS ClassName ExtendsClause LCURVPAREN ClassFields LCURVPAREN MethodDeclList RCURVPAREN RCURVPAREN 
 			;
 ClassName ::= (ClassName) IDENT:className ;
+ClassFields ::= (ClassFields) VarDeclList;	
 ExtendsClause ::= (ExtendsClause_) EXTENDS Type:extendType 
 				|
 				(NoExtendsClause) /*epsilon*/

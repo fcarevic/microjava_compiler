@@ -1,0 +1,36 @@
+package rs.ac.bg.etf.pp1;
+
+
+import rs.etf.pp1.symboltable.structure.SymbolDataStructure;
+
+public class MyStruct extends  rs.etf.pp1.symboltable.concepts.Struct {
+
+	public MyStruct(int kind, MyStruct elemType) {
+		super(kind, elemType);
+		// TODO Auto-generated constructor stub
+	}
+
+	public MyStruct(int kind, SymbolDataStructure members) {
+		super(kind, members);
+		// TODO Auto-generated constructor stub
+	}
+
+	public MyStruct(int kind) {
+		super(kind);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	public boolean assignableTo( rs.etf.pp1.symboltable.concepts.Struct dest) {
+		if(this.getElemType()==dest) return true;
+		return super.assignableTo(dest);
+		
+		
+		
+		
+		
+	}
+	
+	
+
+}

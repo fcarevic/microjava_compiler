@@ -103,7 +103,8 @@ nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
 nonterminal DoClause DoClause;
-nonterminal CaseClause CaseClause ;
+nonterminal CaseClause CaseClause;
+nonterminal ClassFields ClassFields ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact ;
 
 
@@ -147,7 +148,7 @@ StdConstType ::= (StdConstBool) BOOL:val {: RESULT=new StdConstBool(val); RESULT
 				|
 				(StdConstChar) CHAR:val {: RESULT=new StdConstChar(val); RESULT.setLine(valleft); :}
 				;
-					
+				
 
 VarDeclList ::= (VarDeclList_) VarDeclList:V1 VarDecl:V2 {: RESULT=new VarDeclList_(V1, V2); RESULT.setLine(V1left); :}
 				|
@@ -175,11 +176,12 @@ VarInit ::= (VarInitPrimitive) IDENT:name {: RESULT=new VarInitPrimitive(name); 
 
 ClassDeclList ::= (ClassDeclList) ClassDeclList:C1 ClassDecl:C2 {: RESULT=new ClassDeclList(C1, C2); RESULT.setLine(C1left); :}; 
 					
-ClassDecl ::= (ClassDeclsNoMethod) CLASS ClassName:C1 ExtendsClause:E2 LCURVPAREN VarDeclList:V3 RCURVPAREN {: RESULT=new ClassDeclsNoMethod(C1, E2, V3); RESULT.setLine(C1left); :} 
+ClassDecl ::= (ClassDeclsNoMethod) CLASS ClassName:C1 ExtendsClause:E2 LCURVPAREN ClassFields:C3 RCURVPAREN {: RESULT=new ClassDeclsNoMethod(C1, E2, C3); RESULT.setLine(C1left); :} 
 				|
-			(ClassDeclMethod) CLASS ClassName:C1 ExtendsClause:E2 LCURVPAREN VarDeclList:V3 LCURVPAREN MethodDeclList:M4 RCURVPAREN RCURVPAREN {: RESULT=new ClassDeclMethod(C1, E2, V3, M4); RESULT.setLine(C1left); :} 
+			(ClassDeclMethod) CLASS ClassName:C1 ExtendsClause:E2 LCURVPAREN ClassFields:C3 LCURVPAREN MethodDeclList:M4 RCURVPAREN RCURVPAREN {: RESULT=new ClassDeclMethod(C1, E2, C3, M4); RESULT.setLine(C1left); :} 
 			;
 ClassName ::= (ClassName) IDENT:className {: RESULT=new ClassName(className); RESULT.setLine(classNameleft); :} ;
+ClassFields ::= (ClassFields) VarDeclList:V1 {: RESULT=new ClassFields(V1); RESULT.setLine(V1left); :};	
 ExtendsClause ::= (ExtendsClause_) EXTENDS Type:extendType {: RESULT=new ExtendsClause_(extendType); RESULT.setLine(extendTypeleft); :} 
 				|
 				(NoExtendsClause) {: RESULT=new NoExtendsClause(); :} /*epsilon*/
