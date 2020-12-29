@@ -103,7 +103,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 				
 				if( type == boolStruct) {
 					StdConstBool boolVal =(StdConstBool)(constInit.getStdConstType());
-					//obj.setAdr(boolVal.get);
+					obj.setAdr(boolVal.getVal().equals("true")? 1:0);
 				} else if(type == Tab.intType) {
 						StdConstNumber numVal = (StdConstNumber)(constInit.getStdConstType());
 						obj.setAdr(numVal.getVal());
@@ -600,6 +600,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(FactorBool factorBool) {
 		factorBool.struct = boolStruct;
+		
 	}
 	
 	@Override
