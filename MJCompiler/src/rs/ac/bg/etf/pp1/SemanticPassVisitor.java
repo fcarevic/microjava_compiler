@@ -708,7 +708,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	}
 	
 	@Override
-	public void visit(ExprTermMinus exprTermMinus) {
+	public void visit(Expr1TermMinus exprTermMinus) {
 		if(exprTermMinus.getAddopList()instanceof AddopEmptyList) {
 			exprTermMinus.struct = ( exprTermMinus.getTerm().struct == Tab.intType? Tab.intType : Tab.noType);
 		}
@@ -727,7 +727,31 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	
 	@Override
-	public void visit(ExprTermNoMinus exprTermNoMinus) {
+	public void visit(Expression expression) {
+		// TODO Auto-generated method stub
+		expression.struct = expression.getExpr1().struct;
+	}
+	
+	@Override
+	public void visit(TernaryExpr ternaryExpr) {
+		if(ternaryExpr.getExpr1().struct !=  boolStruct) {
+			report_error("Uslov ternarnog izraza nije boolean tipa ", ternaryExpr);
+			ternaryExpr.struct= Tab.noType;
+			return;
+		}
+		
+		Struct base = MyStruct.getBaseStruct(ternaryExpr.getExpr11().struct,  ternaryExpr.getExpr12().struct);
+		if(base == Tab.noType) {
+			report_error("Izrazi ternarnog izraza nisu kompatibilni", ternaryExpr);
+			
+		}
+		ternaryExpr.struct=base;
+		
+	}
+	
+	
+	@Override
+	public void visit(Expr1TermNoMinus exprTermNoMinus) {
 		if(exprTermNoMinus.getAddopList() instanceof AddopEmptyList) {
 			exprTermNoMinus.struct =  exprTermNoMinus.getTerm().struct;
 		}
@@ -760,6 +784,10 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 					
 				}
 	}
+	
+	
+	
+	
 	
 	@Override
 	public void visit(DesignatorStatementAssignop statement) {
@@ -1052,6 +1080,8 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		Obj retObj = Tab.find(name);
 		if(retObj==Tab.noObj) {
 			if(prevName.equals("")&& currentClassCount>0) {
+				if(currentClassStruct.get(currentClassStruct.size()-1)==null) return Tab.noObj;
+				if(currentClassStruct.get(currentClassStruct.size()-1).getElemType()==null) return Tab.noObj;
 				retObj = currentClassStruct.get(currentClassStruct.size()-1).getElemType().getMembersTable().searchKey(name);
 				if(retObj==null) retObj=Tab.noObj;
 				return retObj;

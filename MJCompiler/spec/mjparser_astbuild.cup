@@ -99,7 +99,7 @@ nonterminal FormalParams FormalParams;
 nonterminal IfErrorCorection IfErrorCorection;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, StdConstType, ExtendsClause, ReturnType ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName ; 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr ;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr1 , Expr ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
 nonterminal DoClause DoClause;
@@ -319,19 +319,16 @@ ConditonFact ::= (ConditionFactExpr) Expr:E1 {: RESULT=new ConditionFactExpr(E1)
 				;
 
 /* ****************************************** */
+Expr ::= (TernaryExpr) Expr1:E1 QUESTION Expr1:firstExpression COLON Expr1:secondExpression {: RESULT=new TernaryExpr(E1, firstExpression, secondExpression); RESULT.setLine(E1left); :}
+		|
+		(Expression) Expr1:E1 {: RESULT=new Expression(E1); RESULT.setLine(E1left); :}
+		;	
 		    
-Expr ::= (ExprTermMinus) MINUS  Term:T1 AddopList:A2 {: RESULT=new ExprTermMinus(T1, A2); RESULT.setLine(T1left); :}
+Expr1 ::= (Expr1TermMinus) MINUS  Term:T1 AddopList:A2 {: RESULT=new Expr1TermMinus(T1, A2); RESULT.setLine(T1left); :}
 			|
-		(ExprTermNoMinus) Term:T1 AddopList:A2 {: RESULT=new ExprTermNoMinus(T1, A2); RESULT.setLine(T1left); :}
+		(Expr1TermNoMinus) Term:T1 AddopList:A2 {: RESULT=new Expr1TermNoMinus(T1, A2); RESULT.setLine(T1left); :}
 			;
-		/*	
-		(ConditionTernary) Condition QUESTION Expr COLON Expr
-			;
-		  |
-		 (ConditionTernary) Condition QUESTION Expr COLON Expr
-			 
-			
-		; */
+		
 AddopList ::= (AddopMultipleList) AddopList:A1 Addop:A2 Term:T3 {: RESULT=new AddopMultipleList(A1, A2, T3); RESULT.setLine(A1left); :} 
 				|
 				(AddopEmptyList) {: RESULT=new AddopEmptyList(); :} /*epsilon*/

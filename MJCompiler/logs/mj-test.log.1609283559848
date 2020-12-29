@@ -1,0 +1,41 @@
+INFO  00:07:13,375 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  00:07:13,537 - #34 program
+INFO  00:07:13,537 - #47 test301
+INFO  00:07:13,537 - #21 {
+INFO  00:07:13,537 - #43 void
+INFO  00:07:13,553 - #47 main
+INFO  00:07:13,553 - #23 (
+INFO  00:07:13,553 - #42 )
+INFO  00:07:13,553 - #47 int
+INFO  00:07:13,553 - #47 bodovi
+INFO  00:07:13,553 - #41 ;
+INFO  00:07:13,553 - #21 {
+INFO  00:07:13,553 - #47 bodovi
+INFO  00:07:13,553 - #18 >
+ERROR 00:07:13,568 - 
+Sintaksna greska na liniji 11
+INFO  00:07:13,568 - #50 10
+INFO  00:07:13,568 - #35 ?
+INFO  00:07:13,568 - #51 +
+INFO  00:07:13,568 - #6 :
+INFO  00:07:13,568 - #51 -
+INFO  00:07:13,568 - #41 ;
+INFO  00:07:13,575 - #33 print
+INFO  00:07:13,575 - #23 (
+INFO  00:07:13,575 - #47 bodovi
+ERROR 00:07:13,575 - Izvrsen oporavak do ; u liniji 11
+INFO  00:07:13,575 - #18 >
+ERROR 00:07:13,575 - 
+Sintaksna greska na liniji 12
+INFO  00:07:13,575 - #50 10
+INFO  00:07:13,575 - #35 ?
+INFO  00:07:13,575 - #51 +
+INFO  00:07:13,575 - #6 :
+INFO  00:07:13,575 - #51 -
+INFO  00:07:13,575 - #42 )
+INFO  00:07:13,575 - #41 ;
+INFO  00:07:13,575 - #37 }
+INFO  00:07:13,575 - #37 }
+ERROR 00:07:13,575 - Izvrsen oporavak do ; u liniji 12
+ERROR 00:07:13,575 - ovde
+ERROR 00:07:13,575 - NEUSPESNO SINTAKSNO PARSIRANJE

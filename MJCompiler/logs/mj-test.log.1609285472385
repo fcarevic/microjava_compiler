@@ -1,0 +1,16 @@
+INFO  00:16:13,483 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  00:16:13,867 - #34 program
+INFO  00:16:13,867 - #47 test301
+INFO  00:16:13,867 - #21 {
+INFO  00:16:20,994 - #43 void
+INFO  00:16:22,234 - #47 main
+INFO  00:16:22,957 - #23 (
+INFO  00:16:26,346 - #42 )
+INFO  00:16:28,411 - #47 int
+INFO  00:16:31,718 - #47 bodovi
+INFO  00:16:34,990 - #41 ;
+INFO  00:16:36,057 - #21 {
+INFO  00:16:42,570 - #33 print
+INFO  00:16:45,328 - #23 (
+INFO  00:16:45,337 - #50 2
+INFO  00:16:45,345 - #42 )

@@ -1,16 +1,16 @@
 // generated with ast extension for cup
 // version 0.8
-// 29/11/2020 4:46:5
+// 29/11/2020 23:26:10
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class ExprTermMinus extends Expr {
+public class Expr1TermMinus extends Expr1 {
 
     private Term Term;
     private AddopList AddopList;
 
-    public ExprTermMinus (Term Term, AddopList AddopList) {
+    public Expr1TermMinus (Term Term, AddopList AddopList) {
         this.Term=Term;
         if(Term!=null) Term.setParent(this);
         this.AddopList=AddopList;
@@ -57,7 +57,7 @@ public class ExprTermMinus extends Expr {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("ExprTermMinus(\n");
+        buffer.append("Expr1TermMinus(\n");
 
         if(Term!=null)
             buffer.append(Term.toString("  "+tab));
@@ -72,7 +72,7 @@ public class ExprTermMinus extends Expr {
         buffer.append("\n");
 
         buffer.append(tab);
-        buffer.append(") [ExprTermMinus]");
+        buffer.append(") [Expr1TermMinus]");
         return buffer.toString();
     }
 }
