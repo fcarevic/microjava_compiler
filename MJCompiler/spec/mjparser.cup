@@ -91,7 +91,7 @@ start with Program;
 Program ::= (Program) PROG ProgName NoMethodDeclList LCURVPAREN MethodDeclList RCURVPAREN
 				{:
 				CUP$MJParser$stack.add(0,o);
-				parser.ispisi_poruku("ovde");
+		
 				
 				:}
 				;
