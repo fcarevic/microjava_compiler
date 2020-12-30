@@ -17,12 +17,14 @@ public class SymbolTablePrinter extends SymbolTableVisitor{
 	}
 
 	public void visitVar(Obj objToVisit) {
+		boolean maySkip = false;
 		switch (objToVisit.getKind()) {
 		case Obj.Con:
 			output.append("Con ");
 			break;
 		case Obj.Var:
 			output.append("Var ");
+			maySkip = true;
 			break;
 		case Obj.Type:
 			output.append("Type ");
@@ -32,6 +34,7 @@ public class SymbolTablePrinter extends SymbolTableVisitor{
 			break;
 		case Obj.Fld:
 			output.append("Fld ");
+			maySkip=true;
 			break;
 		case Obj.Prog:
 			output.append("Prog ");
@@ -39,7 +42,12 @@ public class SymbolTablePrinter extends SymbolTableVisitor{
 		}
 		output.append(objToVisit.getName());
 		output.append(": ");
+		if(maySkip && objToVisit.getType().getKind() == Struct.Class) {
+			output.append("Klasni tip");
+		}
+		else
 		objToVisit.getType().accept(this);
+		 
 		output.append(", ");
 		output.append(objToVisit.getAdr());
 		output.append(", ");
@@ -84,6 +92,7 @@ public class SymbolTablePrinter extends SymbolTableVisitor{
 
 	@Override
 	public void visitStructNode(Struct structToVisit) {
+		
 		switch (structToVisit.getKind()) {
 		case Struct.None:
 			output.append("notype");

@@ -1,0 +1,29 @@
+INFO  18:08:16,853 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  18:08:17,031 - #34 program
+INFO  18:08:17,031 - #47 test_303
+INFO  18:08:17,031 - #8 const
+INFO  18:08:17,047 - #47 int
+INFO  18:08:17,047 - #47 cinilac
+INFO  18:08:17,054 - #15 =
+INFO  18:08:17,054 - #50 4
+INFO  18:08:17,054 - #7 ,
+INFO  18:08:17,054 - #47 delilac
+INFO  18:08:17,054 - #15 =
+INFO  18:08:17,054 - #50 3
+INFO  18:08:17,054 - #41 ;
+INFO  18:08:17,054 - #21 {
+INFO  18:08:17,054 - #43 void
+INFO  18:08:17,054 - #47 main
+INFO  18:08:17,054 - #23 (
+INFO  18:08:17,054 - #42 )
+INFO  18:08:17,069 - #21 {
+INFO  18:08:17,069 - #33 print
+INFO  18:08:17,069 - #23 (
+INFO  18:08:17,069 - #47 cinilac
+INFO  18:08:17,069 - #42 )
+INFO  18:08:17,085 - #41 ;
+INFO  18:08:17,085 - #37 }
+INFO  18:08:17,085 - #37 }
+ERROR 18:08:17,085 - ovde
+INFO  18:08:17,101 - ===================================
+INFO  18:08:17,121 - USPESNO SEMANTICKO PARSIRANJE

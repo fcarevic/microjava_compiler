@@ -3,6 +3,7 @@ package rs.ac.bg.etf.pp1;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 import java.io.Reader;
@@ -14,6 +15,9 @@ import org.apache.log4j.xml.DOMConfigurator;
 
 import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.util.Log4JUtils;
+import rs.etf.pp1.mj.runtime.Code;
+import rs.etf.pp1.mj.runtime.Run;
+import rs.etf.pp1.mj.runtime.disasm;
 import rs.etf.pp1.symboltable.Tab;
 import rs.etf.pp1.symboltable.concepts.Obj;
 import rs.etf.pp1.symboltable.concepts.Scope;
@@ -57,6 +61,7 @@ public class MJParserTest {
 			SemanticPassVisitor v = new SemanticPassVisitor();
 			prog.traverseBottomUp(v); 
 			
+			Tab.dump( new SymbolTablePrinter());
 			
 			if(!v.isSuccess()) {
 				log.error("NEUSPESNO SEMANTICKO  PARSIRANJE");
@@ -64,10 +69,21 @@ public class MJParserTest {
 			} else {
 				
 				log.info("USPESNO SEMANTICKO PARSIRANJE");
+				File file = new File("test/output.obj");
+				if(file.exists()) file.delete();
+				CodeGenerator codeGen = new CodeGenerator();
+				prog.traverseBottomUp(codeGen);
+				Code.write(new FileOutputStream(file));
+				
+				String [] argS = {"test/output.obj"};
+				
+			 disasm.main(argS);
+				Run.main(argS);
+				
+				
 			}
 			
-			//Tab.dump( new SymbolTablePrinter());
-			
+				
 			
 	/*      
 			log.info(" Print count calls = " + v.printCallCount);
