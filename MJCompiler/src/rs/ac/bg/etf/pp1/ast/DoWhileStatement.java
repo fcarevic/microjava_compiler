@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/11/2020 3:8:7
+// 2/0/2021 3:42:30
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,15 +9,15 @@ public class DoWhileStatement extends Statement {
 
     private DoClause DoClause;
     private Statement Statement;
-    private Condition Condition;
+    private DoWhileCondition DoWhileCondition;
 
-    public DoWhileStatement (DoClause DoClause, Statement Statement, Condition Condition) {
+    public DoWhileStatement (DoClause DoClause, Statement Statement, DoWhileCondition DoWhileCondition) {
         this.DoClause=DoClause;
         if(DoClause!=null) DoClause.setParent(this);
         this.Statement=Statement;
         if(Statement!=null) Statement.setParent(this);
-        this.Condition=Condition;
-        if(Condition!=null) Condition.setParent(this);
+        this.DoWhileCondition=DoWhileCondition;
+        if(DoWhileCondition!=null) DoWhileCondition.setParent(this);
     }
 
     public DoClause getDoClause() {
@@ -36,12 +36,12 @@ public class DoWhileStatement extends Statement {
         this.Statement=Statement;
     }
 
-    public Condition getCondition() {
-        return Condition;
+    public DoWhileCondition getDoWhileCondition() {
+        return DoWhileCondition;
     }
 
-    public void setCondition(Condition Condition) {
-        this.Condition=Condition;
+    public void setDoWhileCondition(DoWhileCondition DoWhileCondition) {
+        this.DoWhileCondition=DoWhileCondition;
     }
 
     public void accept(Visitor visitor) {
@@ -51,20 +51,20 @@ public class DoWhileStatement extends Statement {
     public void childrenAccept(Visitor visitor) {
         if(DoClause!=null) DoClause.accept(visitor);
         if(Statement!=null) Statement.accept(visitor);
-        if(Condition!=null) Condition.accept(visitor);
+        if(DoWhileCondition!=null) DoWhileCondition.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
         if(DoClause!=null) DoClause.traverseTopDown(visitor);
         if(Statement!=null) Statement.traverseTopDown(visitor);
-        if(Condition!=null) Condition.traverseTopDown(visitor);
+        if(DoWhileCondition!=null) DoWhileCondition.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(DoClause!=null) DoClause.traverseBottomUp(visitor);
         if(Statement!=null) Statement.traverseBottomUp(visitor);
-        if(Condition!=null) Condition.traverseBottomUp(visitor);
+        if(DoWhileCondition!=null) DoWhileCondition.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -85,8 +85,8 @@ public class DoWhileStatement extends Statement {
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(Condition!=null)
-            buffer.append(Condition.toString("  "+tab));
+        if(DoWhileCondition!=null)
+            buffer.append(DoWhileCondition.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

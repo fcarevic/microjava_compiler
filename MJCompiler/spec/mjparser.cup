@@ -67,20 +67,20 @@ nonterminal VarInitList, VarInit ;
 nonterminal ClassDeclList , MethodDecl;
 nonterminal FormalParamList, VarDeclList ;
 nonterminal FormalParam ;
-nonterminal Statement, StatementList, CaseList, Case, ReturnStatement, PrintNumConst, PrintExpr;
+nonterminal Statement, StatementList, CaseList, SwitchClause,   ReturnStatement, PrintNumConst, PrintExpr;
 nonterminal DesignatorStatement, DesingatorOption, ActualParameterList, ActualParams ;
 nonterminal  ConditionFactRelOp ;
 nonterminal TermOptions ;
 nonterminal Matched, Unmatched;
-nonterminal MinusExpr, ProgName;
+nonterminal MinusExpr, ProgName, DoWhileCondition;
 nonterminal ConstDeclList, AddopTermExprOption;
-nonterminal DesignatorOptionList, FormalParams, IfErrorCorection;
+nonterminal DesignatorOptionList, FormalParams ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, StdConstType, ExtendsClause, ReturnType ;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName ; 
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName, Break ; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr1 , Expr ;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName ;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName, Else, IfErrorCorection, Case , CaseClause ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
-nonterminal DoClause, CaseClause, ClassFields ;
+nonterminal DoClause, ClassFields ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact ;
 
 
@@ -206,11 +206,11 @@ StatementList ::= (StatementList_) StatementList Statement
  
 Statement   ::= (DesignatorStatementStatement) DesignatorStatement  
 			|
-			(DoWhileStatement) DoClause Statement WHILE LPAREN Condition RPAREN SEMI
+			(DoWhileStatement) DoClause Statement WHILE LPAREN DoWhileCondition RPAREN SEMI
 			|
-			(SwitchStatement) SWITCH LPAREN  Expr RPAREN LCURVPAREN CaseList RCURVPAREN 
+			(SwitchStatement) SwitchClause  LCURVPAREN CaseList RCURVPAREN 
 		    |
-		    (BreakStatement) BREAK SEMI
+		    (BreakStatement) Break SEMI
 		    |
 		    (ContinueStatement) CONTINUE SEMI
 		    |
@@ -224,13 +224,15 @@ Statement   ::= (DesignatorStatementStatement) DesignatorStatement
 		    |
 		    (IfStatement) IF LPAREN IfErrorCorection  Statement 
 		    |
-		    (IfElseStatement) IF  LPAREN IfErrorCorection Statement ELSE Statement
+		    (IfElseStatement) IF  LPAREN IfErrorCorection Statement  Else Statement
 		    ;
 
 
 DoClause ::= (DoClause) DO ;
-
-	    
+DoWhileCondition ::= (DoWhileCondition) Condition;
+Else  ::= (Else) ELSE ;
+Break ::= (Break) BREAK;
+SwitchClause ::= (SwitchClause) SWITCH LPAREN  Expr RPAREN ;
 		    
 IfErrorCorection ::= (IfCondition) Condition RPAREN  
 					|

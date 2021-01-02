@@ -61,7 +61,7 @@ public class MJParserTest {
 			SemanticPassVisitor v = new SemanticPassVisitor();
 			prog.traverseBottomUp(v); 
 			
-			Tab.dump( new SymbolTablePrinter());
+			//Tab.dump( new SymbolTablePrinter());
 			
 			if(!v.isSuccess()) {
 				log.error("NEUSPESNO SEMANTICKO  PARSIRANJE");
@@ -73,6 +73,7 @@ public class MJParserTest {
 				if(file.exists()) file.delete();
 				CodeGenerator codeGen = new CodeGenerator();
 				prog.traverseBottomUp(codeGen);
+				Code.dataSize = v.getGlobalVariableNumber();
 				Code.write(new FileOutputStream(file));
 				
 				String [] argS = {"test/output.obj"};

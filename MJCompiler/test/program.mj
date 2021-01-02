@@ -3,9 +3,36 @@
 program test_303
 
 const int cinilac = 4, delilac = 3;
+int x, y, u;
 {
-	void main() 
+
+int f(int x, int y, int g){
+	return x+y + g;
+}
+	
+	void main() int x; char y; 
 	{	
-		print(cinilac *delilac);
+	x=0;
+	do {
+	 x++;
+	 switch(x){
+	 case 1:// print(x);
+	  break;
+	 case 2:
+	 	do{
+	 	print('a');
+	 	break;
+	 	} while (true);
+	 
+	 
+	 continue;
+	 }
+	 f(1,x,5);
+	  print(f(1,x,5));
+	 if(x==3) break;
+	}
+	 while
+	  ( x!=5 ) ; 
+	
 	}
 }

@@ -1,28 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/11/2020 3:8:7
+// 2/0/2021 3:42:30
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class SwitchStatement extends Statement {
 
-    private Expr Expr;
+    private SwitchClause SwitchClause;
     private CaseList CaseList;
 
-    public SwitchStatement (Expr Expr, CaseList CaseList) {
-        this.Expr=Expr;
-        if(Expr!=null) Expr.setParent(this);
+    public SwitchStatement (SwitchClause SwitchClause, CaseList CaseList) {
+        this.SwitchClause=SwitchClause;
+        if(SwitchClause!=null) SwitchClause.setParent(this);
         this.CaseList=CaseList;
         if(CaseList!=null) CaseList.setParent(this);
     }
 
-    public Expr getExpr() {
-        return Expr;
+    public SwitchClause getSwitchClause() {
+        return SwitchClause;
     }
 
-    public void setExpr(Expr Expr) {
-        this.Expr=Expr;
+    public void setSwitchClause(SwitchClause SwitchClause) {
+        this.SwitchClause=SwitchClause;
     }
 
     public CaseList getCaseList() {
@@ -38,18 +38,18 @@ public class SwitchStatement extends Statement {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Expr!=null) Expr.accept(visitor);
+        if(SwitchClause!=null) SwitchClause.accept(visitor);
         if(CaseList!=null) CaseList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Expr!=null) Expr.traverseTopDown(visitor);
+        if(SwitchClause!=null) SwitchClause.traverseTopDown(visitor);
         if(CaseList!=null) CaseList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Expr!=null) Expr.traverseBottomUp(visitor);
+        if(SwitchClause!=null) SwitchClause.traverseBottomUp(visitor);
         if(CaseList!=null) CaseList.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -59,8 +59,8 @@ public class SwitchStatement extends Statement {
         buffer.append(tab);
         buffer.append("SwitchStatement(\n");
 
-        if(Expr!=null)
-            buffer.append(Expr.toString("  "+tab));
+        if(SwitchClause!=null)
+            buffer.append(SwitchClause.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

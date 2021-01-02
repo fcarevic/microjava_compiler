@@ -155,6 +155,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	/**		VARIABLE DECLARATIONS      **/
 	
 	private List<VarInit> variableNames = new ArrayList<VarInit>();
+	private int globalVariableCnt = 0;
 	
 	@Override
 	public void visit(VarInitArray varInitArray) {
@@ -163,6 +164,8 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			report_error("Vec postoji deklarisano ime : " + varInitArray.getName(), varInitArray);
 			return;
 		}
+		if(currentClassCount==0 && !currentMethod)
+		globalVariableCnt++;
 		variableNames.add(varInitArray);
 	}
 	
@@ -174,6 +177,8 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			report_error("Vec postoji deklarisano ime : " + varInitPrimitive.getName(), varInitPrimitive);
 			return;
 		}
+		if(currentClassCount==0 && !currentMethod)
+		globalVariableCnt++;
 		variableNames.add(varInitPrimitive);
 	}
 	
@@ -351,6 +356,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	public void visit(ReturnTypeVoid returnTypeVoid) {
 		returnTypeVoid.struct = Tab.noType;
 		this.returnType = returnTypeVoid.struct;
+		currentMethod = true;
 		
 	}
 	
@@ -561,7 +567,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	@Override
 	public void visit(SwitchStatement switchStatement) {
-		if(switchStatement.getExpr().struct != Tab.intType) {
+		if(switchStatement.getSwitchClause().getExpr().struct != Tab.intType) {
 			report_error(" Expr u switch-u nije tipa int ", switchStatement);
 			return;
 		}
@@ -1109,6 +1115,9 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 public boolean isSuccess() {
 	return !errorDetected;
+}
+public int getGlobalVariableNumber() {
+	return globalVariableCnt;
 }
 	
 }

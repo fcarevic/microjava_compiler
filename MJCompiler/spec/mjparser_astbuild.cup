@@ -78,8 +78,8 @@ nonterminal FormalParam FormalParam ;
 nonterminal Statement Statement;
 nonterminal StatementList StatementList;
 nonterminal CaseList CaseList;
-nonterminal Case Case;
-nonterminal ReturnStatement ReturnStatement;
+nonterminal SwitchClause SwitchClause;
+nonterminal   ReturnStatement ReturnStatement;
 nonterminal PrintNumConst PrintNumConst;
 nonterminal PrintExpr PrintExpr;
 nonterminal DesignatorStatement DesignatorStatement;
@@ -92,18 +92,17 @@ nonterminal Matched Matched;
 nonterminal Unmatched Unmatched;
 nonterminal MinusExpr MinusExpr;
 nonterminal ProgName ProgName;
+nonterminal DoWhileCondition DoWhileCondition;
 nonterminal ConstDeclList ConstDeclList;
 nonterminal AddopTermExprOption AddopTermExprOption;
 nonterminal DesignatorOptionList DesignatorOptionList;
-nonterminal FormalParams FormalParams;
-nonterminal IfErrorCorection IfErrorCorection;
+nonterminal FormalParams FormalParams ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, StdConstType, ExtendsClause, ReturnType ;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName ; 
+nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName, Break ; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr1 , Expr ;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName ;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName, Else, IfErrorCorection, Case , CaseClause ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
 nonterminal DoClause DoClause;
-nonterminal CaseClause CaseClause;
 nonterminal ClassFields ClassFields ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact ;
 
@@ -115,7 +114,7 @@ start with Program;
 Program ::= (Program) PROG ProgName:P1 NoMethodDeclList:N2 LCURVPAREN MethodDeclList:M3 RCURVPAREN
 				{:
 				CUP$MJParser$stack.add(0,o);
-				parser.ispisi_poruku("ovde");
+		
 				
 				:} {: RESULT=new Program(P1, N2, M3); RESULT.setLine(P1left); :}
 				;
@@ -230,11 +229,11 @@ StatementList ::= (StatementList_) StatementList:S1 Statement:S2 {: RESULT=new S
  
 Statement   ::= (DesignatorStatementStatement) DesignatorStatement:D1 {: RESULT=new DesignatorStatementStatement(D1); RESULT.setLine(D1left); :}  
 			|
-			(DoWhileStatement) DoClause:D1 Statement:S2 WHILE LPAREN Condition:C3 RPAREN SEMI {: RESULT=new DoWhileStatement(D1, S2, C3); RESULT.setLine(D1left); :}
+			(DoWhileStatement) DoClause:D1 Statement:S2 WHILE LPAREN DoWhileCondition:D3 RPAREN SEMI {: RESULT=new DoWhileStatement(D1, S2, D3); RESULT.setLine(D1left); :}
 			|
-			(SwitchStatement) SWITCH LPAREN  Expr:E1 RPAREN LCURVPAREN CaseList:C2 RCURVPAREN {: RESULT=new SwitchStatement(E1, C2); RESULT.setLine(E1left); :} 
+			(SwitchStatement) SwitchClause:S1  LCURVPAREN CaseList:C2 RCURVPAREN {: RESULT=new SwitchStatement(S1, C2); RESULT.setLine(S1left); :} 
 		    |
-		    (BreakStatement) BREAK SEMI {: RESULT=new BreakStatement(); :}
+		    (BreakStatement) Break:B1 SEMI {: RESULT=new BreakStatement(B1); RESULT.setLine(B1left); :}
 		    |
 		    (ContinueStatement) CONTINUE SEMI {: RESULT=new ContinueStatement(); :}
 		    |
@@ -248,13 +247,15 @@ Statement   ::= (DesignatorStatementStatement) DesignatorStatement:D1 {: RESULT=
 		    |
 		    (IfStatement) IF LPAREN IfErrorCorection:I1  Statement:S2 {: RESULT=new IfStatement(I1, S2); RESULT.setLine(I1left); :} 
 		    |
-		    (IfElseStatement) IF  LPAREN IfErrorCorection:I1 Statement:S2 ELSE Statement:S3 {: RESULT=new IfElseStatement(I1, S2, S3); RESULT.setLine(I1left); :}
+		    (IfElseStatement) IF  LPAREN IfErrorCorection:I1 Statement:S2  Else:E3 Statement:S4 {: RESULT=new IfElseStatement(I1, S2, E3, S4); RESULT.setLine(I1left); :}
 		    ;
 
 
 DoClause ::= (DoClause) DO {: RESULT=new DoClause(); :} ;
-
-	    
+DoWhileCondition ::= (DoWhileCondition) Condition:C1 {: RESULT=new DoWhileCondition(C1); RESULT.setLine(C1left); :};
+Else  ::= (Else) ELSE {: RESULT=new Else(); :} ;
+Break ::= (Break) BREAK {: RESULT=new Break(); :};
+SwitchClause ::= (SwitchClause) SWITCH LPAREN  Expr:E1 RPAREN {: RESULT=new SwitchClause(E1); RESULT.setLine(E1left); :} ;
 		    
 IfErrorCorection ::= (IfCondition) Condition:C1 RPAREN {: RESULT=new IfCondition(C1); RESULT.setLine(C1left); :}  
 					|

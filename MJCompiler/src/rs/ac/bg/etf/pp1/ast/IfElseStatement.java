@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 30/11/2020 3:8:7
+// 2/0/2021 3:42:30
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -9,13 +9,16 @@ public class IfElseStatement extends Statement {
 
     private IfErrorCorection IfErrorCorection;
     private Statement Statement;
+    private Else Else;
     private Statement Statement1;
 
-    public IfElseStatement (IfErrorCorection IfErrorCorection, Statement Statement, Statement Statement1) {
+    public IfElseStatement (IfErrorCorection IfErrorCorection, Statement Statement, Else Else, Statement Statement1) {
         this.IfErrorCorection=IfErrorCorection;
         if(IfErrorCorection!=null) IfErrorCorection.setParent(this);
         this.Statement=Statement;
         if(Statement!=null) Statement.setParent(this);
+        this.Else=Else;
+        if(Else!=null) Else.setParent(this);
         this.Statement1=Statement1;
         if(Statement1!=null) Statement1.setParent(this);
     }
@@ -36,6 +39,14 @@ public class IfElseStatement extends Statement {
         this.Statement=Statement;
     }
 
+    public Else getElse() {
+        return Else;
+    }
+
+    public void setElse(Else Else) {
+        this.Else=Else;
+    }
+
     public Statement getStatement1() {
         return Statement1;
     }
@@ -51,6 +62,7 @@ public class IfElseStatement extends Statement {
     public void childrenAccept(Visitor visitor) {
         if(IfErrorCorection!=null) IfErrorCorection.accept(visitor);
         if(Statement!=null) Statement.accept(visitor);
+        if(Else!=null) Else.accept(visitor);
         if(Statement1!=null) Statement1.accept(visitor);
     }
 
@@ -58,12 +70,14 @@ public class IfElseStatement extends Statement {
         accept(visitor);
         if(IfErrorCorection!=null) IfErrorCorection.traverseTopDown(visitor);
         if(Statement!=null) Statement.traverseTopDown(visitor);
+        if(Else!=null) Else.traverseTopDown(visitor);
         if(Statement1!=null) Statement1.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
         if(IfErrorCorection!=null) IfErrorCorection.traverseBottomUp(visitor);
         if(Statement!=null) Statement.traverseBottomUp(visitor);
+        if(Else!=null) Else.traverseBottomUp(visitor);
         if(Statement1!=null) Statement1.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -81,6 +95,12 @@ public class IfElseStatement extends Statement {
 
         if(Statement!=null)
             buffer.append(Statement.toString("  "+tab));
+        else
+            buffer.append(tab+"  null");
+        buffer.append("\n");
+
+        if(Else!=null)
+            buffer.append(Else.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

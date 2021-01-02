@@ -1,0 +1,51 @@
+INFO  22:07:42,967 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  22:07:43,199 - #34 program
+INFO  22:07:43,199 - #47 test_303
+INFO  22:07:43,199 - #8 const
+INFO  22:07:43,199 - #47 int
+INFO  22:07:43,214 - #47 cinilac
+INFO  22:07:43,214 - #15 =
+INFO  22:07:43,214 - #50 4
+INFO  22:07:43,214 - #7 ,
+INFO  22:07:43,214 - #47 delilac
+INFO  22:07:43,214 - #15 =
+INFO  22:07:43,214 - #50 3
+INFO  22:07:43,214 - #41 ;
+INFO  22:07:43,214 - #47 int
+INFO  22:07:43,214 - #47 x
+INFO  22:07:43,214 - #7 ,
+INFO  22:07:43,214 - #47 y
+INFO  22:07:43,214 - #41 ;
+INFO  22:07:43,214 - #21 {
+INFO  22:07:43,214 - #43 void
+INFO  22:07:43,214 - #47 main
+INFO  22:07:43,230 - #23 (
+INFO  22:07:43,230 - #42 )
+INFO  22:07:43,236 - #47 int
+INFO  22:07:43,236 - #47 x
+INFO  22:07:43,236 - #7 ,
+INFO  22:07:43,236 - #47 y
+INFO  22:07:43,236 - #7 ,
+INFO  22:07:43,236 - #47 t
+INFO  22:07:43,236 - #41 ;
+INFO  22:07:43,236 - #21 {
+INFO  22:07:43,236 - #47 x
+INFO  22:07:43,236 - #15 =
+INFO  22:07:43,236 - #47 cinilac
+INFO  22:07:43,252 - #27 *
+INFO  22:07:43,252 - #47 delilac
+INFO  22:07:43,252 - #41 ;
+INFO  22:07:43,252 - #47 y
+INFO  22:07:43,252 - #15 =
+INFO  22:07:43,252 - #47 cinilac
+INFO  22:07:43,252 - #41 ;
+INFO  22:07:43,252 - #33 print
+INFO  22:07:43,252 - #23 (
+INFO  22:07:43,252 - #47 x
+INFO  22:07:43,268 - #42 )
+INFO  22:07:43,268 - #41 ;
+INFO  22:07:43,268 - #37 }
+INFO  22:07:43,268 - #37 }
+ERROR 22:07:43,268 - ovde
+INFO  22:07:43,268 - ===================================
+INFO  22:07:43,299 - USPESNO SEMANTICKO PARSIRANJE
