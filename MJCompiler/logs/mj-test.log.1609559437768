@@ -1,0 +1,45 @@
+INFO  04:50:21,588 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  04:50:21,741 - #34 program
+INFO  04:50:21,741 - #47 test_303
+INFO  04:50:21,741 - #5 class
+INFO  04:50:21,741 - #47 A
+INFO  04:50:21,741 - #21 {
+INFO  04:50:21,741 - #47 int
+INFO  04:50:21,741 - #47 x
+INFO  04:50:21,741 - #41 ;
+INFO  04:50:21,741 - #37 }
+INFO  04:50:21,741 - #21 {
+INFO  04:50:21,757 - #43 void
+INFO  04:50:21,757 - #47 main
+INFO  04:50:21,757 - #23 (
+INFO  04:50:21,757 - #42 )
+INFO  04:50:21,757 - #47 A
+INFO  04:50:21,757 - #47 a
+INFO  04:50:21,757 - #41 ;
+INFO  04:50:21,757 - #21 {
+INFO  04:50:21,757 - #47 a
+INFO  04:50:21,757 - #15 =
+INFO  04:50:21,757 - #28 new
+INFO  04:50:21,773 - #47 A
+INFO  04:50:21,773 - #23 (
+ERROR 04:50:21,773 - 
+Sintaksna greska na liniji 14
+INFO  04:50:21,773 - #42 )
+INFO  04:50:21,773 - #41 ;
+INFO  04:50:21,773 - #47 a
+INFO  04:50:21,804 - #12 .
+INFO  04:50:21,804 - #47 x
+ERROR 04:50:21,804 - Izvrsen oporavak do ; u liniji 14
+INFO  04:50:21,804 - #15 =
+INFO  04:50:21,804 - #50 2
+INFO  04:50:21,804 - #41 ;
+INFO  04:50:21,810 - #33 print
+INFO  04:50:21,810 - #23 (
+INFO  04:50:21,810 - #47 a
+INFO  04:50:21,810 - #12 .
+INFO  04:50:21,810 - #47 x
+INFO  04:50:21,810 - #42 )
+INFO  04:50:21,810 - #41 ;
+INFO  04:50:21,810 - #37 }
+INFO  04:50:21,810 - #37 }
+ERROR 04:50:21,810 - NEUSPESNO SINTAKSNO PARSIRANJE

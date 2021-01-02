@@ -2,37 +2,29 @@
 
 program test_303
 
-const int cinilac = 4, delilac = 3;
-int x, y, u;
+class A {
+ int x;
+
+}
+class B{
+	A a;
+}
 {
 
-int f(int x, int y, int g){
-	return x+y + g;
-}
+
 	
-	void main() int x; char y; 
+	void main() B b; A a; B c[]; //int x; char y; 
 	{	
-	x=0;
-	do {
-	 x++;
-	 switch(x){
-	 case 1:// print(x);
-	  break;
-	 case 2:
-	 	do{
-	 	print('a');
-	 	break;
-	 	} while (true);
-	 
-	 
-	 continue;
-	 }
-	 f(1,x,5);
-	  print(f(1,x,5));
-	 if(x==3) break;
-	}
-	 while
-	  ( x!=5 ) ; 
-	
+	 a= new A;
+	 a.x=2;
+	 b= new B;
+	 b.a=a;
+	 print(a.x);
+	 a.x=3;
+	 c=new B[1];
+	 c[0]=new B;
+	 c[0].a=a;
+	 c[0].a.x=9;
+	 print(b.a.x);
 	}
 }

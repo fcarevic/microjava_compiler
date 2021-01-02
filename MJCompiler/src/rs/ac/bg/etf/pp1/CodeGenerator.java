@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.stream.Collectors;
 
 import rs.ac.bg.etf.pp1.ast.AddopMultipleList;
 import rs.ac.bg.etf.pp1.ast.BreakStatement;
@@ -18,6 +19,9 @@ import rs.ac.bg.etf.pp1.ast.ConditionOR;
 import rs.ac.bg.etf.pp1.ast.ContinueStatement;
 import rs.ac.bg.etf.pp1.ast.DesignatoStatementDec;
 import rs.ac.bg.etf.pp1.ast.Designator;
+import rs.ac.bg.etf.pp1.ast.DesignatorDotIdentOption;
+import rs.ac.bg.etf.pp1.ast.DesignatorIndexingOption;
+import rs.ac.bg.etf.pp1.ast.DesignatorName;
 import rs.ac.bg.etf.pp1.ast.DesignatorStatementAssignop;
 import rs.ac.bg.etf.pp1.ast.DesignatorStatementFuncCall;
 import rs.ac.bg.etf.pp1.ast.DesignatorStatementInc;
@@ -30,6 +34,8 @@ import rs.ac.bg.etf.pp1.ast.FactorBool;
 import rs.ac.bg.etf.pp1.ast.FactorChar;
 import rs.ac.bg.etf.pp1.ast.FactorDesignator;
 import rs.ac.bg.etf.pp1.ast.FactorFunctionCall;
+import rs.ac.bg.etf.pp1.ast.FactorNew;
+import rs.ac.bg.etf.pp1.ast.FactorNewExpr;
 import rs.ac.bg.etf.pp1.ast.FactorNumber;
 import rs.ac.bg.etf.pp1.ast.GreaterEqual;
 import rs.ac.bg.etf.pp1.ast.GreaterThen;
@@ -195,16 +201,73 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorStatementAssignop designatorStatementAssignop) {
 	 Designator des = designatorStatementAssignop.getDesignator();
-	 if(des.obj.getType().getKind()==Struct.Array) {
-		 
-	 	} else {
+	 
 		 Code.store(des.obj);
-	 	}
+	 	
 	}
 	
 	private int calculatePCOffset(int adr) {
 		return adr-Code.pc+1;
 	}
+	
+	private Obj currentDesignatorObj;
+	private Struct currentDesignatorStruct;
+	
+	
+	@Override
+	public void visit(DesignatorIndexingOption designatorIndexingOption) {
+		designatorIndexingOption.obj = new Obj(Obj.Elem, "", currentDesignatorStruct.getElemType());
+		currentDesignatorStruct= currentDesignatorStruct.getElemType();
+	}
+	
+	@Override
+	public void visit(DesignatorDotIdentOption designatorDotIdentOption) {
+		//System.err.println(designatorDotIdentOption.getName());
+		if(currentDesignatorStruct.getKind()==Struct.Class || currentDesignatorStruct.getKind()==Struct.Array) Code.load(currentDesignatorObj);
+		currentDesignatorObj = currentDesignatorStruct.getMembersTable().searchKey(designatorDotIdentOption.getName());
+		currentDesignatorStruct = currentDesignatorObj.getType();
+		designatorDotIdentOption.obj=currentDesignatorObj;
+		
+	}
+	
+	@Override
+	public void visit(DesignatorName designatorName) {
+		//System.err.println(designatorName.obj.getKind());
+		currentDesignatorObj=designatorName.obj;
+		currentDesignatorStruct= currentDesignatorObj.getType();
+	}
+	
+	@Override
+	public void visit(Designator designator) {
+		// TODO Auto-generated method stub
+		designator.obj=currentDesignatorObj;
+	}
+	/****   OOP  *****/
+	
+	@Override
+	public void visit(FactorNew factorNew) {
+		// TODO Auto-generated method stub
+		Code.put(Code.new_);
+		Code.put2(factorNew.getType().struct.getNumberOfFields());
+		
+	}
+	
+	@Override
+	public void visit(FactorNewExpr FactorNewExpr) {
+		Code.put(Code.newarray);
+	}
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	/**CONDITIONS **/
@@ -281,6 +344,8 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(IfStatement ifStatement) {
 		Code.fixup(ifStatement.getIfErrorCorection().obj.getAdr());
 	}
+	
+	
 	
 	
 	

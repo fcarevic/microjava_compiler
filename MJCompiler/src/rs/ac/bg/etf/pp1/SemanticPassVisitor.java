@@ -944,13 +944,17 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			Struct baseClass = currentClassStruct.get(currentClassStruct.size()-1).getElemType();
 			if(baseClass!=null && baseClass!=Tab.noType) {
 				obj = baseClass.getMembersTable().searchKey(designatorName.getName());
-				if(obj!=null) return;
+				if(obj!=null) {
+					designatorName.obj=obj;
+					return;
+				}
 			}
 				
 				
 			}
 			report_error("Nije definisano ime " + designatorName.getName() + " ", designatorName);
-		}		
+		}
+		designatorName.obj=obj;
 	}
 	
 
