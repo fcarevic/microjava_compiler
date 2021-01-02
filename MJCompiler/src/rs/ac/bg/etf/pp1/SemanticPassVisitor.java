@@ -304,6 +304,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		className.obj=Tab.insert(Obj.Type, className.getClassName(), new MyStruct(Struct.Class));
 		currentClassStruct.add(className.obj.getType());
 		Tab.openScope();
+		Tab.insert(Obj.Fld, "vt", Tab.intType);
 	}
 	
 	@Override

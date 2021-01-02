@@ -2,9 +2,11 @@ package rs.ac.bg.etf.pp1;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+
 
 import rs.ac.bg.etf.pp1.ast.AddopMultipleList;
 import rs.ac.bg.etf.pp1.ast.BreakStatement;
@@ -13,6 +15,7 @@ import rs.ac.bg.etf.pp1.ast.CaseClause;
 import rs.ac.bg.etf.pp1.ast.CaseList;
 import rs.ac.bg.etf.pp1.ast.CaseList_;
 import rs.ac.bg.etf.pp1.ast.CaseSingle;
+import rs.ac.bg.etf.pp1.ast.ClassDeclMethod;
 import rs.ac.bg.etf.pp1.ast.ConditionAND;
 import rs.ac.bg.etf.pp1.ast.ConditionFactExprRelop;
 import rs.ac.bg.etf.pp1.ast.ConditionOR;
@@ -52,6 +55,7 @@ import rs.ac.bg.etf.pp1.ast.NotSame;
 import rs.ac.bg.etf.pp1.ast.Plus;
 import rs.ac.bg.etf.pp1.ast.PrintNumConst_;
 import rs.ac.bg.etf.pp1.ast.PrintStatement;
+import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.ast.Relop;
 import rs.ac.bg.etf.pp1.ast.Rem;
 import rs.ac.bg.etf.pp1.ast.ReturnStatement_;
@@ -67,6 +71,15 @@ import rs.etf.pp1.symboltable.concepts.Obj;
 import rs.etf.pp1.symboltable.concepts.Struct;
 
 public class CodeGenerator extends VisitorAdaptor {
+	
+	
+	@Override
+	public void visit(Program program) {
+		// TODO Auto-generated method stub
+		program.traverseBottomUp(new ClassDeclVisitorForPoly());
+	
+	}
+	
 	
 	/*** PRINT ****/
 	@Override
@@ -112,6 +125,13 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(FactorFunctionCall factorFunctionCall) {
+			
+		if(wasDotIdent){
+			callClassMethod(factorFunctionCall.getDesignator().obj.getName());
+			
+		return;	
+		}
+		
 			Code.put(Code.call);
 			//todo NE RADI ZA ULANCAVANJE
 			Code.put2(calculatePCOffset(factorFunctionCall.getDesignator().obj.getAdr()));
@@ -126,11 +146,30 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(DesignatorStatementFuncCall designatorStatementFuncCall) {
+	
+		if(wasDotIdent){
+		
+			callClassMethod(designatorStatementFuncCall.getDesignator().obj.getName());
+		} else  {
+		
 		Code.put(Code.call);
 		Code.put2(calculatePCOffset(designatorStatementFuncCall.getDesignator().obj.getAdr()));
 		if(designatorStatementFuncCall.getDesignator().obj.getType()!=Tab.noType) {
 			Code.put(Code.pop);
+			}
 		}
+	}
+	
+	private void callClassMethod(String name) {
+		Code.put(Code.dup);
+		Code.put(Code.getfield);
+		Code.put2(0);
+		Code.put(Code.invokevirtual);
+		for(int i= 0 ; i < name.length();i++ ) {
+			Code.put4(name.charAt(i));
+		}
+		Code.put4(-1);
+		
 	}
 	
 	/**  FACTORS  **/
@@ -223,6 +262,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorDotIdentOption designatorDotIdentOption) {
 		//System.err.println(designatorDotIdentOption.getName());
+		wasDotIdent=true;
 		if(currentDesignatorStruct.getKind()==Struct.Class || currentDesignatorStruct.getKind()==Struct.Array) Code.load(currentDesignatorObj);
 		currentDesignatorObj = currentDesignatorStruct.getMembersTable().searchKey(designatorDotIdentOption.getName());
 		currentDesignatorStruct = currentDesignatorObj.getType();
@@ -230,8 +270,11 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 	}
 	
+	private boolean wasDotIdent = false;
+	
 	@Override
 	public void visit(DesignatorName designatorName) {
+		wasDotIdent=false;
 		//System.err.println(designatorName.obj.getKind());
 		currentDesignatorObj=designatorName.obj;
 		currentDesignatorStruct= currentDesignatorObj.getType();
@@ -243,12 +286,22 @@ public class CodeGenerator extends VisitorAdaptor {
 		designator.obj=currentDesignatorObj;
 	}
 	/****   OOP  *****/
+	private Map<Struct, List<Integer>> mapNew = new HashMap<>();
 	
 	@Override
 	public void visit(FactorNew factorNew) {
 		// TODO Auto-generated method stub
 		Code.put(Code.new_);
+		
 		Code.put2(factorNew.getType().struct.getNumberOfFields());
+		Code.put(Code.dup);
+		Code.put(Code.const_);
+		if(mapNew.get(factorNew.getType())==null)
+			mapNew.put(factorNew.struct, new LinkedList<Integer>());
+		mapNew.get(factorNew.getType().struct).add(Code.pc);
+		Code.put4(0); //dummy
+		Code.put(Code.putfield);
+		Code.put2(0);
 		
 	}
 	
@@ -455,6 +508,60 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 		
 	}
+	
+	private class PolyCreator extends VisitorAdaptor{
+	
+		
+		@Override
+		public void visit(MethodDecl methodDecl) {
+			String name = methodDecl.getMethodName().getMethodName();
+			for(int i=0 ; i < name.length(); i++) {
+				char c= name.charAt(i);
+				Code.loadConst(c);
+				Code.put(Code.putstatic);
+				Code.put2(Code.dataSize++);
+			}
+			Code.loadConst(-1);
+			Code.put(Code.putstatic);
+			Code.put2(Code.dataSize++);
+			Code.loadConst(methodDecl.getMethodName().obj.getAdr());
+			Code.put(Code.putstatic);
+			Code.put2(Code.dataSize++);
+		}
+		
+		 
+	}
+		private class ClassDeclVisitorForPoly extends VisitorAdaptor{
+			private int oldMainpc;
+			public ClassDeclVisitorForPoly() {
+				oldMainpc = Code.mainPc;
+				Code.mainPc=Code.pc;
+			}
+			
+			@Override
+			public void visit(Program program) {
+				Code.putJump(oldMainpc);
+			}
+			
+			
+			@Override
+			public void visit(ClassDeclMethod classDeclMethod) {
+				classDeclMethod.getClassName().obj.setAdr(Code.dataSize);
+				
+				classDeclMethod.getMethodDeclList().traverseBottomUp(new PolyCreator());
+				
+				List<Integer> list = mapNew.get(classDeclMethod.getClassName().obj.getType());
+				if(list!=null){
+					for(int pc:list) {
+						Code.put2(pc, classDeclMethod.getClassName().obj.getAdr() >> 16);
+						Code.put2(pc+2, classDeclMethod.getClassName().obj.getAdr() & 0xff);
+					}
+				}
+				mapNew.remove(classDeclMethod.getClassName().obj.getType());
+				
+			}
+			
+		}
 	
 	
 	

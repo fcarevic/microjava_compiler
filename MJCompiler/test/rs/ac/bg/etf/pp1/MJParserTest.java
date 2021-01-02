@@ -71,9 +71,9 @@ public class MJParserTest {
 				log.info("USPESNO SEMANTICKO PARSIRANJE");
 				File file = new File("test/output.obj");
 				if(file.exists()) file.delete();
+				Code.dataSize = v.getGlobalVariableNumber();
 				CodeGenerator codeGen = new CodeGenerator();
 				prog.traverseBottomUp(codeGen);
-				Code.dataSize = v.getGlobalVariableNumber();
 				Code.write(new FileOutputStream(file));
 				
 				String [] argS = {"test/output.obj"};
