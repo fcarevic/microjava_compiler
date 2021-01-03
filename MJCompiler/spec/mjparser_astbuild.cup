@@ -100,7 +100,7 @@ nonterminal FormalParams FormalParams ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, StdConstType, ExtendsClause, ReturnType ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName, Break ; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr1 , Expr ;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName, Else, IfErrorCorection, Case , CaseClause ;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName, Else, IfErrorCorection, Case , CaseClause , DesignatorFunc  ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
 nonterminal DoClause DoClause;
 nonterminal ClassFields ClassFields ;
@@ -284,7 +284,7 @@ PrintNumConst ::= (PrintNumConst_)   COMMA NUMBER:val {: RESULT=new PrintNumCons
 
 DesignatorStatement ::= (DesignatorStatementAssignop) Designator:D1 Assignop:A2 Expr:E3 SEMI {: RESULT=new DesignatorStatementAssignop(D1, A2, E3); RESULT.setLine(D1left); :}
 						|
-					(DesignatorStatementFuncCall) Designator:D1 LPAREN ActualParameterList:A2 RPAREN SEMI {: RESULT=new DesignatorStatementFuncCall(D1, A2); RESULT.setLine(D1left); :}
+					(DesignatorStatementFuncCall) DesignatorFunc:D1 LPAREN ActualParameterList:A2 RPAREN SEMI {: RESULT=new DesignatorStatementFuncCall(D1, A2); RESULT.setLine(D1left); :}
 					|
 					(DesignatorStatementInc) Designator:D1 PLUSPLUS SEMI {: RESULT=new DesignatorStatementInc(D1); RESULT.setLine(D1left); :}
 					|
@@ -294,7 +294,7 @@ DesignatorStatement ::= (DesignatorStatementAssignop) Designator:D1 Assignop:A2 
 		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new ErrorDesignator(); :}
 						;
 						
-					
+DesignatorFunc ::= (DesignatorFunc) Designator:D1 {: RESULT=new DesignatorFunc(D1); RESULT.setLine(D1left); :} ;					
 
 
 ActualParameterList ::= (ActualParameterList_) ActualParams:A1 {: RESULT=new ActualParameterList_(A1); RESULT.setLine(A1left); :}
@@ -346,7 +346,7 @@ Term ::= (TermNoMul) Factor:F1 {: RESULT=new TermNoMul(F1); RESULT.setLine(F1lef
 		    
 	
 		    
-Factor ::= (FactorFunctionCall) Designator:D1 LPAREN ActualParameterList:A2 RPAREN {: RESULT=new FactorFunctionCall(D1, A2); RESULT.setLine(D1left); :}
+Factor ::= (FactorFunctionCall) DesignatorFunc:D1 LPAREN ActualParameterList:A2 RPAREN {: RESULT=new FactorFunctionCall(D1, A2); RESULT.setLine(D1left); :}
 			|
 			(FactorDesignator) Designator:D1 {: RESULT=new FactorDesignator(D1); RESULT.setLine(D1left); :}
 			|

@@ -78,7 +78,7 @@ nonterminal DesignatorOptionList, FormalParams ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, StdConstType, ExtendsClause, ReturnType ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName, Break ; 
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr1 , Expr ;
-nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName, Else, IfErrorCorection, Case , CaseClause ;
+nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName, Else, IfErrorCorection, Case , CaseClause , DesignatorFunc  ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
 nonterminal DoClause, ClassFields ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact ;
@@ -261,7 +261,7 @@ PrintNumConst ::= (PrintNumConst_)   COMMA NUMBER:val
 
 DesignatorStatement ::= (DesignatorStatementAssignop) Designator Assignop Expr SEMI
 						|
-					(DesignatorStatementFuncCall) Designator LPAREN ActualParameterList RPAREN SEMI
+					(DesignatorStatementFuncCall) DesignatorFunc LPAREN ActualParameterList RPAREN SEMI
 					|
 					(DesignatorStatementInc) Designator PLUSPLUS SEMI
 					|
@@ -271,7 +271,7 @@ DesignatorStatement ::= (DesignatorStatementAssignop) Designator Assignop Expr S
 		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
 						;
 						
-					
+DesignatorFunc ::= (DesignatorFunc) Designator ;					
 
 
 ActualParameterList ::= (ActualParameterList_) ActualParams
@@ -323,7 +323,7 @@ Term ::= (TermNoMul) Factor
 		    
 	
 		    
-Factor ::= (FactorFunctionCall) Designator LPAREN ActualParameterList RPAREN
+Factor ::= (FactorFunctionCall) DesignatorFunc LPAREN ActualParameterList RPAREN
 			|
 			(FactorDesignator) Designator
 			|

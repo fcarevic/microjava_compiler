@@ -1,28 +1,28 @@
 // generated with ast extension for cup
 // version 0.8
-// 2/0/2021 3:42:30
+// 2/0/2021 17:43:56
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class FactorFunctionCall extends Factor {
 
-    private Designator Designator;
+    private DesignatorFunc DesignatorFunc;
     private ActualParameterList ActualParameterList;
 
-    public FactorFunctionCall (Designator Designator, ActualParameterList ActualParameterList) {
-        this.Designator=Designator;
-        if(Designator!=null) Designator.setParent(this);
+    public FactorFunctionCall (DesignatorFunc DesignatorFunc, ActualParameterList ActualParameterList) {
+        this.DesignatorFunc=DesignatorFunc;
+        if(DesignatorFunc!=null) DesignatorFunc.setParent(this);
         this.ActualParameterList=ActualParameterList;
         if(ActualParameterList!=null) ActualParameterList.setParent(this);
     }
 
-    public Designator getDesignator() {
-        return Designator;
+    public DesignatorFunc getDesignatorFunc() {
+        return DesignatorFunc;
     }
 
-    public void setDesignator(Designator Designator) {
-        this.Designator=Designator;
+    public void setDesignatorFunc(DesignatorFunc DesignatorFunc) {
+        this.DesignatorFunc=DesignatorFunc;
     }
 
     public ActualParameterList getActualParameterList() {
@@ -38,18 +38,18 @@ public class FactorFunctionCall extends Factor {
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(Designator!=null) Designator.accept(visitor);
+        if(DesignatorFunc!=null) DesignatorFunc.accept(visitor);
         if(ActualParameterList!=null) ActualParameterList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(Designator!=null) Designator.traverseTopDown(visitor);
+        if(DesignatorFunc!=null) DesignatorFunc.traverseTopDown(visitor);
         if(ActualParameterList!=null) ActualParameterList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(Designator!=null) Designator.traverseBottomUp(visitor);
+        if(DesignatorFunc!=null) DesignatorFunc.traverseBottomUp(visitor);
         if(ActualParameterList!=null) ActualParameterList.traverseBottomUp(visitor);
         accept(visitor);
     }
@@ -59,8 +59,8 @@ public class FactorFunctionCall extends Factor {
         buffer.append(tab);
         buffer.append("FactorFunctionCall(\n");
 
-        if(Designator!=null)
-            buffer.append(Designator.toString("  "+tab));
+        if(DesignatorFunc!=null)
+            buffer.append(DesignatorFunc.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

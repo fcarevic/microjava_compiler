@@ -262,7 +262,11 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 				Obj extendedMethObj = Tab.currentScope().findSymbol(baseLocalMth.getName());
 				if(extendedMethObj==null ) {
 					Obj o= Tab.insert(Obj.Meth, baseLocalMth.getName(), baseLocalMth.getType());
+					HashTableDataStructure baseLocals = new HashTableDataStructure();
+					for(Obj localLobj : baseLocalMth.getLocalSymbols()) baseLocals.insertKey(localLobj);
+					o.setLocals(baseLocals);
 				o.setLevel(baseLocalMth.getLevel());
+				o.setAdr(-1);
 				} else  checkIfSameClassMethods(baseLocalMth, extendedMethObj, info);
 			}
 		}
@@ -315,11 +319,11 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			report_error("Tip specificiran u extends klauzuli nije klasa ", extendsClause);
 			return;
 		}
-		if(extendsClause.struct.getElemType()!=Tab.noType) {
-			report_error("Nije dozvoljeno izvesti izvedenu klasu  ", extendsClause);
-			return;
-		}
-		
+//		if(extendsClause.struct.getElemType()!=Tab.noType) {
+//			report_error("Nije dozvoljeno izvesti izvedenu klasu  ", extendsClause);
+//			return;
+//		}
+//		
 		List<Obj> locals = extendsClause.struct.getMembers().stream().collect(Collectors.toList());
 		for(int i=0; i<extendsClause.struct.getNumberOfFields() ; i++) {
 			
@@ -413,7 +417,9 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		if(method!= null) {
 			method.setLevel(numberOfFormalParams);
 			Tab.chainLocalSymbols(method);
+			methodDecl.getMethodName().obj.setAdr(-1);
 		}
+		
 		Tab.closeScope();
 	}
 	
@@ -616,15 +622,20 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	}
 	
 	@Override
+	public void visit(DesignatorFunc designatorFunc) {
+		// TODO Auto-generated method stub
+		designatorFunc.obj = designatorFunc.getDesignator().obj;
+	}
+	
+	@Override
 	public void visit(FactorFunctionCall funcCall) {
-		if(funcCall.getDesignator().obj.getKind() != Obj.Meth) {
-				report_error("Ime " + funcCall.getDesignator().getDesignatorName().getName() + "nije funkcija ", funcCall);
+		if(funcCall.getDesignatorFunc().obj.getKind() != Obj.Meth) {
+				report_error("Ime " + funcCall.getDesignatorFunc().getDesignator().getDesignatorName().getName() + "nije funkcija ", funcCall);
 				funcCall.struct = Tab.noType;
 				return;
 		}
-		checkActualParameterFuncCall(funcCall.getDesignator().obj, funcCall.getActualParameterList(), funcCall);
-		funcCall.struct = getFinalTypeForDesignator(funcCall.getDesignator());
-		
+		checkActualParameterFuncCall(funcCall.getDesignatorFunc().obj, funcCall.getActualParameterList(), funcCall);
+		funcCall.struct = getFinalTypeForDesignator(funcCall.getDesignatorFunc().getDesignator());
 	}
 	
 	@Override
@@ -809,7 +820,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorStatementFuncCall designatorFuncCall) {
 		
-		Obj mth = getLastDesignatorMethodInChaining(designatorFuncCall.getDesignator());
+		Obj mth = getLastDesignatorMethodInChaining(designatorFuncCall.getDesignatorFunc().getDesignator());
 		
 		 
 	
@@ -823,7 +834,9 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	
 	private boolean checkActualParameterFuncCall(Obj mth, ActualParameterList paramList, SyntaxNode info) {
 		List<Obj> localSymbols = mth.getLocalSymbols().stream().collect(Collectors.toList());
-		
+		if(localSymbols.isEmpty()) {
+			System.out.println();
+		}
 		boolean classMethod = false;
 		
 		if((paramList instanceof ActualParameterEmptyList)) {

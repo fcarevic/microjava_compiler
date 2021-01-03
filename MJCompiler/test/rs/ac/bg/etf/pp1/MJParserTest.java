@@ -76,11 +76,15 @@ public class MJParserTest {
 				prog.traverseBottomUp(codeGen);
 				Code.write(new FileOutputStream(file));
 				
+				String [] argS1 = {"test/output.obj", "-debug"};
 				String [] argS = {"test/output.obj"};
-				
+						
 			 disasm.main(argS);
 				Run.main(argS);
-				
+			
+
+				//Tab.dump( new SymbolTablePrinter());
+					
 				
 			}
 			
