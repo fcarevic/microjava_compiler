@@ -6,7 +6,7 @@ import rs.ac.bg.etf.pp1.ast.*;
 
 parser code {:
 
-	boolean errorDetected=false;
+	boolean errorDetected;
 	
 	Logger log = Logger.getLogger(getClass());
    
@@ -40,7 +40,9 @@ parser code {:
 
 :}
 
-
+init with {:
+	errorDetected = false;
+:}
 
 scan with {:
 	Symbol s = this.getScanner().next_token();
@@ -106,12 +108,9 @@ nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, Co
 
 precedence left ELSE;
 
-Program ::= (Program) PROG ProgName:P1 NoMethodDeclList:N2 LCURVPAREN MethodDeclList:M3 RCURVPAREN
-				{:
-				CUP$MJParser$stack.add(0,o);
-				:} {: RESULT=new Program(P1, N2, M3); RESULT.setLine(P1left); :}
+Program ::= (Program)PROG ProgName:P1 NoMethodDeclList:N2 LCURVPAREN MethodDeclList:M3 RCURVPAREN {: RESULT=new Program(P1, N2, M3); RESULT.setLine(P1left); :}
 				;
-ProgName ::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :};
+ProgName ::= (ProgName) IDENT:progName {: RESULT=new ProgName(progName); RESULT.setLine(progNameleft); :} ;
 NoMethodDeclList ::= (NoMethodDeclList_) NoMethodDeclList:N1 NoMethodDecl:N2 {: RESULT=new NoMethodDeclList_(N1, N2); RESULT.setLine(N1left); :}
 					|
 					(NoMethodDeclEmptyList) {: RESULT=new NoMethodDeclEmptyList(); :} /*epsilon*/
