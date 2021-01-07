@@ -6,7 +6,7 @@ import rs.ac.bg.etf.pp1.ast.*;
 
 parser code {:
 
-	boolean errorDetected;
+	boolean errorDetected=false;
 	
 	Logger log = Logger.getLogger(getClass());
    
@@ -40,9 +40,7 @@ parser code {:
 
 :}
 
-init with {:
-	errorDetected = false;
-:}
+
 
 scan with {:
 	Symbol s = this.getScanner().next_token();
@@ -69,7 +67,7 @@ nonterminal FormalParamList, VarDeclList ;
 nonterminal FormalParam ;
 nonterminal Statement, StatementList, CaseList, SwitchClause,   ReturnStatement, PrintNumConst, PrintExpr;
 nonterminal DesignatorStatement, DesingatorOption, ActualParameterList, ActualParams ;
-nonterminal  ConditionFactRelOp ;
+nonterminal ConditionFactRelOp ;
 nonterminal TermOptions ;
 nonterminal Matched, Unmatched;
 nonterminal MinusExpr, ProgName, DoWhileCondition;
@@ -83,19 +81,14 @@ nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mu
 nonterminal DoClause, ClassFields ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact ;
 
-
-
 precedence left ELSE;
-start with Program;
 
 Program ::= (Program) PROG ProgName NoMethodDeclList LCURVPAREN MethodDeclList RCURVPAREN
 				{:
 				CUP$MJParser$stack.add(0,o);
-		
-				
 				:}
 				;
-ProgName ::= (ProgName) IDENT:progName ;
+ProgName ::= (ProgName) IDENT:progName;
 NoMethodDeclList ::= (NoMethodDeclList_) NoMethodDeclList NoMethodDecl
 					|
 					(NoMethodDeclEmptyList) /*epsilon*/

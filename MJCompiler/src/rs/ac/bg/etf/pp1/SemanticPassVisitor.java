@@ -15,6 +15,9 @@ import rs.etf.pp1.symboltable.concepts.*;
 import rs.etf.pp1.symboltable.structure.HashTableDataStructure;
 import rs.etf.pp1.symboltable.structure.SymbolDataStructure;
 public class SemanticPassVisitor extends VisitorAdaptor {
+	
+	private static final String STRUCT_KINS[] = {"None", "Int", "Char", "Array", "Class" , "Bool" , "Enum", "Interface" };
+	private static final String OBJ_KINDS[] = {"Con", "Var" , "Type", "Meth", "Fld" , "Elem", "Program"};
 	private static Struct boolStruct  = new Struct(Struct.Bool);
 	
 	
@@ -74,6 +77,8 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		else {
 			if(Obj.Type== obj.getKind()) {
 				type.struct = obj.getType();
+				report_info("Pretraga (" + obj.getName() + ") nadjeno [" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , type);
+				
 			}
 			else {
 				report_error("Ne postoji tip : " + type.getTypeName(), type);
@@ -100,6 +105,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 					continue;
 				}
 				Obj obj = Tab.insert(Obj.Con, constInit.getName(), type);
+				report_info("Deklaracija (" + obj.getName() + ")  [" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , constList);
 				
 				if( type == boolStruct) {
 					StdConstBool boolVal =(StdConstBool)(constInit.getStdConstType());
@@ -180,6 +186,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		if(currentClassCount==0 && !currentMethod)
 		globalVariableCnt++;
 		variableNames.add(varInitPrimitive);
+		
 	}
 	
 	
@@ -195,14 +202,18 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			if(varInit instanceof VarInitPrimitive) {
 				
 				Obj obj = Tab.insert(objKind, ((VarInitPrimitive) varInit).getName(), type);
+				report_info("Deklaracija (" + obj.getName() + ") [" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , varDecl);
 			} else if( varInit instanceof VarInitArray) {
 				Obj obj = Tab.insert(objKind, ((VarInitArray) varInit).getName(), new Struct(Struct.Array, type));
+				report_info("Deklaracija (" + obj.getName() + ") [" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " of "+  STRUCT_KINS[obj.getType().getKind()] +" ]" , varDecl);
 				
 			} else {
 				System.err.println("VARIJABLA TIP NEDEFINISAN");
 			}
 			
 		}
+		
+		
 		
 		variableNames.clear();
 	}
@@ -306,6 +317,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			return;
 		}
 		className.obj=Tab.insert(Obj.Type, className.getClassName(), new MyStruct(Struct.Class));
+		report_info("Deklaracija klase " + className.getClassName(), className);
 		currentClassStruct.add(className.obj.getType());
 		Tab.openScope();
 		Tab.insert(Obj.Fld, "vt", Tab.intType);
@@ -398,6 +410,10 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			methodName.obj=null;
 		} else {
 			methodName.obj = Tab.insert(Obj.Meth, methodName.getMethodName(), returnType);
+			obj= methodName.obj;
+			report_info("Deklaracija (" + obj.getName() + ") [" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , methodName);
+			
+			
 		}
 		
 		Tab.openScope();
@@ -443,7 +459,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	@Override
 	public void visit(ReturnStatementNoExpr returnStatementNoExpr) {
 			if(returnType!=Tab.noType) {
-				report_error("Missing return expression statement", returnStatementNoExpr);
+				report_error("Nedostaje return expression", returnStatementNoExpr);
 				
 			}
 	}
@@ -825,7 +841,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		 
 	
 		if(mth.getKind() != Obj.Meth) {
-				report_error("Ime " + mth.getName() + " nije funkcijA ", designatorFuncCall);
+				report_error("Ime " + mth.getName() + " nije funkcija ", designatorFuncCall);
 				return;
 		}
 		
@@ -968,6 +984,8 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			}
 			report_error("Nije definisano ime " + designatorName.getName() + " ", designatorName);
 		}
+		report_info("Pretraga (" + obj.getName() + ") nadjeno [" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , designatorName);
+		
 		designatorName.obj=obj;
 	}
 	
@@ -991,7 +1009,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	public void visit(DesignatorIndexingOption designatorIndexingOption) {
 		
 		if(designatorIndexingOption.getExpr().struct != Tab.intType) {
-			report_error("Indeks nije nije tipa int ", designatorIndexingOption);
+			report_error("Indeks nije tipa int ", designatorIndexingOption);
 			
 			
 		}

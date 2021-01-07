@@ -1,0 +1,303 @@
+INFO  00:49:46,734 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  00:49:46,968 - #34 program
+INFO  00:49:46,968 - #47 Program
+INFO  00:49:46,968 - #5 class
+INFO  00:49:46,972 - #47 A
+INFO  00:49:46,972 - #21 {
+INFO  00:49:46,977 - #47 int
+INFO  00:49:46,979 - #47 x
+INFO  00:49:46,981 - #20 [
+INFO  00:49:46,982 - #36 ]
+INFO  00:49:46,982 - #7 ,
+INFO  00:49:46,982 - #47 y
+INFO  00:49:46,983 - #20 [
+INFO  00:49:46,983 - #36 ]
+INFO  00:49:46,983 - #41 ;
+INFO  00:49:46,984 - #37 }
+INFO  00:49:46,986 - #8 const
+INFO  00:49:46,987 - #47 int
+INFO  00:49:46,987 - #47 pi
+INFO  00:49:46,988 - #15 =
+INFO  00:49:46,988 - #50 3
+INFO  00:49:46,989 - #7 ,
+INFO  00:49:47,005 - #47 e
+INFO  00:49:47,006 - #15 =
+INFO  00:49:47,006 - #50 2
+INFO  00:49:47,006 - #41 ;
+INFO  00:49:47,007 - #5 class
+INFO  00:49:47,010 - #47 B
+INFO  00:49:47,011 - #16 extends
+INFO  00:49:47,011 - #47 A
+INFO  00:49:47,011 - #21 {
+INFO  00:49:47,012 - #47 int
+INFO  00:49:47,012 - #47 i
+INFO  00:49:47,012 - #41 ;
+INFO  00:49:47,012 - #21 {
+INFO  00:49:47,013 - #47 int
+INFO  00:49:47,015 - #47 getValue
+INFO  00:49:47,015 - #23 (
+INFO  00:49:47,017 - #47 int
+INFO  00:49:47,017 - #47 a
+INFO  00:49:47,018 - #42 )
+INFO  00:49:47,019 - #47 int
+INFO  00:49:47,019 - #47 b
+INFO  00:49:47,022 - #41 ;
+INFO  00:49:47,022 - #47 bool
+INFO  00:49:47,022 - #47 c
+INFO  00:49:47,022 - #41 ;
+INFO  00:49:47,023 - #21 {
+INFO  00:49:47,023 - #40 return
+INFO  00:49:47,025 - #47 this
+INFO  00:49:47,026 - #12 .
+INFO  00:49:47,028 - #47 i
+INFO  00:49:47,031 - #31 +
+INFO  00:49:47,047 - #47 this
+INFO  00:49:47,052 - #12 .
+INFO  00:49:47,053 - #47 x
+INFO  00:49:47,054 - #20 [
+INFO  00:49:47,058 - #50 0
+INFO  00:49:47,059 - #36 ]
+INFO  00:49:47,060 - #31 +
+INFO  00:49:47,063 - #47 a
+INFO  00:49:47,064 - #41 ;
+INFO  00:49:47,073 - #37 }
+INFO  00:49:47,075 - #43 void
+INFO  00:49:47,084 - #47 m
+INFO  00:49:47,087 - #23 (
+INFO  00:49:47,088 - #42 )
+INFO  00:49:47,092 - #21 {
+INFO  00:49:47,092 - #37 }
+INFO  00:49:47,112 - #37 }
+INFO  00:49:47,113 - #37 }
+INFO  00:49:47,113 - #5 class
+INFO  00:49:47,114 - #47 C
+INFO  00:49:47,114 - #16 extends
+INFO  00:49:47,114 - #47 B
+INFO  00:49:47,115 - #21 {
+INFO  00:49:47,115 - #47 A
+INFO  00:49:47,115 - #47 theA
+INFO  00:49:47,116 - #41 ;
+INFO  00:49:47,116 - #47 int
+INFO  00:49:47,116 - #47 a
+INFO  00:49:47,117 - #41 ;
+INFO  00:49:47,118 - #37 }
+INFO  00:49:47,120 - #21 {
+INFO  00:49:47,121 - #43 void
+INFO  00:49:47,122 - #47 main
+INFO  00:49:47,123 - #23 (
+INFO  00:49:47,124 - #42 )
+INFO  00:49:47,124 - #47 A
+INFO  00:49:47,125 - #47 a
+INFO  00:49:47,126 - #41 ;
+INFO  00:49:47,129 - #47 C
+INFO  00:49:47,131 - #47 c
+INFO  00:49:47,132 - #41 ;
+INFO  00:49:47,132 - #47 int
+INFO  00:49:47,137 - #47 i
+INFO  00:49:47,138 - #41 ;
+INFO  00:49:47,138 - #47 int
+INFO  00:49:47,138 - #47 x
+INFO  00:49:47,139 - #20 [
+INFO  00:49:47,139 - #36 ]
+INFO  00:49:47,141 - #41 ;
+INFO  00:49:47,142 - #47 char
+INFO  00:49:47,145 - #47 ch
+INFO  00:49:47,145 - #41 ;
+INFO  00:49:47,147 - #21 {
+INFO  00:49:47,148 - #47 a
+INFO  00:49:47,149 - #15 =
+INFO  00:49:47,152 - #28 new
+INFO  00:49:47,162 - #47 A
+INFO  00:49:47,162 - #41 ;
+INFO  00:49:47,163 - #47 a
+INFO  00:49:47,165 - #12 .
+INFO  00:49:47,165 - #47 x
+INFO  00:49:47,167 - #15 =
+INFO  00:49:47,167 - #28 new
+INFO  00:49:47,167 - #47 int
+INFO  00:49:47,168 - #20 [
+INFO  00:49:47,169 - #50 5
+INFO  00:49:47,169 - #36 ]
+INFO  00:49:47,170 - #41 ;
+INFO  00:49:47,170 - #47 a
+INFO  00:49:47,171 - #12 .
+INFO  00:49:47,171 - #47 y
+INFO  00:49:47,171 - #15 =
+INFO  00:49:47,172 - #28 new
+INFO  00:49:47,174 - #47 int
+INFO  00:49:47,178 - #20 [
+INFO  00:49:47,204 - #50 5
+INFO  00:49:47,207 - #36 ]
+INFO  00:49:47,207 - #41 ;
+INFO  00:49:47,208 - #47 c
+INFO  00:49:47,208 - #15 =
+INFO  00:49:47,209 - #28 new
+INFO  00:49:47,210 - #47 C
+INFO  00:49:47,210 - #41 ;
+INFO  00:49:47,210 - #47 c
+INFO  00:49:47,211 - #12 .
+INFO  00:49:47,211 - #47 theA
+INFO  00:49:47,211 - #15 =
+INFO  00:49:47,212 - #47 a
+INFO  00:49:47,212 - #41 ;
+INFO  00:49:47,212 - #47 c
+INFO  00:49:47,213 - #12 .
+INFO  00:49:47,213 - #47 x
+INFO  00:49:47,213 - #15 =
+INFO  00:49:47,213 - #28 new
+INFO  00:49:47,214 - #47 int
+INFO  00:49:47,214 - #20 [
+INFO  00:49:47,214 - #50 5
+INFO  00:49:47,215 - #36 ]
+INFO  00:49:47,215 - #41 ;
+INFO  00:49:47,215 - #47 x
+INFO  00:49:47,221 - #15 =
+INFO  00:49:47,227 - #28 new
+INFO  00:49:47,227 - #47 int
+INFO  00:49:47,227 - #20 [
+INFO  00:49:47,228 - #50 3
+INFO  00:49:47,228 - #36 ]
+INFO  00:49:47,228 - #41 ;
+INFO  00:49:47,228 - #38 read
+INFO  00:49:47,228 - #23 (
+INFO  00:49:47,228 - #47 c
+INFO  00:49:47,228 - #12 .
+INFO  00:49:47,228 - #47 i
+INFO  00:49:47,229 - #42 )
+INFO  00:49:47,229 - #41 ;
+INFO  00:49:47,229 - #47 i
+INFO  00:49:47,229 - #15 =
+INFO  00:49:47,230 - #50 0
+INFO  00:49:47,230 - #41 ;
+INFO  00:49:47,231 - #11 do
+INFO  00:49:47,232 - #21 {
+INFO  00:49:47,234 - #38 read
+INFO  00:49:47,235 - #23 (
+INFO  00:49:47,235 - #47 c
+INFO  00:49:47,235 - #12 .
+INFO  00:49:47,235 - #47 x
+INFO  00:49:47,236 - #20 [
+INFO  00:49:47,236 - #47 i
+INFO  00:49:47,236 - #36 ]
+INFO  00:49:47,236 - #42 )
+INFO  00:49:47,236 - #41 ;
+INFO  00:49:47,239 - #38 read
+INFO  00:49:47,239 - #23 (
+INFO  00:49:47,239 - #47 c
+INFO  00:49:47,240 - #12 .
+INFO  00:49:47,241 - #47 theA
+INFO  00:49:47,241 - #12 .
+INFO  00:49:47,243 - #47 x
+INFO  00:49:47,243 - #20 [
+INFO  00:49:47,243 - #47 i
+INFO  00:49:47,247 - #36 ]
+INFO  00:49:47,248 - #42 )
+INFO  00:49:47,248 - #41 ;
+INFO  00:49:47,248 - #47 i
+INFO  00:49:47,248 - #32 ++
+INFO  00:49:47,248 - #41 ;
+INFO  00:49:47,248 - #37 }
+INFO  00:49:47,249 - #44 while
+INFO  00:49:47,249 - #23 (
+INFO  00:49:47,249 - #47 i
+INFO  00:49:47,249 - #24 <
+INFO  00:49:47,249 - #50 5
+INFO  00:49:47,253 - #42 )
+INFO  00:49:47,256 - #41 ;
+INFO  00:49:47,257 - #33 print
+INFO  00:49:47,257 - #23 (
+INFO  00:49:47,258 - #47 c
+INFO  00:49:47,258 - #12 .
+INFO  00:49:47,258 - #47 getValue
+INFO  00:49:47,258 - #23 (
+INFO  00:49:47,283 - #47 c
+INFO  00:49:47,284 - #12 .
+INFO  00:49:47,284 - #47 theA
+INFO  00:49:47,284 - #12 .
+INFO  00:49:47,284 - #47 x
+INFO  00:49:47,285 - #20 [
+INFO  00:49:47,285 - #50 0
+INFO  00:49:47,286 - #36 ]
+INFO  00:49:47,286 - #42 )
+INFO  00:49:47,287 - #42 )
+INFO  00:49:47,293 - #41 ;
+INFO  00:49:47,295 - #47 c
+INFO  00:49:47,295 - #12 .
+INFO  00:49:47,296 - #47 m
+INFO  00:49:47,296 - #23 (
+INFO  00:49:47,296 - #42 )
+INFO  00:49:47,298 - #41 ;
+INFO  00:49:47,299 - #38 read
+INFO  00:49:47,299 - #23 (
+INFO  00:49:47,299 - #47 ch
+INFO  00:49:47,299 - #42 )
+INFO  00:49:47,299 - #41 ;
+INFO  00:49:47,300 - #37 }
+INFO  00:49:47,300 - #37 }
+INFO  00:49:47,303 - ===================================
+INFO  00:49:47,368 - Deklaracija klase A na liniji 2
+INFO  00:49:47,370 - Pretraga (int) nadjeno [Type , Int ] na liniji 2
+INFO  00:49:47,371 - Deklaracija (x) [Fld , Array of Array ] na liniji 2
+INFO  00:49:47,372 - Deklaracija (y) [Fld , Array of Array ] na liniji 2
+INFO  00:49:47,373 - Pretraga (int) nadjeno [Type , Int ] na liniji 3
+INFO  00:49:47,375 - Deklaracija (pi)  [Con , Int ] na liniji 3
+INFO  00:49:47,375 - Deklaracija (e)  [Con , Int ] na liniji 3
+INFO  00:49:47,375 - Deklaracija klase B na liniji 4
+INFO  00:49:47,376 - Pretraga (A) nadjeno [Type , Class ] na liniji 4
+INFO  00:49:47,685 - Pretraga (int) nadjeno [Type , Int ] na liniji 5
+INFO  00:49:47,686 - Deklaracija (i) [Fld , Int ] na liniji 5
+INFO  00:49:47,686 - Pretraga (int) nadjeno [Type , Int ] na liniji 7
+INFO  00:49:47,687 - Deklaracija (getValue) [Meth , Int ] na liniji 7
+INFO  00:49:47,687 - Pretraga (int) nadjeno [Type , Int ] na liniji 7
+INFO  00:49:47,688 - Pretraga (int) nadjeno [Type , Int ] na liniji 7
+INFO  00:49:47,688 - Deklaracija (b) [Var , Int ] na liniji 7
+INFO  00:49:47,688 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 7
+INFO  00:49:47,689 - Deklaracija (c) [Var , Bool ] na liniji 7
+INFO  00:49:47,698 - Pretraga (this) nadjeno [Var , Class ] na liniji 7
+INFO  00:49:47,705 - Pretraga (this) nadjeno [Var , Class ] na liniji 7
+INFO  00:49:47,714 - Pretraga (a) nadjeno [Var , Int ] na liniji 7
+INFO  00:49:47,714 - Deklaracija (m) [Meth , None ] na liniji 8
+INFO  00:49:47,795 - Deklaracija klase C na liniji 11
+INFO  00:49:47,796 - Pretraga (B) nadjeno [Type , Class ] na liniji 11
+INFO  00:49:47,796 - Pretraga (A) nadjeno [Type , Class ] na liniji 11
+INFO  00:49:47,796 - Deklaracija (theA) [Fld , Class ] na liniji 11
+INFO  00:49:47,797 - Pretraga (int) nadjeno [Type , Int ] na liniji 11
+INFO  00:49:47,797 - Deklaracija (a) [Fld , Int ] na liniji 11
+INFO  00:49:47,799 - Deklaracija (main) [Meth , None ] na liniji 15
+INFO  00:49:47,799 - Pretraga (A) nadjeno [Type , Class ] na liniji 15
+INFO  00:49:47,799 - Deklaracija (a) [Var , Class ] na liniji 15
+INFO  00:49:47,799 - Pretraga (C) nadjeno [Type , Class ] na liniji 15
+INFO  00:49:47,799 - Deklaracija (c) [Var , Class ] na liniji 15
+INFO  00:49:47,800 - Pretraga (int) nadjeno [Type , Int ] na liniji 15
+INFO  00:49:47,800 - Deklaracija (i) [Var , Int ] na liniji 15
+INFO  00:49:47,800 - Pretraga (int) nadjeno [Type , Int ] na liniji 15
+INFO  00:49:47,801 - Deklaracija (x) [Var , Array of Array ] na liniji 15
+INFO  00:49:47,801 - Pretraga (char) nadjeno [Type , Char ] na liniji 15
+INFO  00:49:47,801 - Deklaracija (ch) [Var , Char ] na liniji 15
+INFO  00:49:47,801 - Pretraga (a) nadjeno [Var , Class ] na liniji 16
+INFO  00:49:47,801 - Pretraga (A) nadjeno [Type , Class ] na liniji 16
+INFO  00:49:47,802 - Pretraga (a) nadjeno [Var , Class ] na liniji 17
+INFO  00:49:47,802 - Pretraga (int) nadjeno [Type , Int ] na liniji 17
+INFO  00:49:47,802 - Pretraga (a) nadjeno [Var , Class ] na liniji 17
+INFO  00:49:47,802 - Pretraga (int) nadjeno [Type , Int ] na liniji 17
+INFO  00:49:47,802 - Pretraga (c) nadjeno [Var , Class ] na liniji 18
+INFO  00:49:47,802 - Pretraga (C) nadjeno [Type , Class ] na liniji 18
+INFO  00:49:47,803 - Pretraga (c) nadjeno [Var , Class ] na liniji 19
+INFO  00:49:47,803 - Pretraga (a) nadjeno [Var , Class ] na liniji 19
+INFO  00:49:47,803 - Pretraga (c) nadjeno [Var , Class ] na liniji 19
+INFO  00:49:47,803 - Pretraga (int) nadjeno [Type , Int ] na liniji 19
+INFO  00:49:47,803 - Pretraga (x) nadjeno [Var , Array ] na liniji 20
+INFO  00:49:47,804 - Pretraga (int) nadjeno [Type , Int ] na liniji 20
+INFO  00:49:47,804 - Pretraga (c) nadjeno [Var , Class ] na liniji 21
+INFO  00:49:47,804 - Pretraga (i) nadjeno [Var , Int ] na liniji 22
+INFO  00:49:47,804 - Pretraga (c) nadjeno [Var , Class ] na liniji 24
+INFO  00:49:47,804 - Pretraga (i) nadjeno [Var , Int ] na liniji 24
+INFO  00:49:47,805 - Pretraga (c) nadjeno [Var , Class ] na liniji 24
+INFO  00:49:47,805 - Pretraga (i) nadjeno [Var , Int ] na liniji 24
+INFO  00:49:47,805 - Pretraga (i) nadjeno [Var , Int ] na liniji 25
+INFO  00:49:47,806 - Pretraga (i) nadjeno [Var , Int ] na liniji 26
+INFO  00:49:47,807 - Pretraga (c) nadjeno [Var , Class ] na liniji 27
+INFO  00:49:47,807 - Pretraga (c) nadjeno [Var , Class ] na liniji 27
+INFO  00:49:47,808 - Pretraga (c) nadjeno [Var , Class ] na liniji 28
+INFO  00:49:47,808 - Pretraga (ch) nadjeno [Var , Char ] na liniji 29
+INFO  00:49:47,835 - USPESNO SEMANTICKO PARSIRANJE

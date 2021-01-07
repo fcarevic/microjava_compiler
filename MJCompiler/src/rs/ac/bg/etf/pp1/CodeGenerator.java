@@ -36,6 +36,7 @@ import rs.ac.bg.etf.pp1.ast.DoClause;
 import rs.ac.bg.etf.pp1.ast.DoWhileCondition;
 import rs.ac.bg.etf.pp1.ast.DoWhileStatement;
 import rs.ac.bg.etf.pp1.ast.Else;
+import rs.ac.bg.etf.pp1.ast.Expr1TermMinus;
 import rs.ac.bg.etf.pp1.ast.FactorBool;
 import rs.ac.bg.etf.pp1.ast.FactorChar;
 import rs.ac.bg.etf.pp1.ast.FactorDesignator;
@@ -221,7 +222,11 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	/*** EXPRESSIONS**/
 	
-	
+	@Override
+	public void visit(Expr1TermMinus Expr1TermMinus) {
+		// TODO Auto-generated method stub
+		Code.put(Code.neg);
+	}
 	
 	@Override
 	public void visit(AddopMultipleList addopMultipleList) {
