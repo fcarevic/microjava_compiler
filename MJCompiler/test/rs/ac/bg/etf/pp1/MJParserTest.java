@@ -61,7 +61,7 @@ public class MJParserTest {
 			SemanticPassVisitor v = new SemanticPassVisitor();
 			prog.traverseBottomUp(v); 
 			
-			Tab.dump( new SymbolTablePrinter());
+			Tab.dump();
 			
 			if(!v.isSuccess()) {
 				log.error("NEUSPESNO SEMANTICKO  PARSIRANJE");

@@ -1,0 +1,58 @@
+// test  switcha
+
+program MJProgram
+	
+	int a, b, c;
+	
+{
+
+	 	void main() {
+		b=0;
+		c=0;
+		read(a);
+		switch(a){
+			case 1:
+				print(a);
+				break;
+			case 2:
+			    print(a);
+				break;
+			case 3:
+				b=2*1;
+				c = b  + 1;
+				switch(c){
+					case 3:
+							print('c');
+							print(eol);
+						break;
+				}
+			case 4:
+				switch(1){
+					case 1:
+					print('c');
+						c=a+1;
+						a=0;
+						switch(a){
+							case 0:
+								print('e',2);
+								b=0;
+								print(eol);
+								do{
+									print(b,2);
+									b++;
+								if(b==3) break;
+								}while(true);
+								
+								print(eol);
+								break;
+						}
+						break;
+					case 2:
+					print(2);
+						break;
+				}
+				break;
+		}
+	}
+           
+}

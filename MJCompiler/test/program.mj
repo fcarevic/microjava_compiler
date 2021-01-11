@@ -1,21 +1,40 @@
-program Program
+// test provera parametra this
 
-		
-		int niz[];
-		const bool c ='false';
-		
-{
-
-	int f(){
-	 if(c)
-	  return 5;
-	}
-	void main()
-		bool b;
+program MJProgram
+class A{
 	{
-		f= 5;
-		print(f());
-		niz= new int[5];
-		print(len(niz));
+		void fun(){
+			print('A');
+			print('F');
+			print(eol);
+		}
+	}
+}
+class B extends A{
+	{
+	void fun(){
+			print('B');
+			print('F');
+			print(eol);
+		}
+	}
+}
+
+{
+	void fun(A this){
+		print('G');
+		print('F');
+		print(eol);
+	}
+	
+	
+	void main() A a; {
+		a = new A;
+		a.fun();
+		fun(a);
+		
+		a = new B;
+		a.fun();
+		fun(a);
 	}
 }

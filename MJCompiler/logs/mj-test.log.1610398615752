@@ -1,0 +1,275 @@
+INFO  21:56:00,857 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  21:56:01,088 - #34 program
+INFO  21:56:01,088 - #47 MJProgram
+INFO  21:56:01,088 - #8 const
+INFO  21:56:01,088 - #47 int
+INFO  21:56:01,088 - #47 ca
+INFO  21:56:01,088 - #15 =
+INFO  21:56:01,088 - #50 1
+INFO  21:56:01,088 - #41 ;
+INFO  21:56:01,088 - #8 const
+INFO  21:56:01,104 - #47 char
+INFO  21:56:01,104 - #47 cc
+INFO  21:56:01,104 - #15 =
+INFO  21:56:01,104 - #51 a
+INFO  21:56:01,104 - #41 ;
+INFO  21:56:01,104 - #8 const
+INFO  21:56:01,104 - #47 bool
+INFO  21:56:01,104 - #47 cbt
+INFO  21:56:01,104 - #15 =
+INFO  21:56:01,104 - #49 true
+INFO  21:56:01,104 - #7 ,
+INFO  21:56:01,104 - #47 cbf
+INFO  21:56:01,111 - #15 =
+INFO  21:56:01,111 - #49 false
+INFO  21:56:01,111 - #41 ;
+INFO  21:56:01,111 - #47 int
+INFO  21:56:01,111 - #47 x
+INFO  21:56:01,111 - #7 ,
+INFO  21:56:01,111 - #47 y
+INFO  21:56:01,111 - #41 ;
+INFO  21:56:01,111 - #47 char
+INFO  21:56:01,111 - #47 ch
+INFO  21:56:01,111 - #41 ;
+INFO  21:56:01,111 - #47 bool
+INFO  21:56:01,111 - #47 b
+INFO  21:56:01,111 - #41 ;
+INFO  21:56:01,111 - #47 int
+INFO  21:56:01,111 - #47 a
+INFO  21:56:01,111 - #7 ,
+INFO  21:56:01,111 - #47 arr
+INFO  21:56:01,111 - #20 [
+INFO  21:56:01,111 - #36 ]
+INFO  21:56:01,111 - #41 ;
+INFO  21:56:01,111 - #21 {
+INFO  21:56:01,111 - #47 int
+INFO  21:56:01,111 - #47 k
+INFO  21:56:01,111 - #23 (
+INFO  21:56:01,111 - #42 )
+INFO  21:56:01,111 - #47 int
+INFO  21:56:01,126 - #47 c
+INFO  21:56:01,126 - #41 ;
+INFO  21:56:01,126 - #21 {
+INFO  21:56:01,126 - #47 c
+INFO  21:56:01,126 - #15 =
+INFO  21:56:01,126 - #50 2
+INFO  21:56:01,142 - #41 ;
+INFO  21:56:01,142 - #40 return
+INFO  21:56:01,142 - #47 c
+INFO  21:56:01,142 - #31 +
+INFO  21:56:01,142 - #50 2
+INFO  21:56:01,142 - #41 ;
+INFO  21:56:01,142 - #37 }
+INFO  21:56:01,142 - #47 int
+INFO  21:56:01,158 - #47 fun
+INFO  21:56:01,158 - #23 (
+INFO  21:56:01,158 - #47 int
+INFO  21:56:01,158 - #47 a
+INFO  21:56:01,158 - #7 ,
+INFO  21:56:01,165 - #47 int
+INFO  21:56:01,165 - #47 b
+INFO  21:56:01,165 - #7 ,
+INFO  21:56:01,165 - #47 int
+INFO  21:56:01,165 - #47 c
+INFO  21:56:01,165 - #42 )
+INFO  21:56:01,165 - #47 int
+INFO  21:56:01,165 - #47 d
+INFO  21:56:01,165 - #41 ;
+INFO  21:56:01,165 - #21 {
+INFO  21:56:01,165 - #19 if
+INFO  21:56:01,165 - #23 (
+INFO  21:56:01,165 - #47 a
+INFO  21:56:01,165 - #17 >=
+INFO  21:56:01,165 - #47 b
+INFO  21:56:01,170 - #42 )
+INFO  21:56:01,170 - #21 {
+INFO  21:56:01,170 - #40 return
+INFO  21:56:01,170 - #50 1
+INFO  21:56:01,170 - #27 *
+INFO  21:56:01,170 - #50 2
+INFO  21:56:01,170 - #41 ;
+INFO  21:56:01,170 - #37 }
+INFO  21:56:01,170 - #13 else
+INFO  21:56:01,170 - #21 {
+INFO  21:56:01,170 - #47 d
+INFO  21:56:01,170 - #15 =
+INFO  21:56:01,170 - #47 b
+INFO  21:56:01,170 - #10 /
+INFO  21:56:01,170 - #50 2
+INFO  21:56:01,170 - #41 ;
+INFO  21:56:01,170 - #40 return
+INFO  21:56:01,170 - #47 c
+INFO  21:56:01,170 - #31 +
+INFO  21:56:01,170 - #47 d
+INFO  21:56:01,170 - #41 ;
+INFO  21:56:01,186 - #37 }
+INFO  21:56:01,186 - #37 }
+INFO  21:56:01,186 - #43 void
+INFO  21:56:01,186 - #47 main
+INFO  21:56:01,186 - #23 (
+INFO  21:56:01,186 - #42 )
+INFO  21:56:01,186 - #21 {
+INFO  21:56:01,186 - #47 x
+INFO  21:56:01,186 - #15 =
+INFO  21:56:01,186 - #50 3
+INFO  21:56:01,186 - #41 ;
+INFO  21:56:01,186 - #47 y
+INFO  21:56:01,186 - #15 =
+INFO  21:56:01,186 - #50 15
+INFO  21:56:01,186 - #41 ;
+INFO  21:56:01,186 - #47 arr
+INFO  21:56:01,186 - #15 =
+INFO  21:56:01,186 - #28 new
+INFO  21:56:01,186 - #47 int
+INFO  21:56:01,186 - #20 [
+INFO  21:56:01,186 - #47 y
+INFO  21:56:01,186 - #31 +
+INFO  21:56:01,186 - #47 x
+INFO  21:56:01,186 - #36 ]
+INFO  21:56:01,186 - #41 ;
+INFO  21:56:01,186 - #38 read
+INFO  21:56:01,186 - #23 (
+INFO  21:56:01,186 - #47 ch
+INFO  21:56:01,186 - #42 )
+INFO  21:56:01,186 - #41 ;
+INFO  21:56:01,186 - #47 b
+INFO  21:56:01,186 - #15 =
+INFO  21:56:01,186 - #49 true
+INFO  21:56:01,186 - #41 ;
+INFO  21:56:01,186 - #47 x
+INFO  21:56:01,186 - #15 =
+INFO  21:56:01,186 - #47 b
+INFO  21:56:01,186 - #35 ?
+INFO  21:56:01,186 - #47 x
+INFO  21:56:01,186 - #31 +
+INFO  21:56:01,186 - #50 5
+INFO  21:56:01,186 - #31 +
+INFO  21:56:01,186 - #50 3
+INFO  21:56:01,186 - #6 :
+INFO  21:56:01,202 - #47 y
+INFO  21:56:01,211 - #25 -
+INFO  21:56:01,211 - #50 2
+INFO  21:56:01,211 - #41 ;
+INFO  21:56:01,211 - #33 print
+INFO  21:56:01,211 - #23 (
+INFO  21:56:01,211 - #47 x
+INFO  21:56:01,211 - #42 )
+INFO  21:56:01,211 - #41 ;
+INFO  21:56:01,211 - #47 k
+INFO  21:56:01,211 - #23 (
+INFO  21:56:01,211 - #42 )
+INFO  21:56:01,211 - #41 ;
+INFO  21:56:01,211 - #33 print
+INFO  21:56:01,211 - #23 (
+INFO  21:56:01,211 - #47 fun
+INFO  21:56:01,211 - #23 (
+INFO  21:56:01,211 - #47 x
+INFO  21:56:01,211 - #7 ,
+INFO  21:56:01,211 - #47 y
+INFO  21:56:01,211 - #7 ,
+INFO  21:56:01,211 - #47 arr
+INFO  21:56:01,211 - #20 [
+INFO  21:56:01,211 - #47 x
+INFO  21:56:01,211 - #36 ]
+INFO  21:56:01,211 - #31 +
+INFO  21:56:01,226 - #47 ca
+INFO  21:56:01,226 - #31 +
+INFO  21:56:01,226 - #47 k
+INFO  21:56:01,226 - #23 (
+INFO  21:56:01,226 - #42 )
+INFO  21:56:01,226 - #42 )
+INFO  21:56:01,226 - #42 )
+INFO  21:56:01,226 - #41 ;
+INFO  21:56:01,226 - #47 a
+INFO  21:56:01,226 - #15 =
+INFO  21:56:01,226 - #47 arr
+INFO  21:56:01,226 - #20 [
+INFO  21:56:01,226 - #47 x
+INFO  21:56:01,226 - #36 ]
+INFO  21:56:01,226 - #41 ;
+INFO  21:56:01,226 - #11 do
+INFO  21:56:01,226 - #21 {
+INFO  21:56:01,226 - #47 x
+INFO  21:56:01,226 - #32 ++
+INFO  21:56:01,226 - #41 ;
+INFO  21:56:01,226 - #47 y
+INFO  21:56:01,226 - #26 --
+INFO  21:56:01,226 - #41 ;
+INFO  21:56:01,226 - #37 }
+INFO  21:56:01,226 - #44 while
+INFO  21:56:01,226 - #23 (
+INFO  21:56:01,226 - #47 y
+INFO  21:56:01,226 - #17 >=
+INFO  21:56:01,226 - #50 0
+INFO  21:56:01,242 - #42 )
+INFO  21:56:01,242 - #41 ;
+INFO  21:56:01,242 - #40 return
+INFO  21:56:01,242 - #41 ;
+INFO  21:56:01,242 - #37 }
+INFO  21:56:01,242 - #37 }
+INFO  21:56:01,242 - ===================================
+INFO  21:56:01,273 - Pretraga (int) nadjeno [Type , Int ] na liniji 4
+INFO  21:56:01,273 - Deklaracija (ca)  [Con , Int ] na liniji 4
+INFO  21:56:01,273 - Pretraga (char) nadjeno [Type , Char ] na liniji 5
+INFO  21:56:01,273 - Deklaracija (cc)  [Con , Char ] na liniji 5
+INFO  21:56:01,273 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 6
+INFO  21:56:01,273 - Deklaracija (cbt)  [Con , Bool ] na liniji 6
+INFO  21:56:01,273 - Deklaracija (cbf)  [Con , Bool ] na liniji 6
+INFO  21:56:01,273 - Pretraga (int) nadjeno [Type , Int ] na liniji 8
+INFO  21:56:01,273 - Deklaracija (x) [Var , Int ] na liniji 8
+INFO  21:56:01,273 - Deklaracija (y) [Var , Int ] na liniji 8
+INFO  21:56:01,273 - Pretraga (char) nadjeno [Type , Char ] na liniji 9
+INFO  21:56:01,273 - Deklaracija (ch) [Var , Char ] na liniji 9
+INFO  21:56:01,273 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 10
+INFO  21:56:01,289 - Deklaracija (b) [Var , Bool ] na liniji 10
+INFO  21:56:01,289 - Pretraga (int) nadjeno [Type , Int ] na liniji 11
+INFO  21:56:01,289 - Deklaracija (a) [Var , Int ] na liniji 11
+INFO  21:56:01,289 - Deklaracija (arr) [Var , Array of Array ] na liniji 11
+INFO  21:56:01,289 - Pretraga (int) nadjeno [Type , Int ] na liniji 14
+INFO  21:56:01,289 - Deklaracija (k) [Meth , Int ] na liniji 14
+INFO  21:56:01,289 - Pretraga (int) nadjeno [Type , Int ] na liniji 14
+INFO  21:56:01,289 - Deklaracija (c) [Var , Int ] na liniji 14
+INFO  21:56:01,289 - Pretraga (c) nadjeno [Var , Int ] na liniji 15
+INFO  21:56:01,289 - Pretraga (c) nadjeno [Var , Int ] na liniji 17
+INFO  21:56:01,289 - Pretraga (int) nadjeno [Type , Int ] na liniji 20
+INFO  21:56:01,289 - Deklaracija (fun) [Meth , Int ] na liniji 20
+INFO  21:56:01,289 - Pretraga (int) nadjeno [Type , Int ] na liniji 20
+INFO  21:56:01,289 - Pretraga (int) nadjeno [Type , Int ] na liniji 20
+INFO  21:56:01,289 - Pretraga (int) nadjeno [Type , Int ] na liniji 20
+INFO  21:56:01,289 - Pretraga (int) nadjeno [Type , Int ] na liniji 20
+INFO  21:56:01,289 - Deklaracija (d) [Var , Int ] na liniji 20
+INFO  21:56:01,289 - Pretraga (a) nadjeno [Var , Int ] na liniji 21
+INFO  21:56:01,289 - Pretraga (b) nadjeno [Var , Int ] na liniji 21
+INFO  21:56:01,289 - Pretraga (d) nadjeno [Var , Int ] na liniji 25
+INFO  21:56:01,289 - Pretraga (b) nadjeno [Var , Int ] na liniji 25
+INFO  21:56:01,289 - Pretraga (c) nadjeno [Var , Int ] na liniji 26
+INFO  21:56:01,289 - Pretraga (d) nadjeno [Var , Int ] na liniji 26
+INFO  21:56:01,289 - Deklaracija (main) [Meth , None ] na liniji 30
+INFO  21:56:01,289 - Pretraga (x) nadjeno [Var , Int ] na liniji 31
+INFO  21:56:01,289 - Pretraga (y) nadjeno [Var , Int ] na liniji 32
+INFO  21:56:01,289 - Pretraga (arr) nadjeno [Var , Array ] na liniji 33
+INFO  21:56:01,289 - Pretraga (int) nadjeno [Type , Int ] na liniji 33
+INFO  21:56:01,289 - Pretraga (y) nadjeno [Var , Int ] na liniji 33
+INFO  21:56:01,289 - Pretraga (x) nadjeno [Var , Int ] na liniji 33
+INFO  21:56:01,289 - Pretraga (ch) nadjeno [Var , Char ] na liniji 35
+INFO  21:56:01,289 - Pretraga (b) nadjeno [Var , Bool ] na liniji 37
+INFO  21:56:01,289 - Pretraga (x) nadjeno [Var , Int ] na liniji 38
+INFO  21:56:01,289 - Pretraga (b) nadjeno [Var , Bool ] na liniji 38
+INFO  21:56:01,289 - Pretraga (x) nadjeno [Var , Int ] na liniji 38
+INFO  21:56:01,289 - Pretraga (y) nadjeno [Var , Int ] na liniji 38
+INFO  21:56:01,289 - Pretraga (x) nadjeno [Var , Int ] na liniji 40
+INFO  21:56:01,289 - Pretraga (k) nadjeno [Meth , Int ] na liniji 42
+INFO  21:56:01,458 - Pretraga (fun) nadjeno [Meth , Int ] na liniji 44
+INFO  21:56:01,458 - Pretraga (x) nadjeno [Var , Int ] na liniji 44
+INFO  21:56:01,458 - Pretraga (y) nadjeno [Var , Int ] na liniji 44
+INFO  21:56:01,458 - Pretraga (arr) nadjeno [Var , Array ] na liniji 44
+INFO  21:56:01,458 - Pretraga (x) nadjeno [Var , Int ] na liniji 44
+INFO  21:56:01,458 - Pretraga (ca) nadjeno [Con , Int ] na liniji 44
+INFO  21:56:01,458 - Pretraga (k) nadjeno [Meth , Int ] na liniji 44
+INFO  21:56:01,458 - Pretraga (a) nadjeno [Var , Int ] na liniji 46
+INFO  21:56:01,458 - Pretraga (arr) nadjeno [Var , Array ] na liniji 46
+INFO  21:56:01,458 - Pretraga (x) nadjeno [Var , Int ] na liniji 46
+INFO  21:56:01,458 - Pretraga (x) nadjeno [Var , Int ] na liniji 49
+INFO  21:56:01,458 - Pretraga (y) nadjeno [Var , Int ] na liniji 50
+INFO  21:56:01,458 - Pretraga (y) nadjeno [Var , Int ] na liniji 51
+INFO  21:56:01,458 - USPESNO SEMANTICKO PARSIRANJE

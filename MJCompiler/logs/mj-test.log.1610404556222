@@ -1,0 +1,682 @@
+INFO  23:34:53,502 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  23:34:53,743 - #34 program
+INFO  23:34:53,746 - #47 MJProgram
+INFO  23:34:53,746 - #8 const
+INFO  23:34:53,747 - #47 char
+INFO  23:34:53,747 - #47 c1
+INFO  23:34:53,753 - #15 =
+INFO  23:34:53,753 - #51 a
+INFO  23:34:53,753 - #41 ;
+INFO  23:34:53,753 - #8 const
+INFO  23:34:53,761 - #47 T
+INFO  23:34:53,761 - #47 c2
+INFO  23:34:53,761 - #15 =
+INFO  23:34:53,761 - #49 false
+INFO  23:34:53,761 - #41 ;
+INFO  23:34:53,761 - #8 const
+INFO  23:34:53,761 - #47 int
+INFO  23:34:53,763 - #47 c1
+INFO  23:34:53,763 - #15 =
+INFO  23:34:53,763 - #50 1
+INFO  23:34:53,763 - #41 ;
+INFO  23:34:53,763 - #8 const
+INFO  23:34:53,773 - #47 bool
+INFO  23:34:53,773 - #47 c2
+INFO  23:34:53,773 - #15 =
+INFO  23:34:53,773 - #51 b
+INFO  23:34:53,773 - #41 ;
+INFO  23:34:53,773 - #47 int
+INFO  23:34:53,773 - #47 v1
+INFO  23:34:53,773 - #7 ,
+INFO  23:34:53,773 - #47 v1
+INFO  23:34:53,773 - #7 ,
+INFO  23:34:53,773 - #47 v2
+INFO  23:34:53,773 - #20 [
+INFO  23:34:53,773 - #36 ]
+INFO  23:34:53,773 - #41 ;
+INFO  23:34:53,773 - #47 double
+INFO  23:34:53,773 - #47 v3
+INFO  23:34:53,773 - #41 ;
+INFO  23:34:53,773 - #47 v1
+INFO  23:34:53,773 - #47 prom
+INFO  23:34:53,773 - #41 ;
+INFO  23:34:53,773 - #5 class
+INFO  23:34:53,781 - #47 A
+INFO  23:34:53,781 - #21 {
+INFO  23:34:53,783 - #47 int
+INFO  23:34:53,783 - #47 v1
+INFO  23:34:53,783 - #41 ;
+INFO  23:34:53,783 - #47 double
+INFO  23:34:53,783 - #47 v2
+INFO  23:34:53,783 - #41 ;
+INFO  23:34:53,783 - #37 }
+INFO  23:34:53,793 - #5 class
+INFO  23:34:53,793 - #47 B
+INFO  23:34:53,793 - #16 extends
+INFO  23:34:53,793 - #47 v1
+INFO  23:34:53,793 - #21 {
+INFO  23:34:53,793 - #37 }
+INFO  23:34:53,793 - #5 class
+INFO  23:34:53,793 - #47 B
+INFO  23:34:53,793 - #16 extends
+INFO  23:34:53,793 - #47 A
+INFO  23:34:53,793 - #21 {
+INFO  23:34:53,804 - #21 {
+INFO  23:34:53,812 - #43 void
+INFO  23:34:53,814 - #47 m1
+INFO  23:34:53,824 - #23 (
+INFO  23:34:53,824 - #42 )
+INFO  23:34:53,824 - #21 {
+INFO  23:34:53,832 - #37 }
+INFO  23:34:53,834 - #47 double
+INFO  23:34:53,834 - #47 m2
+INFO  23:34:53,834 - #23 (
+INFO  23:34:53,834 - #42 )
+INFO  23:34:53,834 - #21 {
+INFO  23:34:53,834 - #37 }
+INFO  23:34:53,834 - #37 }
+INFO  23:34:53,834 - #37 }
+INFO  23:34:53,834 - #21 {
+INFO  23:34:53,834 - #43 void
+INFO  23:34:53,834 - #47 f1
+INFO  23:34:53,834 - #23 (
+INFO  23:34:53,834 - #47 int
+INFO  23:34:53,834 - #47 p1
+INFO  23:34:53,834 - #42 )
+INFO  23:34:53,834 - #47 int
+INFO  23:34:53,834 - #47 p1
+INFO  23:34:53,842 - #41 ;
+INFO  23:34:53,842 - #21 {
+INFO  23:34:53,842 - #37 }
+INFO  23:34:53,842 - #43 void
+INFO  23:34:53,842 - #47 c1
+INFO  23:34:53,842 - #23 (
+INFO  23:34:53,842 - #42 )
+INFO  23:34:53,842 - #21 {
+INFO  23:34:53,844 - #37 }
+INFO  23:34:53,844 - #47 double
+INFO  23:34:53,844 - #47 f2
+INFO  23:34:53,844 - #23 (
+INFO  23:34:53,844 - #47 string
+INFO  23:34:53,844 - #47 p1
+INFO  23:34:53,844 - #42 )
+INFO  23:34:53,844 - #47 float
+INFO  23:34:53,844 - #47 l1
+INFO  23:34:53,844 - #41 ;
+INFO  23:34:53,844 - #21 {
+INFO  23:34:53,844 - #37 }
+INFO  23:34:53,844 - #43 void
+INFO  23:34:53,844 - #47 f3
+INFO  23:34:53,844 - #23 (
+INFO  23:34:53,844 - #47 int
+INFO  23:34:53,844 - #47 p1
+INFO  23:34:53,844 - #7 ,
+INFO  23:34:53,844 - #47 int
+INFO  23:34:53,844 - #47 p2
+INFO  23:34:53,844 - #42 )
+INFO  23:34:53,844 - #21 {
+INFO  23:34:53,844 - #40 return
+INFO  23:34:53,844 - #47 p1
+INFO  23:34:53,844 - #27 *
+INFO  23:34:53,852 - #47 p2
+INFO  23:34:53,852 - #41 ;
+INFO  23:34:53,852 - #37 }
+INFO  23:34:53,852 - #47 int
+INFO  23:34:53,852 - #47 f4
+INFO  23:34:53,852 - #23 (
+INFO  23:34:53,852 - #42 )
+INFO  23:34:53,852 - #21 {
+INFO  23:34:53,852 - #37 }
+INFO  23:34:53,852 - #47 char
+INFO  23:34:53,852 - #47 f5
+INFO  23:34:53,852 - #23 (
+INFO  23:34:53,852 - #47 int
+INFO  23:34:53,852 - #47 p1
+INFO  23:34:53,852 - #42 )
+INFO  23:34:53,852 - #21 {
+INFO  23:34:53,852 - #40 return
+INFO  23:34:53,852 - #47 p1
+INFO  23:34:53,852 - #31 +
+INFO  23:34:53,852 - #50 5
+INFO  23:34:53,862 - #41 ;
+INFO  23:34:53,862 - #37 }
+INFO  23:34:53,862 - #47 int
+INFO  23:34:53,862 - #47 f6
+INFO  23:34:53,862 - #23 (
+INFO  23:34:53,862 - #47 char
+INFO  23:34:53,862 - #47 p1
+INFO  23:34:53,862 - #20 [
+INFO  23:34:53,862 - #36 ]
+INFO  23:34:53,862 - #42 )
+INFO  23:34:53,862 - #21 {
+INFO  23:34:53,862 - #40 return
+INFO  23:34:53,862 - #47 p1
+INFO  23:34:53,862 - #20 [
+INFO  23:34:53,862 - #50 0
+INFO  23:34:53,862 - #36 ]
+INFO  23:34:53,862 - #41 ;
+INFO  23:34:53,862 - #37 }
+INFO  23:34:53,862 - #43 void
+INFO  23:34:53,862 - #47 main
+INFO  23:34:53,862 - #23 (
+INFO  23:34:53,862 - #42 )
+INFO  23:34:53,862 - #47 A
+INFO  23:34:53,862 - #47 a
+INFO  23:34:53,862 - #41 ;
+INFO  23:34:53,862 - #47 B
+INFO  23:34:53,862 - #47 b
+INFO  23:34:53,862 - #41 ;
+INFO  23:34:53,862 - #21 {
+INFO  23:34:53,862 - #47 v1
+INFO  23:34:53,862 - #15 =
+INFO  23:34:53,862 - #47 v2
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 v2
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #47 c1
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 c1
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #47 v1
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 c1
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #47 v2
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 v1
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #28 new
+INFO  23:34:53,878 - #47 char
+INFO  23:34:53,878 - #20 [
+INFO  23:34:53,878 - #50 5
+INFO  23:34:53,878 - #36 ]
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 v1
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #25 -
+INFO  23:34:53,878 - #47 v2
+INFO  23:34:53,878 - #27 *
+INFO  23:34:53,878 - #23 (
+INFO  23:34:53,878 - #47 v1
+INFO  23:34:53,878 - #31 +
+INFO  23:34:53,878 - #50 3
+INFO  23:34:53,878 - #42 )
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 v1
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #47 v2
+INFO  23:34:53,878 - #20 [
+INFO  23:34:53,878 - #47 c1
+INFO  23:34:53,878 - #36 ]
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 v2
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #47 v1
+INFO  23:34:53,878 - #20 [
+INFO  23:34:53,878 - #47 c1
+INFO  23:34:53,878 - #36 ]
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 v1
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #51 a
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 v1
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #49 true
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 v2
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #50 0
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 v2
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #51 a
+INFO  23:34:53,878 - #41 ;
+INFO  23:34:53,878 - #47 v2
+INFO  23:34:53,878 - #15 =
+INFO  23:34:53,878 - #49 false
+INFO  23:34:53,893 - #41 ;
+INFO  23:34:53,893 - #47 c1
+INFO  23:34:53,893 - #15 =
+INFO  23:34:53,893 - #51 a
+INFO  23:34:53,893 - #41 ;
+INFO  23:34:53,893 - #47 c1
+INFO  23:34:53,893 - #15 =
+INFO  23:34:53,893 - #49 true
+INFO  23:34:53,893 - #41 ;
+INFO  23:34:53,893 - #47 a
+INFO  23:34:53,893 - #15 =
+INFO  23:34:53,893 - #28 new
+INFO  23:34:53,893 - #47 int
+INFO  23:34:53,893 - #41 ;
+INFO  23:34:53,893 - #47 b
+INFO  23:34:53,893 - #15 =
+INFO  23:34:53,893 - #28 new
+INFO  23:34:53,893 - #47 char
+INFO  23:34:53,893 - #20 [
+INFO  23:34:53,893 - #50 9
+INFO  23:34:53,893 - #36 ]
+INFO  23:34:53,893 - #41 ;
+INFO  23:34:53,893 - #47 a
+INFO  23:34:53,893 - #15 =
+INFO  23:34:53,893 - #47 v1
+INFO  23:34:53,893 - #41 ;
+INFO  23:34:53,893 - #47 a
+INFO  23:34:53,893 - #15 =
+INFO  23:34:53,893 - #47 c1
+INFO  23:34:53,893 - #41 ;
+INFO  23:34:53,893 - #47 b
+INFO  23:34:53,893 - #15 =
+INFO  23:34:53,893 - #47 v2
+INFO  23:34:53,893 - #41 ;
+INFO  23:34:53,893 - #47 b
+INFO  23:34:53,893 - #32 ++
+INFO  23:34:53,893 - #41 ;
+INFO  23:34:53,893 - #47 v2
+INFO  23:34:53,893 - #26 --
+INFO  23:34:53,893 - #41 ;
+INFO  23:34:53,893 - #47 v1
+INFO  23:34:53,893 - #12 .
+INFO  23:34:53,893 - #47 m1
+INFO  23:34:53,893 - #23 (
+INFO  23:34:53,893 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 a
+INFO  23:34:53,909 - #12 .
+INFO  23:34:53,909 - #47 m1
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 b
+INFO  23:34:53,909 - #12 .
+INFO  23:34:53,909 - #47 m1
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #50 2
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 f1
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 f1
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #49 true
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 f3
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #50 1
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 f3
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #51 a
+INFO  23:34:53,909 - #7 ,
+INFO  23:34:53,909 - #49 false
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 f6
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #47 f5
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #47 f4
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #50 0
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 v1
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 v2
+INFO  23:34:53,909 - #20 [
+INFO  23:34:53,909 - #47 c1
+INFO  23:34:53,909 - #36 ]
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 chr
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 chr
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #47 c1
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 ord
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 ord
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #47 v2
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 len
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #47 len
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #47 v1
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #41 ;
+INFO  23:34:53,909 - #19 if
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #47 v1
+INFO  23:34:53,909 - #42 )
+INFO  23:34:53,909 - #21 {
+INFO  23:34:53,909 - #37 }
+INFO  23:34:53,909 - #19 if
+INFO  23:34:53,909 - #23 (
+INFO  23:34:53,909 - #47 v2
+INFO  23:34:53,909 - #46 ==
+INFO  23:34:53,909 - #47 c1
+INFO  23:34:53,925 - #42 )
+INFO  23:34:53,925 - #21 {
+INFO  23:34:53,925 - #37 }
+INFO  23:34:53,925 - #19 if
+INFO  23:34:53,925 - #23 (
+INFO  23:34:53,925 - #47 c1
+INFO  23:34:53,925 - #2 &&
+INFO  23:34:53,925 - #47 v2
+INFO  23:34:53,925 - #24 <
+INFO  23:34:53,925 - #50 0
+INFO  23:34:53,940 - #42 )
+INFO  23:34:53,940 - #21 {
+INFO  23:34:53,940 - #37 }
+INFO  23:34:53,940 - #19 if
+INFO  23:34:53,940 - #23 (
+INFO  23:34:53,940 - #47 a
+INFO  23:34:53,940 - #18 >
+INFO  23:34:53,940 - #47 a
+INFO  23:34:53,940 - #42 )
+INFO  23:34:53,940 - #21 {
+INFO  23:34:53,940 - #37 }
+INFO  23:34:53,940 - #19 if
+INFO  23:34:53,940 - #23 (
+INFO  23:34:53,940 - #47 b
+INFO  23:34:53,940 - #22 <=
+INFO  23:34:53,940 - #47 a
+INFO  23:34:53,940 - #42 )
+INFO  23:34:53,940 - #21 {
+INFO  23:34:53,940 - #37 }
+INFO  23:34:53,940 - #11 do
+INFO  23:34:53,940 - #21 {
+INFO  23:34:53,940 - #37 }
+INFO  23:34:53,940 - #44 while
+INFO  23:34:53,940 - #23 (
+INFO  23:34:53,940 - #47 a
+INFO  23:34:53,940 - #46 ==
+INFO  23:34:53,940 - #47 b
+INFO  23:34:53,940 - #30 ||
+INFO  23:34:53,940 - #47 c1
+INFO  23:34:53,940 - #42 )
+INFO  23:34:53,962 - #41 ;
+INFO  23:34:53,962 - #45 switch
+INFO  23:34:53,962 - #23 (
+INFO  23:34:53,962 - #47 v1
+INFO  23:34:53,962 - #42 )
+INFO  23:34:53,962 - #21 {
+INFO  23:34:53,962 - #4 case
+INFO  23:34:53,962 - #50 1
+INFO  23:34:53,962 - #6 :
+INFO  23:34:53,962 - #3 break
+INFO  23:34:53,962 - #41 ;
+INFO  23:34:53,962 - #4 case
+INFO  23:34:53,962 - #50 2
+INFO  23:34:53,962 - #6 :
+INFO  23:34:53,962 - #3 break
+INFO  23:34:53,962 - #41 ;
+INFO  23:34:53,962 - #4 case
+INFO  23:34:53,962 - #50 1
+INFO  23:34:53,962 - #6 :
+INFO  23:34:53,962 - #9 continue
+INFO  23:34:53,962 - #41 ;
+INFO  23:34:53,962 - #37 }
+INFO  23:34:53,978 - #3 break
+INFO  23:34:53,978 - #41 ;
+INFO  23:34:53,978 - #9 continue
+INFO  23:34:53,978 - #41 ;
+INFO  23:34:53,978 - #38 read
+INFO  23:34:53,978 - #23 (
+INFO  23:34:53,978 - #47 a
+INFO  23:34:53,978 - #42 )
+INFO  23:34:53,978 - #41 ;
+INFO  23:34:53,978 - #33 print
+INFO  23:34:53,978 - #23 (
+INFO  23:34:53,978 - #47 v2
+INFO  23:34:53,978 - #42 )
+INFO  23:34:53,978 - #41 ;
+INFO  23:34:53,978 - #33 print
+INFO  23:34:53,978 - #23 (
+INFO  23:34:53,978 - #47 b
+INFO  23:34:53,978 - #7 ,
+INFO  23:34:53,978 - #50 2
+INFO  23:34:53,978 - #42 )
+INFO  23:34:53,978 - #41 ;
+INFO  23:34:53,978 - #37 }
+INFO  23:34:53,978 - #47 int
+INFO  23:34:53,978 - #47 main
+INFO  23:34:53,978 - #23 (
+INFO  23:34:53,978 - #47 int
+INFO  23:34:53,978 - #47 argc
+INFO  23:34:53,978 - #7 ,
+INFO  23:34:53,978 - #47 char
+INFO  23:34:53,978 - #47 args
+INFO  23:34:53,978 - #20 [
+INFO  23:34:53,978 - #36 ]
+INFO  23:34:53,978 - #42 )
+INFO  23:34:53,978 - #21 {
+INFO  23:34:53,978 - #37 }
+INFO  23:34:53,978 - #37 }
+INFO  23:34:53,978 - ===================================
+INFO  23:34:54,009 - Pretraga (char) nadjeno [Type , Char ] na liniji 5
+INFO  23:34:54,009 - Deklaracija (c1)  [Con , Char ] na liniji 5
+ERROR 23:34:54,009 - Nije pronadjen tip u tabeli simbola : T na liniji 6
+ERROR 23:34:54,009 - Ne poklapaju se tipovi i inicijalna vrednost konstante : c2 na liniji 6
+INFO  23:34:54,009 - Pretraga (int) nadjeno [Type , Int ] na liniji 7
+ERROR 23:34:54,009 - Postoji vec deklaracija za ime : c1
+INFO  23:34:54,009 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 8
+ERROR 23:34:54,009 - Ne poklapaju se tipovi i inicijalna vrednost konstante : c2 na liniji 8
+INFO  23:34:54,009 - Pretraga (int) nadjeno [Type , Int ] na liniji 10
+INFO  23:34:54,009 - Deklaracija (v1) [Var , Int ] na liniji 10
+INFO  23:34:54,009 - Deklaracija (v1) [Var , Int ] na liniji 10
+INFO  23:34:54,009 - Deklaracija (v2) [Var , Array of Array ] na liniji 10
+ERROR 23:34:54,009 - Nije pronadjen tip u tabeli simbola : double na liniji 11
+INFO  23:34:54,009 - Deklaracija (v3) [Var , None ] na liniji 11
+ERROR 23:34:54,009 - Ne postoji tip : v1 na liniji 12
+INFO  23:34:54,009 - Deklaracija (prom) [Var , None ] na liniji 12
+INFO  23:34:54,009 - Deklaracija klase A na liniji 14
+INFO  23:34:54,009 - Pretraga (int) nadjeno [Type , Int ] na liniji 14
+INFO  23:34:54,009 - Deklaracija (v1) [Fld , Int ] na liniji 14
+ERROR 23:34:54,009 - Nije pronadjen tip u tabeli simbola : double na liniji 14
+INFO  23:34:54,009 - Deklaracija (v2) [Fld , None ] na liniji 14
+INFO  23:34:54,025 - Deklaracija klase B na liniji 15
+ERROR 23:34:54,025 - Ne postoji tip : v1 na liniji 15
+ERROR 23:34:54,025 - Tip specificiran u extends klauzuli nije klasa  na liniji 15
+ERROR 23:34:54,025 - Postoji vec deklarisano ime za klasu : B na liniji 16
+INFO  23:34:54,025 - Pretraga (A) nadjeno [Type , Class ] na liniji 16
+INFO  23:34:54,025 - Deklaracija (m1) [Meth , None ] na liniji 18
+ERROR 23:34:54,025 - Nije pronadjen tip u tabeli simbola : double na liniji 19
+INFO  23:34:54,025 - Deklaracija (m2) [Meth , None ] na liniji 19
+INFO  23:34:54,025 - Deklaracija (f1) [Meth , None ] na liniji 23
+INFO  23:34:54,025 - Pretraga (int) nadjeno [Type , Int ] na liniji 23
+INFO  23:34:54,025 - Pretraga (int) nadjeno [Type , Int ] na liniji 23
+ERROR 23:34:54,025 - Vec postoji deklarisano ime : p1 na liniji 23
+ERROR 23:34:54,025 - Vec postoji tip sa deklarisanim imenom kao metoda : c1  na liniji 25
+ERROR 23:34:54,025 - Nije pronadjen tip u tabeli simbola : double na liniji 27
+INFO  23:34:54,025 - Deklaracija (f2) [Meth , None ] na liniji 27
+ERROR 23:34:54,025 - Nije pronadjen tip u tabeli simbola : string na liniji 27
+ERROR 23:34:54,025 - Nije pronadjen tip u tabeli simbola : float na liniji 27
+INFO  23:34:54,025 - Deklaracija (l1) [Var , None ] na liniji 27
+INFO  23:34:54,025 - Deklaracija (f3) [Meth , None ] na liniji 29
+INFO  23:34:54,025 - Pretraga (int) nadjeno [Type , Int ] na liniji 29
+INFO  23:34:54,025 - Pretraga (int) nadjeno [Type , Int ] na liniji 29
+INFO  23:34:54,025 - Pretraga (p1) nadjeno [Var , Int ] na liniji 30
+INFO  23:34:54,025 - Pretraga (p2) nadjeno [Var , Int ] na liniji 30
+ERROR 23:34:54,025 - Funkcija je deklarisana kao void, a return ima expr  na liniji 30
+INFO  23:34:54,025 - Pretraga (int) nadjeno [Type , Int ] na liniji 33
+INFO  23:34:54,025 - Deklaracija (f4) [Meth , Int ] na liniji 33
+INFO  23:34:54,025 - Pretraga (char) nadjeno [Type , Char ] na liniji 35
+INFO  23:34:54,025 - Deklaracija (f5) [Meth , Char ] na liniji 35
+INFO  23:34:54,025 - Pretraga (int) nadjeno [Type , Int ] na liniji 35
+INFO  23:34:54,025 - Pretraga (p1) nadjeno [Var , Int ] na liniji 36
+ERROR 23:34:54,025 -  Tip return expessiona nije moguce dodeliti tipu povratne vrednosi  na liniji 36
+INFO  23:34:54,025 - Pretraga (int) nadjeno [Type , Int ] na liniji 39
+INFO  23:34:54,025 - Deklaracija (f6) [Meth , Int ] na liniji 39
+INFO  23:34:54,025 - Pretraga (char) nadjeno [Type , Char ] na liniji 39
+INFO  23:34:54,025 - Pretraga (p1) nadjeno [Var , Array ] na liniji 40
+ERROR 23:34:54,025 -  Tip return expessiona nije moguce dodeliti tipu povratne vrednosi  na liniji 40
+INFO  23:34:54,025 - Deklaracija (main) [Meth , None ] na liniji 43
+INFO  23:34:54,025 - Pretraga (A) nadjeno [Type , Class ] na liniji 43
+INFO  23:34:54,025 - Deklaracija (a) [Var , Class ] na liniji 43
+INFO  23:34:54,025 - Pretraga (B) nadjeno [Type , Class ] na liniji 43
+INFO  23:34:54,025 - Deklaracija (b) [Var , Class ] na liniji 43
+INFO  23:34:54,025 - Pretraga (v1) nadjeno [Var , Int ] na liniji 44
+INFO  23:34:54,025 - Pretraga (v2) nadjeno [Var , Array ] na liniji 44
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 44
+INFO  23:34:54,025 - Pretraga (v2) nadjeno [Var , Array ] na liniji 45
+INFO  23:34:54,025 - Pretraga (c1) nadjeno [Con , Char ] na liniji 45
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 45
+INFO  23:34:54,025 - Pretraga (c1) nadjeno [Con , Char ] na liniji 46
+INFO  23:34:54,025 - Pretraga (v1) nadjeno [Var , Int ] na liniji 46
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 46
+ERROR 23:34:54,025 - Konstanti ( c1) ne moze da se promeni vrednost na liniji 46
+INFO  23:34:54,025 - Pretraga (c1) nadjeno [Con , Char ] na liniji 47
+INFO  23:34:54,025 - Pretraga (v2) nadjeno [Var , Array ] na liniji 47
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 47
+ERROR 23:34:54,025 - Konstanti ( c1) ne moze da se promeni vrednost na liniji 47
+INFO  23:34:54,025 - Pretraga (v1) nadjeno [Var , Int ] na liniji 48
+INFO  23:34:54,025 - Pretraga (char) nadjeno [Type , Char ] na liniji 48
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 48
+INFO  23:34:54,025 - Pretraga (v1) nadjeno [Var , Int ] na liniji 49
+INFO  23:34:54,025 - Pretraga (v2) nadjeno [Var , Array ] na liniji 49
+INFO  23:34:54,025 - Pretraga (v1) nadjeno [Var , Int ] na liniji 49
+ERROR 23:34:54,025 - Nekompatibilni tipovi prilikom mnozenja  na liniji 49
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 49
+INFO  23:34:54,025 - Pretraga (v1) nadjeno [Var , Int ] na liniji 50
+INFO  23:34:54,025 - Pretraga (v2) nadjeno [Var , Array ] na liniji 50
+INFO  23:34:54,025 - Pretraga (c1) nadjeno [Con , Char ] na liniji 50
+ERROR 23:34:54,025 - Indeks nije tipa int  na liniji 50
+INFO  23:34:54,025 - Pretraga (v2) nadjeno [Var , Array ] na liniji 51
+INFO  23:34:54,025 - Pretraga (v1) nadjeno [Var , Int ] na liniji 51
+INFO  23:34:54,025 - Pretraga (c1) nadjeno [Con , Char ] na liniji 51
+ERROR 23:34:54,025 - Indeks nije tipa int  na liniji 51
+ERROR 23:34:54,025 - Ime v1 nije niz  na liniji 51
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 51
+INFO  23:34:54,025 - Pretraga (v1) nadjeno [Var , Int ] na liniji 52
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 52
+INFO  23:34:54,025 - Pretraga (v1) nadjeno [Var , Int ] na liniji 53
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 53
+INFO  23:34:54,025 - Pretraga (v2) nadjeno [Var , Array ] na liniji 54
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 54
+INFO  23:34:54,025 - Pretraga (v2) nadjeno [Var , Array ] na liniji 55
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 55
+INFO  23:34:54,025 - Pretraga (v2) nadjeno [Var , Array ] na liniji 56
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 56
+INFO  23:34:54,025 - Pretraga (c1) nadjeno [Con , Char ] na liniji 57
+ERROR 23:34:54,025 - Konstanti ( c1) ne moze da se promeni vrednost na liniji 57
+INFO  23:34:54,025 - Pretraga (c1) nadjeno [Con , Char ] na liniji 58
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 58
+ERROR 23:34:54,025 - Konstanti ( c1) ne moze da se promeni vrednost na liniji 58
+INFO  23:34:54,025 - Pretraga (a) nadjeno [Var , Class ] na liniji 60
+INFO  23:34:54,025 - Pretraga (int) nadjeno [Type , Int ] na liniji 60
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 60
+INFO  23:34:54,025 - Pretraga (b) nadjeno [Var , Class ] na liniji 61
+INFO  23:34:54,025 - Pretraga (char) nadjeno [Type , Char ] na liniji 61
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 61
+INFO  23:34:54,025 - Pretraga (a) nadjeno [Var , Class ] na liniji 62
+INFO  23:34:54,025 - Pretraga (v1) nadjeno [Var , Int ] na liniji 62
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 62
+INFO  23:34:54,025 - Pretraga (a) nadjeno [Var , Class ] na liniji 63
+INFO  23:34:54,025 - Pretraga (c1) nadjeno [Con , Char ] na liniji 63
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 63
+INFO  23:34:54,025 - Pretraga (b) nadjeno [Var , Class ] na liniji 64
+INFO  23:34:54,025 - Pretraga (v2) nadjeno [Var , Array ] na liniji 64
+ERROR 23:34:54,025 - Neispravna tipizacija za dodelu vrednosti  na liniji 64
+INFO  23:34:54,025 - Pretraga (b) nadjeno [Var , Class ] na liniji 66
+ERROR 23:34:54,025 - Nije tip int za inc  na liniji 66
+INFO  23:34:54,025 - Pretraga (v2) nadjeno [Var , Array ] na liniji 67
+ERROR 23:34:54,025 - Nije tip int za inc  na liniji 67
+INFO  23:34:54,025 - Pretraga (v1) nadjeno [Var , Int ] na liniji 69
+ERROR 23:34:54,025 - Ime v1 nije objekat klase na liniji 69
+ERROR 23:34:54,025 -  Nije objekat klase v1 na liniji 69
+ERROR 23:34:54,025 - Ime noObj nije funkcija  na liniji 69
+INFO  23:34:54,025 - Pretraga (a) nadjeno [Var , Class ] na liniji 70
+ERROR 23:34:54,025 - Ime m1 nije polje objekta a   na liniji 70
+ERROR 23:34:54,025 - Ime noObj nije funkcija  na liniji 70
+INFO  23:34:54,025 - Pretraga (b) nadjeno [Var , Class ] na liniji 71
+ERROR 23:34:54,025 - Ime m1 nije polje objekta b   na liniji 71
+ERROR 23:34:54,025 - Ime noObj nije funkcija  na liniji 71
+INFO  23:34:54,025 - Pretraga (f1) nadjeno [Meth , None ] na liniji 73
+ERROR 23:34:54,179 - Previse parametara specificirano za fju f1  na liniji 73
+INFO  23:34:54,179 - Pretraga (f1) nadjeno [Meth , None ] na liniji 74
+ERROR 23:34:54,179 -  Tip parametra 1( p1) nije odgovarajuci na liniji 74
+INFO  23:34:54,179 - Pretraga (f3) nadjeno [Meth , None ] na liniji 75
+ERROR 23:34:54,179 -  Premalo parametara ,  fja  f3 zahteva 2 parametara  na liniji 75
+INFO  23:34:54,179 - Pretraga (f3) nadjeno [Meth , None ] na liniji 76
+ERROR 23:34:54,179 -  Tip parametra 1( p1) nije odgovarajuci na liniji 76
+INFO  23:34:54,179 - Pretraga (f6) nadjeno [Meth , Int ] na liniji 77
+INFO  23:34:54,179 - Pretraga (f5) nadjeno [Meth , Char ] na liniji 77
+INFO  23:34:54,179 - Pretraga (f4) nadjeno [Meth , Int ] na liniji 77
+ERROR 23:34:54,179 - Previse parametara za fju f4 na liniji 77
+ERROR 23:34:54,179 -  Tip parametra 1( p1) nije odgovarajuci na liniji 77
+INFO  23:34:54,179 - Pretraga (v1) nadjeno [Var , Int ] na liniji 78
+ERROR 23:34:54,179 - Ime v1 nije funkcija  na liniji 78
+INFO  23:34:54,179 - Pretraga (v2) nadjeno [Var , Array ] na liniji 79
+INFO  23:34:54,179 - Pretraga (c1) nadjeno [Con , Char ] na liniji 79
+ERROR 23:34:54,179 - Indeks nije tipa int  na liniji 79
+ERROR 23:34:54,179 - Ime v2 nije funkcija  na liniji 79
+INFO  23:34:54,179 - Pretraga (chr) nadjeno [Meth , Char ] na liniji 81
+ERROR 23:34:54,179 - Previse parametara specificirano za fju chr  na liniji 81
+INFO  23:34:54,179 - Pretraga (chr) nadjeno [Meth , Char ] na liniji 82
+INFO  23:34:54,179 - Pretraga (c1) nadjeno [Con , Char ] na liniji 82
+ERROR 23:34:54,179 -  Tip parametra 1( i) nije odgovarajuci na liniji 82
+INFO  23:34:54,179 - Pretraga (ord) nadjeno [Meth , Int ] na liniji 83
+ERROR 23:34:54,179 - Previse parametara specificirano za fju ord  na liniji 83
+INFO  23:34:54,179 - Pretraga (ord) nadjeno [Meth , Int ] na liniji 84
+INFO  23:34:54,179 - Pretraga (v2) nadjeno [Var , Array ] na liniji 84
+ERROR 23:34:54,179 -  Tip parametra 1( ch) nije odgovarajuci na liniji 84
+INFO  23:34:54,179 - Pretraga (len) nadjeno [Meth , Int ] na liniji 85
+ERROR 23:34:54,179 - Previse parametara specificirano za fju len  na liniji 85
+INFO  23:34:54,179 - Pretraga (len) nadjeno [Meth , Int ] na liniji 86
+INFO  23:34:54,179 - Pretraga (v1) nadjeno [Var , Int ] na liniji 86
+ERROR 23:34:54,179 -  Tip parametra 1( arr) nije odgovarajuci na liniji 86
+INFO  23:34:54,179 - Pretraga (v1) nadjeno [Var , Int ] na liniji 88
+ERROR 23:34:54,179 -  Uslov nije boolean tipa  na liniji 88
+INFO  23:34:54,179 - Pretraga (v2) nadjeno [Var , Array ] na liniji 89
+INFO  23:34:54,179 - Pretraga (c1) nadjeno [Con , Char ] na liniji 89
+ERROR 23:34:54,179 -  Tipovi poredjenja nisu kompatibilni  na liniji 89
+ERROR 23:34:54,179 -  Uslov nije boolean tipa  na liniji 89
+INFO  23:34:54,179 - Pretraga (c1) nadjeno [Con , Char ] na liniji 90
+INFO  23:34:54,179 - Pretraga (v2) nadjeno [Var , Array ] na liniji 90
+ERROR 23:34:54,179 -  Tipovi poredjenja nisu kompatibilni  na liniji 90
+ERROR 23:34:54,179 -  Jedan od tipova u AND izrazu nije bool  na liniji 90
+ERROR 23:34:54,179 -  Uslov nije boolean tipa  na liniji 90
+INFO  23:34:54,179 - Pretraga (a) nadjeno [Var , Class ] na liniji 91
+INFO  23:34:54,179 - Pretraga (a) nadjeno [Var , Class ] na liniji 91
+ERROR 23:34:54,179 -  Promenljive su tipa klase, iskoriscen je nedozvoljeni relacioni operator. Dozvolljeni su samo == i != |  na liniji 91
+ERROR 23:34:54,179 -  Uslov nije boolean tipa  na liniji 91
+INFO  23:34:54,179 - Pretraga (b) nadjeno [Var , Class ] na liniji 92
+INFO  23:34:54,179 - Pretraga (a) nadjeno [Var , Class ] na liniji 92
+ERROR 23:34:54,179 -  Tipovi poredjenja nisu kompatibilni  na liniji 92
+ERROR 23:34:54,179 -  Uslov nije boolean tipa  na liniji 92
+INFO  23:34:54,179 - Pretraga (a) nadjeno [Var , Class ] na liniji 94
+INFO  23:34:54,179 - Pretraga (b) nadjeno [Var , Class ] na liniji 94
+ERROR 23:34:54,179 -  Tipovi poredjenja nisu kompatibilni  na liniji 94
+ERROR 23:34:54,179 -  Uslov nije boolean tipa  na liniji 94
+INFO  23:34:54,179 - Pretraga (c1) nadjeno [Con , Char ] na liniji 94
+ERROR 23:34:54,179 -  Jedan od tipova u OR izrazu nije bool  na liniji 94
+INFO  23:34:54,179 - Pretraga (v1) nadjeno [Var , Int ] na liniji 98
+INFO  23:34:54,179 - Pretraga (a) nadjeno [Var , Class ] na liniji 108
+INFO  23:34:54,179 - Pretraga (v2) nadjeno [Var , Array ] na liniji 110
+INFO  23:34:54,179 - Pretraga (b) nadjeno [Var , Class ] na liniji 111
+INFO  23:34:54,179 - Pretraga (int) nadjeno [Type , Int ] na liniji 114
+ERROR 23:34:54,179 - Vec postoji tip sa deklarisanim imenom kao metoda : main  na liniji 114
+INFO  23:34:54,179 - Pretraga (int) nadjeno [Type , Int ] na liniji 114
+INFO  23:34:54,179 - Pretraga (char) nadjeno [Type , Char ] na liniji 114
+ERROR 23:34:54,179 - NEUSPESNO SEMANTICKO  PARSIRANJE

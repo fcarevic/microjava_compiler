@@ -1,0 +1,91 @@
+INFO  22:53:00,396 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  22:53:00,908 - #34 program
+INFO  22:53:00,908 - #47 MJProgram
+INFO  22:53:00,908 - #47 int
+INFO  22:53:00,910 - #47 a
+INFO  22:53:00,910 - #7 ,
+INFO  22:53:00,910 - #47 b
+INFO  22:53:00,918 - #7 ,
+INFO  22:53:00,918 - #47 c
+INFO  22:53:00,918 - #41 ;
+INFO  22:53:00,918 - #47 char
+INFO  22:53:00,918 - #47 ch
+INFO  22:53:00,918 - #41 ;
+INFO  22:53:00,920 - #21 {
+INFO  22:53:00,920 - #43 void
+INFO  22:53:00,920 - #47 main
+INFO  22:53:00,920 - #23 (
+INFO  22:53:00,928 - #42 )
+INFO  22:53:00,930 - #21 {
+INFO  22:53:00,930 - #38 read
+INFO  22:53:00,938 - #23 (
+INFO  22:53:00,938 - #47 ch
+INFO  22:53:00,940 - #42 )
+INFO  22:53:00,940 - #41 ;
+INFO  22:53:00,948 - #38 read
+INFO  22:53:00,950 - #23 (
+INFO  22:53:00,950 - #47 a
+INFO  22:53:00,950 - #42 )
+INFO  22:53:00,950 - #41 ;
+INFO  22:53:00,950 - #38 read
+INFO  22:53:00,950 - #23 (
+INFO  22:53:00,950 - #47 b
+INFO  22:53:00,950 - #42 )
+INFO  22:53:00,950 - #41 ;
+INFO  22:53:00,950 - #45 switch
+INFO  22:53:00,950 - #23 (
+INFO  22:53:00,950 - #47 ch
+INFO  22:53:00,950 - #42 )
+INFO  22:53:00,950 - #21 {
+INFO  22:53:00,958 - #4 case
+INFO  22:53:00,960 - #51 A
+ERROR 22:53:00,960 - 
+Sintaksna greska na liniji 15
+INFO  22:53:00,960 - #6 :
+INFO  22:53:00,960 - #33 print
+INFO  22:53:00,960 - #23 (
+INFO  22:53:00,960 - #47 ch
+INFO  22:53:00,960 - #42 )
+INFO  22:53:00,960 - #41 ;
+INFO  22:53:00,960 - #3 break
+INFO  22:53:00,960 - #41 ;
+INFO  22:53:00,960 - #4 case
+ERROR 22:53:00,960 - Izvrsen oporavak do ; u liniji 14
+ERROR 22:53:00,968 - 
+Sintaksna greska na liniji 18
+INFO  22:53:00,970 - #51 a
+INFO  22:53:00,970 - #6 :
+INFO  22:53:00,970 - #33 print
+INFO  22:53:00,970 - #23 (
+INFO  22:53:00,970 - #47 ch
+INFO  22:53:00,970 - #42 )
+INFO  22:53:00,970 - #41 ;
+INFO  22:53:00,970 - #3 break
+INFO  22:53:00,970 - #41 ;
+INFO  22:53:00,970 - #4 case
+ERROR 22:53:00,980 - Izvrsen oporavak do ; u liniji 13
+ERROR 22:53:00,980 - 
+Sintaksna greska na liniji 21
+INFO  22:53:00,980 - #51 B
+INFO  22:53:00,980 - #6 :
+INFO  22:53:00,980 - #47 a
+INFO  22:53:00,980 - #15 =
+INFO  22:53:00,980 - #50 1
+INFO  22:53:00,980 - #41 ;
+INFO  22:53:00,990 - #47 c
+INFO  22:53:00,990 - #15 =
+INFO  22:53:00,990 - #47 a
+ERROR 22:53:00,990 - Izvrsen oporavak do ; u liniji 13
+INFO  22:53:00,998 - #27 *
+INFO  22:53:00,998 - #50 2
+INFO  22:53:01,001 - #31 +
+INFO  22:53:01,001 - #50 1
+INFO  22:53:01,001 - #41 ;
+INFO  22:53:01,001 - #3 break
+INFO  22:53:01,009 - #41 ;
+INFO  22:53:01,009 - #37 }
+INFO  22:53:01,009 - #37 }
+INFO  22:53:01,011 - #37 }
+ERROR 22:53:01,011 - 
+Sintaksna greska na liniji 28
+ERROR 22:53:01,011 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 28

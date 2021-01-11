@@ -1,83 +1,152 @@
-INFO  17:11:26,391 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
-INFO  17:11:26,560 - #34 program
-INFO  17:11:26,572 - #47 Program
-INFO  17:11:26,572 - #47 int
-INFO  17:11:26,574 - #47 niz
-INFO  17:11:26,574 - #20 [
-INFO  17:11:26,574 - #36 ]
-INFO  17:11:26,574 - #41 ;
-INFO  17:11:26,574 - #8 const
-INFO  17:11:26,574 - #47 bool
-INFO  17:11:26,574 - #47 c
-INFO  17:11:26,574 - #15 =
-INFO  17:11:26,574 - #49 false
-INFO  17:11:26,580 - #41 ;
-INFO  17:11:26,582 - #21 {
-INFO  17:11:26,582 - #47 int
-INFO  17:11:26,582 - #47 f
-INFO  17:11:26,582 - #23 (
-INFO  17:11:26,582 - #42 )
-INFO  17:11:26,582 - #21 {
-INFO  17:11:26,582 - #19 if
-INFO  17:11:26,582 - #23 (
-INFO  17:11:26,582 - #47 c
-INFO  17:11:26,582 - #42 )
-INFO  17:11:26,598 - #40 return
-INFO  17:11:26,598 - #50 5
-INFO  17:11:26,598 - #41 ;
-INFO  17:11:26,598 - #37 }
-INFO  17:11:26,598 - #43 void
-INFO  17:11:26,598 - #47 main
-INFO  17:11:26,598 - #23 (
-INFO  17:11:26,598 - #42 )
-INFO  17:11:26,598 - #47 bool
-INFO  17:11:26,598 - #47 b
-INFO  17:11:26,598 - #41 ;
-INFO  17:11:26,598 - #21 {
-INFO  17:11:26,598 - #47 f
-INFO  17:11:26,598 - #15 =
-INFO  17:11:26,598 - #50 5
-INFO  17:11:26,614 - #41 ;
-INFO  17:11:26,614 - #33 print
-INFO  17:11:26,614 - #23 (
-INFO  17:11:26,614 - #47 f
-INFO  17:11:26,614 - #23 (
-INFO  17:11:26,614 - #42 )
-INFO  17:11:26,614 - #42 )
-INFO  17:11:26,614 - #41 ;
-INFO  17:11:26,614 - #47 niz
-INFO  17:11:26,614 - #15 =
-INFO  17:11:26,614 - #28 new
-INFO  17:11:26,614 - #47 int
-INFO  17:11:26,614 - #20 [
-INFO  17:11:26,614 - #50 5
-INFO  17:11:26,614 - #36 ]
-INFO  17:11:26,614 - #41 ;
-INFO  17:11:26,614 - #33 print
-INFO  17:11:26,629 - #23 (
-INFO  17:11:26,629 - #47 len
-INFO  17:11:26,629 - #23 (
-INFO  17:11:26,629 - #47 niz
-INFO  17:11:26,629 - #42 )
-INFO  17:11:26,629 - #42 )
-INFO  17:11:26,629 - #41 ;
-INFO  17:11:26,629 - #37 }
-INFO  17:11:26,629 - #37 }
-INFO  17:11:26,629 - ===================================
-INFO  17:11:26,645 - Pretraga (int) nadjeno [Type , Int ] na liniji 4
-INFO  17:11:26,645 - Deklaracija (niz) [Var , Array of Array ] na liniji 4
-INFO  17:11:26,645 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 5
-INFO  17:11:26,645 - Deklaracija (c)  [Con , Bool ] na liniji 5
-INFO  17:11:26,645 - Pretraga (int) nadjeno [Type , Int ] na liniji 9
-INFO  17:11:26,645 - Deklaracija (f) [Meth , Int ] na liniji 9
-INFO  17:11:26,645 - Pretraga (c) nadjeno [Con , Bool ] na liniji 10
-INFO  17:11:26,645 - Deklaracija (main) [Meth , None ] na liniji 13
-INFO  17:11:26,645 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 14
-INFO  17:11:26,645 - Deklaracija (b) [Var , Bool ] na liniji 14
-INFO  17:11:26,645 - Pretraga (f) nadjeno [Meth , Int ] na liniji 16
-INFO  17:11:26,645 - Pretraga (f) nadjeno [Meth , Int ] na liniji 17
-INFO  17:11:26,776 - Pretraga (niz) nadjeno [Var , Array ] na liniji 18
-INFO  17:11:26,776 - Pretraga (int) nadjeno [Type , Int ] na liniji 18
-INFO  17:11:26,776 - Pretraga (len) nadjeno [Meth , Int ] na liniji 19
-INFO  17:11:26,776 - Pretraga (niz) nadjeno [Var , Array ] na liniji 19
-INFO  17:11:26,776 - USPESNO SEMANTICKO PARSIRANJE
+INFO  00:56:56,661 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  00:56:56,925 - #34 program
+INFO  00:56:56,925 - #47 MJProgram
+INFO  00:56:56,925 - #5 class
+INFO  00:56:56,932 - #47 A
+INFO  00:56:56,932 - #21 {
+INFO  00:56:56,932 - #21 {
+INFO  00:56:56,932 - #43 void
+INFO  00:56:56,932 - #47 fun
+INFO  00:56:56,932 - #23 (
+INFO  00:56:56,932 - #42 )
+INFO  00:56:56,948 - #21 {
+INFO  00:56:56,948 - #33 print
+INFO  00:56:56,948 - #23 (
+INFO  00:56:56,948 - #51 A
+INFO  00:56:56,948 - #42 )
+INFO  00:56:56,948 - #41 ;
+INFO  00:56:56,948 - #33 print
+INFO  00:56:56,948 - #23 (
+INFO  00:56:56,948 - #51 F
+INFO  00:56:56,948 - #42 )
+INFO  00:56:56,948 - #41 ;
+INFO  00:56:56,948 - #33 print
+INFO  00:56:56,948 - #23 (
+INFO  00:56:56,948 - #47 eol
+INFO  00:56:56,948 - #42 )
+INFO  00:56:56,963 - #41 ;
+INFO  00:56:56,963 - #37 }
+INFO  00:56:56,963 - #37 }
+INFO  00:56:56,963 - #37 }
+INFO  00:56:56,963 - #5 class
+INFO  00:56:56,963 - #47 B
+INFO  00:56:56,963 - #16 extends
+INFO  00:56:56,963 - #47 A
+INFO  00:56:56,963 - #21 {
+INFO  00:56:56,963 - #21 {
+INFO  00:56:56,963 - #43 void
+INFO  00:56:56,963 - #47 fun
+INFO  00:56:56,963 - #23 (
+INFO  00:56:56,963 - #42 )
+INFO  00:56:56,963 - #21 {
+INFO  00:56:56,963 - #33 print
+INFO  00:56:56,963 - #23 (
+INFO  00:56:56,963 - #51 B
+INFO  00:56:56,963 - #42 )
+INFO  00:56:56,963 - #41 ;
+INFO  00:56:56,963 - #33 print
+INFO  00:56:56,963 - #23 (
+INFO  00:56:56,963 - #51 F
+INFO  00:56:56,963 - #42 )
+INFO  00:56:56,963 - #41 ;
+INFO  00:56:56,979 - #33 print
+INFO  00:56:56,979 - #23 (
+INFO  00:56:56,979 - #47 eol
+INFO  00:56:56,979 - #42 )
+INFO  00:56:56,979 - #41 ;
+INFO  00:56:56,979 - #37 }
+INFO  00:56:56,979 - #37 }
+INFO  00:56:56,979 - #37 }
+INFO  00:56:56,979 - #21 {
+INFO  00:56:56,979 - #43 void
+INFO  00:56:56,979 - #47 fun
+INFO  00:56:56,979 - #23 (
+INFO  00:56:56,979 - #47 A
+INFO  00:56:56,979 - #47 this
+INFO  00:56:56,979 - #42 )
+INFO  00:56:56,979 - #21 {
+INFO  00:56:56,979 - #33 print
+INFO  00:56:56,979 - #23 (
+INFO  00:56:56,979 - #51 G
+INFO  00:56:56,979 - #42 )
+INFO  00:56:56,979 - #41 ;
+INFO  00:56:56,979 - #33 print
+INFO  00:56:56,979 - #23 (
+INFO  00:56:56,979 - #51 F
+INFO  00:56:56,979 - #42 )
+INFO  00:56:56,979 - #41 ;
+INFO  00:56:56,979 - #33 print
+INFO  00:56:56,979 - #23 (
+INFO  00:56:56,979 - #47 eol
+INFO  00:56:56,979 - #42 )
+INFO  00:56:56,994 - #41 ;
+INFO  00:56:56,994 - #37 }
+INFO  00:56:56,994 - #43 void
+INFO  00:56:56,994 - #47 main
+INFO  00:56:56,994 - #23 (
+INFO  00:56:56,994 - #42 )
+INFO  00:56:56,994 - #47 A
+INFO  00:56:56,994 - #47 a
+INFO  00:56:56,994 - #41 ;
+INFO  00:56:56,994 - #21 {
+INFO  00:56:56,994 - #47 a
+INFO  00:56:56,994 - #15 =
+INFO  00:56:56,994 - #28 new
+INFO  00:56:56,994 - #47 A
+INFO  00:56:56,994 - #41 ;
+INFO  00:56:56,994 - #47 a
+INFO  00:56:56,994 - #12 .
+INFO  00:56:56,994 - #47 fun
+INFO  00:56:56,994 - #23 (
+INFO  00:56:56,994 - #42 )
+INFO  00:56:56,994 - #41 ;
+INFO  00:56:56,994 - #47 fun
+INFO  00:56:56,994 - #23 (
+INFO  00:56:56,994 - #47 a
+INFO  00:56:56,994 - #42 )
+INFO  00:56:56,994 - #41 ;
+INFO  00:56:56,994 - #47 a
+INFO  00:56:56,994 - #15 =
+INFO  00:56:56,994 - #28 new
+INFO  00:56:56,994 - #47 B
+INFO  00:56:56,994 - #41 ;
+INFO  00:56:56,994 - #47 a
+INFO  00:56:56,994 - #12 .
+INFO  00:56:56,994 - #47 fun
+INFO  00:56:56,994 - #23 (
+INFO  00:56:56,994 - #42 )
+INFO  00:56:56,994 - #41 ;
+INFO  00:56:56,994 - #47 fun
+INFO  00:56:56,994 - #23 (
+INFO  00:56:56,994 - #47 a
+INFO  00:56:57,010 - #42 )
+INFO  00:56:57,010 - #41 ;
+INFO  00:56:57,010 - #37 }
+INFO  00:56:57,010 - #37 }
+INFO  00:56:57,010 - ===================================
+INFO  00:56:57,032 - Deklaracija klase A na liniji 4
+INFO  00:56:57,032 - Deklaracija (fun) [Meth , None ] na liniji 6
+INFO  00:56:57,048 - Pretraga (eol) nadjeno [Con , Char ] na liniji 9
+INFO  00:56:57,048 - Deklaracija klase B na liniji 13
+INFO  00:56:57,048 - Pretraga (A) nadjeno [Type , Class ] na liniji 13
+INFO  00:56:57,164 - Deklaracija (fun) [Meth , None ] na liniji 15
+INFO  00:56:57,164 - Pretraga (eol) nadjeno [Con , Char ] na liniji 18
+INFO  00:56:57,164 - Deklaracija (fun) [Meth , None ] na liniji 24
+INFO  00:56:57,164 - Pretraga (A) nadjeno [Type , Class ] na liniji 24
+INFO  00:56:57,164 - Pretraga (eol) nadjeno [Con , Char ] na liniji 27
+INFO  00:56:57,164 - Deklaracija (main) [Meth , None ] na liniji 31
+INFO  00:56:57,164 - Pretraga (A) nadjeno [Type , Class ] na liniji 31
+INFO  00:56:57,164 - Deklaracija (a) [Var , Class ] na liniji 31
+INFO  00:56:57,164 - Pretraga (a) nadjeno [Var , Class ] na liniji 32
+INFO  00:56:57,164 - Pretraga (A) nadjeno [Type , Class ] na liniji 32
+INFO  00:56:57,164 - Pretraga (a) nadjeno [Var , Class ] na liniji 33
+INFO  00:56:57,164 - Pretraga (fun) nadjeno [Meth , None ] na liniji 34
+INFO  00:56:57,164 - Pretraga (a) nadjeno [Var , Class ] na liniji 34
+ERROR 00:56:57,164 - Previse parametara za fju fun na liniji 34
+INFO  00:56:57,170 - Pretraga (a) nadjeno [Var , Class ] na liniji 36
+INFO  00:56:57,170 - Pretraga (B) nadjeno [Type , Class ] na liniji 36
+INFO  00:56:57,170 - Pretraga (a) nadjeno [Var , Class ] na liniji 37
+INFO  00:56:57,170 - Pretraga (fun) nadjeno [Meth , None ] na liniji 38
+INFO  00:56:57,170 - Pretraga (a) nadjeno [Var , Class ] na liniji 38
+ERROR 00:56:57,170 - Previse parametara za fju fun na liniji 38
+ERROR 00:56:57,172 - NEUSPESNO SEMANTICKO  PARSIRANJE

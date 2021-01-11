@@ -1,57 +1,57 @@
 // generated with ast extension for cup
 // version 0.8
-// 7/0/2021 1:43:47
+// 11/0/2021 20:14:38
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public abstract class VisitorAdaptor implements Visitor { 
 
-    public void visit(PrintNumConst PrintNumConst) { }
-    public void visit(Unmatched Unmatched) { }
-    public void visit(ReturnType ReturnType) { }
-    public void visit(Mulop Mulop) { }
-    public void visit(AddopTermExprOption AddopTermExprOption) { }
-    public void visit(Matched Matched) { }
-    public void visit(Relop Relop) { }
-    public void visit(StdConstType StdConstType) { }
-    public void visit(Assignop Assignop) { }
-    public void visit(TermOptions TermOptions) { }
-    public void visit(StatementList StatementList) { }
-    public void visit(ConditionTerm ConditionTerm) { }
-    public void visit(Addop Addop) { }
-    public void visit(ExtendsClause ExtendsClause) { }
-    public void visit(Factor Factor) { }
-    public void visit(Term Term) { }
-    public void visit(Condition Condition) { }
-    public void visit(CaseList CaseList) { }
-    public void visit(NoMethodDecl NoMethodDecl) { }
-    public void visit(ConditionFactRelOp ConditionFactRelOp) { }
-    public void visit(ActualParams ActualParams) { }
-    public void visit(DesingatorOption DesingatorOption) { }
-    public void visit(FormalParam FormalParam) { }
-    public void visit(ReturnStatement ReturnStatement) { }
-    public void visit(VarDeclList VarDeclList) { }
-    public void visit(FormalParamList FormalParamList) { }
-    public void visit(ConditonFact ConditonFact) { }
-    public void visit(Expr Expr) { }
-    public void visit(FormalParams FormalParams) { }
-    public void visit(Expr1 Expr1) { }
-    public void visit(AddopList AddopList) { }
-    public void visit(DesignatorOptionList DesignatorOptionList) { }
-    public void visit(DesignatorStatement DesignatorStatement) { }
-    public void visit(NoMethodDeclList NoMethodDeclList) { }
-    public void visit(VarInit VarInit) { }
-    public void visit(Statement Statement) { }
-    public void visit(ConstInitList ConstInitList) { }
-    public void visit(VarDecl VarDecl) { }
-    public void visit(DesignatorOption DesignatorOption) { }
-    public void visit(ClassDecl ClassDecl) { }
-    public void visit(MinusExpr MinusExpr) { }
-    public void visit(MethodDeclList MethodDeclList) { }
-    public void visit(ActualParameterList ActualParameterList) { }
-    public void visit(IfErrorCorection IfErrorCorection) { }
     public void visit(VarInitList VarInitList) { }
+    public void visit(Factor Factor) { }
+    public void visit(Statement Statement) { }
+    public void visit(ConditionFactRelOp ConditionFactRelOp) { }
+    public void visit(ReturnStatement ReturnStatement) { }
+    public void visit(VarInit VarInit) { }
+    public void visit(TermOptions TermOptions) { }
+    public void visit(Relop Relop) { }
+    public void visit(FormalParamList FormalParamList) { }
+    public void visit(CaseList CaseList) { }
+    public void visit(ConstInitList ConstInitList) { }
+    public void visit(Expr Expr) { }
+    public void visit(MinusExpr MinusExpr) { }
+    public void visit(VarDecl VarDecl) { }
+    public void visit(IfErrorCorection IfErrorCorection) { }
+    public void visit(Unmatched Unmatched) { }
+    public void visit(PrintNumConst PrintNumConst) { }
+    public void visit(NoMethodDeclList NoMethodDeclList) { }
+    public void visit(DesignatorOptionList DesignatorOptionList) { }
+    public void visit(Condition Condition) { }
+    public void visit(NoMethodDecl NoMethodDecl) { }
+    public void visit(Mulop Mulop) { }
+    public void visit(DesignatorStatement DesignatorStatement) { }
+    public void visit(Addop Addop) { }
+    public void visit(StatementList StatementList) { }
+    public void visit(Assignop Assignop) { }
+    public void visit(ActualParams ActualParams) { }
+    public void visit(ConditionTerm ConditionTerm) { }
+    public void visit(ReturnType ReturnType) { }
+    public void visit(FormalParam FormalParam) { }
+    public void visit(ClassDecl ClassDecl) { }
+    public void visit(MethodDeclList MethodDeclList) { }
+    public void visit(AddopTermExprOption AddopTermExprOption) { }
+    public void visit(FormalParams FormalParams) { }
+    public void visit(DesingatorOption DesingatorOption) { }
+    public void visit(Expr1 Expr1) { }
+    public void visit(StdConstType StdConstType) { }
+    public void visit(DesignatorOption DesignatorOption) { }
+    public void visit(AddopList AddopList) { }
+    public void visit(ConditonFact ConditonFact) { }
+    public void visit(Matched Matched) { }
+    public void visit(VarDeclList VarDeclList) { }
+    public void visit(ExtendsClause ExtendsClause) { }
+    public void visit(Term Term) { }
+    public void visit(ActualParameterList ActualParameterList) { }
     public void visit(Rem Rem) { visit(); }
     public void visit(Div Div) { visit(); }
     public void visit(Mul Mul) { visit(); }
@@ -85,12 +85,16 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(AddopMultipleList AddopMultipleList) { visit(); }
     public void visit(Expr1TermNoMinus Expr1TermNoMinus) { visit(); }
     public void visit(Expr1TermMinus Expr1TermMinus) { visit(); }
+    public void visit(TernaryColon TernaryColon) { visit(); }
+    public void visit(TernaryCondition TernaryCondition) { visit(); }
     public void visit(Expression Expression) { visit(); }
     public void visit(TernaryExpr TernaryExpr) { visit(); }
     public void visit(ConditionFactExprRelop ConditionFactExprRelop) { visit(); }
     public void visit(ConditionFactExpr ConditionFactExpr) { visit(); }
+    public void visit(ConditionTermLeft ConditionTermLeft) { visit(); }
     public void visit(NoConditionAND NoConditionAND) { visit(); }
     public void visit(ConditionAND ConditionAND) { visit(); }
+    public void visit(ConditionLeft ConditionLeft) { visit(); }
     public void visit(NoConditionOR NoConditionOR) { visit(); }
     public void visit(ConditionOR ConditionOR) { visit(); }
     public void visit(ActualParameterSingle ActualParameterSingle) { visit(); }

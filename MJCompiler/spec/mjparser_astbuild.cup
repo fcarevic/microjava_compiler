@@ -99,12 +99,12 @@ nonterminal DesignatorOptionList DesignatorOptionList;
 nonterminal FormalParams FormalParams ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, StdConstType, ExtendsClause, ReturnType ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName, Break ; 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr1 , Expr ;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr1 , Expr, TernaryCondition, TernaryColon ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName, Else, IfErrorCorection, Case , CaseClause , DesignatorFunc  ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
 nonterminal DoClause DoClause;
 nonterminal ClassFields ClassFields ;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact ;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact, ConditionLeft, ConditionTermLeft;
 
 precedence left ELSE;
 
@@ -298,25 +298,28 @@ ActualParams ::= (ActualParameterMultipleList)  Expr:E1 COMMA ActualParams:A2 {:
 					(ActualParameterSingle) Expr:E1 {: RESULT=new ActualParameterSingle(E1); RESULT.setLine(E1left); :}
 					;
 
-Condition ::= (ConditionOR)Condition:C1 OR ConditionTerm:C2 {: RESULT=new ConditionOR(C1, C2); RESULT.setLine(C1left); :}
+Condition ::= (ConditionOR) ConditionLeft:C1 OR ConditionTerm:C2 {: RESULT=new ConditionOR(C1, C2); RESULT.setLine(C1left); :}
 			|
 			(NoConditionOR) ConditionTerm:C1 {: RESULT=new NoConditionOR(C1); RESULT.setLine(C1left); :}
 			;
-ConditionTerm ::= (ConditionAND) ConditionTerm:C1 AND ConditonFact:C2 {: RESULT=new ConditionAND(C1, C2); RESULT.setLine(C1left); :}
+ConditionLeft ::= (ConditionLeft) Condition:C1 {: RESULT=new ConditionLeft(C1); RESULT.setLine(C1left); :} ;
+ConditionTerm ::= (ConditionAND) ConditionTermLeft:C1 AND ConditonFact:C2 {: RESULT=new ConditionAND(C1, C2); RESULT.setLine(C1left); :}
 				|
 				(NoConditionAND) ConditonFact:C1 {: RESULT=new NoConditionAND(C1); RESULT.setLine(C1left); :}
 				;
+ConditionTermLeft ::= (ConditionTermLeft) ConditionTerm:C1 {: RESULT=new ConditionTermLeft(C1); RESULT.setLine(C1left); :};
 ConditonFact ::= (ConditionFactExpr) Expr:E1 {: RESULT=new ConditionFactExpr(E1); RESULT.setLine(E1left); :}  
 				|
 				(ConditionFactExprRelop) Expr:E1 Relop:R2 Expr:E3 {: RESULT=new ConditionFactExprRelop(E1, R2, E3); RESULT.setLine(E1left); :}
 				;
 
 /* ****************************************** */
-Expr ::= (TernaryExpr) Expr1:E1 QUESTION Expr1:firstExpression COLON Expr1:secondExpression {: RESULT=new TernaryExpr(E1, firstExpression, secondExpression); RESULT.setLine(E1left); :}
+Expr ::= (TernaryExpr) TernaryCondition:T1 QUESTION Expr1:firstExpression  TernaryColon:T2 Expr1:secondExpression {: RESULT=new TernaryExpr(T1, firstExpression, T2, secondExpression); RESULT.setLine(T1left); :} 
 		|
 		(Expression) Expr1:E1 {: RESULT=new Expression(E1); RESULT.setLine(E1left); :}
 		;	
-		    
+TernaryCondition ::= (TernaryCondition) Expr1:E1 {: RESULT=new TernaryCondition(E1); RESULT.setLine(E1left); :};
+TernaryColon ::= (TernaryColon) COLON {: RESULT=new TernaryColon(); :} ;		    
 Expr1 ::= (Expr1TermMinus) MINUS  Term:T1 AddopList:A2 {: RESULT=new Expr1TermMinus(T1, A2); RESULT.setLine(T1left); :}
 			|
 		(Expr1TermNoMinus) Term:T1 AddopList:A2 {: RESULT=new Expr1TermNoMinus(T1, A2); RESULT.setLine(T1left); :}

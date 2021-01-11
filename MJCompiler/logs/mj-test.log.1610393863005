@@ -1,0 +1,481 @@
+INFO  20:30:59,965 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  20:31:00,630 - #34 program
+INFO  20:31:00,630 - #47 test302
+INFO  20:31:00,630 - #8 const
+INFO  20:31:00,640 - #47 int
+INFO  20:31:00,640 - #47 jedan
+INFO  20:31:00,648 - #15 =
+INFO  20:31:00,648 - #50 1
+INFO  20:31:00,648 - #41 ;
+INFO  20:31:00,656 - #47 int
+INFO  20:31:00,656 - #47 i
+INFO  20:31:00,656 - #41 ;
+INFO  20:31:00,664 - #47 bool
+INFO  20:31:00,664 - #47 ibool
+INFO  20:31:00,664 - #41 ;
+INFO  20:31:00,664 - #47 int
+INFO  20:31:00,664 - #47 niz
+INFO  20:31:00,664 - #20 [
+INFO  20:31:00,664 - #36 ]
+INFO  20:31:00,664 - #41 ;
+INFO  20:31:00,664 - #21 {
+INFO  20:31:00,664 - #47 int
+INFO  20:31:00,672 - #47 sum
+INFO  20:31:00,672 - #23 (
+INFO  20:31:00,672 - #47 int
+INFO  20:31:00,672 - #47 z
+INFO  20:31:00,672 - #7 ,
+INFO  20:31:00,672 - #47 int
+INFO  20:31:00,672 - #47 d
+INFO  20:31:00,672 - #42 )
+INFO  20:31:00,680 - #21 {
+INFO  20:31:00,680 - #40 return
+INFO  20:31:00,680 - #47 z
+INFO  20:31:00,680 - #31 +
+INFO  20:31:00,696 - #47 d
+INFO  20:31:00,704 - #41 ;
+INFO  20:31:00,712 - #37 }
+INFO  20:31:00,712 - #47 int
+INFO  20:31:00,712 - #47 inkrement
+INFO  20:31:00,712 - #23 (
+INFO  20:31:00,712 - #47 int
+INFO  20:31:00,712 - #47 a
+INFO  20:31:00,712 - #7 ,
+INFO  20:31:00,712 - #47 int
+INFO  20:31:00,712 - #47 inc
+INFO  20:31:00,712 - #42 )
+INFO  20:31:00,712 - #47 int
+INFO  20:31:00,712 - #47 pom
+INFO  20:31:00,712 - #41 ;
+INFO  20:31:00,720 - #21 {
+INFO  20:31:00,720 - #19 if
+INFO  20:31:00,720 - #23 (
+INFO  20:31:00,720 - #47 inc
+INFO  20:31:00,720 - #46 ==
+INFO  20:31:00,720 - #47 jedan
+INFO  20:31:00,720 - #42 )
+INFO  20:31:00,728 - #47 pom
+INFO  20:31:00,728 - #15 =
+INFO  20:31:00,728 - #50 1
+INFO  20:31:00,728 - #41 ;
+INFO  20:31:00,728 - #13 else
+INFO  20:31:00,728 - #19 if
+INFO  20:31:00,736 - #23 (
+INFO  20:31:00,736 - #47 inc
+INFO  20:31:00,736 - #46 ==
+INFO  20:31:00,736 - #50 2
+INFO  20:31:00,744 - #42 )
+INFO  20:31:00,744 - #47 pom
+INFO  20:31:00,744 - #15 =
+INFO  20:31:00,744 - #47 a
+INFO  20:31:00,744 - #41 ;
+INFO  20:31:00,744 - #40 return
+INFO  20:31:00,744 - #47 sum
+INFO  20:31:00,744 - #23 (
+INFO  20:31:00,760 - #47 a
+INFO  20:31:00,760 - #7 ,
+INFO  20:31:00,760 - #47 pom
+INFO  20:31:00,760 - #42 )
+INFO  20:31:00,760 - #41 ;
+INFO  20:31:00,760 - #37 }
+INFO  20:31:00,760 - #47 bool
+INFO  20:31:00,760 - #47 verify
+INFO  20:31:00,760 - #23 (
+INFO  20:31:00,760 - #42 )
+INFO  20:31:00,768 - #21 {
+INFO  20:31:00,768 - #33 print
+INFO  20:31:00,768 - #23 (
+INFO  20:31:00,768 - #51 v
+INFO  20:31:00,768 - #42 )
+INFO  20:31:00,776 - #41 ;
+INFO  20:31:00,776 - #40 return
+INFO  20:31:00,776 - #49 false
+INFO  20:31:00,776 - #41 ;
+INFO  20:31:00,776 - #37 }
+INFO  20:31:00,776 - #43 void
+INFO  20:31:00,776 - #47 main
+INFO  20:31:00,776 - #23 (
+INFO  20:31:00,776 - #42 )
+INFO  20:31:00,776 - #21 {
+INFO  20:31:00,784 - #19 if
+INFO  20:31:00,784 - #23 (
+INFO  20:31:00,784 - #50 1
+INFO  20:31:00,784 - #29 !=
+INFO  20:31:00,784 - #50 1
+INFO  20:31:00,784 - #42 )
+INFO  20:31:00,784 - #33 print
+INFO  20:31:00,784 - #23 (
+INFO  20:31:00,784 - #25 -
+INFO  20:31:00,784 - #50 6
+INFO  20:31:00,784 - #42 )
+INFO  20:31:00,784 - #41 ;
+INFO  20:31:00,784 - #13 else
+INFO  20:31:00,792 - #33 print
+INFO  20:31:00,792 - #23 (
+INFO  20:31:00,792 - #50 0
+INFO  20:31:00,792 - #42 )
+INFO  20:31:00,792 - #41 ;
+INFO  20:31:00,792 - #47 ibool
+INFO  20:31:00,792 - #15 =
+INFO  20:31:00,792 - #49 false
+INFO  20:31:00,792 - #41 ;
+INFO  20:31:00,792 - #47 i
+INFO  20:31:00,792 - #15 =
+INFO  20:31:00,792 - #50 0
+INFO  20:31:00,792 - #41 ;
+INFO  20:31:00,792 - #11 do
+INFO  20:31:00,792 - #21 {
+INFO  20:31:00,808 - #19 if
+INFO  20:31:00,816 - #23 (
+INFO  20:31:00,816 - #47 i
+INFO  20:31:00,816 - #46 ==
+INFO  20:31:00,816 - #50 2
+INFO  20:31:00,816 - #42 )
+INFO  20:31:00,816 - #47 ibool
+INFO  20:31:00,816 - #15 =
+INFO  20:31:00,816 - #49 true
+INFO  20:31:00,816 - #41 ;
+INFO  20:31:00,816 - #47 i
+INFO  20:31:00,816 - #32 ++
+INFO  20:31:00,816 - #41 ;
+INFO  20:31:00,816 - #37 }
+INFO  20:31:00,816 - #44 while
+INFO  20:31:00,816 - #23 (
+INFO  20:31:00,816 - #47 i
+INFO  20:31:00,816 - #24 <
+INFO  20:31:00,816 - #50 5
+INFO  20:31:00,824 - #42 )
+INFO  20:31:00,824 - #41 ;
+INFO  20:31:00,824 - #19 if
+INFO  20:31:00,824 - #23 (
+INFO  20:31:00,824 - #47 ibool
+INFO  20:31:00,824 - #42 )
+INFO  20:31:00,824 - #19 if
+INFO  20:31:00,824 - #23 (
+INFO  20:31:00,824 - #47 i
+INFO  20:31:00,824 - #46 ==
+INFO  20:31:00,824 - #50 5
+INFO  20:31:00,824 - #42 )
+INFO  20:31:00,824 - #33 print
+INFO  20:31:00,824 - #23 (
+INFO  20:31:00,824 - #50 1
+INFO  20:31:00,824 - #42 )
+INFO  20:31:00,832 - #41 ;
+INFO  20:31:00,832 - #13 else
+INFO  20:31:00,832 - #33 print
+INFO  20:31:00,832 - #23 (
+INFO  20:31:00,832 - #25 -
+INFO  20:31:00,832 - #50 1
+INFO  20:31:00,832 - #42 )
+INFO  20:31:00,832 - #41 ;
+INFO  20:31:00,832 - #47 niz
+INFO  20:31:00,832 - #15 =
+INFO  20:31:00,832 - #28 new
+INFO  20:31:00,832 - #47 int
+INFO  20:31:00,832 - #20 [
+INFO  20:31:00,832 - #50 3
+INFO  20:31:00,832 - #36 ]
+INFO  20:31:00,840 - #41 ;
+INFO  20:31:00,840 - #47 niz
+INFO  20:31:00,840 - #20 [
+INFO  20:31:00,840 - #50 0
+INFO  20:31:00,840 - #36 ]
+INFO  20:31:00,840 - #15 =
+INFO  20:31:00,840 - #50 1
+INFO  20:31:00,840 - #41 ;
+INFO  20:31:00,840 - #47 niz
+INFO  20:31:00,840 - #20 [
+INFO  20:31:00,840 - #50 1
+INFO  20:31:00,840 - #36 ]
+INFO  20:31:00,840 - #15 =
+INFO  20:31:00,840 - #50 2
+INFO  20:31:00,840 - #41 ;
+INFO  20:31:00,840 - #47 niz
+INFO  20:31:00,840 - #20 [
+INFO  20:31:00,840 - #50 2
+INFO  20:31:00,840 - #36 ]
+INFO  20:31:00,840 - #15 =
+INFO  20:31:00,840 - #47 sum
+INFO  20:31:00,840 - #23 (
+INFO  20:31:00,840 - #47 niz
+INFO  20:31:00,840 - #20 [
+INFO  20:31:00,840 - #50 1
+INFO  20:31:00,840 - #36 ]
+INFO  20:31:00,848 - #7 ,
+INFO  20:31:00,848 - #47 niz
+INFO  20:31:00,848 - #20 [
+INFO  20:31:00,848 - #50 0
+INFO  20:31:00,848 - #36 ]
+INFO  20:31:00,848 - #42 )
+INFO  20:31:00,848 - #31 +
+INFO  20:31:00,848 - #50 1
+INFO  20:31:00,848 - #41 ;
+INFO  20:31:00,848 - #19 if
+INFO  20:31:00,848 - #23 (
+INFO  20:31:00,848 - #47 verify
+INFO  20:31:00,848 - #23 (
+INFO  20:31:00,848 - #42 )
+INFO  20:31:00,856 - #30 ||
+INFO  20:31:00,864 - #47 niz
+INFO  20:31:00,864 - #20 [
+INFO  20:31:00,864 - #50 2
+INFO  20:31:00,864 - #36 ]
+INFO  20:31:00,864 - #46 ==
+INFO  20:31:00,864 - #50 4
+INFO  20:31:00,864 - #42 )
+INFO  20:31:00,864 - #33 print
+INFO  20:31:00,864 - #23 (
+INFO  20:31:00,864 - #47 ord
+INFO  20:31:00,864 - #23 (
+INFO  20:31:00,864 - #51 A
+INFO  20:31:00,864 - #42 )
+INFO  20:31:00,864 - #42 )
+INFO  20:31:00,864 - #41 ;
+INFO  20:31:00,864 - #13 else
+INFO  20:31:00,864 - #33 print
+INFO  20:31:00,864 - #23 (
+INFO  20:31:00,872 - #47 ord
+INFO  20:31:00,872 - #23 (
+INFO  20:31:00,872 - #51 a
+INFO  20:31:00,872 - #42 )
+INFO  20:31:00,872 - #42 )
+INFO  20:31:00,872 - #41 ;
+INFO  20:31:00,872 - #33 print
+INFO  20:31:00,872 - #23 (
+INFO  20:31:00,891 - #47 eol
+INFO  20:31:00,891 - #42 )
+INFO  20:31:00,891 - #41 ;
+INFO  20:31:00,891 - #47 i
+INFO  20:31:00,891 - #15 =
+INFO  20:31:00,891 - #50 0
+INFO  20:31:00,891 - #41 ;
+INFO  20:31:00,891 - #11 do
+INFO  20:31:00,891 - #21 {
+INFO  20:31:00,891 - #19 if
+INFO  20:31:00,891 - #23 (
+INFO  20:31:00,891 - #47 i
+INFO  20:31:00,891 - #46 ==
+INFO  20:31:00,891 - #50 3
+INFO  20:31:00,891 - #42 )
+INFO  20:31:00,891 - #21 {
+INFO  20:31:00,891 - #47 i
+INFO  20:31:00,891 - #32 ++
+INFO  20:31:00,891 - #41 ;
+INFO  20:31:00,891 - #9 continue
+INFO  20:31:00,891 - #41 ;
+INFO  20:31:00,891 - #37 }
+INFO  20:31:00,899 - #19 if
+INFO  20:31:00,899 - #23 (
+INFO  20:31:00,899 - #47 i
+INFO  20:31:00,899 - #46 ==
+INFO  20:31:00,899 - #50 4
+INFO  20:31:00,899 - #42 )
+INFO  20:31:00,899 - #3 break
+INFO  20:31:00,899 - #41 ;
+INFO  20:31:00,907 - #47 i
+INFO  20:31:00,907 - #15 =
+INFO  20:31:00,907 - #47 inkrement
+INFO  20:31:00,907 - #23 (
+INFO  20:31:00,907 - #47 i
+INFO  20:31:00,907 - #7 ,
+INFO  20:31:00,907 - #50 1
+INFO  20:31:00,907 - #42 )
+INFO  20:31:00,907 - #41 ;
+INFO  20:31:00,907 - #37 }
+INFO  20:31:00,907 - #44 while
+INFO  20:31:00,907 - #23 (
+INFO  20:31:00,907 - #47 i
+INFO  20:31:00,907 - #24 <
+INFO  20:31:00,907 - #50 10
+INFO  20:31:00,907 - #42 )
+INFO  20:31:00,907 - #41 ;
+INFO  20:31:00,907 - #19 if
+INFO  20:31:00,907 - #23 (
+INFO  20:31:00,907 - #47 i
+INFO  20:31:00,907 - #46 ==
+INFO  20:31:00,907 - #50 3
+INFO  20:31:00,907 - #2 &&
+INFO  20:31:00,907 - #47 verify
+INFO  20:31:00,907 - #23 (
+INFO  20:31:00,907 - #42 )
+INFO  20:31:00,907 - #42 )
+INFO  20:31:00,915 - #33 print
+INFO  20:31:00,915 - #23 (
+INFO  20:31:00,915 - #25 -
+INFO  20:31:00,915 - #50 4
+INFO  20:31:00,915 - #42 )
+INFO  20:31:00,915 - #41 ;
+INFO  20:31:00,915 - #13 else
+INFO  20:31:00,915 - #33 print
+INFO  20:31:00,915 - #23 (
+INFO  20:31:00,915 - #50 4
+INFO  20:31:00,915 - #42 )
+INFO  20:31:00,915 - #41 ;
+INFO  20:31:00,915 - #38 read
+INFO  20:31:00,915 - #23 (
+INFO  20:31:00,915 - #47 niz
+INFO  20:31:00,915 - #20 [
+INFO  20:31:00,915 - #50 0
+INFO  20:31:00,915 - #36 ]
+INFO  20:31:00,915 - #42 )
+INFO  20:31:00,915 - #41 ;
+INFO  20:31:00,915 - #38 read
+INFO  20:31:00,915 - #23 (
+INFO  20:31:00,915 - #47 niz
+INFO  20:31:00,915 - #20 [
+INFO  20:31:00,923 - #50 1
+INFO  20:31:00,923 - #36 ]
+INFO  20:31:00,923 - #42 )
+INFO  20:31:00,923 - #41 ;
+INFO  20:31:00,923 - #38 read
+INFO  20:31:00,923 - #23 (
+INFO  20:31:00,923 - #47 niz
+INFO  20:31:00,923 - #20 [
+INFO  20:31:00,923 - #50 2
+INFO  20:31:00,923 - #36 ]
+INFO  20:31:00,923 - #42 )
+INFO  20:31:00,923 - #41 ;
+INFO  20:31:00,923 - #33 print
+INFO  20:31:00,923 - #23 (
+INFO  20:31:00,923 - #47 eol
+INFO  20:31:00,923 - #42 )
+INFO  20:31:00,923 - #41 ;
+INFO  20:31:00,923 - #33 print
+INFO  20:31:00,923 - #23 (
+INFO  20:31:00,923 - #47 sum
+INFO  20:31:00,923 - #23 (
+INFO  20:31:00,923 - #47 sum
+INFO  20:31:00,923 - #23 (
+INFO  20:31:00,923 - #47 niz
+INFO  20:31:00,923 - #20 [
+INFO  20:31:00,923 - #50 0
+INFO  20:31:00,923 - #36 ]
+INFO  20:31:00,923 - #7 ,
+INFO  20:31:00,923 - #47 niz
+INFO  20:31:00,923 - #20 [
+INFO  20:31:00,923 - #50 1
+INFO  20:31:00,923 - #36 ]
+INFO  20:31:00,923 - #42 )
+INFO  20:31:00,923 - #7 ,
+INFO  20:31:00,923 - #47 niz
+INFO  20:31:00,923 - #20 [
+INFO  20:31:00,923 - #50 2
+INFO  20:31:00,923 - #36 ]
+INFO  20:31:00,923 - #42 )
+INFO  20:31:00,923 - #42 )
+INFO  20:31:00,923 - #41 ;
+INFO  20:31:00,923 - #33 print
+INFO  20:31:00,923 - #23 (
+INFO  20:31:00,923 - #47 eol
+INFO  20:31:00,923 - #42 )
+INFO  20:31:00,923 - #41 ;
+INFO  20:31:00,923 - #33 print
+INFO  20:31:00,923 - #23 (
+INFO  20:31:00,923 - #47 inkrement
+INFO  20:31:00,923 - #23 (
+INFO  20:31:00,923 - #47 niz
+INFO  20:31:00,923 - #20 [
+INFO  20:31:00,923 - #50 2
+INFO  20:31:00,923 - #36 ]
+INFO  20:31:00,923 - #7 ,
+INFO  20:31:00,923 - #50 2
+INFO  20:31:00,923 - #42 )
+INFO  20:31:00,931 - #42 )
+INFO  20:31:00,931 - #41 ;
+INFO  20:31:00,931 - #33 print
+INFO  20:31:00,931 - #23 (
+INFO  20:31:00,931 - #47 verify
+INFO  20:31:00,931 - #23 (
+INFO  20:31:00,931 - #42 )
+INFO  20:31:00,931 - #35 ?
+INFO  20:31:00,931 - #51 t
+INFO  20:31:00,931 - #6 :
+INFO  20:31:00,931 - #51 f
+INFO  20:31:00,939 - #42 )
+INFO  20:31:00,947 - #41 ;
+INFO  20:31:00,947 - #33 print
+INFO  20:31:00,947 - #23 (
+INFO  20:31:00,947 - #47 eol
+INFO  20:31:00,947 - #42 )
+INFO  20:31:00,947 - #41 ;
+INFO  20:31:00,947 - #37 }
+INFO  20:31:00,947 - #37 }
+INFO  20:31:00,955 - ===================================
+INFO  20:31:01,011 - Pretraga (int) nadjeno [Type , Int ] na liniji 5
+INFO  20:31:01,017 - Deklaracija (jedan)  [Con , Int ] na liniji 5
+INFO  20:31:01,017 - Pretraga (int) nadjeno [Type , Int ] na liniji 7
+INFO  20:31:01,017 - Deklaracija (i) [Var , Int ] na liniji 7
+INFO  20:31:01,017 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 8
+INFO  20:31:01,017 - Deklaracija (ibool) [Var , Bool ] na liniji 8
+INFO  20:31:01,017 - Pretraga (int) nadjeno [Type , Int ] na liniji 10
+INFO  20:31:01,017 - Deklaracija (niz) [Var , Array of Array ] na liniji 10
+INFO  20:31:01,017 - Pretraga (int) nadjeno [Type , Int ] na liniji 14
+INFO  20:31:01,017 - Deklaracija (sum) [Meth , Int ] na liniji 14
+INFO  20:31:01,017 - Pretraga (int) nadjeno [Type , Int ] na liniji 14
+INFO  20:31:01,017 - Pretraga (int) nadjeno [Type , Int ] na liniji 14
+INFO  20:31:01,017 - Pretraga (z) nadjeno [Var , Int ] na liniji 16
+INFO  20:31:01,017 - Pretraga (d) nadjeno [Var , Int ] na liniji 16
+INFO  20:31:01,017 - Pretraga (int) nadjeno [Type , Int ] na liniji 19
+INFO  20:31:01,017 - Deklaracija (inkrement) [Meth , Int ] na liniji 19
+INFO  20:31:01,017 - Pretraga (int) nadjeno [Type , Int ] na liniji 19
+INFO  20:31:01,017 - Pretraga (int) nadjeno [Type , Int ] na liniji 19
+INFO  20:31:01,017 - Pretraga (int) nadjeno [Type , Int ] na liniji 20
+INFO  20:31:01,017 - Deklaracija (pom) [Var , Int ] na liniji 20
+INFO  20:31:01,017 - Pretraga (inc) nadjeno [Var , Int ] na liniji 22
+INFO  20:31:01,017 - Pretraga (jedan) nadjeno [Con , Int ] na liniji 22
+INFO  20:31:01,017 - Pretraga (pom) nadjeno [Var , Int ] na liniji 22
+INFO  20:31:01,017 - Pretraga (inc) nadjeno [Var , Int ] na liniji 23
+INFO  20:31:01,017 - Pretraga (pom) nadjeno [Var , Int ] na liniji 23
+INFO  20:31:01,017 - Pretraga (a) nadjeno [Var , Int ] na liniji 23
+INFO  20:31:01,017 - Pretraga (sum) nadjeno [Meth , Int ] na liniji 25
+INFO  20:31:01,017 - Pretraga (a) nadjeno [Var , Int ] na liniji 25
+INFO  20:31:01,017 - Pretraga (pom) nadjeno [Var , Int ] na liniji 25
+INFO  20:31:01,421 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 28
+INFO  20:31:01,421 - Deklaracija (verify) [Meth , Bool ] na liniji 28
+INFO  20:31:01,421 - Deklaracija (main) [Meth , None ] na liniji 33
+INFO  20:31:01,421 - Pretraga (ibool) nadjeno [Var , Bool ] na liniji 38
+INFO  20:31:01,421 - Pretraga (i) nadjeno [Var , Int ] na liniji 39
+INFO  20:31:01,421 - Pretraga (i) nadjeno [Var , Int ] na liniji 41
+INFO  20:31:01,447 - Pretraga (ibool) nadjeno [Var , Bool ] na liniji 41
+INFO  20:31:01,447 - Pretraga (i) nadjeno [Var , Int ] na liniji 42
+INFO  20:31:01,447 - Pretraga (i) nadjeno [Var , Int ] na liniji 43
+INFO  20:31:01,447 - Pretraga (ibool) nadjeno [Var , Bool ] na liniji 45
+INFO  20:31:01,447 - Pretraga (i) nadjeno [Var , Int ] na liniji 46
+INFO  20:31:01,455 - Pretraga (niz) nadjeno [Var , Array ] na liniji 49
+INFO  20:31:01,455 - Pretraga (int) nadjeno [Type , Int ] na liniji 49
+INFO  20:31:01,455 - Pretraga (niz) nadjeno [Var , Array ] na liniji 50
+INFO  20:31:01,455 - Pretraga (niz) nadjeno [Var , Array ] na liniji 51
+INFO  20:31:01,455 - Pretraga (niz) nadjeno [Var , Array ] na liniji 52
+INFO  20:31:01,455 - Pretraga (sum) nadjeno [Meth , Int ] na liniji 52
+INFO  20:31:01,455 - Pretraga (niz) nadjeno [Var , Array ] na liniji 52
+INFO  20:31:01,455 - Pretraga (niz) nadjeno [Var , Array ] na liniji 52
+INFO  20:31:01,455 - Pretraga (verify) nadjeno [Meth , Bool ] na liniji 53
+INFO  20:31:01,455 - Pretraga (niz) nadjeno [Var , Array ] na liniji 53
+INFO  20:31:01,455 - Pretraga (ord) nadjeno [Meth , Int ] na liniji 53
+INFO  20:31:01,455 - Pretraga (ord) nadjeno [Meth , Int ] na liniji 54
+INFO  20:31:01,455 - Pretraga (eol) nadjeno [Con , Char ] na liniji 56
+INFO  20:31:01,455 - Pretraga (i) nadjeno [Var , Int ] na liniji 57
+INFO  20:31:01,455 - Pretraga (i) nadjeno [Var , Int ] na liniji 59
+INFO  20:31:01,463 - Pretraga (i) nadjeno [Var , Int ] na liniji 61
+INFO  20:31:01,463 - Pretraga (i) nadjeno [Var , Int ] na liniji 64
+INFO  20:31:01,463 - Pretraga (i) nadjeno [Var , Int ] na liniji 65
+INFO  20:31:01,463 - Pretraga (inkrement) nadjeno [Meth , Int ] na liniji 65
+INFO  20:31:01,463 - Pretraga (i) nadjeno [Var , Int ] na liniji 65
+INFO  20:31:01,463 - Pretraga (i) nadjeno [Var , Int ] na liniji 66
+INFO  20:31:01,463 - Pretraga (i) nadjeno [Var , Int ] na liniji 68
+INFO  20:31:01,463 - Pretraga (verify) nadjeno [Meth , Bool ] na liniji 68
+INFO  20:31:01,463 - Pretraga (niz) nadjeno [Var , Array ] na liniji 71
+INFO  20:31:01,463 - Pretraga (niz) nadjeno [Var , Array ] na liniji 72
+INFO  20:31:01,463 - Pretraga (niz) nadjeno [Var , Array ] na liniji 73
+INFO  20:31:01,463 - Pretraga (eol) nadjeno [Con , Char ] na liniji 74
+INFO  20:31:01,463 - Pretraga (sum) nadjeno [Meth , Int ] na liniji 76
+INFO  20:31:01,471 - Pretraga (sum) nadjeno [Meth , Int ] na liniji 76
+INFO  20:31:01,471 - Pretraga (niz) nadjeno [Var , Array ] na liniji 76
+INFO  20:31:01,471 - Pretraga (niz) nadjeno [Var , Array ] na liniji 76
+INFO  20:31:01,471 - Pretraga (niz) nadjeno [Var , Array ] na liniji 76
+INFO  20:31:01,471 - Pretraga (eol) nadjeno [Con , Char ] na liniji 78
+INFO  20:31:01,471 - Pretraga (inkrement) nadjeno [Meth , Int ] na liniji 79
+INFO  20:31:01,530 - Pretraga (niz) nadjeno [Var , Array ] na liniji 79
+INFO  20:31:01,538 - Pretraga (verify) nadjeno [Meth , Bool ] na liniji 81
+INFO  20:31:01,538 - Pretraga (eol) nadjeno [Con , Char ] na liniji 83
+INFO  20:31:01,538 - USPESNO SEMANTICKO PARSIRANJE

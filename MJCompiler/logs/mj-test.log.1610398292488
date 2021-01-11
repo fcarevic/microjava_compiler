@@ -1,0 +1,93 @@
+INFO  21:51:00,532 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  21:51:00,816 - #34 program
+INFO  21:51:00,816 - #47 Program
+INFO  21:51:00,816 - #8 const
+INFO  21:51:00,816 - #47 int
+INFO  21:51:00,816 - #47 consta
+INFO  21:51:00,831 - #15 =
+INFO  21:51:00,831 - #50 50
+INFO  21:51:00,831 - #41 ;
+INFO  21:51:00,831 - #47 bool
+INFO  21:51:00,831 - #47 boo
+INFO  21:51:00,831 - #47 boo
+ERROR 21:51:00,831 - 
+Sintaksna greska na liniji 5
+INFO  21:51:00,831 - #41 ;
+INFO  21:51:00,831 - #47 int
+INFO  21:51:00,831 - #47 f
+INFO  21:51:00,831 - #20 [
+INFO  21:51:00,831 - #36 ]
+INFO  21:51:00,831 - #7 ,
+INFO  21:51:00,831 - #7 ,
+INFO  21:51:00,831 - #20 [
+INFO  21:51:00,863 - #7 ,
+INFO  21:51:00,863 - #36 ]
+INFO  21:51:00,863 - #7 ,
+INFO  21:51:00,869 - #47 j
+INFO  21:51:00,869 - #41 ;
+INFO  21:51:00,869 - #47 char
+INFO  21:51:00,869 - #20 [
+INFO  21:51:00,869 - #36 ]
+INFO  21:51:00,869 - #7 ,
+INFO  21:51:00,869 - #47 ch
+INFO  21:51:00,869 - #41 ;
+INFO  21:51:00,869 - #47 int
+INFO  21:51:00,869 - #41 ;
+INFO  21:51:00,869 - #47 bool
+INFO  21:51:00,869 - #7 ,
+INFO  21:51:00,869 - #41 ;
+INFO  21:51:00,869 - #21 {
+INFO  21:51:00,869 - #43 void
+ERROR 21:51:00,869 - Izvrsen oporavak do , u liniji 5
+INFO  21:51:00,900 - #47 main
+INFO  21:51:00,900 - #23 (
+INFO  21:51:00,900 - #42 )
+INFO  21:51:00,900 - #47 int
+INFO  21:51:00,900 - #47 a
+INFO  21:51:00,900 - #7 ,
+INFO  21:51:00,900 - #47 b
+INFO  21:51:00,900 - #7 ,
+INFO  21:51:00,900 - #47 c
+INFO  21:51:00,900 - #41 ;
+INFO  21:51:00,900 - #21 {
+INFO  21:51:00,900 - #47 b
+INFO  21:51:00,916 - #15 =
+INFO  21:51:00,916 - #47 a
+INFO  21:51:00,916 - #31 +
+INFO  21:51:00,916 - #41 ;
+ERROR 21:51:00,916 - 
+Sintaksna greska na liniji 13
+INFO  21:51:00,931 - #47 c
+INFO  21:51:00,931 - #15 =
+INFO  21:51:00,931 - #47 a
+ERROR 21:51:00,931 - Izvrsen oporavak do ; u liniji 13
+INFO  21:51:00,931 - #25 -
+INFO  21:51:00,931 - #25 -
+ERROR 21:51:00,931 - 
+Sintaksna greska na liniji 14
+INFO  21:51:00,931 - #47 c
+INFO  21:51:00,931 - #41 ;
+INFO  21:51:00,931 - #47 a
+INFO  21:51:00,931 - #15 =
+INFO  21:51:00,931 - #47 b
+ERROR 21:51:00,947 - Izvrsen oporavak do ; u liniji 14
+INFO  21:51:00,947 - #47 c
+ERROR 21:51:00,947 - 
+Sintaksna greska na liniji 15
+INFO  21:51:00,947 - #41 ;
+INFO  21:51:00,947 - #47 a
+INFO  21:51:00,947 - #15 =
+INFO  21:51:00,947 - #41 ;
+ERROR 21:51:00,947 - Izvrsen oporavak do ; u liniji 15
+ERROR 21:51:00,947 - 
+Sintaksna greska na liniji 16
+INFO  21:51:00,947 - #47 b
+INFO  21:51:00,947 - #15 =
+INFO  21:51:00,947 - #41 ;
+ERROR 21:51:00,947 - Izvrsen oporavak do ; u liniji 16
+ERROR 21:51:00,947 - 
+Sintaksna greska na liniji 17
+INFO  21:51:00,947 - #37 }
+INFO  21:51:00,947 - #37 }
+ERROR 21:51:00,947 - Izvrsen oporavak do ; u liniji 17
+ERROR 21:51:00,947 - NEUSPESNO SINTAKSNO PARSIRANJE

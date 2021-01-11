@@ -77,11 +77,11 @@ nonterminal ConstDeclList, AddopTermExprOption;
 nonterminal DesignatorOptionList, FormalParams ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, StdConstType, ExtendsClause, ReturnType ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj ConstInit, ClassName, MethodName, Break ; 
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr1 , Expr ;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Term , Factor, Expr1 , Expr, TernaryCondition, TernaryColon ;
 nonterminal rs.etf.pp1.symboltable.concepts.Obj Designator, DesignatorOption, DesignatorName, Else, IfErrorCorection, Case , CaseClause , DesignatorFunc  ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct  Assignop , Relop , Addop, Mulop, AddopList;
 nonterminal DoClause, ClassFields ;
-nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact ;
+nonterminal rs.etf.pp1.symboltable.concepts.Struct Condition , ConditionTerm, ConditonFact, ConditionLeft, ConditionTermLeft;
 
 precedence left ELSE;
 
@@ -275,25 +275,28 @@ ActualParams ::= (ActualParameterMultipleList)  Expr COMMA ActualParams
 					(ActualParameterSingle) Expr
 					;
 
-Condition ::= (ConditionOR)Condition OR ConditionTerm
+Condition ::= (ConditionOR) ConditionLeft OR ConditionTerm
 			|
 			(NoConditionOR) ConditionTerm
 			;
-ConditionTerm ::= (ConditionAND) ConditionTerm AND ConditonFact
+ConditionLeft ::= (ConditionLeft) Condition ;
+ConditionTerm ::= (ConditionAND) ConditionTermLeft AND ConditonFact
 				|
 				(NoConditionAND) ConditonFact
 				;
+ConditionTermLeft ::= (ConditionTermLeft) ConditionTerm;
 ConditonFact ::= (ConditionFactExpr) Expr  
 				|
 				(ConditionFactExprRelop) Expr Relop Expr
 				;
 
 /* ****************************************** */
-Expr ::= (TernaryExpr) Expr1 QUESTION Expr1:firstExpression COLON Expr1:secondExpression
+Expr ::= (TernaryExpr) TernaryCondition QUESTION Expr1:firstExpression  TernaryColon Expr1:secondExpression 
 		|
 		(Expression) Expr1
 		;	
-		    
+TernaryCondition ::= (TernaryCondition) Expr1;
+TernaryColon ::= (TernaryColon) COLON ;		    
 Expr1 ::= (Expr1TermMinus) MINUS  Term AddopList
 			|
 		(Expr1TermNoMinus) Term AddopList

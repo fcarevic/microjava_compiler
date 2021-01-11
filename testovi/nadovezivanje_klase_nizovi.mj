@@ -1,0 +1,31 @@
+program Program
+
+	class A{
+	 int x;
+	}
+	class B{
+		A a;
+		A arr[];
+	}	
+	class C extends B {
+			int x;
+	}
+{
+
+	
+	void main()
+		A a,a1; B b; C c; 
+	{
+		 a = new A;
+		 a1= new A;
+		 b = new B;
+		 c = new C;
+		c.arr= new A[4];
+		a1.x=0;
+		b.a=a1;
+		print(len(c.arr));
+		c.arr[0]=a;
+		a.x=7;
+		print(c.arr[b.a.x].x);
+	}
+}

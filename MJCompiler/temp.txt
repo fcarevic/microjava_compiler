@@ -1,2 +1,54 @@
- 	Object o =CUP$MJParser$stack.remove(0);
+ 	void main() {
+		read(ch);
+		read(a);
+		read(b);
+		switch(ch){
+			case 'A':
+				print(ch);
+				break;
+			case 'a':
+			    print(ch);
+				break;
+			case 'B':
+				a=1;
+				c = a * 2 + 1;
+				switch(c){
+					case 3:
+							print(ch);
+							print(c);
+							prin(eol);
+						break;
+				}
+			case 'b':
+				print(ch);
+				switch(1){
+					case 1:
+					print('c');
+						c++;
+						a=0;
+						switch(a){
+							case 0:
+								print('e',2);
+								a=0;
+								print(eol);
+								do{
+									print(a,2);
+									x++;
+								if(a==3) break;
+								}while(true);
+								
+								print(eol);
+								break;
+							case 1:
+								print('f');
+								break;
+						}
+						break;
+					case 2:
+					print(2);
+						break;
+				}
+				break;
+		}
+	}
            

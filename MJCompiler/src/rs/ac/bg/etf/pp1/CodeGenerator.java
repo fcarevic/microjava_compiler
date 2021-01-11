@@ -18,7 +18,9 @@ import rs.ac.bg.etf.pp1.ast.CaseSingle;
 import rs.ac.bg.etf.pp1.ast.ClassDeclMethod;
 import rs.ac.bg.etf.pp1.ast.ConditionAND;
 import rs.ac.bg.etf.pp1.ast.ConditionFactExprRelop;
+import rs.ac.bg.etf.pp1.ast.ConditionLeft;
 import rs.ac.bg.etf.pp1.ast.ConditionOR;
+import rs.ac.bg.etf.pp1.ast.ConditionTermLeft;
 import rs.ac.bg.etf.pp1.ast.ContinueStatement;
 import rs.ac.bg.etf.pp1.ast.DesignatoStatementDec;
 import rs.ac.bg.etf.pp1.ast.Designator;
@@ -59,6 +61,7 @@ import rs.ac.bg.etf.pp1.ast.NotSame;
 import rs.ac.bg.etf.pp1.ast.Plus;
 import rs.ac.bg.etf.pp1.ast.PrintNumConst_;
 import rs.ac.bg.etf.pp1.ast.PrintStatement;
+import rs.ac.bg.etf.pp1.ast.ProgName;
 import rs.ac.bg.etf.pp1.ast.Program;
 import rs.ac.bg.etf.pp1.ast.ReadStatement;
 import rs.ac.bg.etf.pp1.ast.Relop;
@@ -69,6 +72,9 @@ import rs.ac.bg.etf.pp1.ast.SwitchClause;
 import rs.ac.bg.etf.pp1.ast.SwitchStatement;
 import rs.ac.bg.etf.pp1.ast.SyntaxNode;
 import rs.ac.bg.etf.pp1.ast.TermMul;
+import rs.ac.bg.etf.pp1.ast.TernaryColon;
+import rs.ac.bg.etf.pp1.ast.TernaryCondition;
+import rs.ac.bg.etf.pp1.ast.TernaryExpr;
 import rs.ac.bg.etf.pp1.ast.VisitorAdaptor;
 import rs.etf.pp1.mj.runtime.Code;
 import rs.etf.pp1.symboltable.Tab;
@@ -83,6 +89,11 @@ public class CodeGenerator extends VisitorAdaptor {
 		// TODO Auto-generated method stub
 		program.traverseBottomUp(new ClassDeclVisitorForPoly());
 	
+	}
+	@Override
+	public void visit(ProgName progName) {
+		// TODO Auto-generated method stub
+		new UniverseScopeCreator().create();
 	}
 	
 	
@@ -146,14 +157,11 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(FactorFunctionCall factorFunctionCall) {
 			
 			if(!callClassMethod(factorFunctionCall.getDesignatorFunc())) {
-				if(factorFunctionCall.getDesignatorFunc().obj.getName().equals("len")) {
-					Code.put(Code.arraylength);
-				}
-				else {
+				
 					Code.put(Code.call);
 			//todo NE RADI ZA ULANCAVANJE
 					Code.put2(calculatePCOffset(factorFunctionCall.getDesignatorFunc().obj.getAdr()));
-				}
+				
 			}
 	}
 	
@@ -231,7 +239,34 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	
 	/*** EXPRESSIONS**/
+	Map<TernaryCondition, Integer> mapCondToAdress = new HashMap<>();
+	@Override
+	public void visit(TernaryCondition ternaryCondition) {
+		Code.loadConst(0);
+		Code.put(Code.jcc+Code.eq);
+		mapCondToAdress.put(ternaryCondition, Code.pc);
+		Code.put2(0);
+		
+		
+	}
 	
+	@Override
+	public void visit(TernaryColon ternaryColon) {
+		TernaryCondition cond = (TernaryCondition)( 
+				((TernaryExpr)(ternaryColon.getParent())).getTernaryCondition()
+				);
+		int adr = mapCondToAdress.get(cond);
+		Code.put(Code.jmp);
+		mapCondToAdress.put(cond, Code.pc);
+		Code.put2(0);
+		Code.fixup(adr);
+	}
+	
+	@Override
+	public void visit(TernaryExpr ternaryExpr) {
+		// TODO Auto-generated method stub
+	Code.fixup(mapCondToAdress.get(ternaryExpr.getTernaryCondition()));
+	}
 	@Override
 	public void visit(Expr1TermMinus Expr1TermMinus) {
 		// TODO Auto-generated method stub
@@ -425,9 +460,10 @@ public class CodeGenerator extends VisitorAdaptor {
 	Code.fixup(secPc);
 	}
 	
-	
+	Map<ConditionTermLeft, Integer> mapLeftANDtoAdr = new HashMap<ConditionTermLeft, Integer>();
 	@Override
 	public void visit(ConditionAND conditionAND) {
+		
 	 Code.put(Code.add);
 	 Code.loadConst(1);
 	 int currPc = Code.pc +1;
@@ -438,10 +474,20 @@ public class CodeGenerator extends VisitorAdaptor {
 	 Code.fixup(currPc);
 	 Code.loadConst(0);
 	 Code.fixup(secPc);
+	 Code.fixup(mapLeftANDtoAdr.get(conditionAND.getConditionTermLeft()));
 	}
 	
 	@Override
-	public void visit(ConditionOR ConditionOR) {
+	public void visit(ConditionTermLeft conditionTermLeft) {
+		Code.put(Code.dup);
+		Code.loadConst(0);
+		Code.put(Code.jcc+Code.eq);
+		mapLeftANDtoAdr.put(conditionTermLeft, Code.pc);
+		Code.put2(0);
+	}
+	Map<ConditionLeft, Integer> mapLeftORtoAdr = new HashMap<ConditionLeft, Integer>();
+	@Override
+	public void visit(ConditionOR conditionOR) {
 		 Code.put(Code.add);
 		 Code.loadConst(0);
 		 int currPc = Code.pc+1;
@@ -452,10 +498,18 @@ public class CodeGenerator extends VisitorAdaptor {
 		 Code.fixup(currPc); // postavi nulu
 		 Code.loadConst(0);
 		 Code.fixup(secPc); //preskoci nulu
+		 Code.fixup(mapLeftORtoAdr.get(conditionOR.getConditionLeft()));
 	
 	}
 	
-	
+	@Override
+	public void visit(ConditionLeft conditionLeft) {
+		Code.put(Code.dup);
+		Code.loadConst(1);
+		Code.put(Code.jcc + Code.eq);
+		mapLeftORtoAdr.put(conditionLeft, Code.pc);
+		Code.put2(0);
+	}
 	@Override
 	public void visit(Else elseSt) {
 		Code.put(Code.jmp);
@@ -527,14 +581,17 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	/******* SWITCH ********************/
-	
 	private Map<Integer, Integer> caseClausemap = new HashMap<Integer, Integer>();
+	private Map<SwitchClause, Integer> mapSkipAllCases = new HashMap<SwitchClause, Integer>();
 	private Map <SyntaxNode , Integer> breakMap = new HashMap<SyntaxNode, Integer>();
 	public void visit(SwitchClause switchCl) {
 		SwitchStatement switchSt = (SwitchStatement)(switchCl.getParent());
 		
-		switchSt.traverseBottomUp(new SwitchCaseCodeEntranceCreator());
-		
+		switchSt.traverseBottomUp(new SwitchCaseCodeEntranceCreator(switchCl, switchSt));
+		//ako nema nijedna, preskoci sve
+		 Code.put(Code.jmp);
+		 mapSkipAllCases.put(switchCl, Code.pc);
+		 Code.put2(0);
 	}
 	
 	
@@ -554,6 +611,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	@Override
 	public void visit(SwitchStatement switchSt){
+			Code.fixup(mapSkipAllCases.get(switchSt.getSwitchClause()));
 			switchSt.traverseTopDown(new SwitchBreakFixup());
 			Code.put(Code.pop); //skida izraz sa steka
 	}
@@ -569,15 +627,36 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	private class SwitchCaseCodeEntranceCreator extends VisitorAdaptor{
+		private SwitchClause acceptableSwitchClause;
+		private SwitchStatement acceptableSwitchStatement;
+		private int nestedSwitchCount=0;
+		private SwitchCaseCodeEntranceCreator(SwitchClause acceptableSwitchClause, SwitchStatement acceptableSwitchStatement  ) {
+			this.acceptableSwitchClause= acceptableSwitchClause;
+			this.acceptableSwitchStatement =acceptableSwitchStatement;
+			
+		}
 		private void generateCaseEnteranceCode(int num) {
 			Code.put(Code.dup);
 			Code.loadConst(num);
-			caseClausemap.put(num, Code.pc+1);
-			Code.putFalseJump(Code.inverse[Code.eq], 0);
+			Code.put(Code.jcc + Code.eq);
+			caseClausemap.put(num, Code.pc);
+			Code.put2(0);
 		
+		}
+		
+		@Override
+		public void visit(SwitchClause switchClause) {
+			if(switchClause!=acceptableSwitchClause)
+				nestedSwitchCount++;
+		}
+		@Override
+		public void visit(SwitchStatement switchStatement) {
+			if(switchStatement!=acceptableSwitchStatement)
+				nestedSwitchCount--;
 		}
 		@Override
 		public void visit(Case case_){
+			if(nestedSwitchCount==0)
 			generateCaseEnteranceCode(case_.getCaseClause().getValue());
 		}
 	}
@@ -617,7 +696,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		 
 	}
-		private class ClassDeclVisitorForPoly extends VisitorAdaptor{
+	private class ClassDeclVisitorForPoly extends VisitorAdaptor{
 			private int oldMainpc;
 			public ClassDeclVisitorForPoly() {
 				oldMainpc = Code.mainPc;
@@ -658,7 +737,36 @@ public class CodeGenerator extends VisitorAdaptor {
 			
 		}
 	
-	
+	private class UniverseScopeCreator{
+		public void create() {
+			Obj obj = Tab.find("chr");
+			obj.setAdr(Code.pc);
+			generateCode(false);
+			obj = Tab.find("ord");
+			obj.setAdr(Code.pc);
+			generateCode(false);
+			obj= Tab.find("len");
+			obj.setAdr(Code.pc);
+			generateCode(true);
+			
+		}
+		
+		private void generateCode(boolean isLen) {
+			Code.put(Code.enter);
+			Code.put(1);
+			Code.put(1);
+			Code.put(Code.load_n);
+			if(isLen) {
+				
+				Code.put(Code.arraylength);
+			}
+			Code.put(Code.exit);
+			Code.put(Code.return_);
+		}
+		
+		
+		
+	}
 	
 	
 }
