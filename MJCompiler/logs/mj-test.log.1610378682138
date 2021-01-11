@@ -1,0 +1,40 @@
+INFO  16:24:17,181 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  16:24:17,357 - #34 program
+INFO  16:24:17,357 - #47 Program
+INFO  16:24:17,357 - #47 int
+INFO  16:24:17,357 - #47 niz
+INFO  16:24:17,357 - #20 [
+INFO  16:24:17,357 - #36 ]
+INFO  16:24:17,357 - #41 ;
+INFO  16:24:17,357 - #47 bool
+INFO  16:24:17,373 - #47 c
+INFO  16:24:17,373 - #15 =
+ERROR 16:24:17,373 - 
+Sintaksna greska na liniji 3
+INFO  16:24:17,373 - #49 true
+INFO  16:24:17,373 - #41 ;
+INFO  16:24:17,373 - #21 {
+INFO  16:24:17,373 - #43 void
+INFO  16:24:17,373 - #47 main
+INFO  16:24:17,373 - #23 (
+INFO  16:24:17,373 - #42 )
+INFO  16:24:17,373 - #21 {
+INFO  16:24:17,373 - #47 niz
+INFO  16:24:17,380 - #15 =
+INFO  16:24:17,380 - #28 new
+INFO  16:24:17,380 - #47 int
+INFO  16:24:17,380 - #20 [
+INFO  16:24:17,380 - #50 5
+INFO  16:24:17,380 - #36 ]
+INFO  16:24:17,395 - #41 ;
+INFO  16:24:17,395 - #33 print
+INFO  16:24:17,395 - #23 (
+INFO  16:24:17,395 - #47 len
+INFO  16:24:17,395 - #23 (
+INFO  16:24:17,395 - #47 niz
+INFO  16:24:17,395 - #42 )
+INFO  16:24:17,395 - #42 )
+INFO  16:24:17,395 - #41 ;
+INFO  16:24:17,395 - #37 }
+INFO  16:24:17,395 - #37 }
+ERROR 16:24:17,395 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 11

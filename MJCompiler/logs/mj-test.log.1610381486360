@@ -1,0 +1,92 @@
+INFO  17:07:30,951 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  17:07:31,186 - #34 program
+INFO  17:07:31,186 - #47 Program
+INFO  17:07:31,186 - #5 class
+INFO  17:07:31,186 - #47 T
+INFO  17:07:31,186 - #16 extends
+INFO  17:07:31,202 - #47 int
+INFO  17:07:31,202 - #21 {
+INFO  17:07:31,202 - #47 int
+INFO  17:07:31,202 - #47 a
+INFO  17:07:31,202 - #41 ;
+INFO  17:07:31,202 - #37 }
+INFO  17:07:31,202 - #47 int
+INFO  17:07:31,202 - #47 niz
+INFO  17:07:31,202 - #20 [
+INFO  17:07:31,202 - #36 ]
+INFO  17:07:31,202 - #41 ;
+INFO  17:07:31,202 - #8 const
+INFO  17:07:31,202 - #47 bool
+INFO  17:07:31,202 - #47 c
+INFO  17:07:31,202 - #15 =
+INFO  17:07:31,218 - #49 false
+INFO  17:07:31,220 - #41 ;
+INFO  17:07:31,221 - #21 {
+INFO  17:07:31,221 - #47 int
+INFO  17:07:31,221 - #47 f
+INFO  17:07:31,221 - #23 (
+INFO  17:07:31,221 - #42 )
+INFO  17:07:31,221 - #21 {
+INFO  17:07:31,221 - #19 if
+INFO  17:07:31,221 - #23 (
+INFO  17:07:31,221 - #47 c
+INFO  17:07:31,221 - #42 )
+INFO  17:07:31,236 - #40 return
+INFO  17:07:31,236 - #50 5
+INFO  17:07:31,236 - #41 ;
+INFO  17:07:31,236 - #37 }
+INFO  17:07:31,236 - #43 void
+INFO  17:07:31,236 - #47 main
+INFO  17:07:31,236 - #23 (
+INFO  17:07:31,236 - #42 )
+INFO  17:07:31,236 - #47 bool
+INFO  17:07:31,236 - #47 b
+INFO  17:07:31,236 - #41 ;
+INFO  17:07:31,236 - #21 {
+INFO  17:07:31,236 - #33 print
+INFO  17:07:31,236 - #23 (
+INFO  17:07:31,252 - #47 f
+INFO  17:07:31,252 - #23 (
+INFO  17:07:31,252 - #42 )
+INFO  17:07:31,252 - #42 )
+INFO  17:07:31,252 - #41 ;
+INFO  17:07:31,252 - #47 niz
+INFO  17:07:31,252 - #15 =
+INFO  17:07:31,252 - #28 new
+INFO  17:07:31,252 - #47 int
+INFO  17:07:31,252 - #20 [
+INFO  17:07:31,252 - #50 5
+INFO  17:07:31,252 - #36 ]
+INFO  17:07:31,252 - #41 ;
+INFO  17:07:31,252 - #33 print
+INFO  17:07:31,268 - #23 (
+INFO  17:07:31,268 - #47 len
+INFO  17:07:31,268 - #23 (
+INFO  17:07:31,268 - #47 niz
+INFO  17:07:31,268 - #42 )
+INFO  17:07:31,268 - #42 )
+INFO  17:07:31,268 - #41 ;
+INFO  17:07:31,268 - #37 }
+INFO  17:07:31,268 - #37 }
+INFO  17:07:31,268 - ===================================
+INFO  17:07:31,283 - Deklaracija klase T na liniji 3
+INFO  17:07:31,283 - Pretraga (int) nadjeno [Type , Int ] na liniji 3
+ERROR 17:07:31,283 - Tip specificiran u extends klauzuli nije klasa  na liniji 3
+INFO  17:07:31,283 - Pretraga (int) nadjeno [Type , Int ] na liniji 3
+INFO  17:07:31,299 - Deklaracija (a) [Fld , Int ] na liniji 3
+INFO  17:07:31,299 - Pretraga (int) nadjeno [Type , Int ] na liniji 4
+INFO  17:07:31,299 - Deklaracija (niz) [Var , Array of Array ] na liniji 4
+INFO  17:07:31,299 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 5
+INFO  17:07:31,299 - Deklaracija (c)  [Con , Bool ] na liniji 5
+INFO  17:07:31,299 - Pretraga (int) nadjeno [Type , Int ] na liniji 9
+INFO  17:07:31,299 - Deklaracija (f) [Meth , Int ] na liniji 9
+INFO  17:07:31,299 - Pretraga (c) nadjeno [Con , Bool ] na liniji 10
+INFO  17:07:31,299 - Deklaracija (main) [Meth , None ] na liniji 13
+INFO  17:07:31,299 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 14
+INFO  17:07:31,299 - Deklaracija (b) [Var , Bool ] na liniji 14
+INFO  17:07:31,299 - Pretraga (f) nadjeno [Meth , Int ] na liniji 17
+INFO  17:07:31,437 - Pretraga (niz) nadjeno [Var , Array ] na liniji 18
+INFO  17:07:31,437 - Pretraga (int) nadjeno [Type , Int ] na liniji 18
+INFO  17:07:31,437 - Pretraga (len) nadjeno [Meth , Int ] na liniji 19
+INFO  17:07:31,437 - Pretraga (niz) nadjeno [Var , Array ] na liniji 19
+ERROR 17:07:31,437 - NEUSPESNO SEMANTICKO  PARSIRANJE

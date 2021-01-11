@@ -828,7 +828,6 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		
 		if(!statement.getExpr().struct.assignableTo(getFinalTypeForDesignator(statement.getDesignator()))) {
 			report_error("Neispravna tipizacija za dodelu vrednosti ", statement);
-			
 		}
 	
 	}

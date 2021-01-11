@@ -1,0 +1,41 @@
+INFO  16:15:00,612 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  16:15:00,844 - #34 program
+INFO  16:15:00,845 - #47 Program
+INFO  16:15:00,845 - #21 {
+INFO  16:15:00,847 - #43 void
+INFO  16:15:00,847 - #47 main
+INFO  16:15:00,847 - #23 (
+INFO  16:15:00,847 - #42 )
+INFO  16:15:00,847 - #47 int
+INFO  16:15:00,847 - #47 niz
+INFO  16:15:00,847 - #20 [
+INFO  16:15:00,847 - #36 ]
+INFO  16:15:00,847 - #41 ;
+INFO  16:15:00,847 - #21 {
+INFO  16:15:00,847 - #47 niz
+INFO  16:15:00,863 - #15 =
+INFO  16:15:00,863 - #28 new
+INFO  16:15:00,863 - #47 int
+INFO  16:15:00,863 - #20 [
+INFO  16:15:00,863 - #50 5
+INFO  16:15:00,863 - #36 ]
+INFO  16:15:00,878 - #41 ;
+INFO  16:15:00,913 - #33 print
+INFO  16:15:00,913 - #23 (
+INFO  16:15:00,913 - #47 len
+INFO  16:15:00,913 - #23 (
+INFO  16:15:00,913 - #47 niz
+INFO  16:15:00,913 - #42 )
+INFO  16:15:00,913 - #42 )
+INFO  16:15:00,928 - #41 ;
+INFO  16:15:00,928 - #37 }
+INFO  16:15:00,928 - #37 }
+INFO  16:15:00,928 - ===================================
+INFO  16:15:00,944 - Deklaracija (main) [Meth , None ] na liniji 5
+INFO  16:15:00,944 - Pretraga (int) nadjeno [Type , Int ] na liniji 6
+INFO  16:15:00,944 - Deklaracija (niz) [Var , Array of Array ] na liniji 6
+INFO  16:15:00,944 - Pretraga (niz) nadjeno [Var , Array ] na liniji 8
+INFO  16:15:00,944 - Pretraga (int) nadjeno [Type , Int ] na liniji 8
+INFO  16:15:00,944 - Pretraga (len) nadjeno [Meth , Int ] na liniji 9
+INFO  16:15:00,944 - Pretraga (niz) nadjeno [Var , Array ] na liniji 9
+INFO  16:15:01,082 - USPESNO SEMANTICKO PARSIRANJE

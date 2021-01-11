@@ -1,0 +1,96 @@
+INFO  16:55:48,811 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  16:55:49,049 - #34 program
+INFO  16:55:49,062 - #47 Program
+INFO  16:55:49,062 - #47 int
+INFO  16:55:49,065 - #47 niz
+INFO  16:55:49,065 - #20 [
+INFO  16:55:49,065 - #36 ]
+INFO  16:55:49,065 - #41 ;
+INFO  16:55:49,065 - #8 const
+INFO  16:55:49,065 - #47 char
+INFO  16:55:49,065 - #47 c
+INFO  16:55:49,065 - #15 =
+INFO  16:55:49,065 - #51 t
+INFO  16:55:49,065 - #41 ;
+INFO  16:55:49,065 - #21 {
+INFO  16:55:49,065 - #47 int
+INFO  16:55:49,065 - #47 f
+INFO  16:55:49,065 - #23 (
+INFO  16:55:49,065 - #42 )
+INFO  16:55:49,080 - #21 {
+INFO  16:55:49,080 - #19 if
+INFO  16:55:49,080 - #23 (
+INFO  16:55:49,080 - #47 c
+INFO  16:55:49,080 - #42 )
+INFO  16:55:49,080 - #40 return
+INFO  16:55:49,080 - #50 5
+INFO  16:55:49,080 - #41 ;
+INFO  16:55:49,080 - #37 }
+INFO  16:55:49,080 - #43 void
+INFO  16:55:49,096 - #47 main
+INFO  16:55:49,096 - #23 (
+INFO  16:55:49,096 - #42 )
+INFO  16:55:49,096 - #47 bool
+INFO  16:55:49,096 - #47 b
+INFO  16:55:49,096 - #41 ;
+INFO  16:55:49,096 - #21 {
+INFO  16:55:49,096 - #47 b
+INFO  16:55:49,096 - #15 =
+INFO  16:55:49,096 - #49 false
+INFO  16:55:49,096 - #41 ;
+INFO  16:55:49,096 - #19 if
+INFO  16:55:49,096 - #23 (
+INFO  16:55:49,096 - #47 b
+INFO  16:55:49,096 - #42 )
+INFO  16:55:49,096 - #21 {
+INFO  16:55:49,096 - #33 print
+INFO  16:55:49,096 - #23 (
+INFO  16:55:49,096 - #51 t
+INFO  16:55:49,096 - #42 )
+INFO  16:55:49,096 - #41 ;
+INFO  16:55:49,096 - #37 }
+INFO  16:55:49,096 - #13 else
+INFO  16:55:49,096 - #21 {
+INFO  16:55:49,111 - #33 print
+INFO  16:55:49,111 - #23 (
+INFO  16:55:49,111 - #51 f
+INFO  16:55:49,111 - #42 )
+INFO  16:55:49,111 - #41 ;
+INFO  16:55:49,111 - #37 }
+INFO  16:55:49,111 - #47 niz
+INFO  16:55:49,111 - #15 =
+INFO  16:55:49,111 - #28 new
+INFO  16:55:49,111 - #47 int
+INFO  16:55:49,111 - #20 [
+INFO  16:55:49,111 - #50 5
+INFO  16:55:49,111 - #36 ]
+INFO  16:55:49,111 - #41 ;
+INFO  16:55:49,111 - #33 print
+INFO  16:55:49,111 - #23 (
+INFO  16:55:49,127 - #47 len
+INFO  16:55:49,127 - #23 (
+INFO  16:55:49,127 - #47 niz
+INFO  16:55:49,127 - #42 )
+INFO  16:55:49,127 - #42 )
+INFO  16:55:49,127 - #41 ;
+INFO  16:55:49,127 - #37 }
+INFO  16:55:49,127 - #37 }
+INFO  16:55:49,127 - ===================================
+INFO  16:55:49,149 - Pretraga (int) nadjeno [Type , Int ] na liniji 2
+INFO  16:55:49,149 - Deklaracija (niz) [Var , Array of Array ] na liniji 2
+INFO  16:55:49,149 - Pretraga (char) nadjeno [Type , Char ] na liniji 3
+INFO  16:55:49,149 - Deklaracija (c)  [Con , Char ] na liniji 3
+INFO  16:55:49,149 - Pretraga (int) nadjeno [Type , Int ] na liniji 7
+INFO  16:55:49,149 - Deklaracija (f) [Meth , Int ] na liniji 7
+INFO  16:55:49,149 - Pretraga (c) nadjeno [Con , Char ] na liniji 8
+ERROR 16:55:49,149 -  Uslov nije boolean tipa  na liniji 8
+INFO  16:55:49,149 - Deklaracija (main) [Meth , None ] na liniji 10
+INFO  16:55:49,149 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 11
+INFO  16:55:49,149 - Deklaracija (b) [Var , Bool ] na liniji 11
+INFO  16:55:49,149 - Pretraga (b) nadjeno [Var , Bool ] na liniji 13
+INFO  16:55:49,149 - Pretraga (b) nadjeno [Var , Bool ] na liniji 14
+INFO  16:55:49,149 - Pretraga (niz) nadjeno [Var , Array ] na liniji 20
+INFO  16:55:49,149 - Pretraga (int) nadjeno [Type , Int ] na liniji 20
+INFO  16:55:49,149 - Pretraga (len) nadjeno [Meth , Int ] na liniji 21
+INFO  16:55:49,149 - Pretraga (niz) nadjeno [Var , Array ] na liniji 21
+ERROR 16:55:49,281 - NEUSPESNO SEMANTICKO  PARSIRANJE

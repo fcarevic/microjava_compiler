@@ -1,0 +1,35 @@
+INFO  16:12:11,240 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  16:12:11,597 - #34 program
+INFO  16:12:11,597 - #47 Program
+INFO  16:12:11,597 - #21 {
+INFO  16:12:11,612 - #47 int
+INFO  16:12:11,612 - #47 niz
+INFO  16:12:11,612 - #20 [
+ERROR 16:12:11,612 - 
+Sintaksna greska na liniji 4
+INFO  16:12:11,612 - #36 ]
+INFO  16:12:11,612 - #41 ;
+INFO  16:12:11,612 - #43 void
+INFO  16:12:11,659 - #47 main
+INFO  16:12:11,659 - #23 (
+INFO  16:12:11,659 - #42 )
+INFO  16:12:11,659 - #21 {
+INFO  16:12:11,659 - #47 niz
+INFO  16:12:11,659 - #15 =
+INFO  16:12:11,659 - #28 new
+INFO  16:12:11,659 - #47 int
+INFO  16:12:11,659 - #20 [
+INFO  16:12:11,659 - #50 5
+INFO  16:12:11,659 - #36 ]
+INFO  16:12:11,659 - #41 ;
+INFO  16:12:11,659 - #33 print
+INFO  16:12:11,659 - #23 (
+INFO  16:12:11,659 - #47 len
+INFO  16:12:11,659 - #23 (
+INFO  16:12:11,675 - #47 niz
+INFO  16:12:11,675 - #42 )
+INFO  16:12:11,675 - #42 )
+INFO  16:12:11,675 - #41 ;
+INFO  16:12:11,675 - #37 }
+INFO  16:12:11,675 - #37 }
+ERROR 16:12:11,675 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 9

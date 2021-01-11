@@ -132,18 +132,28 @@ public class CodeGenerator extends VisitorAdaptor {
 	}
 	
 	@Override
-	public void visit(MethodDecl MethodDecl) {
-		Code.put(Code.exit);
-		Code.put(Code.return_);
+	public void visit(MethodDecl methodDecl) {
+		if(methodDecl.getReturnType().struct==Tab.noType)
+		{Code.put(Code.exit);
+		Code.put(Code.return_);}
+		else {
+			Code.put(Code.trap);
+			Code.put(1);
+		}
 	}
 	
 	@Override
 	public void visit(FactorFunctionCall factorFunctionCall) {
 			
 			if(!callClassMethod(factorFunctionCall.getDesignatorFunc())) {
-			Code.put(Code.call);
+				if(factorFunctionCall.getDesignatorFunc().obj.getName().equals("len")) {
+					Code.put(Code.arraylength);
+				}
+				else {
+					Code.put(Code.call);
 			//todo NE RADI ZA ULANCAVANJE
-			Code.put2(calculatePCOffset(factorFunctionCall.getDesignatorFunc().obj.getAdr()));
+					Code.put2(calculatePCOffset(factorFunctionCall.getDesignatorFunc().obj.getAdr()));
+				}
 			}
 	}
 	
@@ -448,6 +458,10 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(Else elseSt) {
+		Code.put(Code.jmp);
+		if(elseSt.obj==null) elseSt.obj=new Obj(Obj.NO_VALUE, "else", Tab.noType);
+		elseSt.obj.setAdr(Code.pc);
+		Code.put2(0);
 	   IfElseStatement ifElseSt = (IfElseStatement)(elseSt.getParent());
 	   IfCondition ifCond = (IfCondition)(ifElseSt.getIfErrorCorection());
 	   Code.fixup(ifCond.obj.getAdr());
@@ -466,7 +480,10 @@ public class CodeGenerator extends VisitorAdaptor {
 		Code.fixup(ifStatement.getIfErrorCorection().obj.getAdr());
 	}
 	
-	
+	@Override
+	public void visit(IfElseStatement ifElseStatement) {
+	  Code.fixup(ifElseStatement.getElse().obj.getAdr());
+	}
 	
 	
 	

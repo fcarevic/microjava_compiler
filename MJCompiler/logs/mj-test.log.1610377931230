@@ -1,0 +1,23 @@
+INFO  16:06:22,859 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  16:06:23,202 - #34 program
+INFO  16:06:23,202 - #47 Program
+INFO  16:06:23,202 - #21 {
+INFO  16:06:23,210 - #43 void
+INFO  16:06:23,212 - #47 main
+INFO  16:06:23,212 - #23 (
+INFO  16:06:23,212 - #42 )
+INFO  16:06:23,220 - #21 {
+INFO  16:06:23,222 - #33 print
+INFO  16:06:23,222 - #23 (
+INFO  16:06:23,222 - #47 chr
+INFO  16:06:23,222 - #23 (
+INFO  16:06:23,230 - #50 65
+INFO  16:06:23,230 - #42 )
+INFO  16:06:23,232 - #42 )
+INFO  16:06:23,232 - #41 ;
+INFO  16:06:23,232 - #37 }
+INFO  16:06:23,240 - #37 }
+INFO  16:06:23,240 - ===================================
+INFO  16:06:23,260 - Deklaracija (main) [Meth , None ] na liniji 4
+INFO  16:06:23,272 - Pretraga (chr) nadjeno [Meth , Char ] na liniji 5
+INFO  16:06:23,479 - USPESNO SEMANTICKO PARSIRANJE
