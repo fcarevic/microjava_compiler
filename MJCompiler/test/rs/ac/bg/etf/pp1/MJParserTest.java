@@ -32,12 +32,19 @@ public class MJParserTest {
 	}
 	
 	public static void main(String[] args) throws Exception {
+
+		String inputFile = "test/program.mj";
+		String outputFile = "test/output.obj";
+		if(args.length==2) {
+			inputFile=args[0];
+			outputFile=args[1];
+		}		
 		
 		Logger log = Logger.getLogger(MJParserTest.class);
 		
 		Reader br = null;
 		try {
-			File sourceCode = new File("test/program.mj");
+			File sourceCode = new File(inputFile);
 			log.info("Compiling source file: " + sourceCode.getAbsolutePath());
 			
 			br = new BufferedReader(new FileReader(sourceCode));
@@ -69,7 +76,7 @@ public class MJParserTest {
 			} else {
 				
 				log.info("USPESNO SEMANTICKO PARSIRANJE");
-				File file = new File("test/output.obj");
+				File file = new File(outputFile);
 				if(file.exists()) file.delete();
 				Code.dataSize = v.getGlobalVariableNumber();
 				CodeGenerator codeGen = new CodeGenerator();
