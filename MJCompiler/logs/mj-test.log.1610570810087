@@ -1,0 +1,110 @@
+INFO  21:45:45,088 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  21:45:45,390 - #34 program
+INFO  21:45:45,390 - #47 MJProgram
+INFO  21:45:45,390 - #21 {
+INFO  21:45:45,395 - #47 bool
+INFO  21:45:45,397 - #47 v
+INFO  21:45:45,400 - #23 (
+INFO  21:45:45,403 - #42 )
+INFO  21:45:45,405 - #21 {
+INFO  21:45:45,407 - #33 print
+INFO  21:45:45,409 - #23 (
+INFO  21:45:45,410 - #51 v
+INFO  21:45:45,410 - #42 )
+INFO  21:45:45,416 - #41 ;
+INFO  21:45:45,416 - #40 return
+INFO  21:45:45,417 - #49 false
+INFO  21:45:45,417 - #41 ;
+INFO  21:45:45,418 - #37 }
+INFO  21:45:45,418 - #47 bool
+INFO  21:45:45,421 - #47 g
+INFO  21:45:45,422 - #23 (
+INFO  21:45:45,422 - #42 )
+INFO  21:45:45,423 - #21 {
+INFO  21:45:45,424 - #33 print
+INFO  21:45:45,424 - #23 (
+INFO  21:45:45,424 - #51 g
+INFO  21:45:45,424 - #42 )
+INFO  21:45:45,425 - #41 ;
+INFO  21:45:45,426 - #40 return
+INFO  21:45:45,426 - #41 ;
+INFO  21:45:45,477 - #37 }
+INFO  21:45:45,478 - #43 void
+INFO  21:45:45,478 - #47 main
+INFO  21:45:45,481 - #23 (
+INFO  21:45:45,481 - #42 )
+INFO  21:45:45,484 - #21 {
+INFO  21:45:45,485 - #19 if
+INFO  21:45:45,485 - #23 (
+INFO  21:45:45,485 - #47 v
+INFO  21:45:45,485 - #23 (
+INFO  21:45:45,553 - #42 )
+INFO  21:45:45,555 - #2 &&
+INFO  21:45:45,559 - #47 v
+INFO  21:45:45,559 - #23 (
+INFO  21:45:45,559 - #42 )
+INFO  21:45:45,560 - #2 &&
+INFO  21:45:45,560 - #47 v
+INFO  21:45:45,561 - #23 (
+INFO  21:45:45,562 - #42 )
+INFO  21:45:45,562 - #2 &&
+INFO  21:45:45,566 - #47 v
+INFO  21:45:45,566 - #23 (
+INFO  21:45:45,566 - #42 )
+INFO  21:45:45,567 - #42 )
+INFO  21:45:45,567 - #21 {
+INFO  21:45:45,568 - #33 print
+INFO  21:45:45,568 - #23 (
+INFO  21:45:45,568 - #51 t
+INFO  21:45:45,568 - #42 )
+INFO  21:45:45,569 - #41 ;
+INFO  21:45:45,569 - #37 }
+INFO  21:45:45,569 - #33 print
+INFO  21:45:45,570 - #23 (
+INFO  21:45:45,571 - #47 eol
+INFO  21:45:45,574 - #42 )
+INFO  21:45:45,574 - #41 ;
+INFO  21:45:45,575 - #19 if
+INFO  21:45:45,575 - #23 (
+INFO  21:45:45,575 - #47 g
+INFO  21:45:45,577 - #23 (
+INFO  21:45:45,579 - #42 )
+INFO  21:45:45,579 - #30 ||
+INFO  21:45:45,582 - #47 v
+INFO  21:45:45,582 - #23 (
+INFO  21:45:45,583 - #42 )
+INFO  21:45:45,583 - #2 &&
+INFO  21:45:45,584 - #47 v
+INFO  21:45:45,584 - #23 (
+INFO  21:45:45,584 - #42 )
+INFO  21:45:45,584 - #2 &&
+INFO  21:45:45,584 - #47 v
+INFO  21:45:45,585 - #23 (
+INFO  21:45:45,586 - #42 )
+INFO  21:45:45,586 - #42 )
+INFO  21:45:45,587 - #21 {
+INFO  21:45:45,587 - #33 print
+INFO  21:45:45,587 - #23 (
+INFO  21:45:45,588 - #51 t
+INFO  21:45:45,588 - #42 )
+INFO  21:45:45,588 - #41 ;
+INFO  21:45:45,588 - #37 }
+INFO  21:45:45,589 - #37 }
+INFO  21:45:45,589 - #37 }
+INFO  21:45:45,592 - ===================================
+INFO  21:45:45,644 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 6
+INFO  21:45:45,647 - Deklaracija (v) [Meth , Bool ] na liniji 6
+INFO  21:45:45,647 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 11
+INFO  21:45:45,648 - Deklaracija (g) [Meth , Bool ] na liniji 11
+ERROR 21:45:45,648 - Nedostaje return expression
+INFO  21:45:45,649 - Deklaracija (main) [Meth , None ] na liniji 15
+INFO  21:45:45,650 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 17
+INFO  21:45:45,826 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 17
+INFO  21:45:45,827 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 17
+INFO  21:45:45,827 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 17
+INFO  21:45:45,827 - Pretraga (eol) nadjeno [Con , Char ] na liniji 20
+INFO  21:45:45,828 - Pretraga (g) nadjeno [Meth , Bool ] na liniji 22
+INFO  21:45:45,828 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 22
+INFO  21:45:45,828 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 22
+INFO  21:45:45,829 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 22
+ERROR 21:45:45,831 - NEUSPESNO SEMANTICKO  PARSIRANJE

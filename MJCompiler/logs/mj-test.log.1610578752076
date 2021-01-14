@@ -1,0 +1,136 @@
+INFO  23:58:53,677 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  23:58:53,861 - #34 program
+INFO  23:58:53,861 - #47 MJProgram
+INFO  23:58:53,861 - #47 int
+INFO  23:58:53,861 - #47 a
+INFO  23:58:53,861 - #41 ;
+INFO  23:58:53,861 - #47 int
+INFO  23:58:53,861 - #47 b
+INFO  23:58:53,861 - #7 ,
+INFO  23:58:53,861 - #47 c
+INFO  23:58:53,861 - #41 ;
+INFO  23:58:53,861 - #21 {
+INFO  23:58:53,861 - #5 class
+ERROR 23:58:53,861 - 
+Sintaksna greska na liniji 11
+INFO  23:58:53,861 - #47 A
+INFO  23:58:53,861 - #21 {
+INFO  23:58:53,861 - #47 int
+INFO  23:58:53,861 - #47 a
+INFO  23:58:53,861 - #7 ,
+INFO  23:58:53,861 - #47 b
+INFO  23:58:53,861 - #27 *
+INFO  23:58:53,861 - #27 *
+INFO  23:58:53,861 - #7 ,
+INFO  23:58:53,861 - #47 d
+INFO  23:58:53,861 - #41 ;
+INFO  23:58:53,861 - #37 }
+ERROR 23:58:53,861 - Izvrsen oporavak prom do ; u liniji 10
+ERROR 23:58:53,877 - 
+Sintaksna greska na liniji 13
+INFO  23:58:53,877 - #47 bool
+INFO  23:58:53,877 - #47 v
+INFO  23:58:53,877 - #23 (
+INFO  23:58:53,877 - #47 int
+INFO  23:58:53,877 - #47 a
+INFO  23:58:53,877 - #7 ,
+INFO  23:58:53,877 - #47 int
+INFO  23:58:53,877 - #27 *
+INFO  23:58:53,877 - #27 *
+INFO  23:58:53,877 - #47 b
+INFO  23:58:53,877 - #7 ,
+INFO  23:58:53,877 - #47 int
+INFO  23:58:53,877 - #47 d
+INFO  23:58:53,877 - #42 )
+INFO  23:58:53,877 - #21 {
+INFO  23:58:53,877 - #40 return
+INFO  23:58:53,877 - #49 true
+INFO  23:58:53,877 - #41 ;
+INFO  23:58:53,877 - #37 }
+ERROR 23:58:53,877 - Izvrsen oporavak prom do ; u liniji 10
+ERROR 23:58:53,877 - 
+Sintaksna greska na liniji 16
+INFO  23:58:53,877 - #47 bool
+INFO  23:58:53,877 - #47 g
+INFO  23:58:53,877 - #23 (
+INFO  23:58:53,877 - #47 int
+INFO  23:58:53,877 - #47 a
+INFO  23:58:53,877 - #42 )
+INFO  23:58:53,877 - #21 {
+INFO  23:58:53,877 - #33 print
+INFO  23:58:53,877 - #23 (
+INFO  23:58:53,877 - #51 g
+INFO  23:58:53,877 - #42 )
+INFO  23:58:53,877 - #41 ;
+INFO  23:58:53,877 - #40 return
+ERROR 23:58:53,877 - 
+Sintaksna greska na liniji 20
+INFO  23:58:53,877 - #49 true
+INFO  23:58:53,877 - #41 ;
+INFO  23:58:53,877 - #37 }
+ERROR 23:58:53,877 - Izvrsen oporavak prom do ; u liniji 10
+ERROR 23:58:53,877 - 
+Sintaksna greska na liniji 21
+INFO  23:58:53,877 - #43 void
+INFO  23:58:53,877 - #47 main
+INFO  23:58:53,877 - #23 (
+INFO  23:58:53,877 - #42 )
+INFO  23:58:53,877 - #21 {
+INFO  23:58:53,877 - #19 if
+INFO  23:58:53,877 - #23 (
+INFO  23:58:53,877 - #47 v
+INFO  23:58:53,877 - #23 (
+INFO  23:58:53,877 - #42 )
+INFO  23:58:53,877 - #2 &&
+INFO  23:58:53,877 - #47 ytty
+INFO  23:58:53,877 - #27 *
+INFO  23:58:53,877 - #27 *
+INFO  23:58:53,877 - #42 )
+INFO  23:58:53,877 - #21 {
+INFO  23:58:53,877 - #33 print
+INFO  23:58:53,877 - #23 (
+INFO  23:58:53,877 - #51 t
+INFO  23:58:53,892 - #42 )
+INFO  23:58:53,892 - #41 ;
+INFO  23:58:53,892 - #37 }
+ERROR 23:58:53,892 - Izvrsen oporavak prom do ; u liniji 10
+ERROR 23:58:53,892 - 
+Sintaksna greska na liniji 26
+INFO  23:58:53,892 - #33 print
+INFO  23:58:53,892 - #23 (
+INFO  23:58:53,892 - #47 eol
+INFO  23:58:53,892 - #42 )
+INFO  23:58:53,892 - #41 ;
+INFO  23:58:53,892 - #19 if
+ERROR 23:58:53,892 - 
+Sintaksna greska na liniji 29
+INFO  23:58:53,892 - #23 (
+INFO  23:58:53,892 - #47 g
+INFO  23:58:53,892 - #23 (
+INFO  23:58:53,892 - #42 )
+INFO  23:58:53,892 - #30 ||
+INFO  23:58:53,892 - #47 v
+INFO  23:58:53,892 - #23 (
+INFO  23:58:53,892 - #42 )
+INFO  23:58:53,892 - #2 &&
+INFO  23:58:53,892 - #47 v
+INFO  23:58:53,892 - #23 (
+INFO  23:58:53,892 - #42 )
+INFO  23:58:53,892 - #2 &&
+INFO  23:58:53,892 - #47 v
+INFO  23:58:53,892 - #23 (
+INFO  23:58:53,892 - #42 )
+INFO  23:58:53,892 - #42 )
+INFO  23:58:53,892 - #21 {
+INFO  23:58:53,892 - #33 print
+INFO  23:58:53,892 - #23 (
+INFO  23:58:53,892 - #51 t
+INFO  23:58:53,892 - #42 )
+INFO  23:58:53,892 - #41 ;
+INFO  23:58:53,892 - #37 }
+ERROR 23:58:53,892 - Izvrsen oporavak prom do ; u liniji 10
+ERROR 23:58:53,892 - 
+Sintaksna greska na liniji 31
+INFO  23:58:53,892 - #37 }
+INFO  23:58:53,892 - #37 }
+ERROR 23:58:53,892 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 34

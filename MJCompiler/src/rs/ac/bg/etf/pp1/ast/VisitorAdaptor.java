@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2021 20:14:38
+// 14/0/2021 0:39:36
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -36,6 +36,7 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(ActualParams ActualParams) { }
     public void visit(ConditionTerm ConditionTerm) { }
     public void visit(ReturnType ReturnType) { }
+    public void visit(ClassFields ClassFields) { }
     public void visit(FormalParam FormalParam) { }
     public void visit(ClassDecl ClassDecl) { }
     public void visit(MethodDeclList MethodDeclList) { }
@@ -137,13 +138,12 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(StatementEmptyList StatementEmptyList) { visit(); }
     public void visit(StatementList_ StatementList_) { visit(); }
     public void visit(Type Type) { visit(); }
+    public void visit(FormaParamError FormaParamError) { visit(); }
     public void visit(FormalParamArray FormalParamArray) { visit(); }
     public void visit(FormalParamPrimitive FormalParamPrimitive) { visit(); }
     public void visit(FormalParamEmptyList FormalParamEmptyList) { visit(); }
-    public void visit(FormaParamError FormaParamError) { visit(); }
     public void visit(FormalParamSingle FormalParamSingle) { visit(); }
     public void visit(FormalParamList_ FormalParamList_) { visit(); }
-    public void visit(FormalParamsError FormalParamsError) { visit(); }
     public void visit(FormalParams_ FormalParams_) { visit(); }
     public void visit(ReturnTypeVoid ReturnTypeVoid) { visit(); }
     public void visit(ReturnTypeType ReturnTypeType) { visit(); }
@@ -151,9 +151,11 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(MethodDecl MethodDecl) { visit(); }
     public void visit(MethodDeclEmptyList MethodDeclEmptyList) { visit(); }
     public void visit(MethodDeclMultipleList MethodDeclMultipleList) { visit(); }
+    public void visit(ExtendsErrorFixup ExtendsErrorFixup) { visit(); }
     public void visit(NoExtendsClause NoExtendsClause) { visit(); }
     public void visit(ExtendsClause_ ExtendsClause_) { visit(); }
-    public void visit(ClassFields ClassFields) { visit(); }
+    public void visit(ClassFieldsError ClassFieldsError) { visit(); }
+    public void visit(ClassFields_ ClassFields_) { visit(); }
     public void visit(ClassName ClassName) { visit(); }
     public void visit(ClassDeclMethod ClassDeclMethod) { visit(); }
     public void visit(ClassDeclsNoMethod ClassDeclsNoMethod) { visit(); }
@@ -163,7 +165,6 @@ public abstract class VisitorAdaptor implements Visitor {
     public void visit(VarInitError VarInitError) { visit(); }
     public void visit(VarInitSingle VarInitSingle) { visit(); }
     public void visit(VarInitMultipleList VarInitMultipleList) { visit(); }
-    public void visit(VarDeclError VarDeclError) { visit(); }
     public void visit(VarDecl_ VarDecl_) { visit(); }
     public void visit(VarDeclEmptyList VarDeclEmptyList) { visit(); }
     public void visit(VarDeclList_ VarDeclList_) { visit(); }

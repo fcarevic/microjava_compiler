@@ -1,0 +1,152 @@
+INFO  00:02:36,564 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  00:02:36,795 - #34 program
+INFO  00:02:36,800 - #47 MJProgram
+INFO  00:02:36,800 - #5 class
+INFO  00:02:36,801 - #47 A
+INFO  00:02:36,801 - #21 {
+INFO  00:02:36,801 - #47 int
+INFO  00:02:36,801 - #47 a
+INFO  00:02:36,801 - #7 ,
+INFO  00:02:36,801 - #47 b
+INFO  00:02:36,801 - #27 *
+ERROR 00:02:36,801 - 
+Sintaksna greska na liniji 6
+INFO  00:02:36,801 - #27 *
+INFO  00:02:36,816 - #7 ,
+INFO  00:02:36,816 - #47 d
+ERROR 00:02:36,816 - Izvrsen oporavak prom u liniji 6
+INFO  00:02:36,816 - #41 ;
+INFO  00:02:36,816 - #37 }
+INFO  00:02:36,816 - #47 int
+INFO  00:02:36,816 - #47 a
+INFO  00:02:36,816 - #41 ;
+INFO  00:02:36,816 - #47 int
+INFO  00:02:36,816 - #47 b
+INFO  00:02:36,816 - #7 ,
+INFO  00:02:36,816 - #47 c
+INFO  00:02:36,816 - #27 *
+ERROR 00:02:36,816 - 
+Sintaksna greska na liniji 9
+INFO  00:02:36,816 - #27 *
+INFO  00:02:36,816 - #41 ;
+INFO  00:02:36,816 - #21 {
+ERROR 00:02:36,816 - Izvrsen oporavak prom u liniji 9
+INFO  00:02:36,816 - #47 bool
+INFO  00:02:36,816 - #47 v
+INFO  00:02:36,832 - #23 (
+INFO  00:02:36,832 - #47 int
+INFO  00:02:36,832 - #47 a
+INFO  00:02:36,832 - #7 ,
+INFO  00:02:36,832 - #47 int
+INFO  00:02:36,832 - #27 *
+ERROR 00:02:36,832 - 
+Sintaksna greska na liniji 14
+INFO  00:02:36,832 - #27 *
+INFO  00:02:36,832 - #47 b
+INFO  00:02:36,832 - #7 ,
+INFO  00:02:36,832 - #47 int
+ERROR 00:02:36,832 - Izvrsen oporavak parametara fje u liniji 14
+INFO  00:02:36,832 - #47 d
+INFO  00:02:36,832 - #42 )
+INFO  00:02:36,832 - #21 {
+INFO  00:02:36,832 - #40 return
+INFO  00:02:36,832 - #49 true
+INFO  00:02:36,832 - #41 ;
+INFO  00:02:36,832 - #37 }
+INFO  00:02:36,848 - #47 bool
+INFO  00:02:36,849 - #47 g
+INFO  00:02:36,849 - #23 (
+INFO  00:02:36,849 - #47 int
+INFO  00:02:36,849 - #47 a
+INFO  00:02:36,849 - #42 )
+INFO  00:02:36,849 - #21 {
+INFO  00:02:36,849 - #33 print
+INFO  00:02:36,849 - #23 (
+INFO  00:02:36,849 - #51 g
+INFO  00:02:36,849 - #42 )
+INFO  00:02:36,864 - #41 ;
+INFO  00:02:36,864 - #40 return
+INFO  00:02:36,864 - #49 true
+INFO  00:02:36,864 - #41 ;
+INFO  00:02:36,864 - #37 }
+INFO  00:02:36,864 - #43 void
+INFO  00:02:36,864 - #47 main
+INFO  00:02:36,864 - #23 (
+INFO  00:02:36,864 - #42 )
+INFO  00:02:36,864 - #21 {
+INFO  00:02:36,864 - #19 if
+INFO  00:02:36,864 - #23 (
+INFO  00:02:36,864 - #47 v
+INFO  00:02:36,864 - #23 (
+INFO  00:02:36,886 - #42 )
+INFO  00:02:36,887 - #2 &&
+INFO  00:02:36,890 - #47 ytty
+INFO  00:02:36,890 - #27 *
+INFO  00:02:36,891 - #27 *
+ERROR 00:02:36,891 - 
+Sintaksna greska na liniji 24
+INFO  00:02:36,891 - #42 )
+INFO  00:02:36,891 - #21 {
+ERROR 00:02:36,892 - Izvrsen oporavak if do ) u liniji 24
+INFO  00:02:36,895 - #33 print
+INFO  00:02:36,897 - #23 (
+INFO  00:02:36,897 - #51 t
+INFO  00:02:36,898 - #42 )
+INFO  00:02:36,898 - #41 ;
+INFO  00:02:36,899 - #37 }
+INFO  00:02:36,899 - #33 print
+INFO  00:02:36,899 - #23 (
+INFO  00:02:36,900 - #47 eol
+INFO  00:02:36,900 - #42 )
+INFO  00:02:36,900 - #41 ;
+INFO  00:02:36,901 - #19 if
+INFO  00:02:36,901 - #23 (
+INFO  00:02:36,901 - #47 g
+INFO  00:02:36,901 - #23 (
+INFO  00:02:36,901 - #42 )
+INFO  00:02:36,902 - #30 ||
+INFO  00:02:36,904 - #47 v
+INFO  00:02:36,904 - #23 (
+INFO  00:02:36,905 - #42 )
+INFO  00:02:36,905 - #2 &&
+INFO  00:02:36,906 - #47 v
+INFO  00:02:36,906 - #23 (
+INFO  00:02:36,906 - #42 )
+INFO  00:02:36,906 - #2 &&
+INFO  00:02:36,907 - #47 v
+INFO  00:02:36,907 - #23 (
+INFO  00:02:36,907 - #42 )
+INFO  00:02:36,908 - #42 )
+INFO  00:02:36,908 - #21 {
+INFO  00:02:36,908 - #33 print
+INFO  00:02:36,909 - #23 (
+INFO  00:02:36,909 - #51 t
+INFO  00:02:36,909 - #42 )
+INFO  00:02:36,909 - #41 ;
+INFO  00:02:36,909 - #37 }
+INFO  00:02:36,911 - #37 }
+INFO  00:02:36,911 - #37 }
+INFO  00:02:36,949 - Deklaracija klase A na liniji 5
+INFO  00:02:36,949 - Pretraga (int) nadjeno [Type , Int ] na liniji 6
+INFO  00:02:36,949 - Deklaracija (d) [Fld , Int ] na liniji 6
+INFO  00:02:36,949 - Pretraga (int) nadjeno [Type , Int ] na liniji 8
+INFO  00:02:36,949 - Deklaracija (a) [Var , Int ] na liniji 8
+INFO  00:02:36,949 - Pretraga (int) nadjeno [Type , Int ] na liniji 9
+INFO  00:02:36,949 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 14
+INFO  00:02:36,949 - Deklaracija (v) [Meth , Bool ] na liniji 14
+INFO  00:02:36,949 - Pretraga (int) nadjeno [Type , Int ] na liniji 14
+INFO  00:02:36,949 - Pretraga (int) nadjeno [Type , Int ] na liniji 14
+INFO  00:02:36,949 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 17
+INFO  00:02:36,949 - Deklaracija (g) [Meth , Bool ] na liniji 17
+INFO  00:02:36,949 - Pretraga (int) nadjeno [Type , Int ] na liniji 17
+INFO  00:02:36,949 - Deklaracija (main) [Meth , None ] na liniji 22
+INFO  00:02:36,949 - Pretraga (eol) nadjeno [Con , Char ] na liniji 27
+INFO  00:02:36,949 - Pretraga (g) nadjeno [Meth , Bool ] na liniji 29
+ERROR 00:02:37,096 - Previse parametara specificirano za fju g  na liniji 29
+INFO  00:02:37,096 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 29
+ERROR 00:02:37,096 - Previse parametara specificirano za fju v  na liniji 29
+INFO  00:02:37,096 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 29
+ERROR 00:02:37,096 - Previse parametara specificirano za fju v  na liniji 29
+INFO  00:02:37,096 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 29
+ERROR 00:02:37,096 - Previse parametara specificirano za fju v  na liniji 29
+ERROR 00:02:37,111 - NEUSPESNO SINTAKSNO PARSIRANJE

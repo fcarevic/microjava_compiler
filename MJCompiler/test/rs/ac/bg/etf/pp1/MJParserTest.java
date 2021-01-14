@@ -60,8 +60,8 @@ public class MJParserTest {
 	        }
 	       // Tab.init();
 			// ispis sintaksnog stabla
-			//log.info(prog.toString(""));
-			log.info("===================================");
+			log.info(prog.toString(""));
+			log.info("=================SEMANTICKA ANALIZA==============");
 
 			// ispis prepoznatih programskih konstrukcija
 			SemanticPassVisitor.init();
@@ -86,7 +86,7 @@ public class MJParserTest {
 				String [] argS1 = {"test/output.obj", "-debug"};
 				String [] argS = {"test/output.obj"};
 						
-			 disasm.main(argS);
+				disasm.main(argS);
 				Run.main(argS);
 			
 

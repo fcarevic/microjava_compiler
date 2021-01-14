@@ -1,0 +1,109 @@
+INFO  23:14:49,107 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  23:14:49,384 - #34 program
+INFO  23:14:49,384 - #47 MJProgram
+INFO  23:14:49,395 - #5 class
+INFO  23:14:49,397 - #47 A
+INFO  23:14:49,397 - #47 extengds
+ERROR 23:14:49,397 - 
+Sintaksna greska na liniji 5
+INFO  23:14:49,397 - #47 b
+INFO  23:14:49,397 - #26 --
+INFO  23:14:49,397 - #21 {
+INFO  23:14:49,397 - #47 int
+INFO  23:14:49,397 - #47 x
+INFO  23:14:49,397 - #41 ;
+INFO  23:14:49,397 - #37 }
+ERROR 23:14:49,397 - Izvrsen oporavak do ; u liniji 5
+ERROR 23:14:49,397 - 
+Sintaksna greska na liniji 10
+INFO  23:14:49,397 - #21 {
+INFO  23:14:49,397 - #47 bool
+INFO  23:14:49,397 - #47 v
+INFO  23:14:49,397 - #23 (
+INFO  23:14:49,397 - #42 )
+INFO  23:14:49,397 - #21 {
+INFO  23:14:49,397 - #40 return
+INFO  23:14:49,397 - #49 true
+INFO  23:14:49,397 - #41 ;
+INFO  23:14:49,397 - #37 }
+ERROR 23:14:49,397 - Izvrsen oporavak do ; u liniji 5
+ERROR 23:14:49,397 - 
+Sintaksna greska na liniji 17
+INFO  23:14:49,397 - #47 bool
+INFO  23:14:49,397 - #47 g
+INFO  23:14:49,397 - #23 (
+INFO  23:14:49,397 - #42 )
+INFO  23:14:49,397 - #21 {
+INFO  23:14:49,397 - #33 print
+INFO  23:14:49,397 - #23 (
+INFO  23:14:49,397 - #51 g
+INFO  23:14:49,397 - #42 )
+INFO  23:14:49,397 - #41 ;
+INFO  23:14:49,397 - #40 return
+ERROR 23:14:49,397 - 
+Sintaksna greska na liniji 20
+INFO  23:14:49,397 - #49 true
+INFO  23:14:49,413 - #41 ;
+INFO  23:14:49,413 - #37 }
+ERROR 23:14:49,413 - Izvrsen oporavak do ; u liniji 5
+ERROR 23:14:49,413 - 
+Sintaksna greska na liniji 21
+INFO  23:14:49,413 - #43 void
+INFO  23:14:49,413 - #47 main
+INFO  23:14:49,413 - #23 (
+INFO  23:14:49,413 - #42 )
+INFO  23:14:49,413 - #21 {
+INFO  23:14:49,413 - #19 if
+INFO  23:14:49,413 - #23 (
+INFO  23:14:49,413 - #47 v
+INFO  23:14:49,413 - #23 (
+INFO  23:14:49,413 - #42 )
+INFO  23:14:49,413 - #42 )
+INFO  23:14:49,413 - #21 {
+INFO  23:14:49,413 - #33 print
+INFO  23:14:49,413 - #23 (
+INFO  23:14:49,413 - #51 t
+INFO  23:14:49,413 - #42 )
+INFO  23:14:49,413 - #41 ;
+INFO  23:14:49,413 - #37 }
+ERROR 23:14:49,413 - Izvrsen oporavak do ; u liniji 5
+ERROR 23:14:49,422 - 
+Sintaksna greska na liniji 26
+INFO  23:14:49,422 - #33 print
+INFO  23:14:49,422 - #23 (
+INFO  23:14:49,422 - #47 eol
+INFO  23:14:49,422 - #42 )
+INFO  23:14:49,422 - #41 ;
+INFO  23:14:49,422 - #19 if
+ERROR 23:14:49,422 - 
+Sintaksna greska na liniji 29
+INFO  23:14:49,422 - #23 (
+INFO  23:14:49,422 - #47 g
+INFO  23:14:49,422 - #23 (
+INFO  23:14:49,422 - #42 )
+INFO  23:14:49,422 - #30 ||
+INFO  23:14:49,422 - #47 v
+INFO  23:14:49,422 - #23 (
+INFO  23:14:49,422 - #42 )
+INFO  23:14:49,422 - #2 &&
+INFO  23:14:49,422 - #47 v
+INFO  23:14:49,422 - #23 (
+INFO  23:14:49,422 - #42 )
+INFO  23:14:49,422 - #2 &&
+INFO  23:14:49,422 - #47 v
+INFO  23:14:49,422 - #23 (
+INFO  23:14:49,422 - #42 )
+INFO  23:14:49,422 - #42 )
+INFO  23:14:49,422 - #21 {
+INFO  23:14:49,422 - #33 print
+INFO  23:14:49,422 - #23 (
+INFO  23:14:49,422 - #51 t
+INFO  23:14:49,422 - #42 )
+INFO  23:14:49,422 - #41 ;
+INFO  23:14:49,422 - #37 }
+ERROR 23:14:49,422 - Izvrsen oporavak do ; u liniji 5
+ERROR 23:14:49,422 - 
+Sintaksna greska na liniji 31
+INFO  23:14:49,422 - #37 }
+INFO  23:14:49,422 - #37 }
+ERROR 23:14:49,422 - Fatalna greska, parsiranje se ne moze nastaviti na liniji 34

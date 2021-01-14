@@ -1,13 +1,13 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2021 20:14:38
+// 14/0/2021 0:39:34
 
 
 package rs.ac.bg.etf.pp1.ast;
 
-public class FormalParamsError extends FormalParams {
+public class ExtendsErrorFixup extends ExtendsClause {
 
-    public FormalParamsError () {
+    public ExtendsErrorFixup () {
     }
 
     public void accept(Visitor visitor) {
@@ -28,10 +28,10 @@ public class FormalParamsError extends FormalParams {
     public String toString(String tab) {
         StringBuffer buffer=new StringBuffer();
         buffer.append(tab);
-        buffer.append("FormalParamsError(\n");
+        buffer.append("ExtendsErrorFixup(\n");
 
         buffer.append(tab);
-        buffer.append(") [FormalParamsError]");
+        buffer.append(") [ExtendsErrorFixup]");
         return buffer.toString();
     }
 }

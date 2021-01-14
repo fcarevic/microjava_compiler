@@ -1,0 +1,169 @@
+INFO  00:29:09,638 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  00:29:09,876 - #34 program
+INFO  00:29:09,876 - #47 MJProgram
+INFO  00:29:09,886 - #5 class
+INFO  00:29:09,888 - #47 A
+INFO  00:29:09,888 - #21 {
+INFO  00:29:09,888 - #47 int
+INFO  00:29:09,888 - #47 a
+INFO  00:29:09,888 - #27 *
+ERROR 00:29:09,888 - 
+Sintaksna greska na liniji 6
+INFO  00:29:09,888 - #27 *
+INFO  00:29:09,888 - #41 ;
+INFO  00:29:09,888 - #47 int
+ERROR 00:29:09,888 - Izvrsen oporavak prom u liniji 6
+INFO  00:29:09,888 - #47 b
+INFO  00:29:09,888 - #27 *
+ERROR 00:29:09,888 - 
+Sintaksna greska na liniji 7
+INFO  00:29:09,888 - #27 *
+INFO  00:29:09,888 - #7 ,
+INFO  00:29:09,904 - #47 c
+ERROR 00:29:09,904 - Izvrsen oporavak prom u liniji 7
+INFO  00:29:09,904 - #7 ,
+INFO  00:29:09,904 - #47 d
+INFO  00:29:09,904 - #41 ;
+INFO  00:29:09,904 - #21 {
+INFO  00:29:09,904 - #37 }
+INFO  00:29:09,904 - #37 }
+INFO  00:29:09,904 - #47 int
+INFO  00:29:09,904 - #47 a
+INFO  00:29:09,904 - #41 ;
+INFO  00:29:09,904 - #47 int
+INFO  00:29:09,904 - #47 g
+INFO  00:29:09,904 - #27 *
+ERROR 00:29:09,904 - 
+Sintaksna greska na liniji 13
+INFO  00:29:09,904 - #27 *
+INFO  00:29:09,904 - #41 ;
+INFO  00:29:09,904 - #47 int
+ERROR 00:29:09,904 - Izvrsen oporavak prom u liniji 13
+INFO  00:29:09,904 - #47 b
+INFO  00:29:09,904 - #27 *
+ERROR 00:29:09,904 - 
+Sintaksna greska na liniji 14
+INFO  00:29:09,904 - #27 *
+INFO  00:29:09,904 - #7 ,
+INFO  00:29:09,904 - #47 c
+ERROR 00:29:09,904 - Izvrsen oporavak prom u liniji 14
+INFO  00:29:09,904 - #7 ,
+INFO  00:29:09,904 - #47 d
+INFO  00:29:09,904 - #41 ;
+INFO  00:29:09,904 - #21 {
+INFO  00:29:09,904 - #47 bool
+INFO  00:29:09,904 - #47 v
+INFO  00:29:09,920 - #23 (
+INFO  00:29:09,920 - #47 int
+INFO  00:29:09,920 - #47 a
+INFO  00:29:09,920 - #7 ,
+INFO  00:29:09,920 - #47 int
+INFO  00:29:09,920 - #27 *
+ERROR 00:29:09,920 - 
+Sintaksna greska na liniji 16
+INFO  00:29:09,920 - #27 *
+INFO  00:29:09,920 - #47 b
+INFO  00:29:09,920 - #7 ,
+INFO  00:29:09,920 - #47 int
+ERROR 00:29:09,920 - Izvrsen oporavak parametara fje u liniji 16
+INFO  00:29:09,920 - #47 d
+INFO  00:29:09,920 - #42 )
+INFO  00:29:09,920 - #21 {
+INFO  00:29:09,920 - #47 a
+INFO  00:29:09,920 - #26 --
+INFO  00:29:09,935 - #15 =
+ERROR 00:29:09,935 - 
+Sintaksna greska na liniji 17
+INFO  00:29:09,935 - #47 tff
+INFO  00:29:09,935 - #41 ;
+INFO  00:29:09,935 - #40 return
+ERROR 00:29:09,935 - Izvrsen oporavak designator do ; u liniji 17
+INFO  00:29:09,945 - #49 true
+INFO  00:29:09,945 - #41 ;
+INFO  00:29:09,945 - #37 }
+INFO  00:29:09,945 - #43 void
+INFO  00:29:09,945 - #47 main
+INFO  00:29:09,960 - #23 (
+INFO  00:29:09,960 - #42 )
+INFO  00:29:09,960 - #21 {
+INFO  00:29:09,960 - #19 if
+INFO  00:29:09,960 - #23 (
+INFO  00:29:09,960 - #47 v
+INFO  00:29:09,960 - #23 (
+INFO  00:29:09,960 - #42 )
+INFO  00:29:09,960 - #2 &&
+INFO  00:29:09,960 - #47 ytty
+INFO  00:29:09,960 - #27 *
+INFO  00:29:09,960 - #27 *
+ERROR 00:29:09,960 - 
+Sintaksna greska na liniji 23
+INFO  00:29:09,960 - #42 )
+INFO  00:29:09,960 - #21 {
+ERROR 00:29:09,960 - Izvrsen oporavak if do ) u liniji 23
+INFO  00:29:09,976 - #33 print
+INFO  00:29:09,976 - #23 (
+INFO  00:29:09,976 - #51 t
+INFO  00:29:09,976 - #42 )
+INFO  00:29:09,976 - #41 ;
+INFO  00:29:09,976 - #37 }
+INFO  00:29:09,976 - #33 print
+INFO  00:29:09,976 - #23 (
+INFO  00:29:09,976 - #47 eol
+INFO  00:29:09,976 - #42 )
+INFO  00:29:09,976 - #41 ;
+INFO  00:29:09,976 - #19 if
+INFO  00:29:09,976 - #23 (
+INFO  00:29:09,976 - #47 g
+INFO  00:29:09,976 - #23 (
+INFO  00:29:09,976 - #42 )
+INFO  00:29:09,976 - #30 ||
+INFO  00:29:09,976 - #47 v
+INFO  00:29:09,976 - #23 (
+INFO  00:29:09,976 - #42 )
+INFO  00:29:09,976 - #2 &&
+INFO  00:29:09,976 - #47 v
+INFO  00:29:09,976 - #23 (
+INFO  00:29:09,976 - #42 )
+INFO  00:29:09,976 - #2 &&
+INFO  00:29:09,976 - #47 v
+INFO  00:29:09,976 - #23 (
+INFO  00:29:09,976 - #42 )
+INFO  00:29:09,976 - #42 )
+INFO  00:29:09,976 - #21 {
+INFO  00:29:09,976 - #33 print
+INFO  00:29:09,976 - #23 (
+INFO  00:29:09,976 - #51 t
+INFO  00:29:09,976 - #42 )
+INFO  00:29:09,976 - #41 ;
+INFO  00:29:09,976 - #37 }
+INFO  00:29:09,976 - #37 }
+INFO  00:29:09,992 - #37 }
+INFO  00:29:10,023 - Deklaracija klase A na liniji 5
+INFO  00:29:10,023 - Pretraga (int) nadjeno [Type , Int ] na liniji 6
+INFO  00:29:10,023 - Pretraga (int) nadjeno [Type , Int ] na liniji 7
+INFO  00:29:10,023 - Deklaracija (c) [Fld , Int ] na liniji 7
+INFO  00:29:10,023 - Deklaracija (d) [Fld , Int ] na liniji 7
+INFO  00:29:10,023 - Pretraga (int) nadjeno [Type , Int ] na liniji 12
+INFO  00:29:10,023 - Deklaracija (a) [Var , Int ] na liniji 12
+INFO  00:29:10,023 - Pretraga (int) nadjeno [Type , Int ] na liniji 13
+INFO  00:29:10,023 - Pretraga (int) nadjeno [Type , Int ] na liniji 14
+INFO  00:29:10,023 - Deklaracija (c) [Var , Int ] na liniji 14
+INFO  00:29:10,023 - Deklaracija (d) [Var , Int ] na liniji 14
+INFO  00:29:10,023 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 16
+INFO  00:29:10,023 - Deklaracija (v) [Meth , Bool ] na liniji 16
+INFO  00:29:10,023 - Pretraga (int) nadjeno [Type , Int ] na liniji 16
+INFO  00:29:10,023 - Pretraga (int) nadjeno [Type , Int ] na liniji 16
+INFO  00:29:10,023 - Deklaracija (main) [Meth , None ] na liniji 21
+INFO  00:29:10,023 - Pretraga (eol) nadjeno [Con , Char ] na liniji 26
+ERROR 00:29:10,023 - Nije definisano ime g  na liniji 28
+INFO  00:29:10,023 - Pretraga (noObj) nadjeno [Var , None ] na liniji 28
+ERROR 00:29:10,023 - Ime gnije funkcija  na liniji 28
+ERROR 00:29:10,023 -  Uslov nije boolean tipa  na liniji 28
+INFO  00:29:10,023 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 28
+ERROR 00:29:10,161 - Previse parametara specificirano za fju v  na liniji 28
+INFO  00:29:10,161 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 28
+ERROR 00:29:10,161 - Previse parametara specificirano za fju v  na liniji 28
+INFO  00:29:10,161 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 28
+ERROR 00:29:10,161 - Previse parametara specificirano za fju v  na liniji 28
+ERROR 00:29:10,161 -  Jedan od tipova u OR izrazu nije bool  na liniji 28
+ERROR 00:29:10,161 - NEUSPESNO SINTAKSNO PARSIRANJE

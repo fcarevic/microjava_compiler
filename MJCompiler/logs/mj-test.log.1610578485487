@@ -1,0 +1,119 @@
+INFO  23:52:36,107 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  23:52:36,292 - #34 program
+INFO  23:52:36,292 - #47 MJProgram
+INFO  23:52:36,295 - #47 int
+INFO  23:52:36,297 - #47 a
+INFO  23:52:36,297 - #41 ;
+INFO  23:52:36,297 - #47 int
+INFO  23:52:36,297 - #47 b
+INFO  23:52:36,297 - #7 ,
+INFO  23:52:36,297 - #47 c
+INFO  23:52:36,297 - #41 ;
+INFO  23:52:36,297 - #21 {
+INFO  23:52:36,297 - #47 bool
+INFO  23:52:36,297 - #47 v
+INFO  23:52:36,297 - #23 (
+INFO  23:52:36,297 - #47 int
+INFO  23:52:36,297 - #47 a
+INFO  23:52:36,297 - #7 ,
+INFO  23:52:36,297 - #47 int
+INFO  23:52:36,297 - #47 b
+INFO  23:52:36,297 - #7 ,
+INFO  23:52:36,297 - #47 int
+INFO  23:52:36,297 - #27 *
+ERROR 23:52:36,312 - 
+Sintaksna greska na liniji 10
+INFO  23:52:36,312 - #27 *
+INFO  23:52:36,312 - #47 d
+INFO  23:52:36,312 - #42 )
+INFO  23:52:36,312 - #21 {
+ERROR 23:52:36,312 - Izvrsen oporavak do ) u liniji 10
+INFO  23:52:36,312 - #40 return
+INFO  23:52:36,312 - #49 true
+INFO  23:52:36,312 - #41 ;
+INFO  23:52:36,312 - #37 }
+INFO  23:52:36,312 - #47 bool
+INFO  23:52:36,312 - #47 g
+INFO  23:52:36,312 - #23 (
+INFO  23:52:36,312 - #47 int
+INFO  23:52:36,312 - #47 a
+INFO  23:52:36,312 - #42 )
+INFO  23:52:36,312 - #21 {
+INFO  23:52:36,312 - #33 print
+INFO  23:52:36,312 - #23 (
+INFO  23:52:36,312 - #51 g
+INFO  23:52:36,312 - #42 )
+INFO  23:52:36,328 - #41 ;
+INFO  23:52:36,328 - #40 return
+INFO  23:52:36,328 - #49 true
+INFO  23:52:36,328 - #41 ;
+INFO  23:52:36,328 - #37 }
+INFO  23:52:36,328 - #43 void
+INFO  23:52:36,328 - #47 main
+INFO  23:52:36,328 - #23 (
+INFO  23:52:36,328 - #42 )
+INFO  23:52:36,328 - #21 {
+INFO  23:52:36,328 - #19 if
+INFO  23:52:36,328 - #23 (
+INFO  23:52:36,328 - #47 v
+INFO  23:52:36,328 - #23 (
+INFO  23:52:36,345 - #42 )
+INFO  23:52:36,345 - #42 )
+INFO  23:52:36,345 - #21 {
+INFO  23:52:36,345 - #33 print
+INFO  23:52:36,345 - #23 (
+INFO  23:52:36,345 - #51 t
+INFO  23:52:36,361 - #42 )
+INFO  23:52:36,361 - #41 ;
+INFO  23:52:36,361 - #37 }
+INFO  23:52:36,361 - #33 print
+INFO  23:52:36,361 - #23 (
+INFO  23:52:36,361 - #47 eol
+INFO  23:52:36,361 - #42 )
+INFO  23:52:36,361 - #41 ;
+INFO  23:52:36,361 - #19 if
+INFO  23:52:36,361 - #23 (
+INFO  23:52:36,361 - #47 g
+INFO  23:52:36,361 - #23 (
+INFO  23:52:36,361 - #42 )
+INFO  23:52:36,361 - #30 ||
+INFO  23:52:36,361 - #47 v
+INFO  23:52:36,361 - #23 (
+INFO  23:52:36,361 - #42 )
+INFO  23:52:36,361 - #2 &&
+INFO  23:52:36,361 - #47 v
+INFO  23:52:36,361 - #23 (
+INFO  23:52:36,361 - #42 )
+INFO  23:52:36,361 - #2 &&
+INFO  23:52:36,361 - #47 v
+INFO  23:52:36,361 - #23 (
+INFO  23:52:36,361 - #42 )
+INFO  23:52:36,361 - #42 )
+INFO  23:52:36,361 - #21 {
+INFO  23:52:36,376 - #33 print
+INFO  23:52:36,376 - #23 (
+INFO  23:52:36,376 - #51 t
+INFO  23:52:36,376 - #42 )
+INFO  23:52:36,376 - #41 ;
+INFO  23:52:36,376 - #37 }
+INFO  23:52:36,376 - #37 }
+INFO  23:52:36,376 - #37 }
+INFO  23:52:36,392 - Pretraga (int) nadjeno [Type , Int ] na liniji 5
+INFO  23:52:36,392 - Deklaracija (a) [Var , Int ] na liniji 5
+INFO  23:52:36,392 - Pretraga (int) nadjeno [Type , Int ] na liniji 6
+INFO  23:52:36,392 - Deklaracija (b) [Var , Int ] na liniji 6
+INFO  23:52:36,392 - Deklaracija (c) [Var , Int ] na liniji 6
+INFO  23:52:36,392 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 10
+INFO  23:52:36,392 - Deklaracija (v) [Meth , Bool ] na liniji 10
+INFO  23:52:36,392 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 13
+INFO  23:52:36,392 - Deklaracija (g) [Meth , Bool ] na liniji 13
+INFO  23:52:36,392 - Pretraga (int) nadjeno [Type , Int ] na liniji 13
+INFO  23:52:36,392 - Deklaracija (main) [Meth , None ] na liniji 18
+INFO  23:52:36,392 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 20
+INFO  23:52:36,539 - Pretraga (eol) nadjeno [Con , Char ] na liniji 23
+INFO  23:52:36,539 - Pretraga (g) nadjeno [Meth , Bool ] na liniji 25
+ERROR 23:52:36,546 - Previse parametara specificirano za fju g  na liniji 25
+INFO  23:52:36,546 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 25
+INFO  23:52:36,546 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 25
+INFO  23:52:36,546 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 25
+ERROR 23:52:36,546 - NEUSPESNO SINTAKSNO PARSIRANJE

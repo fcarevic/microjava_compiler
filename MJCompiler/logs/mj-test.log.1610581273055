@@ -1,0 +1,119 @@
+INFO  00:35:38,922 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  00:35:39,154 - #34 program
+INFO  00:35:39,154 - #47 MJProgram
+INFO  00:35:39,154 - #5 class
+INFO  00:35:39,154 - #47 A
+INFO  00:35:39,154 - #21 {
+INFO  00:35:39,169 - #47 int
+INFO  00:35:39,169 - #47 a
+INFO  00:35:39,176 - #41 ;
+INFO  00:35:39,176 - #47 int
+INFO  00:35:39,176 - #47 b
+INFO  00:35:39,176 - #7 ,
+INFO  00:35:39,178 - #47 c
+INFO  00:35:39,178 - #7 ,
+INFO  00:35:39,178 - #47 d
+INFO  00:35:39,178 - #41 ;
+INFO  00:35:39,178 - #37 }
+INFO  00:35:39,178 - #47 int
+INFO  00:35:39,178 - #47 a
+INFO  00:35:39,178 - #41 ;
+INFO  00:35:39,178 - #21 {
+INFO  00:35:39,178 - #47 bool
+INFO  00:35:39,186 - #47 v
+INFO  00:35:39,186 - #23 (
+INFO  00:35:39,186 - #47 int
+INFO  00:35:39,186 - #47 a
+INFO  00:35:39,186 - #7 ,
+INFO  00:35:39,186 - #47 int
+INFO  00:35:39,186 - #47 b
+INFO  00:35:39,186 - #7 ,
+INFO  00:35:39,186 - #47 int
+INFO  00:35:39,186 - #47 d
+INFO  00:35:39,186 - #42 )
+INFO  00:35:39,186 - #21 {
+INFO  00:35:39,186 - #40 return
+INFO  00:35:39,186 - #49 true
+INFO  00:35:39,186 - #41 ;
+INFO  00:35:39,196 - #37 }
+INFO  00:35:39,196 - #43 void
+INFO  00:35:39,196 - #47 main
+INFO  00:35:39,196 - #23 (
+INFO  00:35:39,196 - #42 )
+INFO  00:35:39,196 - #21 {
+INFO  00:35:39,196 - #19 if
+INFO  00:35:39,196 - #23 (
+INFO  00:35:39,196 - #47 v
+INFO  00:35:39,196 - #23 (
+INFO  00:35:39,211 - #42 )
+INFO  00:35:39,211 - #42 )
+INFO  00:35:39,211 - #21 {
+INFO  00:35:39,211 - #33 print
+INFO  00:35:39,211 - #23 (
+INFO  00:35:39,211 - #51 t
+INFO  00:35:39,211 - #42 )
+INFO  00:35:39,211 - #41 ;
+INFO  00:35:39,211 - #37 }
+INFO  00:35:39,211 - #33 print
+INFO  00:35:39,227 - #23 (
+INFO  00:35:39,227 - #47 eol
+INFO  00:35:39,227 - #42 )
+INFO  00:35:39,227 - #41 ;
+INFO  00:35:39,227 - #19 if
+INFO  00:35:39,227 - #23 (
+INFO  00:35:39,227 - #47 g
+INFO  00:35:39,227 - #23 (
+INFO  00:35:39,227 - #42 )
+INFO  00:35:39,227 - #30 ||
+INFO  00:35:39,227 - #47 v
+INFO  00:35:39,227 - #23 (
+INFO  00:35:39,227 - #42 )
+INFO  00:35:39,227 - #2 &&
+INFO  00:35:39,227 - #47 v
+INFO  00:35:39,227 - #23 (
+INFO  00:35:39,227 - #42 )
+INFO  00:35:39,227 - #2 &&
+INFO  00:35:39,227 - #47 v
+INFO  00:35:39,227 - #23 (
+INFO  00:35:39,227 - #42 )
+INFO  00:35:39,227 - #42 )
+INFO  00:35:39,227 - #21 {
+INFO  00:35:39,227 - #33 print
+INFO  00:35:39,227 - #23 (
+INFO  00:35:39,227 - #51 t
+INFO  00:35:39,227 - #42 )
+INFO  00:35:39,227 - #41 ;
+INFO  00:35:39,227 - #37 }
+INFO  00:35:39,227 - #37 }
+INFO  00:35:39,227 - #37 }
+INFO  00:35:39,274 - ===================================
+INFO  00:35:39,312 - Deklaracija klase A na liniji 5
+INFO  00:35:39,312 - Pretraga (int) nadjeno [Type , Int ] na liniji 6
+INFO  00:35:39,312 - Deklaracija (a) [Fld , Int ] na liniji 6
+INFO  00:35:39,312 - Pretraga (int) nadjeno [Type , Int ] na liniji 7
+INFO  00:35:39,312 - Deklaracija (b) [Fld , Int ] na liniji 7
+INFO  00:35:39,312 - Deklaracija (c) [Fld , Int ] na liniji 7
+INFO  00:35:39,312 - Deklaracija (d) [Fld , Int ] na liniji 7
+INFO  00:35:39,312 - Pretraga (int) nadjeno [Type , Int ] na liniji 9
+INFO  00:35:39,312 - Deklaracija (a) [Var , Int ] na liniji 9
+INFO  00:35:39,312 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 13
+INFO  00:35:39,312 - Deklaracija (v) [Meth , Bool ] na liniji 13
+INFO  00:35:39,312 - Pretraga (int) nadjeno [Type , Int ] na liniji 13
+INFO  00:35:39,312 - Pretraga (int) nadjeno [Type , Int ] na liniji 13
+INFO  00:35:39,312 - Pretraga (int) nadjeno [Type , Int ] na liniji 13
+INFO  00:35:39,312 - Deklaracija (main) [Meth , None ] na liniji 17
+INFO  00:35:39,312 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 19
+ERROR 00:35:39,474 - Previse parametara specificirano za fju v  na liniji 19
+INFO  00:35:39,474 - Pretraga (eol) nadjeno [Con , Char ] na liniji 22
+ERROR 00:35:39,474 - Nije definisano ime g  na liniji 24
+INFO  00:35:39,474 - Pretraga (noObj) nadjeno [Var , None ] na liniji 24
+ERROR 00:35:39,474 - Ime gnije funkcija  na liniji 24
+ERROR 00:35:39,474 -  Uslov nije boolean tipa  na liniji 24
+INFO  00:35:39,474 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 24
+ERROR 00:35:39,474 - Previse parametara specificirano za fju v  na liniji 24
+INFO  00:35:39,474 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 24
+ERROR 00:35:39,474 - Previse parametara specificirano za fju v  na liniji 24
+INFO  00:35:39,474 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 24
+ERROR 00:35:39,474 - Previse parametara specificirano za fju v  na liniji 24
+ERROR 00:35:39,474 -  Jedan od tipova u OR izrazu nije bool  na liniji 24
+ERROR 00:35:39,474 - NEUSPESNO SEMANTICKO  PARSIRANJE

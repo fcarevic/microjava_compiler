@@ -1,0 +1,22 @@
+// test provera parametra this
+
+program MJProgram
+
+int a;
+const int c=2;
+
+
+{
+	bool v(int a ){
+	return true;
+	}
+		
+	void main() {
+		a=c;
+		if(v(c)){
+		 print('t');
+		}
+		print(eol);
+		
+	}
+}

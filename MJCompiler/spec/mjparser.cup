@@ -9,7 +9,9 @@ parser code {:
 	boolean errorDetected;
 	
 	Logger log = Logger.getLogger(getClass());
-   
+   public int error_sync_size(){
+   	return 1;
+   }
    public void ispisi_poruku(String message){
    	log.error(message);
    
@@ -124,17 +126,14 @@ VarDeclList ::= (VarDeclList_) VarDeclList VarDecl
 				;
 				
 VarDecl ::= (VarDecl_) Type:varType VarInitList SEMI 
-		 	|
-		 	(VarDeclError) error SEMI:l
-		 	 {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
 		 	;
 		 	
 VarInitList ::= (VarInitMultipleList) VarInitList COMMA VarInit
 				|
 				(VarInitSingle) VarInit:var
 				|
-				(VarInitError) error COMMA:l
-				 {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :}
+				(VarInitError) error:l
+				 {: parser.report_error("Izvrsen oporavak prom u liniji " + lleft, null);  :}
 				;
 				
 VarInit ::= (VarInitPrimitive) IDENT:name
@@ -149,10 +148,17 @@ ClassDecl ::= (ClassDeclsNoMethod) CLASS ClassName ExtendsClause LCURVPAREN Clas
 			(ClassDeclMethod) CLASS ClassName ExtendsClause LCURVPAREN ClassFields LCURVPAREN MethodDeclList RCURVPAREN RCURVPAREN 
 			;
 ClassName ::= (ClassName) IDENT:className ;
-ClassFields ::= (ClassFields) VarDeclList;	
-ExtendsClause ::= (ExtendsClause_) EXTENDS Type:extendType 
+ClassFields ::= (ClassFields_) VarDeclList
 				|
-				(NoExtendsClause) /*epsilon*/
+				(ClassFieldsError) error:l 
+				  {: parser.report_error("Izvrsen oporavak  do { u liniji " + lleft, null);  :}
+				;
+ExtendsClause ::= (ExtendsClause_) EXTENDS Type:extendType  
+				|
+				(NoExtendsClause) /* epsilon */
+				|
+				 (ExtendsErrorFixup)  error:l
+				  {: parser.report_error("Izvrsen oporavak extends do { u liniji " + lleft, null);  :}
 				;
 				
 
@@ -160,30 +166,27 @@ MethodDeclList ::= (MethodDeclMultipleList) MethodDeclList MethodDecl
 					|
 					(MethodDeclEmptyList) /*epsilon*/
 					; 
-MethodDecl ::= (MethodDecl) ReturnType MethodName LPAREN FormalParams VarDeclList LCURVPAREN StatementList RCURVPAREN ;
+MethodDecl ::= (MethodDecl) ReturnType MethodName LPAREN FormalParams RPAREN VarDeclList LCURVPAREN StatementList RCURVPAREN ;
 
 MethodName ::= (MethodName) IDENT:methodName;
 ReturnType ::= (ReturnTypeType) Type:retType 
 				|
 				(ReturnTypeVoid) VOID
 				;
-FormalParams ::= (FormalParams_)  FormalParamList RPAREN
-				|
-				(FormalParamsError) error RPAREN:l
-							 {: parser.report_error("Izvrsen oporavak do ) u liniji " + lleft, null);  :}
+FormalParams ::= (FormalParams_)  FormalParamList 
 				;
-FormalParamList ::= (FormalParamList_) FormalParamList COMMA FormalParam
+FormalParamList ::= (FormalParamList_) FormalParam  COMMA  FormalParamList
 				|
 				(FormalParamSingle) FormalParam
-				|
-				(FormaParamError) error COMMA:l
-				 {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :}
 				|
 				(FormalParamEmptyList) /*epsilon*/				
 				;
 FormalParam ::= (FormalParamPrimitive) Type IDENT:paramName
 				|
 				(FormalParamArray) Type IDENT:paramName LBRACE RBRACE
+				|
+				(FormaParamError) error:l
+				 {: parser.report_error("Izvrsen oporavak parametara fje u liniji " + lleft, null);  :}
 				;
 
 Type ::= (Type) IDENT:typeName ;
@@ -229,7 +232,7 @@ SwitchClause ::= (SwitchClause) SWITCH LPAREN  Expr RPAREN ;
 IfErrorCorection ::= (IfCondition) Condition RPAREN  
 					|
 					(IfError) error RPAREN:l
-					 {: parser.report_error("Izvrsen oporavak do ) u liniji " + lleft, null);  :}
+					 {: parser.report_error("Izvrsen oporavak if do ) u liniji " + lleft, null);  :}
 						;
     
 CaseList ::= (CaseList_) CaseList Case
@@ -260,7 +263,7 @@ DesignatorStatement ::= (DesignatorStatementAssignop) Designator Assignop Expr S
 					(DesignatoStatementDec) Designator MINUSMINUS SEMI
 					|
 					(ErrorDesignator) error SEMI:l
-		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :}
+		    {: parser.report_error("Izvrsen oporavak designator do ; u liniji " + lleft, null);  :}
 						;
 						
 DesignatorFunc ::= (DesignatorFunc) Designator ;					

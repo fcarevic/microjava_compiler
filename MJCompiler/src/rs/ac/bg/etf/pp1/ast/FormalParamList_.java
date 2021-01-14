@@ -1,28 +1,20 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2021 20:14:38
+// 14/0/2021 0:39:34
 
 
 package rs.ac.bg.etf.pp1.ast;
 
 public class FormalParamList_ extends FormalParamList {
 
-    private FormalParamList FormalParamList;
     private FormalParam FormalParam;
+    private FormalParamList FormalParamList;
 
-    public FormalParamList_ (FormalParamList FormalParamList, FormalParam FormalParam) {
-        this.FormalParamList=FormalParamList;
-        if(FormalParamList!=null) FormalParamList.setParent(this);
+    public FormalParamList_ (FormalParam FormalParam, FormalParamList FormalParamList) {
         this.FormalParam=FormalParam;
         if(FormalParam!=null) FormalParam.setParent(this);
-    }
-
-    public FormalParamList getFormalParamList() {
-        return FormalParamList;
-    }
-
-    public void setFormalParamList(FormalParamList FormalParamList) {
         this.FormalParamList=FormalParamList;
+        if(FormalParamList!=null) FormalParamList.setParent(this);
     }
 
     public FormalParam getFormalParam() {
@@ -33,24 +25,32 @@ public class FormalParamList_ extends FormalParamList {
         this.FormalParam=FormalParam;
     }
 
+    public FormalParamList getFormalParamList() {
+        return FormalParamList;
+    }
+
+    public void setFormalParamList(FormalParamList FormalParamList) {
+        this.FormalParamList=FormalParamList;
+    }
+
     public void accept(Visitor visitor) {
         visitor.visit(this);
     }
 
     public void childrenAccept(Visitor visitor) {
-        if(FormalParamList!=null) FormalParamList.accept(visitor);
         if(FormalParam!=null) FormalParam.accept(visitor);
+        if(FormalParamList!=null) FormalParamList.accept(visitor);
     }
 
     public void traverseTopDown(Visitor visitor) {
         accept(visitor);
-        if(FormalParamList!=null) FormalParamList.traverseTopDown(visitor);
         if(FormalParam!=null) FormalParam.traverseTopDown(visitor);
+        if(FormalParamList!=null) FormalParamList.traverseTopDown(visitor);
     }
 
     public void traverseBottomUp(Visitor visitor) {
-        if(FormalParamList!=null) FormalParamList.traverseBottomUp(visitor);
         if(FormalParam!=null) FormalParam.traverseBottomUp(visitor);
+        if(FormalParamList!=null) FormalParamList.traverseBottomUp(visitor);
         accept(visitor);
     }
 
@@ -59,14 +59,14 @@ public class FormalParamList_ extends FormalParamList {
         buffer.append(tab);
         buffer.append("FormalParamList_(\n");
 
-        if(FormalParamList!=null)
-            buffer.append(FormalParamList.toString("  "+tab));
+        if(FormalParam!=null)
+            buffer.append(FormalParam.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");
 
-        if(FormalParam!=null)
-            buffer.append(FormalParam.toString("  "+tab));
+        if(FormalParamList!=null)
+            buffer.append(FormalParamList.toString("  "+tab));
         else
             buffer.append(tab+"  null");
         buffer.append("\n");

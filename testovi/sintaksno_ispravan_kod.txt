@@ -1,0 +1,28 @@
+// test provera parametra this
+
+program MJProgram
+
+class A {
+ int a;
+ int b,c,d;
+}
+int a;
+
+{
+	bool v(int a , int b, int d){
+	return true;
+	}
+		
+	void main() {
+		
+		if(v()){
+		 print('t');
+		}
+		print(eol);
+		
+		if(g() || v() && v() && v()){
+		 print('t');
+		}
+	
+	}
+}

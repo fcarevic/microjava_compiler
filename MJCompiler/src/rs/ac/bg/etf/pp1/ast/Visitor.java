@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 11/0/2021 20:14:38
+// 14/0/2021 0:39:36
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -36,6 +36,7 @@ public interface Visitor {
     public void visit(ActualParams ActualParams);
     public void visit(ConditionTerm ConditionTerm);
     public void visit(ReturnType ReturnType);
+    public void visit(ClassFields ClassFields);
     public void visit(FormalParam FormalParam);
     public void visit(ClassDecl ClassDecl);
     public void visit(MethodDeclList MethodDeclList);
@@ -137,13 +138,12 @@ public interface Visitor {
     public void visit(StatementEmptyList StatementEmptyList);
     public void visit(StatementList_ StatementList_);
     public void visit(Type Type);
+    public void visit(FormaParamError FormaParamError);
     public void visit(FormalParamArray FormalParamArray);
     public void visit(FormalParamPrimitive FormalParamPrimitive);
     public void visit(FormalParamEmptyList FormalParamEmptyList);
-    public void visit(FormaParamError FormaParamError);
     public void visit(FormalParamSingle FormalParamSingle);
     public void visit(FormalParamList_ FormalParamList_);
-    public void visit(FormalParamsError FormalParamsError);
     public void visit(FormalParams_ FormalParams_);
     public void visit(ReturnTypeVoid ReturnTypeVoid);
     public void visit(ReturnTypeType ReturnTypeType);
@@ -151,9 +151,11 @@ public interface Visitor {
     public void visit(MethodDecl MethodDecl);
     public void visit(MethodDeclEmptyList MethodDeclEmptyList);
     public void visit(MethodDeclMultipleList MethodDeclMultipleList);
+    public void visit(ExtendsErrorFixup ExtendsErrorFixup);
     public void visit(NoExtendsClause NoExtendsClause);
     public void visit(ExtendsClause_ ExtendsClause_);
-    public void visit(ClassFields ClassFields);
+    public void visit(ClassFieldsError ClassFieldsError);
+    public void visit(ClassFields_ ClassFields_);
     public void visit(ClassName ClassName);
     public void visit(ClassDeclMethod ClassDeclMethod);
     public void visit(ClassDeclsNoMethod ClassDeclsNoMethod);
@@ -163,7 +165,6 @@ public interface Visitor {
     public void visit(VarInitError VarInitError);
     public void visit(VarInitSingle VarInitSingle);
     public void visit(VarInitMultipleList VarInitMultipleList);
-    public void visit(VarDeclError VarDeclError);
     public void visit(VarDecl_ VarDecl_);
     public void visit(VarDeclEmptyList VarDeclEmptyList);
     public void visit(VarDeclList_ VarDeclList_);

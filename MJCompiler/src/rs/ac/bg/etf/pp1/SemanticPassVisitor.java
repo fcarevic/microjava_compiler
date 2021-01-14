@@ -39,6 +39,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		if (line != 0)
 			msg.append (" na liniji ").append(line);
 		log.error(msg.toString());
+		System.err.println(msg.toString());
 	}
 
 	public void report_info(String message, SyntaxNode info) {
@@ -226,7 +227,7 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	private List<Struct> currentClassStruct=new ArrayList<Struct>();
 	
 	@Override
-	public void visit(ClassFields classFields) {
+	public void visit(ClassFields_ classFields) {
 		if(currentClassStruct.get(currentClassStruct.size()-1)!=null) {
 			
 			currentClassStruct.get(currentClassStruct.size()-1).setMembers(Tab.currentScope().getLocals());
@@ -386,7 +387,9 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			report_error("Formalni parametar vec postoji + " + formalParam.getParamName() , formalParam);
 			return;
 		}
-		Tab.insert(Obj.Var, formalParam.getParamName(), formalParam.getType().struct);
+		Obj obj =Tab.insert(Obj.Var, formalParam.getParamName(), formalParam.getType().struct);
+		report_info("Formalni parametar (" + obj.getName() + ")  [" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , formalParam);
+		
 	}
 	
 	@Override
@@ -397,9 +400,8 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			report_error("Formalni parametar vec postoji + " + formalParam.getParamName() , formalParam);
 			return;
 		}
-		Tab.insert(Obj.Var, formalParam.getParamName(), new Struct(Struct.Array, formalParam.getType().struct));
-		
-	
+		Obj obj = Tab.insert(Obj.Var, formalParam.getParamName(), new Struct(Struct.Array, formalParam.getType().struct));
+		report_info("Formalni parametar (" + obj.getName() + ")  [" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , formalParam);
 	}
 	
 	@Override
@@ -662,8 +664,12 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 		}
 		checkActualParameterFuncCall(funcCall.getDesignatorFunc().obj, funcCall.getActualParameterList(), funcCall);
 		Obj obj = funcCall.getDesignatorFunc().getDesignator().obj;
+		
 		if(obj==Tab.noObj) funcCall.struct = Tab.noType;
-		else funcCall.struct = obj.getType();
+		else {
+			report_info("Poziv fje (" + obj.getName() + ")  [" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , funcCall);
+					funcCall.struct = obj.getType();
+		}
 	}
 	
 	@Override
@@ -689,6 +695,8 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			return;
 		}
 		factorNew.struct = factorNew.getType().struct;
+		report_info("Kreiranje objekta (" + obj.getName() + ")  [" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , factorNew);
+		
 	}
  	
 	@Override
@@ -704,9 +712,10 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			factorNewExpr.struct = Tab.noType;
 			return;
 		}
-		
+	
 		
 		factorNewExpr.struct = new Struct(Struct.Array, factorNewExpr.getType().struct);
+		report_info("Kreiranje niza (" + obj.getName() + ")  [" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , factorNewExpr);
 		
 	}
 	
@@ -867,6 +876,8 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 				report_error("Ime " + mth.getName() + " nije funkcija ", designatorFuncCall);
 				return;
 		}
+		
+		report_info("Poziv fje (" + mth.getName() + ")  [" + OBJ_KINDS[mth.getKind()]+ " , " + STRUCT_KINS[mth.getType().getKind()]+ " ]" , designatorFuncCall);
 		
 		checkActualParameterFuncCall(mth, designatorFuncCall.getActualParameterList(), designatorFuncCall);
 	}
@@ -1080,6 +1091,8 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 					return;
 				} else {
 					designator.obj=obj;
+					report_info("Pristup polju (" + obj.getName() + ")[" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , nextDesignator);
+					
 					return;
 				}
 			}
@@ -1094,6 +1107,8 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 						return;
 					} else {
 						designator.obj=obj;
+						report_info("Pristup polju (" + obj.getName() + ")[" + OBJ_KINDS[obj.getKind()]+ " , " + STRUCT_KINS[obj.getType().getKind()]+ " ]" , nextDesignator);
+						
 						return;
 					}
 				}
@@ -1119,7 +1134,9 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 				designator.obj=Tab.noObj;
 				return;
 			}
+			report_info("Pristup elementu niza (" + designator.obj.getName() + ")[" + OBJ_KINDS[designator.obj.getKind()]+ " , " + STRUCT_KINS[designator.obj.getType().getKind()]+ " ]" ,DesignatorIndexingOption );
 			designator.obj= new Obj(Obj.Elem, "", designator.obj.getType().getElemType());
+			
 	}
 	private String getLastDesignatorNameInChaining(Designator designator) {
 		String name = "";

@@ -1,0 +1,33 @@
+// test provera parametra this
+
+program MJProgram
+
+class A {
+ int a**;
+ int b**,c,d;
+ {
+ 
+ }
+}
+int a;
+int g**;
+int b**,c, d;
+{
+	bool v(int a , int** b, int d){
+	a--=tff;
+	return true;
+	}
+		
+	void main() {
+		
+		if(v() && ytty**  ){
+		 print('t');
+		}
+		print(eol);
+		
+		if(g() || v() && v() && v()){
+		 print('t');
+		}
+	
+	}
+}

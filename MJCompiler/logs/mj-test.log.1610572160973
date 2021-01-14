@@ -1,0 +1,95 @@
+INFO  22:08:33,995 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  22:08:34,264 - #34 program
+INFO  22:08:34,264 - #47 MJProgram
+INFO  22:08:34,269 - #21 {
+INFO  22:08:34,271 - #47 bool
+INFO  22:08:34,271 - #47 v
+INFO  22:08:34,271 - #23 (
+INFO  22:08:34,271 - #42 )
+INFO  22:08:34,271 - #21 {
+INFO  22:08:34,271 - #33 print
+INFO  22:08:34,287 - #23 (
+INFO  22:08:34,287 - #51 v
+INFO  22:08:34,287 - #42 )
+INFO  22:08:34,287 - #41 ;
+INFO  22:08:34,287 - #40 return
+INFO  22:08:34,287 - #49 false
+INFO  22:08:34,287 - #41 ;
+INFO  22:08:34,287 - #37 }
+INFO  22:08:34,287 - #47 bool
+INFO  22:08:34,287 - #47 g
+INFO  22:08:34,287 - #23 (
+INFO  22:08:34,287 - #42 )
+INFO  22:08:34,303 - #21 {
+INFO  22:08:34,303 - #33 print
+INFO  22:08:34,303 - #23 (
+INFO  22:08:34,303 - #51 g
+INFO  22:08:34,303 - #42 )
+INFO  22:08:34,303 - #41 ;
+INFO  22:08:34,303 - #40 return
+INFO  22:08:34,303 - #49 true
+INFO  22:08:34,303 - #41 ;
+INFO  22:08:34,303 - #37 }
+INFO  22:08:34,303 - #43 void
+INFO  22:08:34,303 - #47 main
+INFO  22:08:34,303 - #23 (
+INFO  22:08:34,303 - #42 )
+INFO  22:08:34,303 - #21 {
+INFO  22:08:34,303 - #19 if
+INFO  22:08:34,303 - #23 (
+INFO  22:08:34,303 - #47 v
+INFO  22:08:34,303 - #23 (
+INFO  22:08:34,318 - #42 )
+INFO  22:08:34,324 - #42 )
+INFO  22:08:34,326 - #21 {
+INFO  22:08:34,326 - #33 print
+INFO  22:08:34,326 - #23 (
+INFO  22:08:34,326 - #51 t
+INFO  22:08:34,326 - #42 )
+INFO  22:08:34,326 - #41 ;
+INFO  22:08:34,326 - #37 }
+INFO  22:08:34,326 - #33 print
+INFO  22:08:34,326 - #23 (
+INFO  22:08:34,326 - #47 eol
+INFO  22:08:34,326 - #42 )
+INFO  22:08:34,326 - #41 ;
+INFO  22:08:34,326 - #19 if
+INFO  22:08:34,326 - #23 (
+INFO  22:08:34,326 - #47 g
+INFO  22:08:34,326 - #23 (
+INFO  22:08:34,326 - #42 )
+INFO  22:08:34,326 - #30 ||
+INFO  22:08:34,326 - #47 v
+INFO  22:08:34,326 - #23 (
+INFO  22:08:34,342 - #42 )
+INFO  22:08:34,342 - #2 &&
+INFO  22:08:34,342 - #47 v
+INFO  22:08:34,342 - #23 (
+INFO  22:08:34,342 - #42 )
+INFO  22:08:34,342 - #2 &&
+INFO  22:08:34,349 - #47 v
+INFO  22:08:34,349 - #23 (
+INFO  22:08:34,349 - #42 )
+INFO  22:08:34,349 - #42 )
+INFO  22:08:34,349 - #21 {
+INFO  22:08:34,349 - #33 print
+INFO  22:08:34,349 - #23 (
+INFO  22:08:34,349 - #51 t
+INFO  22:08:34,349 - #42 )
+INFO  22:08:34,349 - #41 ;
+INFO  22:08:34,349 - #37 }
+INFO  22:08:34,349 - #37 }
+INFO  22:08:34,349 - #37 }
+INFO  22:08:34,349 - ===================================
+INFO  22:08:34,380 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 6
+INFO  22:08:34,380 - Deklaracija (v) [Meth , Bool ] na liniji 6
+INFO  22:08:34,380 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 11
+INFO  22:08:34,380 - Deklaracija (g) [Meth , Bool ] na liniji 11
+INFO  22:08:34,380 - Deklaracija (main) [Meth , None ] na liniji 15
+INFO  22:08:34,380 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 17
+INFO  22:08:34,543 - Pretraga (eol) nadjeno [Con , Char ] na liniji 20
+INFO  22:08:34,543 - Pretraga (g) nadjeno [Meth , Bool ] na liniji 22
+INFO  22:08:34,543 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 22
+INFO  22:08:34,543 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 22
+INFO  22:08:34,543 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 22
+INFO  22:08:34,549 - USPESNO SEMANTICKO PARSIRANJE

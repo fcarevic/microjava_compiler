@@ -9,7 +9,9 @@ parser code {:
 	boolean errorDetected;
 	
 	Logger log = Logger.getLogger(getClass());
-   
+   public int error_sync_size(){
+   	return 1;
+   }
    public void ispisi_poruku(String message){
    	log.error(message);
    
@@ -147,17 +149,14 @@ VarDeclList ::= (VarDeclList_) VarDeclList:V1 VarDecl:V2 {: RESULT=new VarDeclLi
 				;
 				
 VarDecl ::= (VarDecl_) Type:varType VarInitList:V1 SEMI {: RESULT=new VarDecl_(varType, V1); RESULT.setLine(varTypeleft); :} 
-		 	|
-		 	(VarDeclError) error SEMI:l
-		 	 {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new VarDeclError(); :}
 		 	;
 		 	
 VarInitList ::= (VarInitMultipleList) VarInitList:V1 COMMA VarInit:V2 {: RESULT=new VarInitMultipleList(V1, V2); RESULT.setLine(V1left); :}
 				|
 				(VarInitSingle) VarInit:var {: RESULT=new VarInitSingle(var); RESULT.setLine(varleft); :}
 				|
-				(VarInitError) error COMMA:l
-				 {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :} {: RESULT=new VarInitError(); :}
+				(VarInitError) error:l
+				 {: parser.report_error("Izvrsen oporavak prom u liniji " + lleft, null);  :} {: RESULT=new VarInitError(); :}
 				;
 				
 VarInit ::= (VarInitPrimitive) IDENT:name {: RESULT=new VarInitPrimitive(name); RESULT.setLine(nameleft); :}
@@ -172,10 +171,17 @@ ClassDecl ::= (ClassDeclsNoMethod) CLASS ClassName:C1 ExtendsClause:E2 LCURVPARE
 			(ClassDeclMethod) CLASS ClassName:C1 ExtendsClause:E2 LCURVPAREN ClassFields:C3 LCURVPAREN MethodDeclList:M4 RCURVPAREN RCURVPAREN {: RESULT=new ClassDeclMethod(C1, E2, C3, M4); RESULT.setLine(C1left); :} 
 			;
 ClassName ::= (ClassName) IDENT:className {: RESULT=new ClassName(className); RESULT.setLine(classNameleft); :} ;
-ClassFields ::= (ClassFields) VarDeclList:V1 {: RESULT=new ClassFields(V1); RESULT.setLine(V1left); :};	
-ExtendsClause ::= (ExtendsClause_) EXTENDS Type:extendType {: RESULT=new ExtendsClause_(extendType); RESULT.setLine(extendTypeleft); :} 
+ClassFields ::= (ClassFields_) VarDeclList:V1 {: RESULT=new ClassFields_(V1); RESULT.setLine(V1left); :}
 				|
-				(NoExtendsClause) {: RESULT=new NoExtendsClause(); :} /*epsilon*/
+				(ClassFieldsError) error:l 
+				  {: parser.report_error("Izvrsen oporavak  do { u liniji " + lleft, null);  :} {: RESULT=new ClassFieldsError(); :}
+				;
+ExtendsClause ::= (ExtendsClause_) EXTENDS Type:extendType {: RESULT=new ExtendsClause_(extendType); RESULT.setLine(extendTypeleft); :}  
+				|
+				(NoExtendsClause) {: RESULT=new NoExtendsClause(); :} /* epsilon */
+				|
+				 (ExtendsErrorFixup)  error:l
+				  {: parser.report_error("Izvrsen oporavak extends do { u liniji " + lleft, null);  :} {: RESULT=new ExtendsErrorFixup(); :}
 				;
 				
 
@@ -183,30 +189,27 @@ MethodDeclList ::= (MethodDeclMultipleList) MethodDeclList:M1 MethodDecl:M2 {: R
 					|
 					(MethodDeclEmptyList) {: RESULT=new MethodDeclEmptyList(); :} /*epsilon*/
 					; 
-MethodDecl ::= (MethodDecl) ReturnType:R1 MethodName:M2 LPAREN FormalParams:F3 VarDeclList:V4 LCURVPAREN StatementList:S5 RCURVPAREN {: RESULT=new MethodDecl(R1, M2, F3, V4, S5); RESULT.setLine(R1left); :} ;
+MethodDecl ::= (MethodDecl) ReturnType:R1 MethodName:M2 LPAREN FormalParams:F3 RPAREN VarDeclList:V4 LCURVPAREN StatementList:S5 RCURVPAREN {: RESULT=new MethodDecl(R1, M2, F3, V4, S5); RESULT.setLine(R1left); :} ;
 
 MethodName ::= (MethodName) IDENT:methodName {: RESULT=new MethodName(methodName); RESULT.setLine(methodNameleft); :};
 ReturnType ::= (ReturnTypeType) Type:retType {: RESULT=new ReturnTypeType(retType); RESULT.setLine(retTypeleft); :} 
 				|
 				(ReturnTypeVoid) VOID {: RESULT=new ReturnTypeVoid(); :}
 				;
-FormalParams ::= (FormalParams_)  FormalParamList:F1 RPAREN {: RESULT=new FormalParams_(F1); RESULT.setLine(F1left); :}
-				|
-				(FormalParamsError) error RPAREN:l
-							 {: parser.report_error("Izvrsen oporavak do ) u liniji " + lleft, null);  :} {: RESULT=new FormalParamsError(); :}
+FormalParams ::= (FormalParams_)  FormalParamList:F1 {: RESULT=new FormalParams_(F1); RESULT.setLine(F1left); :} 
 				;
-FormalParamList ::= (FormalParamList_) FormalParamList:F1 COMMA FormalParam:F2 {: RESULT=new FormalParamList_(F1, F2); RESULT.setLine(F1left); :}
+FormalParamList ::= (FormalParamList_) FormalParam:F1  COMMA  FormalParamList:F2 {: RESULT=new FormalParamList_(F1, F2); RESULT.setLine(F1left); :}
 				|
 				(FormalParamSingle) FormalParam:F1 {: RESULT=new FormalParamSingle(F1); RESULT.setLine(F1left); :}
-				|
-				(FormaParamError) error COMMA:l
-				 {: parser.report_error("Izvrsen oporavak do , u liniji " + lleft, null);  :} {: RESULT=new FormaParamError(); :}
 				|
 				(FormalParamEmptyList) {: RESULT=new FormalParamEmptyList(); :} /*epsilon*/				
 				;
 FormalParam ::= (FormalParamPrimitive) Type:T1 IDENT:paramName {: RESULT=new FormalParamPrimitive(T1, paramName); RESULT.setLine(T1left); :}
 				|
 				(FormalParamArray) Type:T1 IDENT:paramName LBRACE RBRACE {: RESULT=new FormalParamArray(T1, paramName); RESULT.setLine(T1left); :}
+				|
+				(FormaParamError) error:l
+				 {: parser.report_error("Izvrsen oporavak parametara fje u liniji " + lleft, null);  :} {: RESULT=new FormaParamError(); :}
 				;
 
 Type ::= (Type) IDENT:typeName {: RESULT=new Type(typeName); RESULT.setLine(typeNameleft); :} ;
@@ -252,7 +255,7 @@ SwitchClause ::= (SwitchClause) SWITCH LPAREN  Expr:E1 RPAREN {: RESULT=new Swit
 IfErrorCorection ::= (IfCondition) Condition:C1 RPAREN {: RESULT=new IfCondition(C1); RESULT.setLine(C1left); :}  
 					|
 					(IfError) error RPAREN:l
-					 {: parser.report_error("Izvrsen oporavak do ) u liniji " + lleft, null);  :} {: RESULT=new IfError(); :}
+					 {: parser.report_error("Izvrsen oporavak if do ) u liniji " + lleft, null);  :} {: RESULT=new IfError(); :}
 						;
     
 CaseList ::= (CaseList_) CaseList:C1 Case:C2 {: RESULT=new CaseList_(C1, C2); RESULT.setLine(C1left); :}
@@ -283,7 +286,7 @@ DesignatorStatement ::= (DesignatorStatementAssignop) Designator:D1 Assignop:A2 
 					(DesignatoStatementDec) Designator:D1 MINUSMINUS SEMI {: RESULT=new DesignatoStatementDec(D1); RESULT.setLine(D1left); :}
 					|
 					(ErrorDesignator) error SEMI:l
-		    {: parser.report_error("Izvrsen oporavak do ; u liniji " + lleft, null);  :} {: RESULT=new ErrorDesignator(); :}
+		    {: parser.report_error("Izvrsen oporavak designator do ; u liniji " + lleft, null);  :} {: RESULT=new ErrorDesignator(); :}
 						;
 						
 DesignatorFunc ::= (DesignatorFunc) Designator:D1 {: RESULT=new DesignatorFunc(D1); RESULT.setLine(D1left); :} ;					
