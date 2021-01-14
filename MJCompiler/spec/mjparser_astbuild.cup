@@ -94,7 +94,7 @@ nonterminal Matched Matched;
 nonterminal Unmatched Unmatched;
 nonterminal MinusExpr MinusExpr;
 nonterminal ProgName ProgName;
-nonterminal DoWhileCondition DoWhileCondition;
+nonterminal DoWhileClause DoWhileClause;
 nonterminal ConstDeclList ConstDeclList;
 nonterminal AddopTermExprOption AddopTermExprOption;
 nonterminal DesignatorOptionList DesignatorOptionList;
@@ -224,7 +224,7 @@ StatementList ::= (StatementList_) StatementList:S1 Statement:S2 {: RESULT=new S
  
 Statement   ::= (DesignatorStatementStatement) DesignatorStatement:D1 {: RESULT=new DesignatorStatementStatement(D1); RESULT.setLine(D1left); :}  
 			|
-			(DoWhileStatement) DoClause:D1 Statement:S2 WHILE LPAREN DoWhileCondition:D3 RPAREN SEMI {: RESULT=new DoWhileStatement(D1, S2, D3); RESULT.setLine(D1left); :}
+			(DoWhileStatement) DoClause:D1 Statement:S2 DoWhileClause:D3 LPAREN Condition:C4  RPAREN SEMI {: RESULT=new DoWhileStatement(D1, S2, D3, C4); RESULT.setLine(D1left); :}
 			|
 			(SwitchStatement) SwitchClause:S1  LCURVPAREN CaseList:C2 RCURVPAREN {: RESULT=new SwitchStatement(S1, C2); RESULT.setLine(S1left); :} 
 		    |
@@ -247,7 +247,7 @@ Statement   ::= (DesignatorStatementStatement) DesignatorStatement:D1 {: RESULT=
 
 
 DoClause ::= (DoClause) DO {: RESULT=new DoClause(); :} ;
-DoWhileCondition ::= (DoWhileCondition) Condition:C1 {: RESULT=new DoWhileCondition(C1); RESULT.setLine(C1left); :};
+DoWhileClause ::= (DoWhileClause) WHILE {: RESULT=new DoWhileClause(); :};
 Else  ::= (Else) ELSE {: RESULT=new Else(); :} ;
 Break ::= (Break) BREAK {: RESULT=new Break(); :};
 SwitchClause ::= (SwitchClause) SWITCH LPAREN  Expr:E1 RPAREN {: RESULT=new SwitchClause(E1); RESULT.setLine(E1left); :} ;

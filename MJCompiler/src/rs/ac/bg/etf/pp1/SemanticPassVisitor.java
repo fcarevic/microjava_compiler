@@ -558,6 +558,11 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	};
 	
 	@Override
+	public void visit(DoWhileStatement DoWhileStatement) {
+			doWhileLoopCount--;
+	}
+	
+	@Override
 	public void visit(Case Case) {
 		caseStmtCount--;
 	}

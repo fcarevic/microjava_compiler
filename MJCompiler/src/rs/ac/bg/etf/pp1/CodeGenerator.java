@@ -35,7 +35,7 @@ import rs.ac.bg.etf.pp1.ast.DesignatorStatementFuncCall;
 import rs.ac.bg.etf.pp1.ast.DesignatorStatementInc;
 import rs.ac.bg.etf.pp1.ast.Div;
 import rs.ac.bg.etf.pp1.ast.DoClause;
-import rs.ac.bg.etf.pp1.ast.DoWhileCondition;
+import rs.ac.bg.etf.pp1.ast.DoWhileClause;
 import rs.ac.bg.etf.pp1.ast.DoWhileStatement;
 import rs.ac.bg.etf.pp1.ast.Else;
 import rs.ac.bg.etf.pp1.ast.Expr1TermMinus;
@@ -560,24 +560,25 @@ public class CodeGenerator extends VisitorAdaptor {
 		doWhileStartStack.add(Code.pc);
 	}
 	@Override
-	public void visit(DoWhileCondition doWhileCondition) {
+	public void visit(DoWhileClause doWhileClause) {
 		// TODO Auto-generated method stub
 		for(Integer adr:doWhileContinueStack) {
 			Code.fixup(adr);
 		}
 		doWhileContinueStack.removeIf(adr-> adr>doWhileStartStack.get(doWhileStartStack.size()-1)&& adr<Code.pc);
 		
-		doWhileCondition.getCondition().traverseBottomUp(this);
-		Code.loadConst(1);
-		Code.putFalseJump(Code.inverse[Code.eq],doWhileStartStack.get(doWhileStartStack.size()-1));
+		
 	}
 	
 	@Override
 	public void visit(DoWhileStatement doWhileStatement) {
 		// TODO Auto-generated method stub
+		Code.loadConst(1);
+		Code.putFalseJump(Code.inverse[Code.eq],doWhileStartStack.get(doWhileStartStack.size()-1));
+
 		doWhileStartStack.remove(doWhileStartStack.size()-1);
 		doWhileStatement.getParent().traverseTopDown(new DoWhileBreakFixup());
-		Code.put(Code.pop); //skida prvi do while uslov
+//		Code.put(Code.pop); //skida prvi do while uslov
 	}
 	
 	/******* SWITCH ********************/

@@ -74,7 +74,7 @@ nonterminal DesignatorStatement, DesingatorOption, ActualParameterList, ActualPa
 nonterminal ConditionFactRelOp ;
 nonterminal TermOptions ;
 nonterminal Matched, Unmatched;
-nonterminal MinusExpr, ProgName, DoWhileCondition;
+nonterminal MinusExpr, ProgName, DoWhileClause;
 nonterminal ConstDeclList, AddopTermExprOption;
 nonterminal DesignatorOptionList, FormalParams ;
 nonterminal rs.etf.pp1.symboltable.concepts.Struct Type, StdConstType, ExtendsClause, ReturnType ;
@@ -201,7 +201,7 @@ StatementList ::= (StatementList_) StatementList Statement
  
 Statement   ::= (DesignatorStatementStatement) DesignatorStatement  
 			|
-			(DoWhileStatement) DoClause Statement WHILE LPAREN DoWhileCondition RPAREN SEMI
+			(DoWhileStatement) DoClause Statement DoWhileClause LPAREN Condition  RPAREN SEMI
 			|
 			(SwitchStatement) SwitchClause  LCURVPAREN CaseList RCURVPAREN 
 		    |
@@ -224,7 +224,7 @@ Statement   ::= (DesignatorStatementStatement) DesignatorStatement
 
 
 DoClause ::= (DoClause) DO ;
-DoWhileCondition ::= (DoWhileCondition) Condition;
+DoWhileClause ::= (DoWhileClause) WHILE;
 Else  ::= (Else) ELSE ;
 Break ::= (Break) BREAK;
 SwitchClause ::= (SwitchClause) SWITCH LPAREN  Expr RPAREN ;

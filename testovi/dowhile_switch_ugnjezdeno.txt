@@ -1,0 +1,47 @@
+//Test do while switch
+
+program test_303
+
+const int c=4;
+{
+void main()
+	int a;
+	bool flag;
+{
+	flag=false;
+	a=2;
+	 do{
+	 	if(flag) a=6;
+		switch(a){
+			case 1: print('a'); print(1);
+			print(eol);
+			break;
+			
+			case 2: print('a'); print(2);
+			print(eol);
+				a=0;
+				do{
+					a++;
+					flag=false;
+					switch(a){
+					case 1: print('a'); break;
+					case 2: print('g'); break;
+					case 3: print('h'); flag= true; break;
+					}
+					if(flag) {print('t');
+					 break;
+					} else {
+					print('f');
+					}
+					
+				}while(a<4);
+				print(eol);
+				print('r');
+				print(eol);
+				break;
+				case 6: print(eol);
+						print(6);
+		}
+		} while(a!=6 && a!=11);
+		}
+}	

@@ -1,6 +1,6 @@
 // generated with ast extension for cup
 // version 0.8
-// 14/0/2021 0:39:36
+// 14/0/2021 17:36:52
 
 
 package rs.ac.bg.etf.pp1.ast;
@@ -122,7 +122,7 @@ public interface Visitor {
     public void visit(SwitchClause SwitchClause);
     public void visit(Break Break);
     public void visit(Else Else);
-    public void visit(DoWhileCondition DoWhileCondition);
+    public void visit(DoWhileClause DoWhileClause);
     public void visit(DoClause DoClause);
     public void visit(IfElseStatement IfElseStatement);
     public void visit(IfStatement IfStatement);
