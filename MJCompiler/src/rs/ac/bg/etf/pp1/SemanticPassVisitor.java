@@ -437,9 +437,13 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 			method.setLevel(numberOfFormalParams);
 			Tab.chainLocalSymbols(method);
 			methodDecl.getMethodName().obj.setAdr(-1);
+			if(method.getType()!= Tab.noType && !wasReturnExpr) {
+				report_error("Nedostaje return za metodu " + method.getName(), methodDecl);
+			}
 		}
 		
 		Tab.closeScope();
+		wasReturnExpr=false;
 	}
 	
 	
@@ -447,9 +451,10 @@ public class SemanticPassVisitor extends VisitorAdaptor {
 	/******* SEMANTIC RETURN CHECK ***************************/
 	
 	
-	
+	private boolean wasReturnExpr = false;
 	@Override
 	public void visit(ReturnStatementExpr returnExpr) {
+		wasReturnExpr=true;
 		if(returnType == Tab.noType) {
 			report_error("Funkcija je deklarisana kao void, a return ima expr ", returnExpr);
 			return;

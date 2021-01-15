@@ -38,10 +38,6 @@ public class MyStruct extends  rs.etf.pp1.symboltable.concepts.Struct {
 		if(this.getElemType()==dest) return true;
 		return super.assignableTo(dest);
 		
-		
-		
-		
-		
 	}
 	
 	

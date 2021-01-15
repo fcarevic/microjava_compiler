@@ -87,7 +87,7 @@ public class MJParserTest {
 				String [] argS = {"test/output.obj"};
 						
 				disasm.main(argS);
-				Run.main(argS);
+				Run.main(argS1);
 			
 
 				//Tab.dump( new SymbolTablePrinter());

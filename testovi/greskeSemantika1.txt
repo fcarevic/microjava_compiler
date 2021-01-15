@@ -1,0 +1,51 @@
+// Test301
+
+program test301
+
+	const int nula = 'a';
+	const bool jedan = 1;
+	const int pet = 5;
+	
+	class A extends int{
+			int x;
+	}
+	
+	Nedefinisano x;
+	
+
+	
+{
+	int m() int c;{
+		c=5;
+	}
+
+	int t() bool b;{
+		m=5;
+		m++;
+		b=5;
+		b++;
+		b();
+		break;
+		continue;
+		read(m);
+		print(m);
+		return 'b';
+	}
+	
+	
+
+	void main()	
+		int bodovi;
+		bool bt;
+	{
+		bodovi = 0;
+		bodovi++;
+		bodovi = bodovi + jedan;
+		bodovi = bodovi * pet;
+		bodovi--;
+		print(bodovi); 
+			
+	}
+}
+
+
