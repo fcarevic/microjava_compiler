@@ -12,6 +12,7 @@
 				<exclude name="RuleVisitor.java"/>
 				<exclude name="SymbolTablePrinter.java"/>
 				<exclude name="CodeGenerator.java"/>
+				<exclude name="Compiler.java"/>
 			
 			</fileset>
 		</delete>

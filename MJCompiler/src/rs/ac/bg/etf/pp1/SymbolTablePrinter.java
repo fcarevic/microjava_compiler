@@ -1,5 +1,8 @@
 package rs.ac.bg.etf.pp1;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import rs.etf.pp1.symboltable.concepts.Obj;
 import rs.etf.pp1.symboltable.concepts.Scope;
 import rs.etf.pp1.symboltable.concepts.Struct;
@@ -9,7 +12,7 @@ public class SymbolTablePrinter extends SymbolTableVisitor{
 
 	protected StringBuilder output = new StringBuilder();
 
-	
+	Map<Struct, Obj> mapClassToStruct = new HashMap< Struct, Obj>();
 
 	SymbolTablePrinter() {
 		
@@ -28,6 +31,7 @@ public class SymbolTablePrinter extends SymbolTableVisitor{
 			break;
 		case Obj.Type:
 			output.append("Type ");
+			mapClassToStruct.put( objToVisit.getType(), objToVisit);
 			break;
 		case Obj.Meth:
 			output.append("Meth ");
@@ -43,7 +47,7 @@ public class SymbolTablePrinter extends SymbolTableVisitor{
 		output.append(objToVisit.getName());
 		output.append(": ");
 		if(maySkip && objToVisit.getType().getKind() == Struct.Class) {
-			output.append("Klasni tip");
+			output.append( mapClassToStruct.get(objToVisit.getType()).getName());
 		}
 		else
 		objToVisit.getType().accept(this);

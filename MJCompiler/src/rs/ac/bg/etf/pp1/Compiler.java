@@ -24,7 +24,7 @@ import rs.etf.pp1.symboltable.concepts.Scope;
 import rs.etf.pp1.symboltable.concepts.Struct;
 import rs.etf.pp1.symboltable.visitors.SymbolTableVisitor;
 
-public class MJParserTest {
+public class Compiler {
 
 	static {
 		DOMConfigurator.configure(Log4JUtils.instance().findLoggerConfigFile());
@@ -40,7 +40,7 @@ public class MJParserTest {
 			outputFile=args[1];
 		}		
 		
-		Logger log = Logger.getLogger(MJParserTest.class);
+		Logger log = Logger.getLogger(Compiler.class);
 		
 		Reader br = null;
 		try {
@@ -68,7 +68,7 @@ public class MJParserTest {
 			SemanticPassVisitor v = new SemanticPassVisitor();
 			prog.traverseBottomUp(v); 
 			
-			Tab.dump( new SymbolTablePrinter());
+			Tab.dump();
 			
 			if(!v.isSuccess()) {
 				log.error("NEUSPESNO SEMANTICKO  PARSIRANJE");

@@ -1,0 +1,16 @@
+**generisanje lexera iz src dir:
+java -cp "../lib/JFlex.jar" JFlex.Main -d rs/ac/bg/etf/pp1 ../spec/mjlexer.lex
+
+** generisanje parsera iz src dir:
+ java -cp "../lib/cup_v10k.jar" java_cup.Main -destdir rs/ac/bg/etf/pp1  -parser MJParser -ast rs.ac.bg.etf.pp1.ast -buildtree ../spec/mjparser.cup
+
+** prevodjenje iz src dir
+ C:\"Program Files"\Java\jdk1.8.0_231\bin\javac.exe -cp "../lib/*" rs/ac/bg/etf/pp1/ast/*.java rs/ac/bg/etf/pp1/util/*.java rs/ac/bg/etf/pp1/*.java
+
+**run compiler iz src dir:
+
+**run iz src dir:
+java -cp "../lib/mj-runtime-1.1.jar" rs.etf.pp1.mj.runtime.Run ../test/output.obj
+
+**disasm iz src dir:
+java -cp "../lib/mj-runtime-1.1.jar" rs.etf.pp1.mj.runtime.disasm ../test/output.obj

@@ -72,6 +72,7 @@ import rs.ac.bg.etf.pp1.ast.SwitchClause;
 import rs.ac.bg.etf.pp1.ast.SwitchStatement;
 import rs.ac.bg.etf.pp1.ast.SyntaxNode;
 import rs.ac.bg.etf.pp1.ast.TermMul;
+import rs.ac.bg.etf.pp1.ast.TermNoMul;
 import rs.ac.bg.etf.pp1.ast.TernaryColon;
 import rs.ac.bg.etf.pp1.ast.TernaryCondition;
 import rs.ac.bg.etf.pp1.ast.TernaryExpr;
@@ -117,7 +118,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	
 	@Override
 	public void visit(PrintStatement printStatement) {
-			if(printStatement.getPrintExpr().getExpr().struct==Tab.intType) {
+			if(printStatement.getPrintExpr().getExpr().struct!=Tab.charType) {
 				Code.put(Code.print);
 			}
 			else {
@@ -267,11 +268,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		// TODO Auto-generated method stub
 	Code.fixup(mapCondToAdress.get(ternaryExpr.getTernaryCondition()));
 	}
-	@Override
-	public void visit(Expr1TermMinus Expr1TermMinus) {
-		// TODO Auto-generated method stub
-		Code.put(Code.neg);
-	}
+	
 	
 	@Override
 	public void visit(AddopMultipleList addopMultipleList) {
@@ -279,6 +276,11 @@ public class CodeGenerator extends VisitorAdaptor {
 		if(addopMultipleList.getAddop() instanceof Plus) codeOp = Code.add;
 		else codeOp = Code.sub;
 		Code.put(codeOp);
+	}
+	@Override
+	public void visit(TermNoMul termNoMul) {
+		if(termNoMul.getParent() instanceof Expr1TermMinus)
+			Code.put(Code.neg);
 	}
 	
 	@Override
@@ -288,6 +290,8 @@ public class CodeGenerator extends VisitorAdaptor {
 		else if (termMul.getMulop() instanceof Div ) codeOp = Code.div;
 		else if(termMul.getMulop() instanceof Rem ) codeOp = Code.rem;
 		Code.put(codeOp);
+		if(termMul.getParent() instanceof Expr1TermMinus)
+			Code.put(Code.neg);
 	}
 	
 	@Override
@@ -300,6 +304,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorStatementInc designatorStatementInc) {
 		Designator des = designatorStatementInc.getDesignator();
+		if(des.obj.getKind()==Obj.Elem)Code.put(Code.dup2);
 		Code.load(des.obj);
 		Code.loadConst(1);
 		Code.put(Code.add);
@@ -719,7 +724,7 @@ public class CodeGenerator extends VisitorAdaptor {
 					if(obj.getKind()==Obj.Meth) {
 						if(obj.getAdr()==-1) {
 							int adr = classDeclMethod.getClassName().obj.getType().getElemType().getMembersTable().searchKey(obj.getName()).getAdr();
-							System.err.println(adr);
+						//	System.err.println(adr);
 							obj.setAdr(adr);
 						}
 						new PolyCreator().create(obj);

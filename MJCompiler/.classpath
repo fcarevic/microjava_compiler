@@ -13,6 +13,6 @@
 	<classpathentry kind="lib" path="C:/Users/CAR/Desktop/semestar7/pp1/projekat/implementacija/MJCompiler/lib/log4j-1.2.17.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jdk1.8.0_231"/>
 	<classpathentry kind="lib" path="C:/Users/CAR/Desktop/semestar7/pp1/projekat/implementacija/MJCompiler/lib/symboltable-1-1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/CAR/Desktop/semestar7/pp1/projekat/implementacija/MJCompiler/lib/mj-runtime.jar"/>
+	<classpathentry kind="lib" path="C:/Users/CAR/Desktop/semestar7/pp1/projekat/materijali_projekat/mj-runtime-1.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
