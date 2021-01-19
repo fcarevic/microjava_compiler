@@ -1,0 +1,494 @@
+INFO  01:37:12,556 - Compiling source file: C:\Users\CAR\Desktop\semestar7\pp1\projekat\implementacija\MJCompiler\test\program.mj
+INFO  01:37:12,758 - #34 program
+INFO  01:37:12,759 - #47 MJProgram
+INFO  01:37:12,759 - #5 class
+INFO  01:37:12,764 - #47 A
+INFO  01:37:12,768 - #21 {
+INFO  01:37:12,772 - #47 int
+INFO  01:37:12,774 - #47 a
+INFO  01:37:12,776 - #41 ;
+INFO  01:37:12,777 - #47 int
+INFO  01:37:12,777 - #47 b
+INFO  01:37:12,778 - #7 ,
+INFO  01:37:12,778 - #47 c
+INFO  01:37:12,778 - #7 ,
+INFO  01:37:12,778 - #47 d
+INFO  01:37:12,779 - #41 ;
+INFO  01:37:12,779 - #37 }
+INFO  01:37:12,779 - #47 int
+INFO  01:37:12,780 - #47 a
+INFO  01:37:12,780 - #41 ;
+INFO  01:37:12,781 - #21 {
+INFO  01:37:12,781 - #47 bool
+INFO  01:37:12,785 - #47 v
+INFO  01:37:12,785 - #23 (
+INFO  01:37:12,787 - #47 int
+INFO  01:37:12,788 - #47 a
+INFO  01:37:12,788 - #7 ,
+INFO  01:37:12,789 - #47 int
+INFO  01:37:12,789 - #47 b
+INFO  01:37:12,789 - #7 ,
+INFO  01:37:12,789 - #47 int
+INFO  01:37:12,789 - #47 d
+INFO  01:37:12,790 - #42 )
+INFO  01:37:12,790 - #21 {
+INFO  01:37:12,790 - #40 return
+INFO  01:37:12,792 - #49 true
+INFO  01:37:12,792 - #41 ;
+INFO  01:37:12,795 - #37 }
+INFO  01:37:12,796 - #43 void
+INFO  01:37:12,798 - #47 main
+INFO  01:37:12,800 - #23 (
+INFO  01:37:12,800 - #42 )
+INFO  01:37:12,803 - #21 {
+INFO  01:37:12,805 - #19 if
+INFO  01:37:12,805 - #23 (
+INFO  01:37:12,805 - #47 v
+INFO  01:37:12,805 - #23 (
+INFO  01:37:12,813 - #42 )
+INFO  01:37:12,823 - #42 )
+INFO  01:37:12,824 - #21 {
+INFO  01:37:12,827 - #33 print
+INFO  01:37:12,828 - #23 (
+INFO  01:37:12,829 - #51 t
+INFO  01:37:12,829 - #42 )
+INFO  01:37:12,833 - #41 ;
+INFO  01:37:12,833 - #37 }
+INFO  01:37:12,833 - #33 print
+INFO  01:37:12,834 - #23 (
+INFO  01:37:12,834 - #47 eol
+INFO  01:37:12,834 - #42 )
+INFO  01:37:12,835 - #41 ;
+INFO  01:37:12,835 - #19 if
+INFO  01:37:12,835 - #23 (
+INFO  01:37:12,836 - #47 g
+INFO  01:37:12,837 - #23 (
+INFO  01:37:12,838 - #42 )
+INFO  01:37:12,838 - #30 ||
+INFO  01:37:12,845 - #47 v
+INFO  01:37:12,845 - #23 (
+INFO  01:37:12,848 - #42 )
+INFO  01:37:12,848 - #2 &&
+INFO  01:37:12,849 - #47 v
+INFO  01:37:12,850 - #23 (
+INFO  01:37:12,850 - #42 )
+INFO  01:37:12,851 - #2 &&
+INFO  01:37:12,851 - #47 v
+INFO  01:37:12,851 - #23 (
+INFO  01:37:12,851 - #42 )
+INFO  01:37:12,851 - #42 )
+INFO  01:37:12,852 - #21 {
+INFO  01:37:12,852 - #33 print
+INFO  01:37:12,852 - #23 (
+INFO  01:37:12,852 - #51 t
+INFO  01:37:12,852 - #42 )
+INFO  01:37:12,852 - #41 ;
+INFO  01:37:12,852 - #37 }
+INFO  01:37:12,852 - #37 }
+INFO  01:37:12,852 - #37 }
+INFO  01:37:12,859 - Program(
+  ProgName(
+   MJProgram
+  ) [ProgName]
+  NoMethodDeclList_(
+    NoMethodDeclList_(
+      NoMethodDeclEmptyList(
+      ) [NoMethodDeclEmptyList]
+      ClassDeclNoMethodDecl(
+        ClassDeclsNoMethod(
+          ClassName(
+           A
+          ) [ClassName]
+          NoExtendsClause(
+          ) [NoExtendsClause]
+          ClassFields_(
+            VarDeclList_(
+              VarDeclList_(
+                VarDeclEmptyList(
+                ) [VarDeclEmptyList]
+                VarDecl_(
+                  Type(
+                   int
+                  ) [Type]
+                  VarInitSingle(
+                    VarInitPrimitive(
+                     a
+                    ) [VarInitPrimitive]
+                  ) [VarInitSingle]
+                ) [VarDecl_]
+              ) [VarDeclList_]
+              VarDecl_(
+                Type(
+                 int
+                ) [Type]
+                VarInitMultipleList(
+                  VarInitMultipleList(
+                    VarInitSingle(
+                      VarInitPrimitive(
+                       b
+                      ) [VarInitPrimitive]
+                    ) [VarInitSingle]
+                    VarInitPrimitive(
+                     c
+                    ) [VarInitPrimitive]
+                  ) [VarInitMultipleList]
+                  VarInitPrimitive(
+                   d
+                  ) [VarInitPrimitive]
+                ) [VarInitMultipleList]
+              ) [VarDecl_]
+            ) [VarDeclList_]
+          ) [ClassFields_]
+        ) [ClassDeclsNoMethod]
+      ) [ClassDeclNoMethodDecl]
+    ) [NoMethodDeclList_]
+    VarDeclNoMethodDecl(
+      VarDecl_(
+        Type(
+         int
+        ) [Type]
+        VarInitSingle(
+          VarInitPrimitive(
+           a
+          ) [VarInitPrimitive]
+        ) [VarInitSingle]
+      ) [VarDecl_]
+    ) [VarDeclNoMethodDecl]
+  ) [NoMethodDeclList_]
+  MethodDeclMultipleList(
+    MethodDeclMultipleList(
+      MethodDeclEmptyList(
+      ) [MethodDeclEmptyList]
+      MethodDecl(
+        ReturnTypeType(
+          Type(
+           bool
+          ) [Type]
+        ) [ReturnTypeType]
+        MethodName(
+         v
+        ) [MethodName]
+        FormalParams_(
+          FormalParamList_(
+            FormalParamPrimitive(
+              Type(
+               int
+              ) [Type]
+             a
+            ) [FormalParamPrimitive]
+            FormalParamList_(
+              FormalParamPrimitive(
+                Type(
+                 int
+                ) [Type]
+               b
+              ) [FormalParamPrimitive]
+              FormalParamSingle(
+                FormalParamPrimitive(
+                  Type(
+                   int
+                  ) [Type]
+                 d
+                ) [FormalParamPrimitive]
+              ) [FormalParamSingle]
+            ) [FormalParamList_]
+          ) [FormalParamList_]
+        ) [FormalParams_]
+        VarDeclEmptyList(
+        ) [VarDeclEmptyList]
+        StatementList_(
+          StatementEmptyList(
+          ) [StatementEmptyList]
+          ReturnStatement_(
+            ReturnStatementExpr(
+              Expression(
+                Expr1TermNoMinus(
+                  TermNoMul(
+                    FactorBool(
+                     true
+                    ) [FactorBool]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [Expr1TermNoMinus]
+              ) [Expression]
+            ) [ReturnStatementExpr]
+          ) [ReturnStatement_]
+        ) [StatementList_]
+      ) [MethodDecl]
+    ) [MethodDeclMultipleList]
+    MethodDecl(
+      ReturnTypeVoid(
+      ) [ReturnTypeVoid]
+      MethodName(
+       main
+      ) [MethodName]
+      FormalParams_(
+        FormalParamEmptyList(
+        ) [FormalParamEmptyList]
+      ) [FormalParams_]
+      VarDeclEmptyList(
+      ) [VarDeclEmptyList]
+      StatementList_(
+        StatementList_(
+          StatementList_(
+            StatementEmptyList(
+            ) [StatementEmptyList]
+            IfStatement(
+              IfCondition(
+                NoConditionOR(
+                  NoConditionAND(
+                    ConditionFactExpr(
+                      Expression(
+                        Expr1TermNoMinus(
+                          TermNoMul(
+                            FactorFunctionCall(
+                              DesignatorFunc(
+                                Designator(
+                                  DesignatorName(
+                                   v
+                                  ) [DesignatorName]
+                                  DesignatorOptionEmptyList(
+                                  ) [DesignatorOptionEmptyList]
+                                ) [Designator]
+                              ) [DesignatorFunc]
+                              ActualParameterEmptyList(
+                              ) [ActualParameterEmptyList]
+                            ) [FactorFunctionCall]
+                          ) [TermNoMul]
+                          AddopEmptyList(
+                          ) [AddopEmptyList]
+                        ) [Expr1TermNoMinus]
+                      ) [Expression]
+                    ) [ConditionFactExpr]
+                  ) [NoConditionAND]
+                ) [NoConditionOR]
+              ) [IfCondition]
+              StatementStatement(
+                StatementList_(
+                  StatementEmptyList(
+                  ) [StatementEmptyList]
+                  PrintStatement(
+                    PrintExpr(
+                      Expression(
+                        Expr1TermNoMinus(
+                          TermNoMul(
+                            FactorChar(
+                             t
+                            ) [FactorChar]
+                          ) [TermNoMul]
+                          AddopEmptyList(
+                          ) [AddopEmptyList]
+                        ) [Expr1TermNoMinus]
+                      ) [Expression]
+                      NoPrintNumConst(
+                      ) [NoPrintNumConst]
+                    ) [PrintExpr]
+                  ) [PrintStatement]
+                ) [StatementList_]
+              ) [StatementStatement]
+            ) [IfStatement]
+          ) [StatementList_]
+          PrintStatement(
+            PrintExpr(
+              Expression(
+                Expr1TermNoMinus(
+                  TermNoMul(
+                    FactorDesignator(
+                      Designator(
+                        DesignatorName(
+                         eol
+                        ) [DesignatorName]
+                        DesignatorOptionEmptyList(
+                        ) [DesignatorOptionEmptyList]
+                      ) [Designator]
+                    ) [FactorDesignator]
+                  ) [TermNoMul]
+                  AddopEmptyList(
+                  ) [AddopEmptyList]
+                ) [Expr1TermNoMinus]
+              ) [Expression]
+              NoPrintNumConst(
+              ) [NoPrintNumConst]
+            ) [PrintExpr]
+          ) [PrintStatement]
+        ) [StatementList_]
+        IfStatement(
+          IfCondition(
+            ConditionOR(
+              ConditionLeft(
+                NoConditionOR(
+                  NoConditionAND(
+                    ConditionFactExpr(
+                      Expression(
+                        Expr1TermNoMinus(
+                          TermNoMul(
+                            FactorFunctionCall(
+                              DesignatorFunc(
+                                Designator(
+                                  DesignatorName(
+                                   g
+                                  ) [DesignatorName]
+                                  DesignatorOptionEmptyList(
+                                  ) [DesignatorOptionEmptyList]
+                                ) [Designator]
+                              ) [DesignatorFunc]
+                              ActualParameterEmptyList(
+                              ) [ActualParameterEmptyList]
+                            ) [FactorFunctionCall]
+                          ) [TermNoMul]
+                          AddopEmptyList(
+                          ) [AddopEmptyList]
+                        ) [Expr1TermNoMinus]
+                      ) [Expression]
+                    ) [ConditionFactExpr]
+                  ) [NoConditionAND]
+                ) [NoConditionOR]
+              ) [ConditionLeft]
+              ConditionAND(
+                ConditionTermLeft(
+                  ConditionAND(
+                    ConditionTermLeft(
+                      NoConditionAND(
+                        ConditionFactExpr(
+                          Expression(
+                            Expr1TermNoMinus(
+                              TermNoMul(
+                                FactorFunctionCall(
+                                  DesignatorFunc(
+                                    Designator(
+                                      DesignatorName(
+                                       v
+                                      ) [DesignatorName]
+                                      DesignatorOptionEmptyList(
+                                      ) [DesignatorOptionEmptyList]
+                                    ) [Designator]
+                                  ) [DesignatorFunc]
+                                  ActualParameterEmptyList(
+                                  ) [ActualParameterEmptyList]
+                                ) [FactorFunctionCall]
+                              ) [TermNoMul]
+                              AddopEmptyList(
+                              ) [AddopEmptyList]
+                            ) [Expr1TermNoMinus]
+                          ) [Expression]
+                        ) [ConditionFactExpr]
+                      ) [NoConditionAND]
+                    ) [ConditionTermLeft]
+                    ConditionFactExpr(
+                      Expression(
+                        Expr1TermNoMinus(
+                          TermNoMul(
+                            FactorFunctionCall(
+                              DesignatorFunc(
+                                Designator(
+                                  DesignatorName(
+                                   v
+                                  ) [DesignatorName]
+                                  DesignatorOptionEmptyList(
+                                  ) [DesignatorOptionEmptyList]
+                                ) [Designator]
+                              ) [DesignatorFunc]
+                              ActualParameterEmptyList(
+                              ) [ActualParameterEmptyList]
+                            ) [FactorFunctionCall]
+                          ) [TermNoMul]
+                          AddopEmptyList(
+                          ) [AddopEmptyList]
+                        ) [Expr1TermNoMinus]
+                      ) [Expression]
+                    ) [ConditionFactExpr]
+                  ) [ConditionAND]
+                ) [ConditionTermLeft]
+                ConditionFactExpr(
+                  Expression(
+                    Expr1TermNoMinus(
+                      TermNoMul(
+                        FactorFunctionCall(
+                          DesignatorFunc(
+                            Designator(
+                              DesignatorName(
+                               v
+                              ) [DesignatorName]
+                              DesignatorOptionEmptyList(
+                              ) [DesignatorOptionEmptyList]
+                            ) [Designator]
+                          ) [DesignatorFunc]
+                          ActualParameterEmptyList(
+                          ) [ActualParameterEmptyList]
+                        ) [FactorFunctionCall]
+                      ) [TermNoMul]
+                      AddopEmptyList(
+                      ) [AddopEmptyList]
+                    ) [Expr1TermNoMinus]
+                  ) [Expression]
+                ) [ConditionFactExpr]
+              ) [ConditionAND]
+            ) [ConditionOR]
+          ) [IfCondition]
+          StatementStatement(
+            StatementList_(
+              StatementEmptyList(
+              ) [StatementEmptyList]
+              PrintStatement(
+                PrintExpr(
+                  Expression(
+                    Expr1TermNoMinus(
+                      TermNoMul(
+                        FactorChar(
+                         t
+                        ) [FactorChar]
+                      ) [TermNoMul]
+                      AddopEmptyList(
+                      ) [AddopEmptyList]
+                    ) [Expr1TermNoMinus]
+                  ) [Expression]
+                  NoPrintNumConst(
+                  ) [NoPrintNumConst]
+                ) [PrintExpr]
+              ) [PrintStatement]
+            ) [StatementList_]
+          ) [StatementStatement]
+        ) [IfStatement]
+      ) [StatementList_]
+    ) [MethodDecl]
+  ) [MethodDeclMultipleList]
+) [Program]
+INFO  01:37:12,861 - =================SEMANTICKA ANALIZA==============
+INFO  01:37:12,885 - Deklaracija klase A na liniji 5
+INFO  01:37:12,887 - Pretraga (int) nadjeno [Type , Int ] na liniji 6
+INFO  01:37:12,887 - Deklaracija (a) [Fld , Int ] na liniji 6
+INFO  01:37:12,888 - Pretraga (int) nadjeno [Type , Int ] na liniji 7
+INFO  01:37:12,888 - Deklaracija (b) [Fld , Int ] na liniji 7
+INFO  01:37:12,888 - Deklaracija (c) [Fld , Int ] na liniji 7
+INFO  01:37:12,889 - Deklaracija (d) [Fld , Int ] na liniji 7
+INFO  01:37:12,889 - Pretraga (int) nadjeno [Type , Int ] na liniji 9
+INFO  01:37:12,890 - Deklaracija (a) [Var , Int ] na liniji 9
+INFO  01:37:12,890 - Pretraga (bool) nadjeno [Type , Bool ] na liniji 12
+INFO  01:37:12,891 - Deklaracija (v) [Meth , Bool ] na liniji 12
+INFO  01:37:12,891 - Pretraga (int) nadjeno [Type , Int ] na liniji 12
+INFO  01:37:12,893 - Formalni parametar (a)  [Var , Int ] na liniji 12
+INFO  01:37:12,893 - Pretraga (int) nadjeno [Type , Int ] na liniji 12
+INFO  01:37:12,893 - Formalni parametar (b)  [Var , Int ] na liniji 12
+INFO  01:37:12,894 - Pretraga (int) nadjeno [Type , Int ] na liniji 12
+INFO  01:37:12,894 - Formalni parametar (d)  [Var , Int ] na liniji 12
+INFO  01:37:12,894 - Deklaracija (main) [Meth , None ] na liniji 16
+INFO  01:37:12,895 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 18
+ERROR 01:37:13,023 - Previse parametara specificirano za fju v  na liniji 18
+INFO  01:37:13,026 - Poziv fje (v)  [Meth , Bool ] na liniji 18
+INFO  01:37:13,027 - Pretraga (eol) nadjeno [Con , Char ] na liniji 21
+ERROR 01:37:13,028 - Nije definisano ime g  na liniji 23
+INFO  01:37:13,028 - Pretraga (noObj) nadjeno [Var , None ] na liniji 23
+ERROR 01:37:13,028 - Ime gnije funkcija  na liniji 23
+ERROR 01:37:13,029 -  Uslov nije boolean tipa  na liniji 23
+INFO  01:37:13,029 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 23
+ERROR 01:37:13,029 - Previse parametara specificirano za fju v  na liniji 23
+INFO  01:37:13,030 - Poziv fje (v)  [Meth , Bool ] na liniji 23
+INFO  01:37:13,030 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 23
+ERROR 01:37:13,031 - Previse parametara specificirano za fju v  na liniji 23
+INFO  01:37:13,031 - Poziv fje (v)  [Meth , Bool ] na liniji 23
+INFO  01:37:13,031 - Pretraga (v) nadjeno [Meth , Bool ] na liniji 23
+ERROR 01:37:13,032 - Previse parametara specificirano za fju v  na liniji 23
+INFO  01:37:13,032 - Poziv fje (v)  [Meth , Bool ] na liniji 23
+ERROR 01:37:13,032 -  Jedan od tipova u OR izrazu nije bool  na liniji 23
+ERROR 01:37:13,034 - NEUSPESNO SEMANTICKO  PARSIRANJE

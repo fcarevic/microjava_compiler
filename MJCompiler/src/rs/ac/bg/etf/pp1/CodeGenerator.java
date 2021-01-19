@@ -304,7 +304,8 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatorStatementInc designatorStatementInc) {
 		Designator des = designatorStatementInc.getDesignator();
-		if(des.obj.getKind()==Obj.Elem)Code.put(Code.dup2);
+		if(des.obj.getKind()==Obj.Elem )Code.put(Code.dup2);
+		if(des.obj.getKind() == Obj.Fld) Code.put(Code.dup);
 		Code.load(des.obj);
 		Code.loadConst(1);
 		Code.put(Code.add);
@@ -314,6 +315,8 @@ public class CodeGenerator extends VisitorAdaptor {
 	@Override
 	public void visit(DesignatoStatementDec designatoStatementDec) {
 		Designator des = designatoStatementDec.getDesignator();
+		if(des.obj.getKind()==Obj.Elem )Code.put(Code.dup2);
+		if(des.obj.getKind() == Obj.Fld) Code.put(Code.dup);
 		Code.load(des.obj);
 		Code.loadConst(1);
 		Code.put(Code.sub);
@@ -595,6 +598,7 @@ public class CodeGenerator extends VisitorAdaptor {
 		
 		switchSt.traverseBottomUp(new SwitchCaseCodeEntranceCreator(switchCl, switchSt));
 		//ako nema nijedna, preskoci sve
+		Code.put(Code.pop);
 		 Code.put(Code.jmp);
 		 mapSkipAllCases.put(switchCl, Code.pc);
 		 Code.put2(0);
@@ -619,7 +623,7 @@ public class CodeGenerator extends VisitorAdaptor {
 	public void visit(SwitchStatement switchSt){
 			Code.fixup(mapSkipAllCases.get(switchSt.getSwitchClause()));
 			switchSt.traverseTopDown(new SwitchBreakFixup());
-			Code.put(Code.pop); //skida izraz sa steka
+			//Code.put(Code.pop); //skida izraz sa steka
 	}
 	
 	private class SwitchBreakFixup extends VisitorAdaptor{
@@ -644,10 +648,14 @@ public class CodeGenerator extends VisitorAdaptor {
 		private void generateCaseEnteranceCode(int num) {
 			Code.put(Code.dup);
 			Code.loadConst(num);
-			Code.put(Code.jcc + Code.eq);
+			Code.put(Code.jcc + Code.ne);
+			int jmpPop= Code.pc;
+			Code.put2(0);
+			Code.put(Code.pop);
+			Code.put(Code.jmp);
 			caseClausemap.put(num, Code.pc);
 			Code.put2(0);
-		
+			Code.fixup(jmpPop);
 		}
 		
 		@Override

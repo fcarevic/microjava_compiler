@@ -1,6 +1,0 @@
-nema char kao char?
-da li this i super treba da budu rezervisane reci?
-gramatika->prva smena ne dozvoljava programe tipa samo ispis?
-da li se array = new int[4] proverava u toku izvrsavanja ili prevodjenja?
-je l treba da se prijavljuju nedostizni delovi koda, npr posle break u case-u ?
-je l dozvoljeno nesto tipa case 1 : if(..)break; ?
